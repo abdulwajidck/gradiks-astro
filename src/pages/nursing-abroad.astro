@@ -10,83 +10,53 @@ const description = 'Build your nursing career abroad with Gradiks. Transparent 
 <MainLayout title={title} description={description}>
     <Navigation />
 
-    <section class="min-h-screen flex items-center relative overflow-hidden pt-24">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute top-1/4 right-0 w-[900px] h-[900px] bg-gradient-radial from-[rgba(201,162,39,0.1)] via-transparent to-transparent rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-radial from-[rgba(0,240,255,0.08)] via-transparent to-transparent rounded-full blur-3xl"></div>
-        </div>
+    <section class="pt-32 pb-20 md:pt-36 md:pb-24" style="background:#f4f4f0;">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="inline-flex items-center gap-3 px-4 py-2 border mb-8" style="border-color:#e5e7eb;background:#fff;">
+                <span class="text-xs tracking-[0.2em] uppercase" style="color:#be1e2d;">Nursing Abroad</span>
+            </div>
 
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10 w-full">
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                <div class="space-y-8">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 border border-[#2a4a6f] bg-[#0f1d32] animate-fade-in-up">
-                        <span class="text-2xl">🩺</span>
-                        <span class="text-xs font-medium tracking-[0.15em] uppercase text-[#a8b4c4]">Nursing Abroad Pathway</span>
-                    </div>
-
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-medium leading-[0.95] tracking-tight animate-fade-in-up delay-100" style="font-family: var(--font-display);">
-                        BUILD YOUR
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[0.95] tracking-tight mb-6" style="font-family: var(--font-display); color:#111827;">
+                        Your Nursing Future,
                         <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a227] to-[#e0c54d]">GLOBAL</span>
-                        <br />
-                        NURSING CAREER
+                        Built On
+                        <span style="color:#be1e2d;"> Reality.</span>
                     </h1>
 
-                    <p class="text-lg md:text-xl text-[#a8b4c4] max-w-xl leading-relaxed animate-fade-in-up delay-200">
-                        From admissions and English tests to licensing and visa filing, we help Indian nurses move abroad with a clear, realistic plan.
+                    <p class="text-lg md:text-xl leading-relaxed max-w-xl mb-10" style="color:#4b5563;">
+                        We help Indian nurses choose the right country, licensing route, and timeline — with clear costs, real eligibility checks, and honest guidance.
                     </p>
 
-                    <div class="flex flex-wrap gap-10 animate-fade-in-up delay-300">
-                        <div>
-                            <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">3</div>
-                            <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Top Destinations</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">1:1</div>
-                            <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Profile Counselling</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">End-to-End</div>
-                            <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Support</div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
-                        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#c9a227] text-[#0a1628] font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,162,39,0.3)]">
-                            <span class="relative z-10 flex items-center justify-center gap-2">
-                                CHECK MY ELIGIBILITY
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                            </span>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="px-8 py-4 font-semibold tracking-wide transition-all" style="background:#be1e2d;color:#fff;">
+                            CHECK MY ELIGIBILITY
                         </button>
-
-                        <a href="tel:+919****3210" class="group px-8 py-4 border border-[#2a4a6f] text-white font-medium tracking-wide flex items-center justify-center gap-3 hover:border-[#c9a227] hover:text-[#c9a227] transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+919****3210" class="px-8 py-4 border font-medium tracking-wide text-center" style="border-color:#d1d5db;color:#111827;background:#fff;">
                             TALK TO AN ADVISOR
                         </a>
                     </div>
                 </div>
 
-                <div class="hidden lg:block">
-                    <div class="bg-[#0f1d32] border border-[#1e3a5f] p-8 lg:p-10 relative">
-                        <div class="absolute -top-4 -right-4 w-24 h-24 border border-[#c9a227]"></div>
-                        <h3 class="text-2xl font-medium mb-8" style="font-family: var(--font-display);">YOUR ROADMAP</h3>
-                        <div class="space-y-6">
-                            <div class="pb-5 border-b border-[#1e3a5f]">
-                                <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-2">Step 01</div>
-                                <p class="text-sm text-[#a8b4c4]">Profile evaluation, country selection, and timeline planning.</p>
-                            </div>
-                            <div class="pb-5 border-b border-[#1e3a5f]">
-                                <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-2">Step 02</div>
-                                <p class="text-sm text-[#a8b4c4]">University/job pathway shortlist + IELTS/OET strategy.</p>
-                            </div>
-                            <div class="pb-5 border-b border-[#1e3a5f]">
-                                <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-2">Step 03</div>
-                                <p class="text-sm text-[#a8b4c4]">Documentation, licensing pathway, interview coaching.</p>
-                            </div>
-                            <div>
-                                <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-2">Step 04</div>
-                                <p class="text-sm text-[#a8b4c4]">Visa filing, pre-departure support, and post-arrival checklist.</p>
-                            </div>
+                <div class="border p-8 md:p-10" style="border-color:#e5e7eb;background:#fff;">
+                    <h3 class="text-2xl font-semibold mb-8" style="font-family: var(--font-display); color:#111827;">How We Work</h3>
+                    <div class="space-y-6">
+                        <div class="pb-5 border-b" style="border-color:#e5e7eb;">
+                            <div class="text-xs tracking-[0.2em] uppercase mb-2" style="color:#be1e2d;">Step 01</div>
+                            <p style="color:#4b5563;">Profile review + country match based on qualification, budget, and goals.</p>
+                        </div>
+                        <div class="pb-5 border-b" style="border-color:#e5e7eb;">
+                            <div class="text-xs tracking-[0.2em] uppercase mb-2" style="color:#be1e2d;">Step 02</div>
+                            <p style="color:#4b5563;">Licensing and language roadmap (IELTS/OET/German) with realistic milestones.</p>
+                        </div>
+                        <div class="pb-5 border-b" style="border-color:#e5e7eb;">
+                            <div class="text-xs tracking-[0.2em] uppercase mb-2" style="color:#be1e2d;">Step 03</div>
+                            <p style="color:#4b5563;">Applications, documentation, interview prep, and visa filing support.</p>
+                        </div>
+                        <div>
+                            <div class="text-xs tracking-[0.2em] uppercase mb-2" style="color:#be1e2d;">Step 04</div>
+                            <p style="color:#4b5563;">Pre-departure checklist and post-arrival setup guidance.</p>
                         </div>
                     </div>
                 </div>
@@ -94,86 +64,81 @@ const description = 'Build your nursing career abroad with Gradiks. Transparent 
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 bg-[#0f1d32] border-y border-[#1e3a5f]">
+    <section class="py-20 md:py-24" style="background:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="max-w-3xl mb-16">
-                <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Destinations</div>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
-                    CHOOSE YOUR
-                    <br />
-                    <span class="text-[#a8b4c4]">NURSING PATHWAY</span>
+            <div class="max-w-3xl mb-12">
+                <div class="text-xs tracking-[0.3em] uppercase mb-4" style="color:#be1e2d;">Destinations</div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight" style="font-family: var(--font-display); color:#111827;">
+                    Choose Your Nursing
+                    <span style="color:#be1e2d;"> Pathway</span>
                 </h2>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-300">
-                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">United Kingdom</div>
-                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">NHS-Focused Route</h3>
-                    <p class="text-sm text-[#a8b4c4] mb-6">BSc/MSc Nursing routes, CBT+OSCE licensing journey, and sponsorship pathways.</p>
-                    <ul class="space-y-3 text-sm text-[#a8b4c4]">
-                        <li>• Typical intake: Jan / Sep</li>
-                        <li>• English: IELTS/OET required</li>
-                        <li>• Stay-back options available</li>
+                <div class="border p-8" style="border-color:#e5e7eb;background:#fff;">
+                    <div class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#be1e2d;">United Kingdom</div>
+                    <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display); color:#111827;">NHS-Focused Route</h3>
+                    <p class="mb-5" style="color:#4b5563;">Best for candidates aiming for a structured licensing journey and strong hospital demand.</p>
+                    <ul class="space-y-2" style="color:#4b5563;">
+                        <li>• CBT + OSCE based pathways</li>
+                        <li>• IELTS/OET guided prep</li>
+                        <li>• Employer-linked opportunities</li>
                     </ul>
                 </div>
 
-                <div class="bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-300">
-                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Ireland</div>
-                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">EU Career Start</h3>
-                    <p class="text-sm text-[#a8b4c4] mb-6">High-demand healthcare ecosystem with regulated clinical standards and long-term opportunities.</p>
-                    <ul class="space-y-3 text-sm text-[#a8b4c4]">
-                        <li>• Strong demand for nurses</li>
-                        <li>• Registration support required</li>
-                        <li>• Clear migration pathways</li>
+                <div class="border p-8" style="border-color:#e5e7eb;background:#fff;">
+                    <div class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#be1e2d;">Ireland</div>
+                    <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display); color:#111827;">High-Demand Track</h3>
+                    <p class="mb-5" style="color:#4b5563;">Great option for nurses looking for regulated systems and long-term EU career progression.</p>
+                    <ul class="space-y-2" style="color:#4b5563;">
+                        <li>• Registration support planning</li>
+                        <li>• Clinical standards alignment</li>
+                        <li>• Transparent migration roadmap</li>
                     </ul>
                 </div>
 
-                <div class="bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-300">
-                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Germany</div>
-                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Adaptation + Language</h3>
-                    <p class="text-sm text-[#a8b4c4] mb-6">Nursing recognition with language preparation and adaptation requirements built into your timeline.</p>
-                    <ul class="space-y-3 text-sm text-[#a8b4c4]">
-                        <li>• German level usually required</li>
-                        <li>• Qualification recognition steps</li>
-                        <li>• Employment-linked options</li>
+                <div class="border p-8" style="border-color:#e5e7eb;background:#fff;">
+                    <div class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#be1e2d;">Germany</div>
+                    <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display); color:#111827;">Adaptation + Language</h3>
+                    <p class="mb-5" style="color:#4b5563;">Ideal for candidates ready for qualification recognition and language-first progression.</p>
+                    <ul class="space-y-2" style="color:#4b5563;">
+                        <li>• German language milestones</li>
+                        <li>• Recognition process mapping</li>
+                        <li>• Employment-linked plans</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 lg:py-32">
+    <section class="py-20 md:py-24" style="background:#f9fafb;">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-2 gap-16">
                 <div>
-                    <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">What You Need</div>
-                    <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-8" style="font-family: var(--font-display);">
-                        BASIC
-                        <span class="text-[#a8b4c4]">ELIGIBILITY</span>
-                    </h2>
-
-                    <ul class="space-y-4">
-                        <li class="flex gap-4"><span class="flex-shrink-0 w-6 h-6 border border-[#c9a227] flex items-center justify-center text-[#c9a227] text-xs">✓</span><span class="text-[#a8b4c4]">GNM / BSc Nursing or relevant qualification (country-specific)</span></li>
-                        <li class="flex gap-4"><span class="flex-shrink-0 w-6 h-6 border border-[#c9a227] flex items-center justify-center text-[#c9a227] text-xs">✓</span><span class="text-[#a8b4c4]">Valid registration and academic records</span></li>
-                        <li class="flex gap-4"><span class="flex-shrink-0 w-6 h-6 border border-[#c9a227] flex items-center justify-center text-[#c9a227] text-xs">✓</span><span class="text-[#a8b4c4]">Language test readiness (IELTS/OET/German, based on destination)</span></li>
-                        <li class="flex gap-4"><span class="flex-shrink-0 w-6 h-6 border border-[#c9a227] flex items-center justify-center text-[#c9a227] text-xs">✓</span><span class="text-[#a8b4c4]">Financial + visa documentation planning</span></li>
+                    <div class="text-xs tracking-[0.3em] uppercase mb-4" style="color:#be1e2d;">Eligibility</div>
+                    <h2 class="text-4xl md:text-5xl font-semibold mb-8 tracking-tight" style="font-family: var(--font-display); color:#111827;">Basic Requirements</h2>
+                    <ul class="space-y-4" style="color:#4b5563;">
+                        <li>• GNM / BSc / MSc Nursing qualification (route-specific)</li>
+                        <li>• Complete academic and registration documents</li>
+                        <li>• English or German language readiness</li>
+                        <li>• Financial and visa documentation planning</li>
                     </ul>
                 </div>
 
-                <div class="bg-[#0f1d32] border border-[#1e3a5f] p-8 lg:p-12">
-                    <h3 class="text-2xl font-medium mb-8" style="font-family: var(--font-display);">COMMON CHALLENGES WE SOLVE</h3>
+                <div class="border p-8 md:p-10" style="border-color:#e5e7eb;background:#fff;">
+                    <h3 class="text-2xl font-semibold mb-6" style="font-family: var(--font-display); color:#111827;">What We Clarify Upfront</h3>
                     <div class="space-y-6">
-                        <div class="pb-6 border-b border-[#1e3a5f]">
-                            <div class="text-white mb-2">Unsure which country fits your profile?</div>
-                            <p class="text-sm text-[#a8b4c4]">We map your marks, budget, language level, and timeline to realistic options.</p>
+                        <div class="pb-5 border-b" style="border-color:#e5e7eb;">
+                            <div class="font-medium mb-2" style="color:#111827;">Expected timeline</div>
+                            <p style="color:#4b5563;">No guesswork. You get stage-wise duration expectations.</p>
                         </div>
-                        <div class="pb-6 border-b border-[#1e3a5f]">
-                            <div class="text-white mb-2">Licensing steps feel confusing?</div>
-                            <p class="text-sm text-[#a8b4c4]">We provide a country-wise process from exam prep to registration flow.</p>
+                        <div class="pb-5 border-b" style="border-color:#e5e7eb;">
+                            <div class="font-medium mb-2" style="color:#111827;">Real cost structure</div>
+                            <p style="color:#4b5563;">Tuition, exams, processing, and living costs shown transparently.</p>
                         </div>
                         <div>
-                            <div class="text-white mb-2">Worried about hidden costs?</div>
-                            <p class="text-sm text-[#a8b4c4]">You get transparent cost sheets before taking any decision.</p>
+                            <div class="font-medium mb-2" style="color:#111827;">Best-fit country match</div>
+                            <p style="color:#4b5563;">Recommendations based on profile fit, not commission bias.</p>
                         </div>
                     </div>
                 </div>
@@ -181,66 +146,60 @@ const description = 'Build your nursing career abroad with Gradiks. Transparent 
         </div>
     </section>
 
-    <section id="lead-form-container" class="py-24 lg:py-32 bg-[#0f1d32] border-y border-[#1e3a5f]">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="max-w-2xl mx-auto">
-                <div class="text-center mb-12">
-                    <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Free Callback</div>
-                    <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
-                        GET YOUR NURSING
-                        <br />
-                        <span class="text-[#a8b4c4]">ABROAD PLAN</span>
-                    </h2>
-                    <p class="text-[#a8b4c4]">Share your profile. Our team will call you with a practical next-step plan.</p>
+    <section id="lead-form-container" class="py-20 md:py-24" style="background:#ffffff; border-top:1px solid #e5e7eb;">
+        <div class="max-w-[900px] mx-auto px-6 lg:px-12">
+            <div class="text-center mb-12">
+                <div class="text-xs tracking-[0.3em] uppercase mb-4" style="color:#be1e2d;">Free Callback</div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4" style="font-family: var(--font-display); color:#111827;">
+                    Get Your Nursing Abroad Plan
+                </h2>
+                <p style="color:#4b5563;">Submit your profile and our counsellor will call you with the next practical steps.</p>
+            </div>
+
+            <form id="lead-form" class="border p-8 md:p-10" style="border-color:#e5e7eb;background:#fff;">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-xs font-medium tracking-[0.15em] uppercase mb-3" style="color:#6b7280;">Full Name *</label>
+                        <input type="text" required class="w-full px-4 py-4 border focus:outline-none" style="border-color:#d1d5db;color:#111827;background:#fff;" placeholder="Your name" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium tracking-[0.15em] uppercase mb-3" style="color:#6b7280;">Phone *</label>
+                        <input type="tel" required class="w-full px-4 py-4 border focus:outline-none" style="border-color:#d1d5db;color:#111827;background:#fff;" placeholder="+91..." />
+                    </div>
                 </div>
 
-                <form id="lead-form" class="bg-[#0a1628] border border-[#1e3a5f] p-8 lg:p-12">
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Full Name *</label>
-                            <input type="text" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="Your name" />
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Phone *</label>
-                            <input type="tel" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="+91..." />
-                        </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-xs font-medium tracking-[0.15em] uppercase mb-3" style="color:#6b7280;">Email *</label>
+                        <input type="email" required class="w-full px-4 py-4 border focus:outline-none" style="border-color:#d1d5db;color:#111827;background:#fff;" placeholder="email@example.com" />
                     </div>
-
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Email *</label>
-                            <input type="email" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="email@example.com" />
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Nursing Qualification</label>
-                            <select class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white focus:border-[#c9a227] focus:outline-none transition-colors appearance-none cursor-pointer">
-                                <option value="" class="bg-[#0f1d32]">Select qualification</option>
-                                <option value="gnm" class="bg-[#0f1d32]">GNM</option>
-                                <option value="bsc" class="bg-[#0f1d32]">BSc Nursing</option>
-                                <option value="msc" class="bg-[#0f1d32]">MSc Nursing</option>
-                                <option value="student" class="bg-[#0f1d32]">Current Nursing Student</option>
-                                <option value="other" class="bg-[#0f1d32]">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Preferred Country</label>
-                        <select class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white focus:border-[#c9a227] focus:outline-none transition-colors appearance-none cursor-pointer">
-                            <option value="" class="bg-[#0f1d32]">Select country</option>
-                            <option value="uk" class="bg-[#0f1d32]">United Kingdom</option>
-                            <option value="ireland" class="bg-[#0f1d32]">Ireland</option>
-                            <option value="germany" class="bg-[#0f1d32]">Germany</option>
-                            <option value="not-sure" class="bg-[#0f1d32]">Not Sure Yet</option>
+                    <div>
+                        <label class="block text-xs font-medium tracking-[0.15em] uppercase mb-3" style="color:#6b7280;">Qualification</label>
+                        <select class="w-full px-4 py-4 border focus:outline-none" style="border-color:#d1d5db;color:#111827;background:#fff;">
+                            <option value="">Select qualification</option>
+                            <option value="gnm">GNM</option>
+                            <option value="bsc">BSc Nursing</option>
+                            <option value="msc">MSc Nursing</option>
+                            <option value="student">Current Nursing Student</option>
                         </select>
                     </div>
+                </div>
 
-                    <button type="submit" class="w-full py-5 bg-[#c9a227] text-[#0a1628] font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(201,162,39,0.3)] transition-all duration-300 flex items-center justify-center gap-3">
-                        GET FREE COUNSELLING CALL
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </button>
-                </form>
-            </div>
+                <div class="mb-8">
+                    <label class="block text-xs font-medium tracking-[0.15em] uppercase mb-3" style="color:#6b7280;">Preferred Country</label>
+                    <select class="w-full px-4 py-4 border focus:outline-none" style="border-color:#d1d5db;color:#111827;background:#fff;">
+                        <option value="">Select country</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ireland">Ireland</option>
+                        <option value="germany">Germany</option>
+                        <option value="not-sure">Not Sure Yet</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-5 font-semibold tracking-wide transition-all" style="background:#be1e2d;color:#fff;">
+                    GET FREE COUNSELLING CALL
+                </button>
+            </form>
         </div>
     </section>
 
@@ -253,15 +212,12 @@ const description = 'Build your nursing career abroad with Gradiks. Transparent 
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
 
-            btn.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                REQUEST SUBMITTED
-            `;
+            btn.innerHTML = 'REQUEST SUBMITTED';
             btn.style.backgroundColor = '#22c55e';
 
             setTimeout(() => {
                 btn.innerHTML = originalText;
-                btn.style.backgroundColor = '';
+                btn.style.backgroundColor = '#be1e2d';
                 form.reset();
             }, 3000);
         });
