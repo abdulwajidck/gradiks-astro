@@ -1,0 +1,291 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Gradiks — Study in UK | Masters, MBA, Nursing & More";
+const description = "Study in UK with Gradiks. MSc, MBA, Nursing, Data Science, Cyber Security & more. 2-year post-study work visa. Honest consultancy.";
+---
+
+<MainLayout title={title} description={description}>
+    <Navigation />
+    
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center relative overflow-hidden pt-24">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] bg-gradient-radial from-[rgba(0,240,255,0.06)] via-transparent to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10 w-full">
+            <div class="max-w-4xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-3 px-4 py-2 border border-[#2a4a6f] bg-[#0f1d32] mb-8 animate-fade-in-up">
+                    <span class="text-2xl">🇬🇧</span>
+                    <span class="text-xs font-medium tracking-[0.15em] uppercase text-[#a8b4c4]">Study in UK</span>
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.9] tracking-tight mb-8 animate-fade-in-up delay-100" style="font-family: var(--font-display);">
+                    STUDY IN THE
+                    <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a227] to-[#e0c54d]">UK</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-[#a8b4c4] max-w-2xl leading-relaxed mb-12 animate-fade-in-up delay-200">
+                    1-year Master's, 2-year post-study work visa, and NHS pathways for healthcare professionals. World-renowned universities.
+                </p>
+                
+                <!-- Stats Row -->
+                <div class="flex flex-wrap gap-12 mb-12 animate-fade-in-up delay-300">
+                    <div>
+                        <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">2 Years</div>
+                        <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Post-Study Work</div>
+                    </div>
+                    
+                    <div>
+                        <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">£15-25K</div>
+                        <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Tuition/Year</div>
+                    </div>
+                    
+                    <div>
+                        <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">1 Year</div>
+                        <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Master's Duration</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
+                    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#c9a227] text-[#0a1628] font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,162,39,0.3)]">
+                        <span class="relative z-10 flex items-center justify-center gap-2">
+                            START APPLICATION
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </button>
+                    
+                    <a href="tel:+919876543210" class="group px-8 py-4 border border-[#2a4a6f] text-white font-medium tracking-wide flex items-center justify-center gap-3 hover:border-[#c9a227] hover:text-[#c9a227] transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        CALL EXPERT
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section class="py-24 lg:py-32 bg-[#0f1d32] border-y border-[#1e3a5f]">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mb-16">
+                <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Programs</div>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
+                    POPULAR
+                    <br />
+                    <span class="text-[#a8b4c4]">PROGRAMS</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-500">
+                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Master of Science</div>
+                    
+                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Data Science</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4] mb-6">AI, Machine Learning, Big Data at Russell Group universities with industry projects.</p>
+                    
+                    <div class="flex justify-between items-center pt-6 border-t border-[#1e3a5f]">
+                        <div>
+                            <div class="text-xs text-[#6b7a8f]">Duration</div>
+                            <div class="text-white">1 Year</div>
+                        </div>
+                        
+                        <div class="text-right">
+                            <div class="text-xs text-[#6b7a8f]">Tuition</div>
+                            <div class="text-[#c9a227] font-medium">£18-28K</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-500">
+                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Master of Science</div>
+                    
+                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Nursing</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4] mb-6">Adult Nursing, Mental Health, Children's Nursing with NHS clinical placements.</p>
+                    
+                    <div class="flex justify-between items-center pt-6 border-t border-[#1e3a5f]">
+                        <div>
+                            <div class="text-xs text-[#6b7a8f]">Duration</div>
+                            <div class="text-white">2 Years</div>
+                        </div>
+                        
+                        <div class="text-right">
+                            <div class="text-xs text-[#6b7a8f]">Tuition</div>
+                            <div class="text-[#c9a227] font-medium">£16-24K</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-500">
+                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Master of Business Administration</div>
+                    
+                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">MBA</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4] mb-6">General Management, Finance, International Business with internship options.</p>
+                    
+                    <div class="flex justify-between items-center pt-6 border-t border-[#1e3a5f]">
+                        <div>
+                            <div class="text-xs text-[#6b7a8f]">Duration</div>
+                            <div class="text-white">1 Year</div>
+                        </div>
+                        
+                        <div class="text-right">
+                            <div class="text-xs text-[#6b7a8f]">Tuition</div>
+                            <div class="text-[#c9a227] font-medium">£25-45K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY UK -->
+    <section class="py-24 lg:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mb-16">
+                <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Why UK</div>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
+                    WHY THE
+                    <span class="text-[#a8b4c4]">UK?</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1e3a5f]">
+                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
+                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">01</div>
+                    
+                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">1-Year Master's</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4]">Complete your Master's in just 12 months. Lower total cost, faster entry to workforce.</p>
+                </div>
+
+                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
+                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">02</div>
+                    
+                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">2-Year Post-Study Work</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4]">Graduate Route visa lets you work for 2 years (3 years for PhD) after graduation.</p>
+                </div>
+
+                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
+                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">03</div>
+                    
+                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">NHS Pathway</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4]">Healthcare programs offer NHS clinical placements and pathway to NMC registration.</p>
+                </div>
+
+                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
+                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">04</div>
+                    
+                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">Russell Group</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4]">24 world-class research-intensive universities. Globally recognized degrees.</p>
+                </div>
+
+                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
+                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">05</div>
+                    
+                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">Industry Connections</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4]">Strong links with employers. Many courses include internships and placements.</p>
+                </div>
+
+                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
+                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">06</div>
+                    
+                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">Scholarships Available</h3>
+                    
+                    <p class="text-sm text-[#a8b4c4]">Chevening, Commonwealth, GREAT, and university-specific scholarships for Indians.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section id="lead-form-container" class="py-24 lg:py-32 bg-[#0f1d32] border-y border-[#1e3a5f]">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Apply Now</div>
+                    
+                    <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
+                        START YOUR
+                        <br />
+                        <span class="text-[#a8b4c4]">APPLICATION</span>
+                    </h2>
+                </div>
+
+                <form id="lead-form" class="bg-[#0a1628] border border-[#1e3a5f] p-8 lg:p-12">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Full Name *</label>
+                            <input type="text" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Phone *</label>
+                            <input type="tel" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="+91...">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Email *</label>
+                        <input type="email" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="email@example.com">
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Program Interest</label>
+                        <select class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white focus:border-[#c9a227] focus:outline-none transition-colors appearance-none cursor-pointer">
+                            <option value="" class="bg-[#0f1d32]">Select program</option>
+                            <option value="data-science" class="bg-[#0f1d32]">MSc Data Science</option>
+                            <option value="nursing" class="bg-[#0f1d32]">MSc Nursing</option>
+                            <option value="mba" class="bg-[#0f1d32]">MBA</option>
+                            <option value="cyber-security" class="bg-[#0f1d32]">MSc Cyber Security</option>
+                            <option value="other" class="bg-[#0f1d32]">Other / Not Sure</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-5 bg-[#c9a227] text-[#0a1628] font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(201,162,39,0.3)] transition-all duration-300 flex items-center justify-center gap-3">
+                        GET FREE CONSULTATION
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script>
+        document.getElementById('lead-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                REQUEST SUBMITTED
+            `;
+            btn.style.backgroundColor = '#22c55e';
+            
+            setTimeout(() => {
+                btn.innerHTML = `
+                    GET FREE CONSULTATION
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                `;
+                btn.style.backgroundColor = '';
+                e.target.reset();
+            }, 3000);
+        });
+    </script>
+</MainLayout>

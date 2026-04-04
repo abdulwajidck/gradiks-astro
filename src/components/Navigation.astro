@@ -1,0 +1,119 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar" style="background: transparent;">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div class="flex items-center justify-between h-20 lg:h-24 border-b transition-all duration-500" id="nav-inner" style="border-color: rgba(30, 58, 95, 0.5);">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-3 group">
+                <!-- New Logo Design - Stylized G with geometric elements -->
+                <div class="relative w-12 h-12 flex items-center justify-center" style="font-family: var(--font-display);">
+                    <!-- Outer ring -->
+                    <div class="absolute inset-0 border-2 transition-all duration-300 group-hover:scale-110" style="border-color: #c9a227; transform: rotate(45deg);"></div>
+                    
+                    <!-- Inner square -->
+                    <div class="absolute inset-2 transition-all duration-300" style="background: linear-gradient(135deg, #c9a227 0%, #b08d1f 100%);"></div>
+                    
+                    <!-- Letter G -->
+                    <span class="relative z-10 text-xl font-bold" style="color: #0a1628;">G</span>
+                </div>
+                
+                <div class="flex flex-col">
+                    <span class="text-xl font-semibold tracking-wide hidden sm:block" style="font-family: var(--font-display); color: #ffffff;">
+                        GRADIKS
+                    </span>
+                    <span class="text-[10px] tracking-[0.3em] uppercase hidden sm:block" style="color: #c9a227;">
+                        Education Consultancy
+                    </span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="/germany-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#c9a227]" style={`color: ${currentPath === '/germany-study/' ? '#c9a227' : '#a8b4c4'};`}>
+                    GERMANY
+                </a>
+                
+                <a href="/ireland-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#c9a227]" style={`color: ${currentPath === '/ireland-study/' ? '#c9a227' : '#a8b4c4'};`}>
+                    IRELAND
+                </a>
+                
+                <a href="/uk-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#c9a227]" style={`color: ${currentPath === '/uk-study/' ? '#c9a227' : '#a8b4c4'};`}>
+                    UK
+                </a>
+                
+                <a href="/india-medical" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#c9a227]" style={`color: ${currentPath === '/india-medical/' ? '#c9a227' : '#a8b4c4'};`}>
+                    INDIA
+                </a>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="flex items-center gap-6">
+                <a href="tel:+919876543210" class="hidden md:flex items-center gap-2 text-sm transition-colors hover:text-white" style="color: #a8b4c4;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span class="font-medium">+91 98765 43210</span>
+                </a>
+                
+                <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-6 py-3 text-sm font-medium tracking-wide overflow-hidden transition-all duration-300 btn-glow" style="background: linear-gradient(135deg, #c9a227 0%, #b08d1f 100%); color: #0a1628;">
+                    <span class="relative z-10">GET STARTED</span>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-4 h-0.5 bg-white transition-all duration-300"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 transform translate-x-full transition-transform duration-500 ease-out z-40" style="background: #0a1628; border-top: 1px solid #1e3a5f;">
+        <div class="flex flex-col p-6 gap-6">
+            <a href="/germany-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#c9a227]" style="font-family: var(--font-display); border-color: #1e3a5f; color: #ffffff;">Germany</a>
+            
+            <a href="/ireland-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#c9a227]" style="font-family: var(--font-display); border-color: #1e3a5f; color: #ffffff;">Ireland</a>
+            
+            <a href="/uk-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#c9a227]" style="font-family: var(--font-display); border-color: #1e3a5f; color: #ffffff;">United Kingdom</a>
+            
+            <a href="/india-medical" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#c9a227]" style="font-family: var(--font-display); border-color: #1e3a5f; color: #ffffff;">India Medical</a>
+            
+            <a href="/" class="text-2xl font-medium tracking-tight py-4 transition-colors hover:text-[#c9a227]" style="font-family: var(--font-display); color: #ffffff;">Home</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const navInner = document.getElementById('nav-inner');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(10, 22, 40, 0.95)';
+            navbar.style.backdropFilter = 'blur(20px)';
+            navInner.style.borderColor = '#1e3a5f';
+        } else {
+            navbar.style.background = 'transparent';
+            navbar.style.backdropFilter = 'none';
+            navInner.style.borderColor = 'rgba(30, 58, 95, 0.5)';
+        }
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+    
+    mobileMenuBtn?.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        
+        if (isMenuOpen) {
+            mobileMenu.style.transform = 'translateX(0)';
+        } else {
+            mobileMenu.style.transform = 'translateX(100%)';
+        }
+    });
+</script>
