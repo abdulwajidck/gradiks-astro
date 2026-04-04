@@ -39,6 +39,7 @@ This is the Astro.js version of the Gradiks educational consultancy website, con
 | Ireland | `/ireland-study/` | MSc, MBA programs with 2-year stay-back |
 | UK | `/uk-study/` | Masters, MBA, Nursing programs |
 | India Medical | `/india-medical/` | NEET counselling support for South India |
+| Nursing Abroad | `/nursing-abroad/` | BSc/MSc Nursing pathways to UK, Ireland, Germany |
 
 ## 🎨 Themes
 

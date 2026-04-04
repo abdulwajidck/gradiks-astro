@@ -1,5 +1,5 @@
 ---
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar" style="background: rgba(244, 244, 240, 0.95);">
@@ -10,19 +10,19 @@ const currentPath = Astro.url.pathname;
             </a>
 
             <div class="hidden lg:flex items-center gap-10">
-                <a href="/germany-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/germany-study/' ? '#be1e2d' : '#4b5563'};`}>
+                <a href="/germany-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/germany-study' ? '#be1e2d' : '#4b5563'};`}>
                     GERMANY
                 </a>
-                <a href="/ireland-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/ireland-study/' ? '#be1e2d' : '#4b5563'};`}>
+                <a href="/ireland-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/ireland-study' ? '#be1e2d' : '#4b5563'};`}>
                     IRELAND
                 </a>
-                <a href="/uk-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/uk-study/' ? '#be1e2d' : '#4b5563'};`}>
+                <a href="/uk-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/uk-study' ? '#be1e2d' : '#4b5563'};`}>
                     UK
                 </a>
-                <a href="/nursing-abroad" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/nursing-abroad/' ? '#be1e2d' : '#4b5563'};`}>
+                <a href="/nursing-abroad" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/nursing-abroad' ? '#be1e2d' : '#4b5563'};`}>
                     NURSING
                 </a>
-                <a href="/india-medical" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/india-medical/' ? '#be1e2d' : '#4b5563'};`}>
+                <a href="/india-medical" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/india-medical' ? '#be1e2d' : '#4b5563'};`}>
                     INDIA
                 </a>
             </div>

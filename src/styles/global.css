@@ -73,9 +73,9 @@
 /* Custom utilities */
 @layer utilities {
   .bg-gradient-radial {
-    background: radial-gradient(circle, var(--tw-gradient-stops));
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
   }
-  
+
   .text-gradient-gold {
     background: linear-gradient(135deg, var(--color-gold-300) 0%, var(--color-gold-500) 50%, var(--color-gold-600) 100%);
     -webkit-background-clip: text;
