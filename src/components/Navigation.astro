@@ -1,121 +1,72 @@
 ---
 const currentPath = Astro.url.pathname;
-const isNursingPage = currentPath === '/nursing-abroad/';
-
-const palette = isNursingPage
-    ? {
-        navBg: 'rgba(244, 244, 240, 0.95)',
-        navBorder: '#e5e7eb',
-        text: '#111827',
-        muted: '#4b5563',
-        accent: '#be1e2d',
-        mobileBg: '#f4f4f0',
-      }
-    : {
-        navBg: 'rgba(10, 22, 40, 0.95)',
-        navBorder: '#1e3a5f',
-        text: '#ffffff',
-        muted: '#a8b4c4',
-        accent: '#c9a227',
-        mobileBg: '#0a1628',
-      };
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar" style="background: transparent;">
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar" style="background: rgba(244, 244, 240, 0.95);">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div class="flex items-center justify-between h-20 lg:h-24 border-b transition-all duration-500" id="nav-inner" style={`border-color: ${isNursingPage ? 'rgba(229, 231, 235, 0.9)' : 'rgba(30, 58, 95, 0.5)'};`}>
+        <div class="flex items-center justify-between h-20 lg:h-24 border-b transition-all duration-500" id="nav-inner" style="border-color: #e5e7eb;">
             <a href="/" class="flex items-center gap-3 group">
-                {isNursingPage ? (
-                    <img src="/gradiks-logo.png" alt="Gradiks Global" class="h-8 md:h-9 w-auto" loading="eager" />
-                ) : (
-                    <>
-                        <div class="relative w-12 h-12 flex items-center justify-center" style="font-family: var(--font-display);">
-                            <div class="absolute inset-0 border-2 transition-all duration-300 group-hover:scale-110" style="border-color: #c9a227; transform: rotate(45deg);"></div>
-                            <div class="absolute inset-2 transition-all duration-300" style="background: linear-gradient(135deg, #c9a227 0%, #b08d1f 100%);"></div>
-                            <span class="relative z-10 text-xl font-bold" style="color: #0a1628;">G</span>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-xl font-semibold tracking-wide hidden sm:block" style="font-family: var(--font-display); color: #ffffff;">GRADIKS</span>
-                            <span class="text-[10px] tracking-[0.3em] uppercase hidden sm:block" style="color: #c9a227;">Education Consultancy</span>
-                        </div>
-                    </>
-                )}
+                <img src="/gradiks-logo.png" alt="Gradiks Global" class="h-8 md:h-9 w-auto" loading="eager" />
             </a>
 
             <div class="hidden lg:flex items-center gap-10">
-                <a href="/germany-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300" style={`color: ${currentPath === '/germany-study/' ? palette.accent : palette.muted};`}>
+                <a href="/germany-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/germany-study/' ? '#be1e2d' : '#4b5563'};`}>
                     GERMANY
                 </a>
-                <a href="/ireland-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300" style={`color: ${currentPath === '/ireland-study/' ? palette.accent : palette.muted};`}>
+                <a href="/ireland-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/ireland-study/' ? '#be1e2d' : '#4b5563'};`}>
                     IRELAND
                 </a>
-                <a href="/uk-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300" style={`color: ${currentPath === '/uk-study/' ? palette.accent : palette.muted};`}>
+                <a href="/uk-study" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/uk-study/' ? '#be1e2d' : '#4b5563'};`}>
                     UK
                 </a>
-                <a href="/nursing-abroad" class="nav-link text-sm font-medium tracking-wide transition-all duration-300" style={`color: ${currentPath === '/nursing-abroad/' ? palette.accent : palette.muted};`}>
+                <a href="/nursing-abroad" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/nursing-abroad/' ? '#be1e2d' : '#4b5563'};`}>
                     NURSING
                 </a>
-                <a href="/india-medical" class="nav-link text-sm font-medium tracking-wide transition-all duration-300" style={`color: ${currentPath === '/india-medical/' ? palette.accent : palette.muted};`}>
+                <a href="/india-medical" class="nav-link text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#be1e2d]" style={`color: ${currentPath === '/india-medical/' ? '#be1e2d' : '#4b5563'};`}>
                     INDIA
                 </a>
             </div>
 
             <div class="flex items-center gap-6">
-                <a href="tel:+919****3210" class="hidden md:flex items-center gap-2 text-sm transition-colors" style={`color: ${palette.muted};`}>
+                <a href="tel:+919****3210" class="hidden md:flex items-center gap-2 text-sm transition-colors hover:text-[#111827]" style="color: #4b5563;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span class="font-medium">+91 98765 43210</span>
                 </a>
 
-                <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-6 py-3 text-sm font-medium tracking-wide overflow-hidden transition-all duration-300 btn-glow" style={`background: ${palette.accent}; color: #ffffff;`}>
+                <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-6 py-3 text-sm font-medium tracking-wide overflow-hidden transition-all duration-300 btn-glow bg-[#be1e2d] text-white hover:bg-[#a81826]">
                     <span class="relative z-10">GET STARTED</span>
                 </button>
 
                 <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
-                    <span class="w-6 h-0.5 transition-all duration-300" style={`background: ${isNursingPage ? '#111827' : '#ffffff'};`}></span>
-                    <span class="w-6 h-0.5 transition-all duration-300" style={`background: ${isNursingPage ? '#111827' : '#ffffff'};`}></span>
-                    <span class="w-4 h-0.5 transition-all duration-300" style={`background: ${isNursingPage ? '#111827' : '#ffffff'};`}></span>
+                    <span class="w-6 h-0.5 bg-[#111827] transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-[#111827] transition-all duration-300"></span>
+                    <span class="w-4 h-0.5 bg-[#111827] transition-all duration-300"></span>
                 </button>
             </div>
         </div>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 transform translate-x-full transition-transform duration-500 ease-out z-40" style={`background: ${palette.mobileBg}; border-top: 1px solid ${palette.navBorder};`}>
+    <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 transform translate-x-full transition-transform duration-500 ease-out z-40" style="background: #f4f4f0; border-top: 1px solid #e5e7eb;">
         <div class="flex flex-col p-6 gap-6">
-            <a href="/germany-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors" style={`font-family: var(--font-display); border-color: ${palette.navBorder}; color: ${palette.text};`}>Germany</a>
-            <a href="/ireland-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors" style={`font-family: var(--font-display); border-color: ${palette.navBorder}; color: ${palette.text};`}>Ireland</a>
-            <a href="/uk-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors" style={`font-family: var(--font-display); border-color: ${palette.navBorder}; color: ${palette.text};`}>United Kingdom</a>
-            <a href="/nursing-abroad" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors" style={`font-family: var(--font-display); border-color: ${palette.navBorder}; color: ${palette.text};`}>Nursing Abroad</a>
-            <a href="/india-medical" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors" style={`font-family: var(--font-display); border-color: ${palette.navBorder}; color: ${palette.text};`}>India Medical</a>
-            <a href="/" class="text-2xl font-medium tracking-tight py-4 transition-colors" style={`font-family: var(--font-display); color: ${palette.text};`}>Home</a>
+            <a href="/germany-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#be1e2d]" style="font-family: var(--font-display); border-color: #e5e7eb; color: #111827;">Germany</a>
+            <a href="/ireland-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#be1e2d]" style="font-family: var(--font-display); border-color: #e5e7eb; color: #111827;">Ireland</a>
+            <a href="/uk-study" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#be1e2d]" style="font-family: var(--font-display); border-color: #e5e7eb; color: #111827;">United Kingdom</a>
+            <a href="/nursing-abroad" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#be1e2d]" style="font-family: var(--font-display); border-color: #e5e7eb; color: #111827;">Nursing Abroad</a>
+            <a href="/india-medical" class="text-2xl font-medium tracking-tight py-4 border-b transition-colors hover:text-[#be1e2d]" style="font-family: var(--font-display); border-color: #e5e7eb; color: #111827;">India Medical</a>
+            <a href="/" class="text-2xl font-medium tracking-tight py-4 transition-colors hover:text-[#be1e2d]" style="font-family: var(--font-display); color: #111827;">Home</a>
         </div>
     </div>
 </nav>
 
 <script>
     const navbar = document.getElementById('navbar');
-    const navInner = document.getElementById('nav-inner');
-    const isNursingPage = window.location.pathname === '/nursing-abroad/';
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            if (isNursingPage) {
-                navbar.style.background = 'rgba(244, 244, 240, 0.98)';
-                navInner.style.borderColor = '#e5e7eb';
-            } else {
-                navbar.style.background = 'rgba(10, 22, 40, 0.95)';
-                navbar.style.backdropFilter = 'blur(20px)';
-                navInner.style.borderColor = '#1e3a5f';
-            }
-        } else {
-            navbar.style.background = 'transparent';
-            navbar.style.backdropFilter = 'none';
-            navInner.style.borderColor = isNursingPage ? 'rgba(229, 231, 235, 0.9)' : 'rgba(30, 58, 95, 0.5)';
-        }
-    });
-
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     let isMenuOpen = false;
+
+    window.addEventListener('scroll', () => {
+        navbar.style.background = window.scrollY > 30 ? 'rgba(244, 244, 240, 0.98)' : 'rgba(244, 244, 240, 0.95)';
+    });
 
     mobileMenuBtn?.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;

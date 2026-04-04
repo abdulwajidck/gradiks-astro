@@ -2,290 +2,232 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-
 const title = "Gradiks — Study in Ireland | MSc, MBA & More";
 const description = "Study in Ireland with Gradiks. MSc Data Analytics, Cyber Security, Computer Science, MBA & more. 2-year stay-back visa. Honest consultancy.";
 ---
-
 <MainLayout title={title} description={description}>
-    <Navigation />
-    
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center relative overflow-hidden pt-24">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] bg-gradient-radial from-[rgba(0,240,255,0.06)] via-transparent to-transparent rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10 w-full">
-            <div class="max-w-4xl">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-3 px-4 py-2 border border-[#2a4a6f] bg-[#0f1d32] mb-8 animate-fade-in-up">
-                    <span class="text-2xl">🇮🇪</span>
-                    <span class="text-xs font-medium tracking-[0.15em] uppercase text-[#a8b4c4]">Study in Ireland</span>
-                </div>
-                
-                <!-- Headline -->
-                <h1 class="text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.9] tracking-tight mb-8 animate-fade-in-up delay-100" style="font-family: var(--font-display);">
-                    STUDY IN
-                    <br />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a227] to-[#e0c54d]">IRELAND</span>
-                </h1>
-                
-                <!-- Subheadline -->
-                <p class="text-xl md:text-2xl text-[#a8b4c4] max-w-2xl leading-relaxed mb-12 animate-fade-in-up delay-200">
-                    The EU's only English-speaking tech hub. Home to Google, Apple, Meta. 2-year stay-back visa for graduates.
-                </p>
-                
-                <!-- Stats Row -->
-                <div class="flex flex-wrap gap-12 mb-12 animate-fade-in-up delay-300">
-                    <div>
-                        <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">2 Years</div>
-                        <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Stay Back Visa</div>
-                    </div>
-                    
-                    <div>
-                        <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">€12-18K</div>
-                        <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Tuition/Year</div>
-                    </div>
-                    
-                    <div>
-                        <div class="text-4xl font-light text-white mb-1" style="font-family: var(--font-display);">1 Year</div>
-                        <div class="text-xs tracking-[0.2em] uppercase text-[#6b7a8f]">Master's Duration</div>
-                    </div>
-                </div>
-                
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
-                    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#c9a227] text-[#0a1628] font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,162,39,0.3)]">
-                        <span class="relative z-10 flex items-center justify-center gap-2">
-                            START APPLICATION
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                        </span>
-                    </button>
-                    
-                    <a href="tel:+919876543210" class="group px-8 py-4 border border-[#2a4a6f] text-white font-medium tracking-wide flex items-center justify-center gap-3 hover:border-[#c9a227] hover:text-[#c9a227] transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        CALL EXPERT
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROGRAMS SECTION -->
-    <section class="py-24 lg:py-32 bg-[#0f1d32] border-y border-[#1e3a5f]">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="max-w-3xl mb-16">
-                <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Programs</div>
-                
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
-                    1-YEAR INTENSIVE
-                    <br />
-                    <span class="text-[#a8b4c4]">MASTER'S</span>
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="group bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-500">
-                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Master of Science</div>
-                    
-                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Data Analytics</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4] mb-6">Big Data, Machine Learning, Business Intelligence. High demand from tech giants.</p>
-                    
-                    <div class="flex justify-between items-center pt-6 border-t border-[#1e3a5f]">
-                        <div>
-                            <div class="text-xs text-[#6b7a8f]">Duration</div>
-                            <div class="text-white">1 Year</div>
-                        </div>
-                        
-                        <div class="text-right">
-                            <div class="text-xs text-[#6b7a8f]">Tuition</div>
-                            <div class="text-[#c9a227] font-medium">€15-20K</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-500">
-                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Master of Science</div>
-                    
-                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Cyber Security</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4] mb-6">Network Security, Ethical Hacking, Digital Forensics. Critical skills shortage.</p>
-                    
-                    <div class="flex justify-between items-center pt-6 border-t border-[#1e3a5f]">
-                        <div>
-                            <div class="text-xs text-[#6b7a8f]">Duration</div>
-                            <div class="text-white">1 Year</div>
-                        </div>
-                        
-                        <div class="text-right">
-                            <div class="text-xs text-[#6b7a8f]">Tuition</div>
-                            <div class="text-[#c9a227] font-medium">€16-22K</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group bg-[#0a1628] border border-[#1e3a5f] p-8 hover:border-[#c9a227] transition-all duration-500">
-                    <div class="text-xs tracking-[0.2em] uppercase text-[#c9a227] mb-4">Master of Business Administration</div>
-                    
-                    <h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">MBA</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4] mb-6">General Management, Finance, Marketing. Strong corporate connections.</p>
-                    
-                    <div class="flex justify-between items-center pt-6 border-t border-[#1e3a5f]">
-                        <div>
-                            <div class="text-xs text-[#6b7a8f]">Duration</div>
-                            <div class="text-white">1 Year</div>
-                        </div>
-                        
-                        <div class="text-right">
-                            <div class="text-xs text-[#6b7a8f]">Tuition</div>
-                            <div class="text-[#c9a227] font-medium">€20-35K</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY IRELAND -->
-    <section class="py-24 lg:py-32">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="max-w-3xl mb-16">
-                <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Why Ireland</div>
-                
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
-                    WHY
-                    <span class="text-[#a8b4c4]">IRELAND?</span>
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1e3a5f]">
-                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
-                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">01</div>
-                    
-                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">2-Year Stay Back</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4]">Graduate visa lets you work for 2 years post-study. Find a job, get a work permit.</p>
-                </div>
-
-                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
-                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">02</div>
-                    
-                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">EU's Tech Hub</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4]">European HQ for Google, Apple, Meta, Microsoft, LinkedIn, TikTok, and 1,000+ MNCs.</p>
-                </div>
-
-                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
-                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">03</div>
-                    
-                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">No Language Barrier</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4]">100% English-speaking country. No need to learn a new language for daily life.</p>
-                </div>
-
-                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
-                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">04</div>
-                    
-                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">1-Year Master's</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4]">Intensive 12-month programs. Lower total cost, faster ROI, quicker entry to workforce.</p>
-                </div>
-
-                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
-                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">05</div>
-                    
-                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">€40-60K Starting Salary</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4]">Tech and pharma graduates start at €40K+. Experienced roles pay €60-80K.</p>
-                </div>
-
-                <div class="bg-[#0a1628] p-8 lg:p-10 group hover:bg-[#0f1d32] transition-colors duration-500">
-                    <div class="text-5xl font-light text-[#6b7a8f] mb-4 group-hover:text-[#c9a227] transition-colors" style="font-family: var(--font-display);">06</div>
-                    
-                    <h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">EU Citizenship Pathway</h3>
-                    
-                    <p class="text-sm text-[#a8b4c4]">5 years of legal residence leads to permanent residency and EU citizenship.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LEAD FORM -->
-    <section id="lead-form-container" class="py-24 lg:py-32 bg-[#0f1d32] border-y border-[#1e3a5f]">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="max-w-2xl mx-auto">
-                <div class="text-center mb-12">
-                    <div class="text-xs tracking-[0.3em] uppercase text-[#c9a227] mb-4">Apply Now</div>
-                    
-                    <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
-                        START YOUR
-                        <br />
-                        <span class="text-[#a8b4c4]">APPLICATION</span>
-                    </h2>
-                </div>
-
-                <form id="lead-form" class="bg-[#0a1628] border border-[#1e3a5f] p-8 lg:p-12">
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Full Name *</label>
-                            <input type="text" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="Your name">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Phone *</label>
-                            <input type="tel" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="+91...">
-                        </div>
-                    </div>
-
-                    <div class="mb-6">
-                        <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Email *</label>
-                        <input type="email" required class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white placeholder-[#6b7a8f] focus:border-[#c9a227] focus:outline-none transition-colors" placeholder="email@example.com">
-                    </div>
-
-                    <div class="mb-8">
-                        <label class="block text-xs font-medium tracking-[0.15em] uppercase text-[#6b7a8f] mb-3">Program Interest</label>
-                        <select class="w-full px-4 py-4 bg-[#0f1d32] border border-[#1e3a5f] text-white focus:border-[#c9a227] focus:outline-none transition-colors appearance-none cursor-pointer">
-                            <option value="" class="bg-[#0f1d32]">Select program</option>
-                            <option value="data-analytics" class="bg-[#0f1d32]">MSc Data Analytics</option>
-                            <option value="cyber-security" class="bg-[#0f1d32]">MSc Cyber Security</option>
-                            <option value="cs" class="bg-[#0f1d32]">MSc Computer Science</option>
-                            <option value="mba" class="bg-[#0f1d32]">MBA</option>
-                            <option value="other" class="bg-[#0f1d32]">Other / Not Sure</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="w-full py-5 bg-[#c9a227] text-[#0a1628] font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(201,162,39,0.3)] transition-all duration-300 flex items-center justify-center gap-3">
-                        GET FREE CONSULTATION
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <Footer />
-
-    <script>
-        document.getElementById('lead-form')?.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button[type="submit"]');
-            btn.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                REQUEST SUBMITTED
-            `;
-            btn.style.backgroundColor = '#22c55e';
-            
-            setTimeout(() => {
-                btn.innerHTML = `
-                    GET FREE CONSULTATION
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                `;
-                btn.style.backgroundColor = '';
-                e.target.reset();
-            }, 3000);
-        });
-    </script>
+<Navigation />
+<!-- HERO SECTION -->
+<section class="min-h-screen flex items-center relative overflow-hidden pt-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] bg-gradient-radial from-[rgba(0,240,255,0.06)] via-transparent to-transparent rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10 w-full">
+<div class="max-w-4xl">
+<!-- Badge -->
+<div class="inline-flex items-center gap-3 px-4 py-2 border border-[#d1d5db] bg-[#f9fafb] mb-8 animate-fade-in-up">
+<span class="text-2xl">🇮🇪</span>
+<span class="text-xs font-medium tracking-[0.15em] uppercase text-[#4b5563]">Study in Ireland</span>
+</div>
+<!-- Headline -->
+<h1 class="text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.9] tracking-tight mb-8 animate-fade-in-up delay-100" style="font-family: var(--font-display);">
+STUDY IN
+<br />
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#be1e2d] to-[#dc2626]">IRELAND</span>
+</h1>
+<!-- Subheadline -->
+<p class="text-xl md:text-2xl text-[#4b5563] max-w-2xl leading-relaxed mb-12 animate-fade-in-up delay-200">
+The EU's only English-speaking tech hub. Home to Google, Apple, Meta. 2-year stay-back visa for graduates.
+</p>
+<!-- Stats Row -->
+<div class="flex flex-wrap gap-12 mb-12 animate-fade-in-up delay-300">
+<div>
+<div class="text-4xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">2 Years</div>
+<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280]">Stay Back Visa</div>
+</div>
+<div>
+<div class="text-4xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">€12-18K</div>
+<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280]">Tuition/Year</div>
+</div>
+<div>
+<div class="text-4xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">1 Year</div>
+<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280]">Master's Duration</div>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
+<button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#be1e2d] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(190,30,45,0.25)]">
+<span class="relative z-10 flex items-center justify-center gap-2">
+START APPLICATION
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+</span>
+</button>
+<a href="tel:+919****3210" class="group px-8 py-4 border border-[#d1d5db] text-[#111827] font-medium tracking-wide flex items-center justify-center gap-3 hover:border-[#be1e2d] hover:text-[#be1e2d] transition-all duration-300">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+CALL EXPERT
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PROGRAMS SECTION -->
+<section class="py-24 lg:py-32 bg-[#f9fafb] border-y border-[#e5e7eb]">
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+<div class="max-w-3xl mb-16">
+<div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Programs</div>
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
+1-YEAR INTENSIVE
+<br />
+<span class="text-[#4b5563]">MASTER'S</span>
+</h2>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#be1e2d] transition-all duration-500">
+<div class="text-xs tracking-[0.2em] uppercase text-[#be1e2d] mb-4">Master of Science</div>
+<h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Data Analytics</h3>
+<p class="text-sm text-[#4b5563] mb-6">Big Data, Machine Learning, Business Intelligence. High demand from tech giants.</p>
+<div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
+<div>
+<div class="text-xs text-[#6b7280]">Duration</div>
+<div class="text-[#111827]">1 Year</div>
+</div>
+<div class="text-right">
+<div class="text-xs text-[#6b7280]">Tuition</div>
+<div class="text-[#be1e2d] font-medium">€15-20K</div>
+</div>
+</div>
+</div>
+<div class="group bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#be1e2d] transition-all duration-500">
+<div class="text-xs tracking-[0.2em] uppercase text-[#be1e2d] mb-4">Master of Science</div>
+<h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">Cyber Security</h3>
+<p class="text-sm text-[#4b5563] mb-6">Network Security, Ethical Hacking, Digital Forensics. Critical skills shortage.</p>
+<div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
+<div>
+<div class="text-xs text-[#6b7280]">Duration</div>
+<div class="text-[#111827]">1 Year</div>
+</div>
+<div class="text-right">
+<div class="text-xs text-[#6b7280]">Tuition</div>
+<div class="text-[#be1e2d] font-medium">€16-22K</div>
+</div>
+</div>
+</div>
+<div class="group bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#be1e2d] transition-all duration-500">
+<div class="text-xs tracking-[0.2em] uppercase text-[#be1e2d] mb-4">Master of Business Administration</div>
+<h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">MBA</h3>
+<p class="text-sm text-[#4b5563] mb-6">General Management, Finance, Marketing. Strong corporate connections.</p>
+<div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
+<div>
+<div class="text-xs text-[#6b7280]">Duration</div>
+<div class="text-[#111827]">1 Year</div>
+</div>
+<div class="text-right">
+<div class="text-xs text-[#6b7280]">Tuition</div>
+<div class="text-[#be1e2d] font-medium">€20-35K</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY IRELAND -->
+<section class="py-24 lg:py-32">
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+<div class="max-w-3xl mb-16">
+<div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Why Ireland</div>
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
+WHY
+<span class="text-[#4b5563]">IRELAND?</span>
+</h2>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e5e7eb]">
+<div class="bg-[#ffffff] p-8 lg:p-10 group hover:bg-[#f9fafb] transition-colors duration-500">
+<div class="text-5xl font-light text-[#6b7280] mb-4 group-hover:text-[#be1e2d] transition-colors" style="font-family: var(--font-display);">01</div>
+<h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">2-Year Stay Back</h3>
+<p class="text-sm text-[#4b5563]">Graduate visa lets you work for 2 years post-study. Find a job, get a work permit.</p>
+</div>
+<div class="bg-[#ffffff] p-8 lg:p-10 group hover:bg-[#f9fafb] transition-colors duration-500">
+<div class="text-5xl font-light text-[#6b7280] mb-4 group-hover:text-[#be1e2d] transition-colors" style="font-family: var(--font-display);">02</div>
+<h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">EU's Tech Hub</h3>
+<p class="text-sm text-[#4b5563]">European HQ for Google, Apple, Meta, Microsoft, LinkedIn, TikTok, and 1,000+ MNCs.</p>
+</div>
+<div class="bg-[#ffffff] p-8 lg:p-10 group hover:bg-[#f9fafb] transition-colors duration-500">
+<div class="text-5xl font-light text-[#6b7280] mb-4 group-hover:text-[#be1e2d] transition-colors" style="font-family: var(--font-display);">03</div>
+<h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">No Language Barrier</h3>
+<p class="text-sm text-[#4b5563]">100% English-speaking country. No need to learn a new language for daily life.</p>
+</div>
+<div class="bg-[#ffffff] p-8 lg:p-10 group hover:bg-[#f9fafb] transition-colors duration-500">
+<div class="text-5xl font-light text-[#6b7280] mb-4 group-hover:text-[#be1e2d] transition-colors" style="font-family: var(--font-display);">04</div>
+<h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">1-Year Master's</h3>
+<p class="text-sm text-[#4b5563]">Intensive 12-month programs. Lower total cost, faster ROI, quicker entry to workforce.</p>
+</div>
+<div class="bg-[#ffffff] p-8 lg:p-10 group hover:bg-[#f9fafb] transition-colors duration-500">
+<div class="text-5xl font-light text-[#6b7280] mb-4 group-hover:text-[#be1e2d] transition-colors" style="font-family: var(--font-display);">05</div>
+<h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">€40-60K Starting Salary</h3>
+<p class="text-sm text-[#4b5563]">Tech and pharma graduates start at €40K+. Experienced roles pay €60-80K.</p>
+</div>
+<div class="bg-[#ffffff] p-8 lg:p-10 group hover:bg-[#f9fafb] transition-colors duration-500">
+<div class="text-5xl font-light text-[#6b7280] mb-4 group-hover:text-[#be1e2d] transition-colors" style="font-family: var(--font-display);">06</div>
+<h3 class="text-xl font-medium mb-3" style="font-family: var(--font-display);">EU Citizenship Pathway</h3>
+<p class="text-sm text-[#4b5563]">5 years of legal residence leads to permanent residency and EU citizenship.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- LEAD FORM -->
+<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f9fafb] border-y border-[#e5e7eb]">
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+<div class="max-w-2xl mx-auto">
+<div class="text-center mb-12">
+<div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Apply Now</div>
+<h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
+START YOUR
+<br />
+<span class="text-[#4b5563]">APPLICATION</span>
+</h2>
+</div>
+<form id="lead-form" class="bg-[#ffffff] border border-[#e5e7eb] p-8 lg:p-12">
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="form-label">Full Name *</label>
+<input type="text" required class="form-input" placeholder="Your name">
+</div>
+<div>
+<label class="form-label">Phone *</label>
+<input type="tel" required class="form-input" placeholder="+91...">
+</div>
+</div>
+<div class="mb-6">
+<label class="form-label">Email *</label>
+<input type="email" required class="form-input" placeholder="email@example.com">
+</div>
+<div class="mb-8">
+<label class="form-label">Program Interest</label>
+<select class="form-select">
+<option value="" class="bg-[#f9fafb]">Select program</option>
+<option value="data-analytics" class="bg-[#f9fafb]">MSc Data Analytics</option>
+<option value="cyber-security" class="bg-[#f9fafb]">MSc Cyber Security</option>
+<option value="cs" class="bg-[#f9fafb]">MSc Computer Science</option>
+<option value="mba" class="bg-[#f9fafb]">MBA</option>
+<option value="other" class="bg-[#f9fafb]">Other / Not Sure</option>
+</select>
+</div>
+<button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
+GET FREE CONSULTATION
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+</button>
+</form>
+</div>
+</div>
+</section>
+<Footer />
+<script>
+document.getElementById('lead-form')?.addEventListener('submit', (e) => {
+e.preventDefault();
+const btn = e.target.querySelector('button[type="submit"]');
+btn.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+REQUEST SUBMITTED
+`;
+btn.style.backgroundColor = '#22c55e';
+setTimeout(() => {
+btn.innerHTML = `
+GET FREE CONSULTATION
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+`;
+btn.style.backgroundColor = '';
+e.target.reset();
+}, 3000);
+});
+</script>
 </MainLayout>

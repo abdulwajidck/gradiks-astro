@@ -1,100 +1,67 @@
 ---
-const currentPath = Astro.url.pathname;
-const isNursingPage = currentPath === '/nursing-abroad/';
-
-const palette = isNursingPage
-  ? {
-      bg: '#ffffff',
-      border: '#e5e7eb',
-      heading: '#111827',
-      text: '#4b5563',
-      muted: '#6b7280',
-      accent: '#be1e2d',
-    }
-  : {
-      bg: '#0a1628',
-      border: '#1e3a5f',
-      heading: '#ffffff',
-      text: '#a8b4c4',
-      muted: '#6b7a8f',
-      accent: '#c9a227',
-    };
 ---
 
-<footer style={`border-top: 1px solid ${palette.border}; background: ${palette.bg};`}>
+<footer style="border-top: 1px solid #e5e7eb; background: #ffffff;">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-24">
         <div class="grid lg:grid-cols-12 gap-12 lg:gap-8">
             <div class="lg:col-span-4">
                 <div class="flex items-center gap-3 mb-6">
-                    {isNursingPage ? (
-                        <img src="/gradiks-logo.png" alt="Gradiks Global" class="h-10 w-auto" />
-                    ) : (
-                        <>
-                            <div class="relative w-14 h-14 flex items-center justify-center" style="font-family: var(--font-display);">
-                                <div class="absolute inset-0 border-2" style="border-color: #c9a227; transform: rotate(45deg);"></div>
-                                <div class="absolute inset-2" style="background: linear-gradient(135deg, #c9a227 0%, #b08d1f 100%);"></div>
-                                <span class="relative z-10 text-2xl font-bold" style="color: #0a1628;">G</span>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-2xl font-semibold tracking-wide" style={`font-family: var(--font-display); color: ${palette.heading};`}>GRADIKS</span>
-                                <span class="text-[10px] tracking-[0.3em] uppercase" style={`color: ${palette.accent};`}>Education Consultancy</span>
-                            </div>
-                        </>
-                    )}
+                    <img src="/gradiks-logo.png" alt="Gradiks Global" class="h-10 w-auto" />
                 </div>
 
-                <p class="text-sm leading-relaxed max-w-sm mb-8" style={`color: ${palette.text};`}>
+                <p class="text-sm leading-relaxed max-w-sm mb-8" style="color: #4b5563;">
                     Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning.
                 </p>
             </div>
 
             <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
-                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style={`color: ${palette.muted};`}>Destinations</h4>
+                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style="color: #6b7280;">Destinations</h4>
                     <ul class="space-y-4">
-                        <li><a href="/germany-study" class="text-sm transition-colors" style={`color: ${palette.text};`}>Germany</a></li>
-                        <li><a href="/ireland-study" class="text-sm transition-colors" style={`color: ${palette.text};`}>Ireland</a></li>
-                        <li><a href="/uk-study" class="text-sm transition-colors" style={`color: ${palette.text};`}>United Kingdom</a></li>
-                        <li><a href="/nursing-abroad" class="text-sm transition-colors" style={`color: ${palette.text};`}>Nursing Abroad</a></li>
+                        <li><a href="/germany-study" class="text-sm transition-colors hover:text-[#be1e2d]" style="color: #4b5563;">Germany</a></li>
+                        <li><a href="/ireland-study" class="text-sm transition-colors hover:text-[#be1e2d]" style="color: #4b5563;">Ireland</a></li>
+                        <li><a href="/uk-study" class="text-sm transition-colors hover:text-[#be1e2d]" style="color: #4b5563;">United Kingdom</a></li>
+                        <li><a href="/nursing-abroad" class="text-sm transition-colors hover:text-[#be1e2d]" style="color: #4b5563;">Nursing Abroad</a></li>
+                        <li><a href="/india-medical" class="text-sm transition-colors hover:text-[#be1e2d]" style="color: #4b5563;">India Medical</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style={`color: ${palette.muted};`}>Programs</h4>
+                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style="color: #6b7280;">Programs</h4>
                     <ul class="space-y-4">
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>Nursing Abroad</span></li>
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>Master's Degree</span></li>
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>MBA</span></li>
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>MBBS Abroad</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">Nursing Abroad</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">Master's Degree</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">MBA</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">MBBS Abroad</span></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style={`color: ${palette.muted};`}>Company</h4>
+                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style="color: #6b7280;">Company</h4>
                     <ul class="space-y-4">
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>About Us</span></li>
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>Success Stories</span></li>
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>Blog</span></li>
-                        <li><span class="text-sm" style={`color: ${palette.text};`}>Careers</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">About Us</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">Success Stories</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">Blog</span></li>
+                        <li><span class="text-sm" style="color: #4b5563;">Careers</span></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style={`color: ${palette.muted};`}>Contact</h4>
+                    <h4 class="text-xs font-semibold tracking-[0.2em] uppercase mb-6" style="color: #6b7280;">Contact</h4>
                     <ul class="space-y-4">
-                        <li class="text-sm" style={`color: ${palette.text};`}>+91 98765 43210</li>
-                        <li class="text-sm" style={`color: ${palette.text};`}>hello@gradiks.com</li>
-                        <li class="text-sm" style={`color: ${palette.text};`}>Kochi, Kerala</li>
+                        <li class="text-sm" style="color: #4b5563;">+91 98765 43210</li>
+                        <li class="text-sm" style="color: #4b5563;">hello@gradiks.com</li>
+                        <li class="text-sm" style="color: #4b5563;">Kochi, Kerala</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={`border-top: 1px solid ${palette.border};`}>
-            <p class="text-xs" style={`color: ${palette.muted};`}>© 2026 Gradiks. All rights reserved.</p>
+        <div class="mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style="border-top: 1px solid #e5e7eb;">
+            <p class="text-xs" style="color: #6b7280;">© 2026 Gradiks. All rights reserved.</p>
             <div class="flex gap-6">
-                <a href="#" class="text-xs transition-colors" style={`color: ${palette.muted};`}>Privacy Policy</a>
-                <a href="#" class="text-xs transition-colors" style={`color: ${palette.muted};`}>Terms of Service</a>
+                <a href="#" class="text-xs transition-colors hover:text-[#be1e2d]" style="color: #6b7280;">Privacy Policy</a>
+                <a href="#" class="text-xs transition-colors hover:text-[#be1e2d]" style="color: #6b7280;">Terms of Service</a>
             </div>
         </div>
     </div>
