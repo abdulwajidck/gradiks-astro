@@ -730,23 +730,9 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
           <label class="form-label">Email *</label>
           <input type="email" name="email" required class="form-input" placeholder="your@email.com">
         </div>
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label class="form-label">12th PCB % *</label>
-            <input type="text" name="12th_marks" required class="form-input" placeholder="e.g. 58% or 72%">
-          </div>
-          <div>
-            <label class="form-label">Preferred Country</label>
-            <select name="preferred_country" class="form-select">
-              <option value="">Select country</option>
-              <option value="georgia">🇬🇪 Georgia</option>
-              <option value="albania">🇦🇱 Albania</option>
-              <option value="bulgaria">🇧🇬 Bulgaria</option>
-              <option value="malta">🇲🇹 Malta</option>
-              <option value="uk">🇬🇧 United Kingdom</option>
-              <option value="not-sure">Not sure — advise me</option>
-            </select>
-          </div>
+        <div class="mb-6">
+          <label class="form-label">12th PCB % *</label>
+          <input type="text" name="12th_marks" required class="form-input" placeholder="e.g. 58% or 72%">
         </div>
         <div class="mb-6">
           <label class="form-label">Any questions? (optional)</label>
@@ -807,7 +793,6 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
   const phone       = form.querySelector('[name="phone"]').value.trim();
   const email       = form.querySelector('[name="email"]').value.trim();
   const marks       = form.querySelector('[name="12th_marks"]').value.trim();
-  const country     = form.querySelector('[name="preferred_country"]').value;
   const questions   = form.querySelector('textarea')?.value.trim() || '';
 
   // Show loading state
@@ -830,20 +815,15 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
 
     const payload = {
       fields: {
-        name:               name,
-        phone:              normalizedPhone,
-        email:              email,
-        '12th_marks':       marks,
-        preferred_country:   country || 'not-specified',
+        name:         name,
+        phone:        normalizedPhone,
+        email:        email,
+        '12th_marks': marks,
       },
       actions: [
         {
           type: 'SYSTEM_NOTE',
-          text: 'Lead Source: Gradiks Website — BSc Nursing Abroad Page',
-        },
-        {
-          type: 'SYSTEM_NOTE',
-          text: `Questions: ${questions}`,
+          text: `Lead Source: Gradiks Website — BSc Nursing Abroad\nQuestions: ${questions}`,
         },
       ],
     };
