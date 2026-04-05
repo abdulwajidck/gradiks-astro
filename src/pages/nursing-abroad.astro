@@ -770,6 +770,30 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
   </div>
 </section>
 
+<!-- MOBILE STICKY CTA — keeps primary conversion actions visible while scrolling -->
+<div class="md:hidden h-24" aria-hidden="true"></div>
+<div class="fixed bottom-0 inset-x-0 z-50 md:hidden border-t border-[#e5e7eb] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
+  <div class="max-w-[1400px] mx-auto px-4 py-3">
+    <p class="text-[11px] text-[#6b7280] text-center mb-2">Admissions 2026 · Free counseling · 24hr response</p>
+    <div class="grid grid-cols-2 gap-2">
+      <a
+        href="tel:+919****3210"
+        class="inline-flex items-center justify-center gap-2 py-3 border border-[#232d61] text-[#232d61] text-xs font-semibold tracking-wide"
+        aria-label="Call Gradiks expert counselor"
+      >
+        CALL EXPERT
+      </a>
+      <button
+        onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
+        class="inline-flex items-center justify-center gap-2 py-3 bg-[#be1e2d] text-white text-xs font-semibold tracking-wide"
+        aria-label="Scroll to free cost breakdown form"
+      >
+        GET FREE BREAKDOWN
+      </button>
+    </div>
+  </div>
+</div>
+
 <Footer />
 
 <script>
