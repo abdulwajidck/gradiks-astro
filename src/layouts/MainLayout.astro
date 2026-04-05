@@ -16,7 +16,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
-    <meta name="theme-color" content="#f4f4f0">
+    <meta name="theme-color" content="#f1f1f1">
     <link rel="canonical" href={Astro.url} />
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
@@ -46,8 +46,8 @@ const { title, description } = Astro.props;
     <!-- Preload critical resources -->
     <link rel="preload" as="image" href="/gradiks-logo.png" fetchpriority="high">
 
-    <!-- Google Fonts - Modern Sans-Serif Pairing -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Brand Guidelines: Poppins (Primary) + Lato (Secondary) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({

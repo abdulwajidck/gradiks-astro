@@ -1,20 +1,27 @@
 @import "tailwindcss";
 
 /* Custom theme configuration for Tailwind v4 */
+/* Brand Guidelines: Red #be1e2d, Blue #232d61, Black #000000, Off White #f1f1f1 */
 @theme {
-  /* Primary Palette - Gradiks red + light neutrals */
+  /* Primary Palette - Gradiks brand colors */
   --color-navy-900: #ffffff;
   --color-navy-800: #f9fafb;
-  --color-navy-700: #f4f4f0;
-  --color-navy-600: #eef0f3;
+  --color-navy-700: #f1f1f1;
+  --color-navy-600: #e5e7eb;
   
   --color-gold-500: #be1e2d;
   --color-gold-400: #c62838;
   --color-gold-300: #dc2626;
   --color-gold-600: #a81826;
   
+  /* Brand Secondary Colors */
+  --color-brand-blue: #232d61;
+  --color-brand-red: #be1e2d;
+  --color-brand-black: #000000;
+  --color-brand-offwhite: #f1f1f1;
+  
   /* Secondary Colors */
-  --color-cream: #f4f4f0;
+  --color-cream: #f1f1f1;
   --color-cream-dark: #e5e7eb;
   
   /* Text Colors */
@@ -33,12 +40,12 @@
   --color-bg-elevated: var(--color-navy-600);
   
   --color-accent: var(--color-gold-500);
-  --color-accent-dim: rgba(201, 162, 39, 0.1);
-  --color-accent-glow: rgba(201, 162, 39, 0.3);
+  --color-accent-dim: rgba(190, 30, 45, 0.1);
+  --color-accent-glow: rgba(190, 30, 45, 0.3);
   
-  /* Fonts */
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  /* Fonts - Brand Guidelines: Poppins (Primary) + Lato (Secondary) */
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Lato', system-ui, sans-serif;
 }
 
 /* Base styles */
