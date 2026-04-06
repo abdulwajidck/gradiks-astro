@@ -20,19 +20,21 @@
   --font-body: 'Lato', system-ui, sans-serif;
 }
 
-/* Base */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: var(--font-body);
-  color: var(--color-text-primary);
-  background: #ffffff;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+/* Base - must be in a layer so Tailwind utilities can override */
+@layer base {
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background: #ffffff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--color-gold-500); color: #ffffff; }
 }
-::selection { background: var(--color-gold-500); color: #ffffff; }
 
 /* Apple-style typography utilities */
 .section-eyebrow {
