@@ -994,3 +994,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 } /* end @layer components */
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+.faq-item.open .faq-answer { display: block; }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
