@@ -1,24 +1,14 @@
 ---
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar" style="background: rgba(244, 244, 240, 1);">
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div class="flex items-center justify-between h-20 lg:h-24 border-b transition-all duration-500" id="nav-inner" style="border-color: #e5e7eb;">
-            <!-- Logo — no link, page is a sealed container -->
-            <div class="flex items-center gap-3">
-                <img src="/gradiks-logo.png" alt="Gradiks Global" class="h-8 md:h-9 w-auto" loading="eager" />
-            </div>
-
-            <div class="flex items-center gap-6">
-                <a href="tel:+919****3210" class="hidden md:flex items-center gap-2 text-sm transition-colors hover:text-[#111827]" style="color: #4b5563;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <span class="font-medium">+91 98765 43210</span>
-                </a>
-
-                <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-6 py-3 text-sm font-medium tracking-wide overflow-hidden transition-all duration-300 btn-glow bg-[#be1e2d] text-white hover:bg-[#a81826]">
-                    <span class="relative z-10">GET STARTED</span>
-                </button>
-            </div>
+<nav id="navbar">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <img src="/gradiks-logo.png" alt="Gradiks Global" loading="eager" />
+        </div>
+        <div class="nav-actions">
+            <a href="tel:+919****3210" class="nav-phone">+91 98765 43210</a>
+            <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="nav-cta">Get Started</button>
         </div>
     </div>
 </nav>
@@ -26,6 +16,71 @@
 <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        navbar.style.background = window.scrollY > 30 ? 'rgba(244, 244, 240, 0.98)' : 'rgba(244, 244, 240, 0.95)';
+        if (window.scrollY > 30) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
 </script>
+
+<style>
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        height: 3.5rem;
+        background: rgba(241, 241, 241, 0.95);
+        border-bottom: 1px solid #e5e7eb;
+        transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    nav.scrolled {
+        background: rgba(241, 241, 241, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+    }
+    .nav-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-logo img {
+        height: 2rem;
+        width: auto;
+    }
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .nav-phone {
+        font-size: 0.875rem;
+        color: #4b5563;
+        font-family: var(--font-body);
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+    .nav-phone:hover { color: #111827; }
+    @media (max-width: 640px) {
+        .nav-phone { display: none; }
+    }
+    .nav-cta {
+        padding: 0.5rem 1.25rem;
+        background: var(--color-gold-500);
+        color: #ffffff;
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+    .nav-cta:hover { background: var(--color-gold-600); }
+</style>
