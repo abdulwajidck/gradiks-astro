@@ -1,39 +1,164 @@
 ---
 ---
 
-<footer style="border-top: 1px solid #e5e7eb; background: #ffffff;">
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-24">
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8">
-            <!-- Brand column -->
-            <div class="lg:col-span-4">
-                <div class="flex items-center gap-3 mb-6">
-                    <img src="/gradiks-logo.png" alt="Gradiks Global" class="h-10 w-auto" />
-                </div>
-                <p class="text-sm leading-relaxed max-w-sm mb-8" style="color: #4b5563;">
-                    Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning.
-                </p>
-                <!-- Contact info -->
-                <ul class="space-y-3">
-                    <li class="text-sm" style="color: #4b5563;">
-                        <a href="tel:+9199876543210" class="hover:text-[#be1e2d] transition-colors">+91 98765 43210</a>
-                    </li>
-                    <li class="text-sm" style="color: #4b5563;">
-                        <a href="mailto:hello@gradiks.com" class="hover:text-[#be1e2d] transition-colors">hello@gradiks.com</a>
-                    </li>
-                    <li class="text-sm" style="color: #4b5563;">Kochi, Kerala</li>
-                </ul>
-            </div>
-
-            <!-- Spacer -->
-            <div class="lg:col-span-8"></div>
-        </div>
-
-        <div class="mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style="border-top: 1px solid #e5e7eb;">
-            <p class="text-xs" style="color: #6b7280;">© 2026 Gradiks. All rights reserved.</p>
-            <div class="flex gap-6">
-                <span class="text-xs transition-colors hover:text-[#be1e2d]" style="color: #6b7280;">Privacy Policy</span>
-                <span class="text-xs transition-colors hover:text-[#be1e2d]" style="color: #6b7280;">Terms of Service</span>
-            </div>
-        </div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="/gradiks-logo.png" alt="Gradiks Global" class="footer-logo" />
+      <p class="footer-tagline">Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning.</p>
+      <div class="footer-contact">
+        <a href="tel:+919****3210" class="contact-item">+91 98765 43210</a>
+        <a href="mailto:hello@gradiks.com" class="contact-item">hello@gradiks.com</a>
+        <span class="contact-item">Kochi, Kerala</span>
+      </div>
     </div>
+
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Study Abroad</h4>
+        <ul class="footer-col-list">
+          <li><a href="/germany-study">Germany</a></li>
+          <li><a href="/ireland-study">Ireland</a></li>
+          <li><a href="/uk-study">United Kingdom</a></li>
+          <li><a href="/india-medical">India (MBBS)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Programs</h4>
+        <ul class="footer-col-list">
+          <li><a href="/nursing-abroad">BSc Nursing Abroad</a></li>
+          <li><a href="/germany-study">MSc Data Science</a></li>
+          <li><a href="/germany-study">MBBS Abroad</a></li>
+          <li><a href="/germany-study">Engineering</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-col-list">
+          <li><a href="tel:+919****3210">Contact Us</a></li>
+          <li><a href="mailto:hello@gradiks.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-copy">© 2026 Gradiks. All rights reserved.</p>
+      <div class="footer-legal">
+        <span>Privacy Policy</span>
+        <span>Terms of Service</span>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<style>
+  footer {
+    background: #ffffff;
+    border-top: 1px solid #f1f1f1;
+    padding: 4rem 1.5rem 0;
+  }
+  .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 768px) {
+    .footer-container {
+      grid-template-columns: 2fr 3fr;
+      gap: 4rem;
+    }
+  }
+  .footer-logo {
+    height: 2rem;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .footer-tagline {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 340px;
+    margin-bottom: 1.5rem;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .contact-item {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #4b5563;
+    transition: color 0.2s ease;
+  }
+  .contact-item:hover { color: var(--color-gold-500); }
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  @media (max-width: 480px) {
+    .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .footer-col-title {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .footer-col-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .footer-col-list li a {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #6b7280;
+    transition: color 0.2s ease;
+  }
+  .footer-col-list li a:hover { color: #111827; }
+  .footer-bottom {
+    border-top: 1px solid #f1f1f1;
+  }
+  .footer-bottom-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  @media (max-width: 560px) {
+    .footer-bottom-inner { flex-direction: column; text-align: center; }
+  }
+  .footer-copy {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: #9ca3af;
+  }
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-legal span {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .footer-legal span:hover { color: #6b7280; }
+</style>
