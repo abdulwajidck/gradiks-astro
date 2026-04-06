@@ -7,7 +7,7 @@
       <img src="/gradiks-logo.png" alt="Gradiks Global" class="footer-logo" />
       <p class="footer-tagline">Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning.</p>
       <div class="footer-contact">
-        <a href="mailto:hello@gradiks.com" class="contact-item">hello@gradiks.com</a>
+        <span class="contact-item">hello@gradiks.com</span>
         <span class="contact-item">Kochi, Kerala</span>
       </div>
     </div>
@@ -16,16 +16,16 @@
       <div class="footer-col">
         <h4 class="footer-col-title">Study Abroad</h4>
         <ul class="footer-col-list">
-          <li><a href="/germany-study">Germany</a></li>
-          <li><a href="/ireland-study">Ireland</a></li>
-          <li><a href="/uk-study">United Kingdom</a></li>
+          <li><span>Germany</span></li>
+          <li><span>Ireland</span></li>
+          <li><span>United Kingdom</span></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4 class="footer-col-title">Programs</h4>
         <ul class="footer-col-list">
-          <li><a href="/nursing-abroad">BSc Nursing Abroad</a></li>
-          <li><a href="/india-medical">MBBS in India</a></li>
+          <li><span>BSc Nursing Abroad</span></li>
+          <li><span>MBBS in India</span></li>
         </ul>
       </div>
     </div>
@@ -104,13 +104,11 @@
     flex-direction: column;
     gap: 0.625rem;
   }
-  .footer-col-list li a {
+  .footer-col-list li span {
     font-family: var(--font-body);
     font-size: 0.875rem;
     color: #6b7280;
-    transition: color 0.2s ease;
   }
-  .footer-col-list li a:hover { color: #111827; }
   .footer-bottom {
     border-top: 1px solid #f1f1f1;
   }
