@@ -36,6 +36,9 @@
   ::selection { background: var(--color-gold-500); color: #ffffff; }
 }
 
+/* All custom components in a layer so Tailwind utilities always win */
+@layer components {
+
 /* Apple-style typography utilities */
 .section-eyebrow {
   font-size: 0.75rem;
@@ -933,3 +936,5 @@ a { text-decoration: none; color: inherit; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
+
+} /* end @layer components */
