@@ -42,54 +42,52 @@ const description = "Trusted MBBS abroad consultancy for Indian families. Transp
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-32 lg:pt-44 pb-20 lg:pb-28 relative z-10">
     <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
       <!-- Left: Content -->
-      <div class="space-y-8">
+      <div>
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(21,190,83,0.12)] border border-[rgba(21,190,83,0.3)] animate-fade-in-up" style="border-radius: 4px;">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(21,190,83,0.12)] border border-[rgba(21,190,83,0.3)] mb-6 animate-fade-in-up" style="border-radius: 4px;">
           <span class="w-1.5 h-1.5 bg-[#15be53] rounded-full"></span>
-          <span class="text-[11px] font-medium tracking-[0.04em] text-[#108c3d]" style="font-family: var(--font-body);">Trusted by 2,000+ Families</span>
+          <span class="text-[0.8125rem] font-semibold tracking-[0.15em] uppercase text-[#108c3d]" style="font-family: var(--font-body);">Trusted by 2,000+ Families</span>
         </div>
 
         <!-- Headline -->
-        <h1 class="text-[clamp(2.25rem,5vw,3.5rem)] font-light leading-[1.08] tracking-[-0.03em] text-[#061b31] animate-fade-in-up delay-100" style="font-family: var(--font-display);">
+        <h1 class="hero-headline animate-fade-in-up delay-100" style="margin-bottom: 1.5rem;">
           Your Child's
           <br />
-          <span class="text-[#be1e2d]">Medical</span> Dreams,
+          <span class="hero-headline-accent">Medical</span> Dreams,
           <br />
           Our Honest Guidance
         </h1>
 
         <!-- Subheadline -->
-        <p class="text-lg text-[#64748b] max-w-md leading-[1.6] font-light animate-fade-in-up delay-200" style="font-family: var(--font-body);">
+        <p class="hero-subheadline animate-fade-in-up delay-200">
           Transparent MBBS admission support abroad. No false promises, no hidden fees — just clear advice for your family's future.
         </p>
 
         <!-- CTA Row -->
-        <div class="flex flex-col sm:flex-row gap-3 animate-fade-in-up delay-300">
-          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group px-6 py-3 bg-[#be1e2d] text-white font-normal tracking-normal transition-all duration-200 hover:bg-[#a11828] hover:shadow-[0_6px_20px_rgba(190,30,45,0.25)]" style="border-radius: 4px; font-family: var(--font-body); font-size: 15px;">
-            <span class="flex items-center justify-center gap-2">
-              Get Free Assessment
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-0.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
+        <div class="hero-ctas animate-fade-in-up delay-300">
+          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
+            Get Free Assessment
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
-          <button onclick="document.getElementById('why-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="px-6 py-3 bg-transparent text-[#be1e2d] font-normal tracking-normal border border-[rgba(190,30,45,0.25)] transition-all duration-200 hover:bg-[rgba(190,30,45,0.04)]" style="border-radius: 4px; font-family: var(--font-body); font-size: 15px;">
+          <button onclick="document.getElementById('why-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="cta-secondary">
             Learn More
           </button>
         </div>
 
         <!-- Trust micro-stats -->
-        <div class="flex items-center gap-6 pt-2 animate-fade-in-up delay-400">
+        <div class="hero-meta animate-fade-in-up delay-400">
           <div class="flex items-center gap-2">
             <div class="flex -space-x-1.5">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" style="border-radius: 50%;" />
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" style="border-radius: 50%;" />
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" style="border-radius: 50%;" />
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
             </div>
-            <span class="text-xs text-[#64748b]">2,000+ students placed</span>
+            <span>2,000+ students placed</span>
           </div>
-          <span class="text-[#e5edf5]">|</span>
+          <span class="meta-dot">|</span>
           <div class="flex items-center gap-1">
-            <span class="text-[#f59e0b] text-xs">★★★★★</span>
-            <span class="text-xs text-[#64748b]">4.9/5</span>
+            <span class="text-[#f59e0b]">★★★★★</span>
+            <span>4.9/5 from parents</span>
           </div>
         </div>
       </div>
@@ -100,7 +98,7 @@ const description = "Trusted MBBS abroad consultancy for Indian families. Transp
         <div class="relative bg-white border border-[#e5edf5] overflow-hidden" style="border-radius: 8px; box-shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;">
           <!-- Image top -->
           <div class="relative h-[240px] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format&fit=crop" alt="Medical students celebrating graduation" class="w-full h-full object-cover" loading="eager" />
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80&auto=format&fit=crop" alt="Doctor in white coat consulting with patient" class="w-full h-full object-cover" loading="eager" />
             <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
           </div>
 
@@ -109,16 +107,16 @@ const description = "Trusted MBBS abroad consultancy for Indian families. Transp
             <!-- Floating stat pills -->
             <div class="grid grid-cols-3 gap-3 mb-5">
               <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
-                <div class="text-xl font-semibold text-[#061b31]" style="font-family: var(--font-display);">2K+</div>
-                <div class="text-[11px] text-[#64748b] mt-0.5">Students</div>
+                <div class="stat-val text-xl">2K+</div>
+                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Students</div>
               </div>
               <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
-                <div class="text-xl font-semibold text-[#061b31]" style="font-family: var(--font-display);">50+</div>
-                <div class="text-[11px] text-[#64748b] mt-0.5">Universities</div>
+                <div class="stat-val text-xl">50+</div>
+                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Universities</div>
               </div>
               <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
-                <div class="text-xl font-semibold text-[#15be53]" style="font-family: var(--font-display);">98%</div>
-                <div class="text-[11px] text-[#64748b] mt-0.5">Success</div>
+                <div class="stat-val text-xl text-[#15be53]">98%</div>
+                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Success</div>
               </div>
             </div>
 
@@ -129,8 +127,8 @@ const description = "Trusted MBBS abroad consultancy for Indian families. Transp
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
                 <div>
-                  <div class="text-sm font-normal text-[#061b31]" style="font-family: var(--font-body);">NMC Verified</div>
-                  <div class="text-[11px] text-[#64748b]">All universities MCI/NMC approved</div>
+                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">NMC Verified</div>
+                  <div class="text-[0.6875rem] text-[#6b7280]">All universities MCI/NMC approved</div>
                 </div>
               </div>
               <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
@@ -138,8 +136,8 @@ const description = "Trusted MBBS abroad consultancy for Indian families. Transp
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 </div>
                 <div>
-                  <div class="text-sm font-normal text-[#061b31]" style="font-family: var(--font-body);">15+ Countries</div>
-                  <div class="text-[11px] text-[#64748b]">Georgia, Germany, UK & more</div>
+                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">15+ Countries</div>
+                  <div class="text-[0.6875rem] text-[#6b7280]">Georgia, Germany, UK & more</div>
                 </div>
               </div>
               <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
@@ -147,8 +145,8 @@ const description = "Trusted MBBS abroad consultancy for Indian families. Transp
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
                 <div>
-                  <div class="text-sm font-normal text-[#061b31]" style="font-family: var(--font-body);">Transparent Pricing</div>
-                  <div class="text-[11px] text-[#64748b]">No hidden charges, ever</div>
+                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">Transparent Pricing</div>
+                  <div class="text-[0.6875rem] text-[#6b7280]">No hidden charges, ever</div>
                 </div>
               </div>
             </div>
