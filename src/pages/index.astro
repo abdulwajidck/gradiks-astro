@@ -8,368 +8,452 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
 ---
 
 <MainLayout title={title} description={description}>
-  <Navigation />
-
-  <!-- HERO SECTION -->
-  <section class="relative overflow-hidden pt-28 lg:pt-36 pb-20 lg:pb-28">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-x-0 top-0 h-[36rem] bg-[linear-gradient(180deg,rgba(190,30,45,0.08),rgba(190,30,45,0))]"></div>
-      <div class="absolute top-[12%] right-[-8%] h-[38rem] w-[38rem] rounded-full bg-[radial-gradient(circle,rgba(35,45,97,0.12),transparent_65%)] blur-3xl"></div>
-      <div class="absolute bottom-[-10%] left-[-8%] h-[32rem] w-[32rem] rounded-full bg-[radial-gradient(circle,rgba(190,30,45,0.12),transparent_65%)] blur-3xl"></div>
+<Navigation />
+<!-- TRUST BAR -->
+<section class="bg-[#232d61] py-4 mt-20 text-white">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 text-white text-sm">
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">2,000+</span>
+        <span class="text-white/70">Students Guided</span>
+      </span>
+      <span class="text-white/30 hidden sm:block">•</span>
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">98%</span>
+        <span class="text-white/70">Success Rate</span>
+      </span>
+      <span class="text-white/30 hidden sm:block">•</span>
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">50+</span>
+        <span class="text-white/70">Partner Universities</span>
+      </span>
+      <span class="text-white/30 hidden sm:block">•</span>
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">15+</span>
+        <span class="text-white/70">Countries</span>
+      </span>
     </div>
+  </div>
+</section>
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden bg-white">
+  <!-- Subtle gradient decoration -->
+  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-[rgba(190,30,45,0.04)] via-transparent to-transparent rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-[rgba(35,45,97,0.03)] via-transparent to-transparent rounded-full blur-3xl"></div>
 
-    <div class="relative z-10 mx-auto grid max-w-[1400px] gap-14 px-6 lg:grid-cols-[minmax(0,1.1fr)_30rem] lg:items-start lg:gap-12 lg:px-12">
-      <div class="space-y-8 lg:space-y-10">
-        <div class="flex flex-col gap-4 animate-fade-in-up">
-          <div class="inline-flex w-fit items-center gap-3 border border-[rgba(190,30,45,0.18)] bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#7c2d12] shadow-[0_20px_60px_rgba(17,24,39,0.06)] backdrop-blur">
-            <span class="h-2 w-2 rounded-full bg-[#be1e2d] animate-pulse"></span>
-            Trusted guidance for Kerala students after 12th
-          </div>
-          <div class="max-w-4xl space-y-5">
-            <h1 class="max-w-4xl text-[clamp(3.2rem,7vw,6.8rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#111827] animate-fade-in-up delay-100" style="font-family: var(--font-display);">
-              STUDY ABROAD
-              <span class="block text-[#be1e2d]">WITHOUT COSTLY</span>
-              WRONG TURNS
-            </h1>
-            <p class="max-w-2xl text-lg leading-8 text-[#4b5563] animate-fade-in-up delay-200 md:text-xl">
-              Gradiks helps students and families from Kerala choose the right country, course, and pathway after 12th — with clear advice, realistic budgets, and premium one-to-one support.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid gap-4 text-sm text-[#374151] md:grid-cols-3 animate-fade-in-up delay-300">
-          <div class="border border-[#e5e7eb] bg-white/80 p-4 shadow-[0_14px_40px_rgba(17,24,39,0.04)] backdrop-blur">
-            <div class="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#9a3412]">Built for clarity</div>
-            <p>No pressure tactics. Just the right options for your marks, budget, and long-term plan.</p>
-          </div>
-          <div class="border border-[#e5e7eb] bg-white/80 p-4 shadow-[0_14px_40px_rgba(17,24,39,0.04)] backdrop-blur">
-            <div class="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#9a3412]">Shortlist faster</div>
-            <p>Get country and course guidance before wasting time on random applications.</p>
-          </div>
-          <div class="border border-[#e5e7eb] bg-white/80 p-4 shadow-[0_14px_40px_rgba(17,24,39,0.04)] backdrop-blur">
-            <div class="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#9a3412]">Family-first support</div>
-            <p>Serious handholding for both students and parents through every decision.</p>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4 sm:flex-row animate-fade-in-up delay-400">
-          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="group inline-flex items-center justify-center gap-3 bg-[#111827] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f172a] hover:shadow-[0_24px_60px_rgba(17,24,39,0.24)]">
-            Get Free Profile Review
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </button>
-          <a href="tel:+919****3210" class="inline-flex items-center justify-center gap-3 border border-[#d1d5db] bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#111827] transition-all duration-300 hover:border-[#111827] hover:shadow-[0_18px_45px_rgba(17,24,39,0.08)]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Talk to an Advisor
-          </a>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-[#e5e7eb] pt-6 text-sm text-[#4b5563] animate-fade-in-up delay-500">
-          <div class="flex items-center gap-2"><span class="text-[#be1e2d]">●</span> Free first consultation</div>
-          <div class="flex items-center gap-2"><span class="text-[#be1e2d]">●</span> Parent-friendly guidance</div>
-          <div class="flex items-center gap-2"><span class="text-[#be1e2d]">●</span> Response within 24 hours</div>
-        </div>
-      </div>
-
-      <aside class="animate-fade-in delay-300 lg:sticky lg:top-28">
-        <div class="overflow-hidden border border-[rgba(17,24,39,0.08)] bg-[linear-gradient(180deg,#fff,#f8f7f4)] shadow-[0_30px_80px_rgba(17,24,39,0.12)]">
-          <div class="border-b border-[#ece7df] px-7 py-6 lg:px-8">
-            <div class="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a3412]">Priority intake</div>
-            <h2 class="text-3xl font-semibold tracking-[-0.03em] text-[#111827]" style="font-family: var(--font-display);">Get your shortlist started</h2>
-            <p class="mt-3 text-sm leading-6 text-[#4b5563]">Tell us where you are right now. We’ll help you identify the right next step based on marks, interest, and budget.</p>
-          </div>
-
-          <form id="lead-form" class="space-y-5 px-7 py-7 lg:px-8 lg:py-8">
-            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
-              <div>
-                <label class="form-label" for="student-name">Student Name *</label>
-                <input id="student-name" name="studentName" type="text" required class="form-input" placeholder="Full name" />
-              </div>
-              <div>
-                <label class="form-label" for="parent-phone">Student / Parent Phone *</label>
-                <input id="parent-phone" name="phone" type="tel" required class="form-input" placeholder="+91 98765 43210" />
-              </div>
-            </div>
-
-            <div>
-              <label class="form-label" for="email-address">Email Address *</label>
-              <input id="email-address" name="email" type="email" required class="form-input" placeholder="email@example.com" />
-            </div>
-
-            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-2">
-              <div>
-                <label class="form-label" for="qualification">Current Stage *</label>
-                <select id="qualification" name="qualification" class="form-select" required>
-                  <option value="" class="bg-white">Select stage</option>
-                  <option value="completed-12th" class="bg-white">Completed 12th</option>
-                  <option value="appearing-12th" class="bg-white">Appearing for 12th</option>
-                  <option value="neet-repeat" class="bg-white">NEET repeat / gap year</option>
-                  <option value="other" class="bg-white">Other</option>
-                </select>
-              </div>
-              <div>
-                <label class="form-label" for="preferred-country">Preferred Country</label>
-                <select id="preferred-country" name="preferredCountry" class="form-select">
-                  <option value="" class="bg-white">Not sure yet</option>
-                  <option value="germany" class="bg-white">Germany</option>
-                  <option value="ireland" class="bg-white">Ireland</option>
-                  <option value="uk" class="bg-white">United Kingdom</option>
-                  <option value="india" class="bg-white">India</option>
-                  <option value="other" class="bg-white">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-2">
-              <div>
-                <label class="form-label" for="neet-score">NEET Score</label>
-                <input id="neet-score" name="neetScore" type="number" class="form-input" placeholder="If available" />
-              </div>
-              <div>
-                <label class="form-label" for="budget-range">Budget Range</label>
-                <select id="budget-range" name="budget" class="form-select">
-                  <option value="" class="bg-white">Select budget</option>
-                  <option value="below-15" class="bg-white">Below ₹15L / year</option>
-                  <option value="15-25" class="bg-white">₹15L – ₹25L / year</option>
-                  <option value="25-40" class="bg-white">₹25L – ₹40L / year</option>
-                  <option value="above-40" class="bg-white">Above ₹40L / year</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label class="form-label" for="message">What do you need help with?</label>
-              <textarea id="message" name="message" class="form-textarea min-h-[110px]" placeholder="Tell us the course, country, or concern you want help with."></textarea>
-            </div>
-
-            <div class="rounded-none border border-[#eadfd3] bg-[#fffaf4] p-4 text-sm leading-6 text-[#5b4635]">
-              <div class="font-semibold text-[#111827]">What happens after you submit?</div>
-              <ul class="mt-2 space-y-1.5">
-                <li>• We review your profile and preferred path</li>
-                <li>• An advisor contacts you within 24 hours</li>
-                <li>• You get the next best step — not a generic pitch</li>
-              </ul>
-            </div>
-
-            <button type="submit" class="inline-flex w-full items-center justify-center gap-3 bg-[#be1e2d] px-6 py-5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#a81826] hover:shadow-[0_24px_60px_rgba(190,30,45,0.24)]">
-              Request Free Consultation
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-
-            <p class="text-center text-xs leading-5 text-[#6b7280]">
-              By submitting, you agree to our privacy policy. Your details stay private and are used only to contact you about your enquiry.
-            </p>
-          </form>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- TRUST STRIP -->
-  <section class="border-y border-[#e5e7eb] bg-[#f8f7f4] py-12">
-    <div class="mx-auto flex max-w-[1400px] flex-col gap-8 px-6 lg:flex-row lg:items-center lg:justify-between lg:px-12">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-32 lg:pt-44 pb-20 lg:pb-28 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <!-- Left: Content -->
       <div>
-        <div class="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#9a3412]">Why families trust Gradiks</div>
-        <p class="mt-3 max-w-xl text-base leading-7 text-[#4b5563]">Students are not looking for hype. Parents are not looking for guesswork. This page is built to show certainty, seriousness, and the right next move.</p>
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(21,190,83,0.12)] border border-[rgba(21,190,83,0.3)] mb-6 animate-fade-in-up" style="border-radius: 4px;">
+          <span class="w-1.5 h-1.5 bg-[#15be53] rounded-full"></span>
+          <span class="text-[0.8125rem] font-semibold tracking-[0.15em] uppercase text-[#108c3d]" style="font-family: var(--font-body);">Trusted by 2,000+ Families</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-headline animate-fade-in-up delay-100" style="margin-bottom: 1.5rem;">
+          Your Child's
+          <br />
+          <span class="hero-headline-accent">Medical</span> Dreams,
+          <br />
+          Our Honest Guidance
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero-subheadline animate-fade-in-up delay-200">
+          Transparent MBBS admission support abroad. No false promises, no hidden fees — just clear advice for your family's future.
+        </p>
+
+        <!-- CTA Row -->
+        <div class="hero-ctas animate-fade-in-up delay-300">
+          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
+            Get Free Assessment
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button onclick="document.getElementById('why-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="cta-secondary">
+            Learn More
+          </button>
+        </div>
+
+        <!-- Trust micro-stats -->
+        <div class="hero-meta animate-fade-in-up delay-400">
+          <div class="flex items-center gap-2">
+            <div class="flex -space-x-1.5">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
+            </div>
+            <span>2,000+ students placed</span>
+          </div>
+          <span class="meta-dot">|</span>
+          <div class="flex items-center gap-1">
+            <span class="text-[#f59e0b]">★★★★★</span>
+            <span>4.9/5 from parents</span>
+          </div>
+        </div>
       </div>
-      <div class="grid grid-cols-2 gap-x-10 gap-y-6 text-sm text-[#374151] md:grid-cols-4">
-        <div>
-          <div class="text-3xl font-semibold text-[#111827]" style="font-family: var(--font-display);">2,000+</div>
-          <div class="mt-1 uppercase tracking-[0.18em] text-[11px] text-[#6b7280]">Families guided</div>
+
+      <!-- Right: Visual card -->
+      <div class="relative hidden lg:block animate-fade-in delay-500">
+        <!-- Main card with Stripe-style shadow -->
+        <div class="relative bg-white border border-[#e5edf5] overflow-hidden" style="border-radius: 8px; box-shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;">
+          <!-- Image top -->
+          <div class="relative h-[240px] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80&auto=format&fit=crop" alt="Doctor in white coat consulting with patient" class="w-full h-full object-cover" loading="eager" />
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+          </div>
+
+          <!-- Card body -->
+          <div class="px-6 pb-6 -mt-8 relative">
+            <!-- Floating stat pills -->
+            <div class="grid grid-cols-3 gap-3 mb-5">
+              <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
+                <div class="stat-val text-xl">2K+</div>
+                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Students</div>
+              </div>
+              <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
+                <div class="stat-val text-xl">50+</div>
+                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Universities</div>
+              </div>
+              <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
+                <div class="stat-val text-xl text-[#15be53]">98%</div>
+                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Success</div>
+              </div>
+            </div>
+
+            <!-- Feature rows -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
+                <div class="w-8 h-8 flex items-center justify-center bg-[rgba(21,190,83,0.12)]" style="border-radius: 4px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">NMC Verified</div>
+                  <div class="text-[0.6875rem] text-[#6b7280]">All universities MCI/NMC approved</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
+                <div class="w-8 h-8 flex items-center justify-center bg-[rgba(83,58,253,0.08)]" style="border-radius: 4px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <div>
+                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">15+ Countries</div>
+                  <div class="text-[0.6875rem] text-[#6b7280]">Georgia, Germany, UK & more</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
+                <div class="w-8 h-8 flex items-center justify-center bg-[rgba(190,30,45,0.06)]" style="border-radius: 4px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">Transparent Pricing</div>
+                  <div class="text-[0.6875rem] text-[#6b7280]">No hidden charges, ever</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="text-3xl font-semibold text-[#111827]" style="font-family: var(--font-display);">50+</div>
-          <div class="mt-1 uppercase tracking-[0.18em] text-[11px] text-[#6b7280]">Partner universities</div>
-        </div>
-        <div>
-          <div class="text-3xl font-semibold text-[#111827]" style="font-family: var(--font-display);">15+</div>
-          <div class="mt-1 uppercase tracking-[0.18em] text-[11px] text-[#6b7280]">Countries</div>
-        </div>
-        <div>
-          <div class="text-3xl font-semibold text-[#111827]" style="font-family: var(--font-display);">24h</div>
-          <div class="mt-1 uppercase tracking-[0.18em] text-[11px] text-[#6b7280]">Response target</div>
-        </div>
+
+        <!-- Decorative accent -->
+        <div class="absolute -z-10 top-6 left-6 right-6 bottom-6 border border-[#e5edf5]" style="border-radius: 12px;"></div>
       </div>
     </div>
-  </section>
-
-  <!-- VALUE SECTION -->
-  <section class="py-24 lg:py-32">
-    <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-      <div class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div class="space-y-5">
-          <div class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a3412]">What makes the approach premium</div>
-          <h2 class="text-[clamp(2.6rem,4.5vw,5rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-[#111827]" style="font-family: var(--font-display);">
-            STRATEGY FIRST.
-            <span class="block text-[#4b5563]">APPLICATIONS AFTER.</span>
-          </h2>
-          <p class="max-w-xl text-lg leading-8 text-[#4b5563]">A lot of students lose time because they start with country names instead of the right plan. Gradiks makes the decision path clear before you commit money, exams, or paperwork.</p>
+  </div>
+</section>
+<!-- WHY CHOOSE US -->
+<section id="why-section" class="py-24 lg:py-32 bg-[#f5f5f7]">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Why Choose Us</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">
+        What Makes Us<br />Different
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </div>
-
-        <div class="grid gap-px bg-[#e5e7eb] md:grid-cols-2">
-          <div class="bg-white p-8 lg:p-10">
-            <div class="mb-6 flex h-12 w-12 items-center justify-center border border-[#e5e7eb] text-[#be1e2d]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Honest profile evaluation</h3>
-            <p class="mt-3 text-sm leading-7 text-[#4b5563]">We help you see what is realistic now, what needs improvement, and which route makes sense for your goals.</p>
-          </div>
-          <div class="bg-white p-8 lg:p-10">
-            <div class="mb-6 flex h-12 w-12 items-center justify-center border border-[#e5e7eb] text-[#be1e2d]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Verified options only</h3>
-            <p class="mt-3 text-sm leading-7 text-[#4b5563]">No inflated promises. No low-trust institutions. Only pathways that can stand up to scrutiny from students and parents.</p>
-          </div>
-          <div class="bg-white p-8 lg:p-10">
-            <div class="mb-6 flex h-12 w-12 items-center justify-center border border-[#e5e7eb] text-[#be1e2d]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Budget clarity from the start</h3>
-            <p class="mt-3 text-sm leading-7 text-[#4b5563]">Families can plan better when the tuition, living costs, and process fees are discussed clearly upfront.</p>
-          </div>
-          <div class="bg-white p-8 lg:p-10">
-            <div class="mb-6 flex h-12 w-12 items-center justify-center border border-[#e5e7eb] text-[#be1e2d]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Guidance beyond the first call</h3>
-            <p class="mt-3 text-sm leading-7 text-[#4b5563]">From shortlist to documentation, the experience is designed to feel serious, structured, and dependable.</p>
-          </div>
+        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Brutally Honest</h3>
+        <p class="text-sm text-[#4b5563] leading-relaxed">No sugarcoating. We tell you exactly which universities match your budget, marks, and career goals.</p>
+      </div>
+      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
+        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Verified Only</h3>
+        <p class="text-sm text-[#4b5563] leading-relaxed">Every university we recommend is MCI/NMC approved. No diploma mills, no surprises.</p>
+      </div>
+      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Transparent Pricing</h3>
+        <p class="text-sm text-[#4b5563] leading-relaxed">Clear breakdown of tuition, living costs, and our fees. No hidden charges, ever.</p>
+      </div>
+      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">End-to-End Support</h3>
+        <p class="text-sm text-[#4b5563] leading-relaxed">From application to visa to FMGE coaching — we're with you for the entire journey.</p>
+      </div>
+      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Parent Updates</h3>
+        <p class="text-sm text-[#4b5563] leading-relaxed">Regular updates for parents, campus visits arranged, and 24/7 emergency support.</p>
+      </div>
+      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">FMGE Success</h3>
+        <p class="text-sm text-[#4b5563] leading-relaxed">Proven coaching programs to help you clear the FMGE and practice in India.</p>
       </div>
     </div>
-  </section>
-
-  <!-- DESTINATIONS SECTION -->
-  <section class="border-y border-[#e5e7eb] bg-[#f8f7f4] py-24 lg:py-32">
-    <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-      <div class="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div class="max-w-3xl">
-          <div class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#9a3412]">Popular destinations</div>
-          <h2 class="mt-4 text-[clamp(2.6rem,4.8vw,5rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-[#111827]" style="font-family: var(--font-display);">
-            CHOOSE THE RIGHT
-            <span class="block text-[#4b5563]">PATH, NOT JUST A COUNTRY</span>
-          </h2>
-        </div>
-        <p class="max-w-lg text-base leading-7 text-[#4b5563]">Every destination has different costs, timelines, language expectations, and career outcomes. The right move depends on fit, not hype.</p>
+  </div>
+</section>
+<!-- COUNTRIES SECTION -->
+<section class="py-24 lg:py-32 bg-[#1d1d1f] text-white">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+      <div class="max-w-2xl">
+        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Destinations</div>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">
+          Top Countries for<br />MBBS
+        </h2>
       </div>
-
-      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <a href="/germany-study" class="group border border-[#e5e7eb] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#be1e2d] hover:shadow-[0_22px_50px_rgba(17,24,39,0.08)]">
-          <div class="text-4xl">🇩🇪</div>
-          <h3 class="mt-8 text-2xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Germany</h3>
-          <p class="mt-3 text-sm leading-7 text-[#4b5563]">For students looking at strong academic reputation, structure, and long-term value.</p>
-          <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#be1e2d]">
-            Explore option
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-
-        <a href="/ireland-study" class="group border border-[#e5e7eb] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#be1e2d] hover:shadow-[0_22px_50px_rgba(17,24,39,0.08)]">
-          <div class="text-4xl">🇮🇪</div>
-          <h3 class="mt-8 text-2xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Ireland</h3>
-          <p class="mt-3 text-sm leading-7 text-[#4b5563]">A strong choice for English-speaking study, global exposure, and a cleaner transition path.</p>
-          <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#be1e2d]">
-            Explore option
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-
-        <a href="/uk-study" class="group border border-[#e5e7eb] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#be1e2d] hover:shadow-[0_22px_50px_rgba(17,24,39,0.08)]">
-          <div class="text-4xl">🇬🇧</div>
-          <h3 class="mt-8 text-2xl font-semibold text-[#111827]" style="font-family: var(--font-display);">United Kingdom</h3>
-          <p class="mt-3 text-sm leading-7 text-[#4b5563]">For families aiming for premium institutions, strong recognition, and a globally legible degree path.</p>
-          <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#be1e2d]">
-            Explore option
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-
-        <a href="/india-medical" class="group border border-[#e5e7eb] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#be1e2d] hover:shadow-[0_22px_50px_rgba(17,24,39,0.08)]">
-          <div class="text-4xl">🇮🇳</div>
-          <h3 class="mt-8 text-2xl font-semibold text-[#111827]" style="font-family: var(--font-display);">India Medical</h3>
-          <p class="mt-3 text-sm leading-7 text-[#4b5563]">For students who need counselling support, planning help, and clarity around the India route as well.</p>
-          <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#be1e2d]">
-            Explore option
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-
-        <a href="/nursing-abroad" class="group border border-[#e5e7eb] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#be1e2d] hover:shadow-[0_22px_50px_rgba(17,24,39,0.08)]">
-          <div class="text-4xl">🩺</div>
-          <h3 class="mt-8 text-2xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Nursing Abroad</h3>
-          <p class="mt-3 text-sm leading-7 text-[#4b5563]">A guided route for students considering international nursing opportunities with clearer career intent.</p>
-          <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#be1e2d]">
-            Explore option
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-
-        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="group border border-dashed border-[#c7b8a8] bg-[linear-gradient(180deg,#fff,#fff8ef)] p-8 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#be1e2d] hover:shadow-[0_22px_50px_rgba(190,30,45,0.12)]">
-          <div class="text-4xl">📞</div>
-          <h3 class="mt-8 text-2xl font-semibold text-[#111827]" style="font-family: var(--font-display);">Need a recommendation?</h3>
-          <p class="mt-3 text-sm leading-7 text-[#4b5563]">If you’re confused between options, send your details and we’ll help you narrow down the right fit.</p>
-          <div class="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#be1e2d]">
-            Get expert advice
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </button>
-      </div>
+      <p class="text-white/60 max-w-md lg:text-right">
+        Choose from world's best medical universities with affordable fees and global recognition.
+      </p>
     </div>
-  </section>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Georgia -->
+      <a href="/georgia-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="text-4xl mb-6">🇬🇪</div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Georgia</h3>
+          <p class="text-sm text-white/60 mb-6">Affordable MBBS in Tbilisi with English-medium programs and NMC-approved universities.</p>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+      <!-- Uzbekistan -->
+      <a href="/uzbekistan-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="text-4xl mb-6">🇺🇿</div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Uzbekistan</h3>
+          <p class="text-sm text-white/60 mb-6">Low-cost MBBS with Indian student-friendly environment and WHO-recognized universities.</p>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+      <!-- Kazakhstan -->
+      <a href="/kazakhstan-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="text-4xl mb-6">🇰🇿</div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Kazakhstan</h3>
+          <p class="text-sm text-white/60 mb-6">Quality medical education in Almaty with affordable fees and strong clinical training.</p>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+      <!-- Russia -->
+      <a href="/russia-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="text-4xl mb-6">🇷🇺</div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Russia</h3>
+          <p class="text-sm text-white/60 mb-6">World-renowned medical universities with decades of Indian student success stories.</p>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+      <!-- Kyrgyzstan -->
+      <a href="/kyrgyzstan-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="text-4xl mb-6">🇰🇬</div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Kyrgyzstan</h3>
+          <p class="text-sm text-white/60 mb-6">Budget-friendly MBBS with Indian-run campuses, FMGE coaching, and NMC approval.</p>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+      <!-- United Kingdom -->
+      <a href="/uk-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <div class="text-4xl mb-6">🇬🇧</div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">United Kingdom</h3>
+          <p class="text-sm text-white/60 mb-6">Prestigious medical education with global recognition, GMC pathway, and NHS exposure.</p>
 
-  <!-- FINAL CTA SECTION -->
-  <section id="lead-form-container" class="py-24 lg:py-32">
-    <div class="mx-auto max-w-[1100px] px-6 lg:px-12">
-      <div class="border border-[#e5e7eb] bg-[#111827] p-10 text-white shadow-[0_30px_80px_rgba(17,24,39,0.18)] lg:p-14">
-        <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- LEAD FORM SECTION -->
+<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f5f5f7]">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Get Started</div>
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">
+          Get Your Free<br />Assessment
+        </h2>
+        <p class="text-[#4b5563]">
+          Fill in your details and our experts will contact you within 24 hours.
+        </p>
+      </div>
+      <form id="lead-form" class="bg-white rounded-xl p-8 lg:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <div class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f9c9cd]">Ready to move?</div>
-            <h2 class="mt-4 text-[clamp(2.4rem,4.4vw,4.8rem)] font-semibold leading-[0.95] tracking-[-0.04em]" style="font-family: var(--font-display);">
-              THE RIGHT NEXT STEP
-              <span class="block text-[#f2d3d7]">STARTS WITH ONE FORM.</span>
-            </h2>
-            <p class="mt-5 max-w-2xl text-base leading-8 text-[#d1d5db]">If you want clear, premium guidance instead of confusing advice, send your details now. Gradiks will help you figure out the smartest next move for your study abroad plan.</p>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Student Name *</label>
+            <input type="text" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Full name">
           </div>
-          <div class="flex flex-col gap-3 text-sm text-[#e5e7eb] lg:items-end">
-            <a href="tel:+919****3210" class="inline-flex items-center justify-center gap-3 border border-white/20 px-6 py-4 font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-white/8">
-              Call now
-            </a>
-            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="inline-flex items-center justify-center gap-3 border border-transparent px-6 py-2 font-medium text-[#f2d3d7] transition-colors hover:text-white">
-              Go to form at top
-            </button>
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Parent's Phone *</label>
+            <input type="tel" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="+91 98765 43210">
           </div>
         </div>
-      </div>
+        <div class="mb-6">
+          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Email Address *</label>
+          <input type="email" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="email@example.com">
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score (if known)</label>
+            <input type="number" class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Enter score">
+          </div>
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label>
+            <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white">
+              <option value="">Select country</option>
+              <option value="georgia">Georgia</option>
+              <option value="uzbekistan">Uzbekistan</option>
+              <option value="kazakhstan">Kazakhstan</option>
+              <option value="russia">Russia</option>
+              <option value="kyrgyzstan">Kyrgyzstan</option>
+              <option value="uk">United Kingdom</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-8">
+          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Message (Optional)</label>
+          <textarea class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea>
+        </div>
+        <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
+          Submit Application
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <p class="text-xs text-center text-[#6b7280] mt-6">
+          By submitting, you agree to our privacy policy. We never share your data.
+        </p>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+<!-- MOBILE STICKY CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#e5e7eb] p-4 lg:hidden z-50">
+  <div class="flex gap-3">
+    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-[#be1e2d] text-white font-semibold text-center">
+      Get Free Assessment
+    </button>
+  </div>
+</div>
+<Footer />
+<script>
+// Form submission handling
+document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = `
+    <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+    SUBMITTING...
+  `;
+  btn.disabled = true;
 
-  <Footer />
+  const name = e.target.querySelector('input[type="text"]').value.trim();
+  const phone = e.target.querySelector('input[type="tel"]').value.trim();
+  const email = e.target.querySelector('input[type="email"]').value.trim() || '';
+  const neetScore = e.target.querySelector('input[type="number"]')?.value.trim() || '';
+  const country = e.target.querySelector('select')?.value || '';
+  const message = e.target.querySelector('textarea')?.value.trim() || '';
 
-  <script>
-    const leadForm = document.getElementById('lead-form');
+  // Ensure phone has country code
+  let formattedPhone = phone;
+  if (!formattedPhone.startsWith('+')) {
+    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
+  }
 
-    leadForm?.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      const submitButton = form.querySelector('button[type="submit"]');
-      const originalText = submitButton?.innerHTML;
+  const payload = {
+    fields: {
+      name: name,
+      phone: formattedPhone,
+      email: email,
+      lead_source: 'Google Ads',
+      facebook_campaign_name: 'Homepage - MBBS Lead',
+    }
+  };
 
-      if (submitButton) {
-        submitButton.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Request Received
-        `;
-        submitButton.classList.remove('bg-[#be1e2d]', 'hover:bg-[#a81826]');
-        submitButton.style.backgroundColor = '#166534';
+  const extraInfo = [];
+  if (neetScore) extraInfo.push('NEET Score: ' + neetScore);
+  if (country) extraInfo.push('Country: ' + country);
+  if (message) extraInfo.push('Message: ' + message);
+  if (extraInfo.length > 0) {
+    payload.fields.notes = extraInfo.join(' | ');
+  }
+
+  try {
+    const response = await fetch(
+      'https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:***',
+        },
+        body: JSON.stringify(payload),
       }
+    );
+    if (!response.ok) {
+      console.error('TeleCRM error:', response.status, await response.text());
+    }
+  } catch (err) {
+    console.error('TeleCRM fetch error:', err);
+  }
 
-      window.setTimeout(() => {
-        if (submitButton && originalText) {
-          submitButton.innerHTML = originalText;
-          submitButton.style.backgroundColor = '';
-        }
-        form.reset();
-      }, 2600);
-    });
-  </script>
+  btn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    REDIRECTING...
+  `;
+  btn.style.backgroundColor = '#22c55e';
+  setTimeout(() => {
+    window.location.href = '/mbbs-thank-you';
+  }, 800);
+});
+</script>
 </MainLayout>

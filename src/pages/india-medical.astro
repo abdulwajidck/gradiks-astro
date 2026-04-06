@@ -7,301 +7,425 @@ const description = "NEET counselling support for MBBS, BDS, Nursing, Pharmacy &
 ---
 <MainLayout title={title} description={description}>
 <Navigation />
+<!-- TRUST BAR -->
+<section class="bg-[#232d61] py-4 mt-20">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 text-white text-sm">
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">3</span>
+        <span class="text-white/70">States Covered</span>
+      </span>
+      <span class="text-white/30 hidden sm:block">•</span>
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">500+</span>
+        <span class="text-white/70">Colleges</span>
+      </span>
+      <span class="text-white/30 hidden sm:block">•</span>
+      <span class="flex items-center gap-2">
+        <span class="font-display font-semibold">100%</span>
+        <span class="text-white/70">Legal Process</span>
+      </span>
+    </div>
+  </div>
+</section>
 <!-- HERO SECTION -->
-<section class="min-h-screen flex items-center relative overflow-hidden pt-24">
-<div class="absolute inset-0 z-0">
-<div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] bg-gradient-radial from-[rgba(0,240,255,0.06)] via-transparent to-transparent rounded-full blur-3xl"></div>
-</div>
-<div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10 w-full">
-<div class="max-w-4xl">
-<!-- Badge -->
-<div class="inline-flex items-center gap-3 px-4 py-2 border border-[#d1d5db] bg-[#f9fafb] mb-8 animate-fade-in-up">
-<span class="text-2xl">🇮🇳</span>
-<span class="text-xs font-medium tracking-[0.15em] uppercase text-[#4b5563]">Domestic Medical Admissions</span>
-</div>
-<!-- Headline -->
-<h1 class="text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.9] tracking-tight mb-8 animate-fade-in-up delay-100" style="font-family: var(--font-display);">
-MBBS IN
-<br />
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#be1e2d] to-[#dc2626]">SOUTH INDIA</span>
-</h1>
-<!-- Subheadline -->
-<p class="text-xl md:text-2xl text-[#4b5563] max-w-2xl leading-relaxed mb-12 animate-fade-in-up delay-200">
-Expert NEET counselling support for Kerala, Karnataka, and Tamil Nadu. We guide you through the process — we don't guarantee admissions.
-</p>
-<!-- Stats Row -->
-<div class="flex flex-wrap gap-12 mb-12 animate-fade-in-up delay-300">
-<div>
-<div class="text-4xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">3</div>
-<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280]">States Covered</div>
-</div>
-<div>
-<div class="text-4xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">500+</div>
-<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280]">Colleges</div>
-</div>
-<div>
-<div class="text-4xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">100%</div>
-<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280]">Legal Process</div>
-</div>
-</div>
-<!-- CTA Buttons -->
-<div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
-<button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#be1e2d] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(190,30,45,0.25)]">
-<span class="relative z-10 flex items-center justify-center gap-2">
-GET COUNSELLING SUPPORT
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-</span>
-</button>
-<a href="tel:+919****3210" class="group px-8 py-4 border border-[#d1d5db] text-[#111827] font-medium tracking-wide flex items-center justify-center gap-3 hover:border-[#be1e2d] hover:text-[#be1e2d] transition-all duration-300">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-CALL EXPERT
-</a>
-</div>
-</div>
-</div>
+<section class="relative overflow-hidden bg-[#0a1628]">
+  <!-- Background image with overlay -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-30" loading="eager" />
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/90 to-[#0a1628]/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-[#0a1628]/40"></div>
+  </div>
+
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 lg:pt-40 pb-20 lg:pb-32 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Left: Content -->
+      <div class="space-y-8">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-sm animate-fade-in-up">
+          <span class="text-2xl">🇮🇳</span>
+          <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Domestic Medical Admissions</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-[-0.02em] text-white animate-fade-in-up delay-100" style="font-family: var(--font-display);">
+          MBBS in
+          <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#be1e2d] to-[#ef4444]">South India</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg md:text-xl text-white/60 max-w-xl leading-relaxed animate-fade-in-up delay-200">
+          Expert NEET counselling support for Kerala, Karnataka, and Tamil Nadu. We guide you through the process — we don't guarantee admissions.
+        </p>
+
+        <!-- Quick stats row -->
+        <div class="grid grid-cols-3 gap-4 animate-fade-in-up delay-300">
+          <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-white" style="font-family: var(--font-display);">160+</div>
+            <div class="text-xs text-white/50 mt-1">Medical Colleges</div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-white" style="font-family: var(--font-display);">3</div>
+            <div class="text-xs text-white/50 mt-1">States Covered</div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+            <div class="text-2xl md:text-3xl font-bold text-[#22c55e]" style="font-family: var(--font-display);">₹13K</div>
+            <div class="text-xs text-white/50 mt-1">Govt Fees/year</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
+          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#be1e2d] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(190,30,45,0.3)]">
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Get Counselling Support
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </button>
+          <span class="flex items-center justify-center gap-2 text-white/40 text-sm py-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            100% Legal Process
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Image collage -->
+      <div class="relative hidden lg:block animate-fade-in-up delay-200">
+        <!-- Main image -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80&auto=format&fit=crop" alt="Medical student studying" class="w-full h-[420px] object-cover" loading="eager" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Floating card: Kerala -->
+        <div class="absolute -bottom-6 -left-8 bg-white rounded-xl p-4 shadow-xl border border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#f0fdf4] flex items-center justify-center text-xl">🏥</div>
+          <div>
+            <div class="font-semibold text-sm text-[#111827]">Kerala</div>
+            <div class="text-xs text-[#6b7280]">30+ Medical Colleges</div>
+          </div>
+        </div>
+
+        <!-- Floating card: Karnataka -->
+        <div class="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-xl border border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#eff6ff] flex items-center justify-center text-xl">🎓</div>
+          <div>
+            <div class="font-semibold text-sm text-[#111827]">Karnataka</div>
+            <div class="text-xs text-[#6b7280]">60+ Medical Colleges</div>
+          </div>
+        </div>
+
+        <!-- Floating card: Tamil Nadu -->
+        <div class="absolute bottom-20 -right-6 bg-white rounded-xl p-4 shadow-xl border border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#fef2f2] flex items-center justify-center text-xl">📋</div>
+          <div>
+            <div class="font-semibold text-sm text-[#111827]">Tamil Nadu</div>
+            <div class="text-xs text-[#6b7280]">70+ Medical Colleges</div>
+          </div>
+        </div>
+
+        <!-- Decorative accent -->
+        <div class="absolute -z-10 top-8 left-8 right-8 bottom-8 rounded-2xl border border-white/5"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom gradient fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
 </section>
 <!-- DISCLAIMER -->
-<section class="py-16 bg-[#f9fafb] border-y border-[#e5e7eb]">
-<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-<div class="max-w-4xl mx-auto">
-<div class="border border-[#be1e2d] p-8 lg:p-12 relative">
-<div class="absolute -top-3 left-8 bg-[#f9fafb] px-4 text-[#be1e2d]">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-</div>
-<h3 class="text-xl font-medium mb-6 text-[#be1e2d]" style="font-family: var(--font-display);">IMPORTANT DISCLAIMER</h3>
-<ul class="space-y-4">
-<li class="flex gap-4 text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>We do NOT guarantee admissions or have "management quota" seats.</span>
-</li>
-<li class="flex gap-4 text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>NEET is mandatory for all medical admissions in India. No exceptions.</span>
-</li>
-<li class="flex gap-4 text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>We only guide through official government counselling processes.</span>
-</li>
-<li class="flex gap-4 text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>Beware of agents promising "direct admission" — it's illegal.</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
+<section class="py-16 bg-[#f5f5f7]">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl p-8 lg:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.06)] relative border-l-4 border-[#be1e2d]">
+        <h3 class="text-xl font-semibold mb-6 text-[#be1e2d]" style="font-family: var(--font-display);">Important Disclaimer</h3>
+        <ul class="space-y-4">
+          <li class="flex gap-4 text-[#4b5563]">
+            <span class="text-[#be1e2d]">→</span>
+            <span>We do NOT guarantee admissions or have "management quota" seats.</span>
+          </li>
+          <li class="flex gap-4 text-[#4b5563]">
+            <span class="text-[#be1e2d]">→</span>
+            <span>NEET is mandatory for all medical admissions in India. No exceptions.</span>
+          </li>
+          <li class="flex gap-4 text-[#4b5563]">
+            <span class="text-[#be1e2d]">→</span>
+            <span>We only guide through official government counselling processes.</span>
+          </li>
+          <li class="flex gap-4 text-[#4b5563]">
+            <span class="text-[#be1e2d]">→</span>
+            <span>Beware of agents promising "direct admission" — it's illegal.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- STATES SECTION -->
-<section class="py-24 lg:py-32">
-<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-<div class="max-w-3xl mb-16">
-<div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">States We Cover</div>
-<h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
-KERALA · KARNATAKA ·
-<br />
-<span class="text-[#4b5563]">TAMIL NADU</span>
-</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="bg-[#f9fafb] border border-[#e5e7eb] p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500">
-<div class="text-4xl font-light text-[#111827] mb-2" style="font-family: var(--font-display);">Kerala</div>
-<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280] mb-8">God's Own Country</div>
-<div class="space-y-3">
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>30+ Medical Colleges</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>State & NRI Quota</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>KEAM Counselling</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>Govt: ₹25K/year</span>
-</div>
-</div>
-</div>
-<div class="bg-[#f9fafb] border border-[#e5e7eb] p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500">
-<div class="text-4xl font-light text-[#111827] mb-2" style="font-family: var(--font-display);">Karnataka</div>
-<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280] mb-8">Silicon Valley of India</div>
-<div class="space-y-3">
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>60+ Medical Colleges</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>All India & State Quota</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>KEA Counselling</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>Govt: ₹50K/year</span>
-</div>
-</div>
-</div>
-<div class="bg-[#f9fafb] border border-[#e5e7eb] p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500">
-<div class="text-4xl font-light text-[#111827] mb-2" style="font-family: var(--font-display);">Tamil Nadu</div>
-<div class="text-xs tracking-[0.2em] uppercase text-[#6b7280] mb-8">Land of Temples</div>
-<div class="space-y-3">
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>70+ Medical Colleges</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>State & Management Quota</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>TN DME Counselling</span>
-</div>
-<div class="flex gap-3 text-sm text-[#4b5563]">
-<span class="text-[#be1e2d]">→</span>
-<span>Govt: ₹13K-50K/year</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section class="py-24 lg:py-32 bg-[#1d1d1f]">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">States We Cover</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">
+        Kerala · Karnataka ·<br />Tamil Nadu
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500">
+        <div class="text-4xl font-light text-white mb-2" style="font-family: var(--font-display);">Kerala</div>
+        <div class="text-xs tracking-[0.2em] uppercase text-white/50 mb-8">God's Own Country</div>
+        <div class="space-y-3">
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>30+ Medical Colleges</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>State & NRI Quota</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>KEAM Counselling</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>Govt: ₹25K/year</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500">
+        <div class="text-4xl font-light text-white mb-2" style="font-family: var(--font-display);">Karnataka</div>
+        <div class="text-xs tracking-[0.2em] uppercase text-white/50 mb-8">Silicon Valley of India</div>
+        <div class="space-y-3">
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>60+ Medical Colleges</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>All India & State Quota</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>KEA Counselling</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>Govt: ₹50K/year</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500">
+        <div class="text-4xl font-light text-white mb-2" style="font-family: var(--font-display);">Tamil Nadu</div>
+        <div class="text-xs tracking-[0.2em] uppercase text-white/50 mb-8">Land of Temples</div>
+        <div class="space-y-3">
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>70+ Medical Colleges</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>State & Management Quota</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>TN DME Counselling</span>
+          </div>
+          <div class="flex gap-3 text-sm text-white/60">
+            <span class="text-[#be1e2d]">→</span>
+            <span>Govt: ₹13K-50K/year</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- PROGRAMS SECTION -->
-<section class="py-24 lg:py-32 bg-[#f9fafb] border-y border-[#e5e7eb]">
-<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-<div class="max-w-3xl mb-16">
-<div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Programs</div>
-<h2 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight" style="font-family: var(--font-display);">
-MEDICAL
-<br />
-<span class="text-[#4b5563]">PROGRAMS</span>
-</h2>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#be1e2d] transition-all duration-500">
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs tracking-[0.2em] uppercase text-[#be1e2d]">UG Medical</span>
-<span class="text-xs px-2 py-1 border border-[#be1e2d] text-[#be1e2d]">NEET Required</span>
-</div>
-<h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">MBBS</h3>
-<p class="text-sm text-[#4b5563]">Bachelor of Medicine & Bachelor of Surgery. 5.5 years including internship.</p>
-</div>
-<div class="bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#be1e2d] transition-all duration-500">
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs tracking-[0.2em] uppercase text-[#be1e2d]">UG Dental</span>
-<span class="text-xs px-2 py-1 border border-[#be1e2d] text-[#be1e2d]">NEET Required</span>
-</div>
-<h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">BDS</h3>
-<p class="text-sm text-[#4b5563]">Bachelor of Dental Surgery. 5 years including internship. High demand in India.</p>
-</div>
-<div class="bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#be1e2d] transition-all duration-500">
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs tracking-[0.2em] uppercase text-[#be1e2d]">UG Nursing</span>
-<span class="text-xs px-2 py-1 border border-[#6b7280] text-[#6b7280]">NEET Not Required</span>
-</div>
-<h3 class="text-2xl font-medium mb-4" style="font-family: var(--font-display);">B.Sc Nursing</h3>
-<p class="text-sm text-[#4b5563]">4-year degree program. Growing demand in India and abroad. Multiple entry pathways.</p>
-</div>
-</div>
-</div>
+<section class="py-24 lg:py-32 bg-[#f5f5f7]">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Programs</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">
+        Medical<br />Programs
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs tracking-[0.2em] uppercase text-[#be1e2d]">UG Medical</span>
+          <span class="text-xs px-2 py-1 border border-[#be1e2d] text-[#be1e2d] rounded">NEET Required</span>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">MBBS</h3>
+        <p class="text-sm text-[#4b5563]">Bachelor of Medicine & Bachelor of Surgery. 5.5 years including internship.</p>
+      </div>
+      <div class="bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs tracking-[0.2em] uppercase text-[#be1e2d]">UG Dental</span>
+          <span class="text-xs px-2 py-1 border border-[#be1e2d] text-[#be1e2d] rounded">NEET Required</span>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">BDS</h3>
+        <p class="text-sm text-[#4b5563]">Bachelor of Dental Surgery. 5 years including internship. High demand in India.</p>
+      </div>
+      <div class="bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs tracking-[0.2em] uppercase text-[#be1e2d]">UG Nursing</span>
+          <span class="text-xs px-2 py-1 border border-[#6b7280] text-[#6b7280] rounded">NEET Not Required</span>
+        </div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">B.Sc Nursing</h3>
+        <p class="text-sm text-[#4b5563]">4-year degree program. Growing demand in India and abroad. Multiple entry pathways.</p>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- LEAD FORM -->
 <section id="lead-form-container" class="py-24 lg:py-32">
-<div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-<div class="max-w-2xl mx-auto">
-<div class="text-center mb-12">
-<div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Get Started</div>
-<h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
-GET COUNSELLING
-<br />
-<span class="text-[#4b5563]">SUPPORT</span>
-</h2>
-<p class="text-[#4b5563]">
-Fill your details. Our experts will guide you through the NEET counselling process.
-</p>
-</div>
-<form id="lead-form" class="bg-[#f9fafb] border border-[#e5e7eb] p-8 lg:p-12">
-<div class="grid md:grid-cols-2 gap-6 mb-6">
-<div>
-<label class="form-label">Student Name *</label>
-<input type="text" required class="form-input" placeholder="Full name">
-</div>
-<div>
-<label class="form-label">Parent's Phone *</label>
-<input type="tel" required class="form-input" placeholder="+91...">
-</div>
-</div>
-<div class="mb-6">
-<label class="form-label">NEET Score / AIR *</label>
-<input type="text" required class="form-input" placeholder="Enter NEET score or All India Rank">
-</div>
-<div class="grid md:grid-cols-2 gap-6 mb-6">
-<div>
-<label class="form-label">Preferred State</label>
-<select class="form-select">
-<option value="" class="bg-[#ffffff]">Select state</option>
-<option value="kerala" class="bg-[#ffffff]">Kerala</option>
-<option value="karnataka" class="bg-[#ffffff]">Karnataka</option>
-<option value="tamil-nadu" class="bg-[#ffffff]">Tamil Nadu</option>
-<option value="any" class="bg-[#ffffff]">Any / Open to All</option>
-</select>
-</div>
-<div>
-<label class="form-label">Program</label>
-<select class="form-select">
-<option value="" class="bg-[#ffffff]">Select program</option>
-<option value="mbbs" class="bg-[#ffffff]">MBBS</option>
-<option value="bds" class="bg-[#ffffff]">BDS</option>
-<option value="bsc-nursing" class="bg-[#ffffff]">B.Sc Nursing</option>
-<option value="other" class="bg-[#ffffff]">Other</option>
-</select>
-</div>
-</div>
-<div class="mb-8">
-<label class="form-label">Budget Range (per year)</label>
-<select class="form-select">
-<option value="" class="bg-[#ffffff]">Select budget range</option>
-<option value="govt" class="bg-[#ffffff]">Govt College (₹10K-1L/year)</option>
-<option value="private-low" class="bg-[#ffffff]">Private (₹5-10L/year)</option>
-<option value="private-high" class="bg-[#ffffff]">Private (₹10-25L/year)</option>
-<option value="nri" class="bg-[#ffffff]">NRI Quota ($20K-50K/year)</option>
-</select>
-</div>
-<button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
-GET COUNSELLING SUPPORT
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-</button>
-<p class="text-xs text-center text-[#6b7280] mt-6">
-We only provide guidance through official counselling. No direct admissions.
-</p>
-</form>
-</div>
-</div>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Get Started</div>
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">
+          Get Counselling<br />Support
+        </h2>
+        <p class="text-[#4b5563]">
+          Fill your details. Our experts will guide you through the NEET counselling process.
+        </p>
+      </div>
+      <form id="lead-form" class="bg-white rounded-xl p-8 lg:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Student Name *</label>
+            <input type="text" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Full name">
+          </div>
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Parent's Phone *</label>
+            <input type="tel" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="+91...">
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score / AIR *</label>
+          <input type="text" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Enter NEET score or All India Rank">
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred State</label>
+            <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white">
+              <option value="">Select state</option>
+              <option value="kerala">Kerala</option>
+              <option value="karnataka">Karnataka</option>
+              <option value="tamil-nadu">Tamil Nadu</option>
+              <option value="any">Any / Open to All</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Program</label>
+            <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white">
+              <option value="">Select program</option>
+              <option value="mbbs">MBBS</option>
+              <option value="bds">BDS</option>
+              <option value="bsc-nursing">B.Sc Nursing</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-8">
+          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Budget Range (per year)</label>
+          <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white">
+            <option value="">Select budget range</option>
+            <option value="govt">Govt College (₹10K-1L/year)</option>
+            <option value="private-low">Private (₹5-10L/year)</option>
+            <option value="private-high">Private (₹10-25L/year)</option>
+            <option value="nri">NRI Quota ($20K-50K/year)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
+          Get Counselling Support
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <p class="text-xs text-center text-[#6b7280] mt-6">
+          We only provide guidance through official counselling. No direct admissions.
+        </p>
+      </form>
+    </div>
+  </div>
 </section>
+<!-- MOBILE STICKY CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#e5e7eb] p-4 lg:hidden z-50">
+  <div class="flex gap-3">
+    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-[#be1e2d] text-white font-semibold text-center">
+      Get Guidance
+    </button>
+  </div>
+</div>
 <Footer />
 <script>
-document.getElementById('lead-form')?.addEventListener('submit', (e) => {
-e.preventDefault();
-const btn = e.target.querySelector('button[type="submit"]');
-btn.innerHTML = `
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-REQUEST SUBMITTED
-`;
-btn.style.backgroundColor = '#22c55e';
-setTimeout(() => {
-btn.innerHTML = `
-GET COUNSELLING SUPPORT
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-`;
-btn.style.backgroundColor = '';
-e.target.reset();
-}, 3000);
+document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.innerHTML = `
+    <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+    SUBMITTING...
+  `;
+  btn.disabled = true;
+
+  const name = e.target.querySelector('input[type="text"]').value.trim();
+  const phone = e.target.querySelector('input[type="tel"]').value.trim();
+  const neetScore = e.target.querySelectorAll('input')[2]?.value.trim() || '';
+
+  // Ensure phone has country code
+  let formattedPhone = phone;
+  if (!formattedPhone.startsWith('+')) {
+    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
+  }
+
+  const payload = {
+    fields: {
+      name: name,
+      phone: formattedPhone,
+      lead_source: 'Google Ads',
+      facebook_campaign_name: 'MBBS Abroad - India Medical',
+    }
+  };
+
+  const extraInfo = [];
+  if (neetScore) extraInfo.push('NEET Score: ' + neetScore);
+  const state = e.target.querySelector('select')?.value;
+  if (state) extraInfo.push('State: ' + state);
+  const program = e.target.querySelectorAll('select')[1]?.value;
+  if (program) extraInfo.push('Program: ' + program);
+  const budget = e.target.querySelectorAll('select')[2]?.value;
+  if (budget) extraInfo.push('Budget: ' + budget);
+  if (extraInfo.length > 0) {
+    payload.fields.notes = extraInfo.join(' | ');
+  }
+
+  try {
+    const response = await fetch(
+      'https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:***',
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+    if (!response.ok) {
+      console.error('TeleCRM error:', response.status, await response.text());
+    }
+  } catch (err) {
+    console.error('TeleCRM fetch error:', err);
+  }
+
+  btn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    REDIRECTING...
+  `;
+  btn.style.backgroundColor = '#22c55e';
+  setTimeout(() => {
+    window.location.href = '/mbbs-thank-you';
+  }, 800);
 });
 </script>
 </MainLayout>
