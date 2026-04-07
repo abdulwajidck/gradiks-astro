@@ -160,7 +160,9 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC appr
         <div class="mb-6"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Email Address *</label><input type="email" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="email@example.com"></div>
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score (if known)</label><input type="number" class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Enter score"></div>
-          <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label><select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white"><option value="">Select country</option><option value="georgia">Georgia</option><option value="uzbekistan">Uzbekistan</option><option value="kazakhstan">Kazakhstan</option><option value="russia" selected>Russia</option><option value="kyrgyzstan">Kyrgyzstan</option><option value="uk">United Kingdom</option><option value="other">Other / Not Sure</option></select></div>
+          <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Program of Interest</label><select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white"><option value="">Select program</option><option value="mbbs">MBBS</option><option value="bds">BDS</option><option value="bams">BAMS</option><option value="bpharm">B.Pharm</option><option value="bsc-nursing">B.Sc Nursing</option><option value="other">Other / Not Sure</option></select></div>
+        </div>
+        <div class="mb-6"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label><select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white"><option value="">Select country</option><option value="georgia">Georgia</option><option value="uzbekistan">Uzbekistan</option><option value="kazakhstan">Kazakhstan</option><option value="russia" selected>Russia</option><option value="kyrgyzstan">Kyrgyzstan</option><option value="uk">United Kingdom</option><option value="other">Other / Not Sure</option></select></div>
         </div>
         <div class="mb-8"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Message (Optional)</label><textarea class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea></div>
         <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">Submit Application<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
@@ -181,13 +183,15 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
   const phone = e.target.querySelector('input[type="tel"]').value.trim();
   const email = e.target.querySelector('input[type="email"]').value.trim() || '';
   const neetScore = e.target.querySelector('input[type="number"]')?.value.trim() || '';
-  const country = e.target.querySelector('select')?.value || '';
+  const program = e.target.querySelectorAll('select')[0]?.value || '';
+  const country = e.target.querySelectorAll('select')[1]?.value || '';
   const message = e.target.querySelector('textarea')?.value.trim() || '';
   let formattedPhone = phone;
   if (!formattedPhone.startsWith('+')) { formattedPhone = '+91' + formattedPhone.replace(/^0+/, ''); }
   const payload = { fields: { name, phone: formattedPhone, email, lead_source: 'Google Ads', facebook_campaign_name: 'Russia LP - MBBS Lead' } };
   const extraInfo = [];
   if (neetScore) extraInfo.push('NEET Score: ' + neetScore);
+  if (program) extraInfo.push('Program: ' + program);
   if (country) extraInfo.push('Country: ' + country);
   if (message) extraInfo.push('Message: ' + message);
   if (extraInfo.length > 0) payload.fields.notes = extraInfo.join(' | ');

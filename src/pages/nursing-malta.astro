@@ -396,6 +396,19 @@ const description = "BSc Nursing in Malta for Indian students. English-speaking 
             <input type="text" name="pcb_percentage" required class="form-input" placeholder="e.g. 58% or 72%">
           </div>
           <div>
+            <label class="form-label">Program of Interest</label>
+            <select name="program_interest" class="form-select">
+              <option value="">Select program</option>
+              <option value="B.Sc Nursing">B.Sc Nursing</option>
+              <option value="GNM">GNM Diploma</option>
+              <option value="Post B.Sc">Post B.Sc Nursing</option>
+              <option value="M.Sc Nursing">M.Sc Nursing</option>
+              <option value="Other">Other / Not Sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-6">
+          <div>
             <label class="form-label">Preferred Country</label>
             <select name="preferred_country" class="form-select">
               <option value="">Select country</option>
@@ -442,6 +455,8 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
   const name = form.querySelector('[name="name"]').value.trim();
   const phone = form.querySelector('[name="phone"]').value.trim();
   const email = form.querySelector('[name="email"]').value.trim();
+  const program = form.querySelector('[name="program_interest"]')?.value || '';
+  if (program) extraInfo.push('Program: ' + program);
   const pcb = form.querySelector('[name="pcb_percentage"]').value.trim();
   const country = form.querySelector('[name="preferred_country"]').value;
   const questions = form.querySelector('[name="questions"]').value.trim();
