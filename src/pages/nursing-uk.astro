@@ -438,36 +438,34 @@ const description = "BSc Nursing in UK for Indian students. Work 20 hrs/week, po
 <Footer />
 
 <script>
-document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
+document.getElementById('lead-form')?.addEventListener('submit', (e) => {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
-  const originalHTML = btn.innerHTML;
-
-  // Show loading state
   btn.disabled = true;
-  btn.innerHTML = `
-    <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="31.4 31.4" stroke-dashoffset="10"/></svg>
-    SENDING...
-  `;
 
   // Collect form data
   const name = form.querySelector('[name="name"]').value.trim();
   const phone = form.querySelector('[name="phone"]').value.trim();
   const email = form.querySelector('[name="email"]').value.trim();
-  const program = form.querySelector('[name="program_interest"]')?.value || '';
-  if (program) extraInfo.push('Program: ' + program);
   const pcb = form.querySelector('[name="pcb_percentage"]').value.trim();
+  const program = form.querySelector('[name="program_interest"]')?.value || '';
   const country = form.querySelector('[name="preferred_country"]').value;
   const questions = form.querySelector('[name="questions"]').value.trim();
 
   // Ensure phone has country code
-  let formattedPhone = phone;
+  let formattedPhone = phone.replace(/[\s\-]/g, '');
   if (!formattedPhone.startsWith('+')) {
     formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
   }
 
-  // Build TeleCRM payload — only standard fields to avoid server errors
+  // Build TeleCRM payload
+  const extraInfo = [];
+  if (pcb) extraInfo.push('12th PCB: ' + pcb);
+  if (program) extraInfo.push('Program: ' + program);
+  if (country) extraInfo.push('Country: ' + country);
+  if (questions) extraInfo.push('Questions: ' + questions);
+
   const payload = {
     fields: {
       name: name,
@@ -477,46 +475,33 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
       facebook_campaign_name: 'Nursing Abroad - UK',
     }
   };
-
-  // Add extra info as a single notes-style field
-  const extraInfo = [];
-  if (pcb) extraInfo.push('12th PCB: ' + pcb);
-  if (country) extraInfo.push('Country: ' + country);
-  if (questions) extraInfo.push('Questions: ' + questions);
   if (extraInfo.length > 0) {
     payload.fields.notes = extraInfo.join(' | ');
   }
 
-  try {
-    const response = await fetch(
-      'https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
-        },
-        body: JSON.stringify(payload),
-      }
-    );
+  // Send to TeleCRM, then redirect — redirect after response OR 1.5s timeout (whichever comes first)
+  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
+    },
+    body: JSON.stringify(payload),
+    keepalive: true,
+  }).catch(() => {});
 
-    if (!response.ok) {
-      const errText = await response.text();
-      console.error('TeleCRM error:', response.status, errText);
-    }
-  } catch (err) {
-    console.error('TeleCRM fetch error:', err);
-  }
+  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
 
-  // Always redirect to thank-you (lead data is fire-and-forget)
-  btn.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-    REDIRECTING...
-  `;
-  btn.style.backgroundColor = '#22c55e';
-  setTimeout(() => {
-    window.location.href = '/nursing-thank-you';
-  }, 800);
+  btn.innerHTML = 'SENDING...';
+
+  Promise.race([sent, timeout]).then(() => {
+    btn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      REDIRECTING...
+    `;
+    btn.style.backgroundColor = '#22c55e';
+    setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
+  });
 });
 </script>
 </MainLayout>
