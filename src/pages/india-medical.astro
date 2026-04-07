@@ -317,18 +317,6 @@ const description = "NEET counselling support for MBBS, BDS, Nursing, Pharmacy &
               <option value="any">Any / Open to All</option>
             </select>
           </div>
-          <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Program of Interest</label>
-            <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white">
-              <option value="">Select program</option>
-              <option value="mbbs">MBBS</option>
-              <option value="bds">BDS</option>
-              <option value="bams">BAMS</option>
-              <option value="bpharm">B.Pharm</option>
-              <option value="bsc-nursing">B.Sc Nursing</option>
-              <option value="other">Other / Not Sure</option>
-            </select>
-          </div>
         </div>
         <div class="mb-8">
           <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Budget Range (per year)</label>
@@ -393,9 +381,7 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
   if (neetScore) extraInfo.push('NEET Score: ' + neetScore);
   const state = e.target.querySelector('select')?.value;
   if (state) extraInfo.push('State: ' + state);
-  const program = e.target.querySelectorAll('select')[1]?.value;
-  if (program) extraInfo.push('Program: ' + program);
-  const budget = e.target.querySelectorAll('select')[2]?.value;
+  const budget = e.target.querySelectorAll('select')[1]?.value;
   if (budget) extraInfo.push('Budget: ' + budget);
   if (extraInfo.length > 0) {
     payload.fields.notes = extraInfo.join(' | ');

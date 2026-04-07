@@ -160,7 +160,6 @@ const description = "Study MBBS in Uzbekistan with Gradiks. 5-year program, NMC 
         <div class="mb-6"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Email Address *</label><input type="email" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="email@example.com"></div>
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score (if known)</label><input type="number" class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Enter score"></div>
-          <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Program of Interest</label><select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white"><option value="">Select program</option><option value="mbbs">MBBS</option><option value="bds">BDS</option><option value="bams">BAMS</option><option value="bpharm">B.Pharm</option><option value="bsc-nursing">B.Sc Nursing</option><option value="other">Other / Not Sure</option></select></div>
         </div>
         <div class="mb-6"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label><select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white"><option value="">Select country</option><option value="georgia">Georgia</option><option value="uzbekistan" selected>Uzbekistan</option><option value="kazakhstan">Kazakhstan</option><option value="russia">Russia</option><option value="kyrgyzstan">Kyrgyzstan</option><option value="uk">United Kingdom</option><option value="other">Other / Not Sure</option></select></div>
         </div>
@@ -183,15 +182,14 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
   const phone = e.target.querySelector('input[type="tel"]').value.trim();
   const email = e.target.querySelector('input[type="email"]').value.trim() || '';
   const neetScore = e.target.querySelector('input[type="number"]')?.value.trim() || '';
-  const program = e.target.querySelectorAll('select')[0]?.value || '';
-  const country = e.target.querySelectorAll('select')[1]?.value || '';
+  
+  const country = e.target.querySelectorAll('select')[0]?.value || '';
   const message = e.target.querySelector('textarea')?.value.trim() || '';
   let formattedPhone = phone;
   if (!formattedPhone.startsWith('+')) { formattedPhone = '+91' + formattedPhone.replace(/^0+/, ''); }
   const payload = { fields: { name, phone: formattedPhone, email, lead_source: 'Google Ads', facebook_campaign_name: 'Uzbekistan LP - MBBS Lead' } };
   const extraInfo = [];
   if (neetScore) extraInfo.push('NEET Score: ' + neetScore);
-  if (program) extraInfo.push('Program: ' + program);
   if (country) extraInfo.push('Country: ' + country);
   if (message) extraInfo.push('Message: ' + message);
   if (extraInfo.length > 0) payload.fields.notes = extraInfo.join(' | ');
