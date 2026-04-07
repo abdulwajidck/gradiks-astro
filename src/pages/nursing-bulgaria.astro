@@ -42,10 +42,22 @@ const description = "BSc Nursing in Bulgaria for Indian students. EU member coun
       Medical universities with English-taught nursing programs.
     </p>
     <div class="hero-ctas">
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex">
         Get free cost breakdown
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
+      <div class="lg:hidden w-full mt-2">
+        <form id="hero-lead-form" class="space-y-3">
+          <input type="text" name="name" required class="form-input" placeholder="Full Name *">
+          <input type="tel" name="phone" required class="form-input" placeholder="+91 98765 43210 *">
+          <input type="email" name="email" required class="form-input" placeholder="Email *">
+          <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2">
+            GET FREE COST BREAKDOWN
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <p class="text-center text-[10px] text-[#9ca3af]">Free · No spam · 24hr response</p>
+        </form>
+      </div>
     </div>
     <div class="hero-meta">
       <span>NMC recognized</span>
@@ -499,6 +511,52 @@ document.getElementById('lead-form')?.addEventListener('submit', (e) => {
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       REDIRECTING...
     `;
+    btn.style.backgroundColor = '#22c55e';
+    setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
+  });
+});
+
+// Hero mobile form handler
+document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+
+  const name = form.querySelector('[name="name"]').value.trim();
+  const phone = form.querySelector('[name="phone"]').value.trim();
+  const email = form.querySelector('[name="email"]').value.trim();
+
+  let formattedPhone = phone.replace(/[\s\-]/g, '');
+  if (!formattedPhone.startsWith('+')) {
+    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
+  }
+
+  const payload = {
+    fields: {
+      name: name,
+      phone: formattedPhone,
+      email: email,
+      lead_source: 'Google Ads',
+      facebook_campaign_name: 'Nursing Abroad - Bulgaria',
+    }
+  };
+
+  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
+    },
+    body: JSON.stringify(payload),
+    keepalive: true,
+  }).catch(() => {});
+
+  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
+  btn.innerHTML = 'SENDING...';
+
+  Promise.race([sent, timeout]).then(() => {
+    btn.innerHTML = 'REDIRECTING...';
     btn.style.backgroundColor = '#22c55e';
     setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
   });
