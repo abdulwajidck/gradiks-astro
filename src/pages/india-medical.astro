@@ -387,33 +387,21 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
     payload.fields.notes = extraInfo.join(' | ');
   }
 
-  try {
-    const response = await fetch(
-      'https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
-        },
-        body: JSON.stringify(payload),
-      }
-    );
-    if (!response.ok) {
-      console.error('TeleCRM error:', response.status, await response.text());
-    }
-  } catch (err) {
-    console.error('TeleCRM fetch error:', err);
-  }
-
-  btn.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-    REDIRECTING...
-  `;
-  btn.style.backgroundColor = '#22c55e';
-  setTimeout(() => {
-    window.location.href = '/mbbs-thank-you';
-  }, 800);
+  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
+    },
+    body: JSON.stringify(payload),
+    keepalive: true,
+  }).catch(() => {});
+  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
+  Promise.race([sent, timeout]).then(() => {
+    btn.innerHTML = 'REDIRECTING...';
+    btn.style.backgroundColor = '#22c55e';
+    setTimeout(() => { window.location.href = '/mbbs-thank-you'; }, 500);
+  });
 });
 </script>
 </MainLayout>
