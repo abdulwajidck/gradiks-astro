@@ -75,7 +75,10 @@
 .trust-bar {
   background: var(--color-brand-blue);
   padding: 0.75rem 0;
-  margin-top: 5rem;
+  margin-top: 4rem;
+}
+@media (min-width: 1024px) {
+  .trust-bar { margin-top: 5rem; }
 }
 .trust-items {
   display: flex;
@@ -107,11 +110,11 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 1rem;
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 5rem 1.5rem 6rem;
+  padding: 1.5rem 1.5rem 1rem;
 }
 @media (min-width: 1024px) {
   .hero {
@@ -128,36 +131,48 @@
   color: var(--color-text-muted);
   font-family: var(--font-body);
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .hero-eyebrow { margin-bottom: 1.5rem; }
 }
 
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2.25rem, 7vw, 5rem);
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: -0.03em;
   color: var(--color-text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .hero-headline { margin-bottom: 1.5rem; font-size: clamp(3rem, 7vw, 5rem); }
 }
 .hero-headline-accent {
   color: var(--color-gold-500);
 }
 
 .hero-subheadline {
-  font-size: 1.1875rem;
-  line-height: 1.5;
+  font-size: 0.9375rem;
+  line-height: 1.4;
   letter-spacing: -0.01em;
   color: var(--color-text-secondary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   max-width: 480px;
+}
+@media (min-width: 1024px) {
+  .hero-subheadline { font-size: 1.1875rem; line-height: 1.5; margin-bottom: 2.5rem; }
 }
 
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+}
+@media (min-width: 1024px) {
+  .hero-ctas { margin-bottom: 2rem; }
 }
 .cta-primary {
   display: inline-flex;
@@ -199,7 +214,7 @@
 }
 
 .hero-meta {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
@@ -207,10 +222,17 @@
   color: var(--color-text-muted);
   font-family: var(--font-body);
 }
+@media (min-width: 1024px) {
+  .hero-meta { display: flex; }
+}
 .meta-dot { color: var(--color-border); }
 
 .hero-image-wrapper {
   position: relative;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .hero-image-wrapper { display: block; }
 }
 .hero-image {
   width: 100%;
