@@ -34,23 +34,23 @@ const description = "Study MBBS in United Kingdom with Gradiks. 5-6 year program
   </div>
 </section>
 <!-- HERO -->
-<section class="min-h-screen flex items-center relative overflow-hidden py-20 lg:py-32 bg-[#1d1d1f]">
+<section class="lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32 bg-[#1d1d1f]">
   <div class="absolute inset-0 z-0">
     <div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] bg-gradient-radial from-[rgba(190,30,45,0.06)] via-transparent to-transparent rounded-full blur-3xl"></div>
   </div>
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10 w-full">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 lg:py-32 relative z-10 w-full">
     <div class="max-w-4xl">
-      <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-white/5 backdrop-blur-sm mb-8 animate-fade-in-up">
+      <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-white/5 backdrop-blur-sm mb-3 lg:mb-8 animate-fade-in-up">
         <span class="text-2xl">🇬🇧</span>
         <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Study MBBS in United Kingdom</span>
       </div>
-      <h1 class="text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-8 animate-fade-in-up delay-100 text-white" style="font-family: var(--font-display);">
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 animate-fade-in-up delay-100 text-white" style="font-family: var(--font-display);">
         MBBS in<br /><span class="text-[#be1e2d]">United Kingdom</span>
       </h1>
-      <p class="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed mb-12 animate-fade-in-up delay-200">
+      <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12 animate-fade-in-up delay-200">
         World-class medical education with GMC registration, NHS clinical placements, and a globally recognised degree that opens doors everywhere.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
+      <div class="hidden lg:flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
         <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#be1e2d] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(190,30,45,0.3)]">
           <span class="relative z-10 flex items-center justify-center gap-2">
             Apply Now
@@ -369,6 +369,28 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
     keepalive: true,
   }).catch(() => {});
   const timeout = new Promise(resolve => setTimeout(resolve, 1500));
+  Promise.race([sent, timeout]).then(() => {
+    btn.innerHTML = 'REDIRECTING...';
+    btn.style.backgroundColor = '#22c55e';
+    setTimeout(() => { window.location.href = '/mbbs-thank-you'; }, 500);
+  });
+});
+
+// Hero mobile form handler
+document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  const name = form.querySelector('[name="name"]').value.trim();
+  const phone = form.querySelector('[name="phone"]').value.trim();
+  const email = form.querySelector('[name="email"]').value.trim();
+  let formattedPhone = phone.replace(/[\s\-]/g, '');
+  if (!formattedPhone.startsWith('+')) { formattedPhone = '+91' + formattedPhone.replace(/^0+/, ''); }
+  const payload = { fields: { name, phone: formattedPhone, email, lead_source: 'Google Ads', facebook_campaign_name: 'UK MBBS LP - MBBS Lead' } };
+  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7' }, body: JSON.stringify(payload), keepalive: true }).catch(() => {});
+  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
+  btn.innerHTML = 'SENDING...';
   Promise.race([sent, timeout]).then(() => {
     btn.innerHTML = 'REDIRECTING...';
     btn.style.backgroundColor = '#22c55e';
