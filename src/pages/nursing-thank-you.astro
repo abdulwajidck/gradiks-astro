@@ -85,8 +85,14 @@ const description = "Your nursing abroad enquiry has been received. Gradiks will
 <Footer />
 
 <!-- Google Ads Conversion Tag — fires on this page only after successful form submit -->
-<script>
-  gtag('config', 'AW-17991836279');
-  gtag('event', 'conversion', {'send_to': 'AW-17991836279/EvilCObkxZUcEPfEloND'});
+<script is:inline>
+  function fireConversion() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-17991836279/EvilCObkxZUcEPfEloND'});
+    } else {
+      setTimeout(fireConversion, 200);
+    }
+  }
+  fireConversion();
 </script>
 </MainLayout>

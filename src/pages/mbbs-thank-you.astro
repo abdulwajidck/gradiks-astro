@@ -81,8 +81,14 @@ const description = "Your MBBS enquiry has been received. Gradiks will contact y
 <Footer />
 
 <!-- Google Ads Conversion Tag — MBBS Lead -->
-<script>
-  gtag('config', 'AW-17991836279');
-  gtag('event', 'conversion', {'send_to': 'AW-17991836279/MiMqCKqor5UcEPfEloND'});
+<script is:inline>
+  function fireConversion() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-17991836279/MiMqCKqor5UcEPfEloND'});
+    } else {
+      setTimeout(fireConversion, 200);
+    }
+  }
+  fireConversion();
 </script>
 </MainLayout>

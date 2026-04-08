@@ -36,15 +36,15 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17991836279"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY869BZV2Z"></script>
-    <script>
+    <script is:inline>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-17991836279');
         gtag('config', 'G-PY869BZV2Z');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17991836279"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY869BZV2Z"></script>
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
