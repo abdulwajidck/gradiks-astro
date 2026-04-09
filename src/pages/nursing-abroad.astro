@@ -81,6 +81,21 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
       <span class="meta-dot" aria-hidden="true">·</span>
       <span>5 countries</span>
     </div>
+
+    <!-- Curiosity hook — scroll to visa gallery -->
+    <button onclick="document.getElementById('visa-gallery')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="visa-teaser" aria-label="See recent visa approvals">
+      <div class="visa-teaser-faces">
+        <img src="/students/visa-student-1.jpeg" alt="" class="visa-teaser-face" />
+        <img src="/students/visa-student-4.jpeg" alt="" class="visa-teaser-face" />
+        <img src="/students/visa-student-5.jpeg" alt="" class="visa-teaser-face" />
+        <img src="/students/visa-student-7.jpeg" alt="" class="visa-teaser-face" />
+        <span class="visa-teaser-more">+8</span>
+      </div>
+      <div class="visa-teaser-text">
+        <span class="visa-teaser-count">12 visas approved</span>
+        <span class="visa-teaser-cta">this month — see proof ↓</span>
+      </div>
+    </button>
   </div>
   <div class="hero-image-wrapper">
     <img
@@ -414,7 +429,7 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
 </section>
 
 <!-- VISA APPROVED — Real student proof gallery -->
-<section class="py-16 lg:py-24 overflow-hidden">
+<section id="visa-gallery" class="py-16 lg:py-24 overflow-hidden">
   <div class="max-w-[1400px] mx-auto">
     <div class="text-center mb-10 px-6">
       <p class="section-eyebrow mb-3">Visa Approved — 2025/2026 Batch</p>
@@ -439,6 +454,13 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
         <img src="/students/visa-student-8.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
         <img src="/students/visa-student-9.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
       </div>
+    </div>
+    <div class="text-center mt-10 px-6">
+      <p class="text-sm text-[var(--color-text-secondary)] mb-4">Want your child's name on this wall?</p>
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
+        Get your free cost breakdown
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
     </div>
   </div>
 </section>

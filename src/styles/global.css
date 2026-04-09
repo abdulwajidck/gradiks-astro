@@ -1310,6 +1310,75 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ============================================
+   VISA TEASER — hero curiosity hook
+   ============================================ */
+.visa-teaser {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem 0.625rem 0.625rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  margin-top: 1rem;
+  width: fit-content;
+  font-family: var(--font-body);
+}
+@media (min-width: 1024px) {
+  .visa-teaser { margin-top: 1.5rem; }
+}
+.visa-teaser:hover {
+  border-color: var(--color-gold-500);
+  transform: translateY(-1px);
+}
+.visa-teaser-faces {
+  display: flex;
+  align-items: center;
+}
+.visa-teaser-face {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top 20%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+}
+.visa-teaser-face:first-child { margin-left: 0; }
+.visa-teaser-more {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-brand-blue);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  border: 2px solid #fff;
+}
+.visa-teaser-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.visa-teaser-count {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+.visa-teaser-cta {
+  font-size: 0.6875rem;
+  color: var(--color-gold-500);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ============================================
    VISA GALLERY — auto-scrolling student proof
    ============================================ */
 .visa-gallery {
