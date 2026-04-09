@@ -9,34 +9,35 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
 <MainLayout title={title} description={description}>
 <Navigation />
 
-<!-- TRUST BAR — Apple-style minimal strip -->
+<!-- TRUST TICKER -->
 <div class="trust-bar">
-  <div class="trust-items">
-    <span class="trust-stat">350+</span>
-    <span class="trust-label">Students placed</span>
+  <div class="trust-items" style="flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
+    <span class="trust-stat" style="white-space: nowrap;">350+ students</span>
+    <span class="trust-label" style="white-space: nowrap;">placed across 5 countries</span>
     <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">100%</span>
-    <span class="trust-label">Visa success</span>
+    <span class="trust-stat" style="white-space: nowrap;">100% visa</span>
+    <span class="trust-label" style="white-space: nowrap;">success since 2021</span>
     <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat accent">₹80K</span>
-    <span class="trust-label">vs ₹12K India</span>
+    <span class="trust-stat accent" style="white-space: nowrap;">₹80K/mo</span>
+    <span class="trust-label" style="white-space: nowrap;">avg starting salary abroad</span>
     <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">5</span>
-    <span class="trust-label">Countries</span>
+    <span class="trust-stat" style="white-space: nowrap;">24hr</span>
+    <span class="trust-label" style="white-space: nowrap;">response guaranteed</span>
   </div>
 </div>
 
-<!-- HERO — Apple-style full-width editorial -->
+<!-- HERO — Salary-led headline -->
 <section class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">For Indian Science Students — 2026 Batch</p>
+    <p class="hero-eyebrow">BSc Nursing Abroad — 2026 Batch Open</p>
     <h1 class="hero-headline">
-      BSc Nursing<br>
-      <span class="hero-headline-accent">Abroad</span>
+      Your Child Deserves<br>
+      <span class="hero-headline-accent">₹80K/Month.</span><br>
+      <span class="text-[#9ca3af]" style="font-size: 0.6em; font-weight: 400;">Not ₹12K.</span>
     </h1>
     <p class="hero-subheadline">
-      Stop accepting ₹12K/month in India.<br>
-      BSc Nursing abroad pays ₹80K–₹2L/month after graduation.
+      BSc Nursing abroad. Same 4-year degree. NMC recognized.
+      5 countries. No NEET. English medium. 5–8x the salary.
     </p>
     <div class="hero-ctas">
       <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex">
@@ -80,403 +81,257 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
   </div>
 </section>
 
-<!-- DESTINATIONS — Apple-style clean grid -->
-<section class="destinations">
-  <div class="section-header">
-    <p class="section-eyebrow">5 Destinations</p>
-    <h2 class="section-headline">Study Nursing<br>in Your Budget</h2>
-    <p class="section-desc">From ₹4L/year budget to ₹20L+ premium — there's a country for every mark sheet and bank balance.</p>
-  </div>
-  <div class="country-grid">
-
-    <!-- Georgia -->
-    <div class="country-card">
-      <div class="country-image-wrap">
-        <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&q=80&auto=format&fit=crop" alt="Tbilisi, Georgia" loading="lazy" />
-        <div class="country-overlay">
-          <span class="country-flag">🇬🇪</span>
-          <span class="country-tag">European Degree</span>
-        </div>
+<!-- SALARY COMPARISON — The anchor moment -->
+<section class="py-16 lg:py-24">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="text-center mb-8 px-6">
+      <p class="section-eyebrow mb-3">The Real Difference</p>
+      <h2 class="section-headline">Same Degree.<br><span class="section-headline-muted">Different Life.</span></h2>
+    </div>
+    <div class="salary-comparison">
+      <div>
+        <div class="salary-big muted">₹12K/mo</div>
+        <div class="salary-label">Fresh BSc Nurse in India</div>
       </div>
-      <div class="country-body">
-        <h3 class="country-name">Georgia</h3>
-        <p class="country-desc">European BSc Nursing at Asian cost. Safe country, warm climate, multiple intakes.</p>
-        <div class="country-stats">
-          <div class="country-stat"><span class="stat-val">4 Years</span><span class="stat-key">Duration</span></div>
-          <div class="country-stat"><span class="stat-val">$3–5.5K</span><span class="stat-key">Tuition/yr</span></div>
-          <div class="country-stat"><span class="stat-val">₹8–12K</span><span class="stat-key">Living/mo</span></div>
-          <div class="country-stat accent"><span class="stat-val">€1.2–1.8K</span><span class="stat-key">Post-grad salary</span></div>
-        </div>
-        <div class="country-intakes">Intakes: Feb &amp; Sep</div>
+      <div class="salary-divider">vs</div>
+      <div>
+        <div class="salary-big accent">₹80K–₹2L/mo</div>
+        <div class="salary-label">Same degree, working abroad</div>
       </div>
     </div>
-
-    <!-- Albania -->
-    <div class="country-card">
-      <div class="country-image-wrap">
-        <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80&auto=format&fit=crop" alt="Tirana, Albania" loading="lazy" />
-        <div class="country-overlay">
-          <span class="country-flag">🇦🇱</span>
-          <span class="country-tag new">New</span>
-        </div>
-      </div>
-      <div class="country-body">
-        <h3 class="country-name">Albania</h3>
-        <p class="country-desc">Affordable European nursing degree. English-taught. Growing destination for Indian students.</p>
-        <div class="country-stats">
-          <div class="country-stat"><span class="stat-val">4 Years</span><span class="stat-key">Duration</span></div>
-          <div class="country-stat"><span class="stat-val">$3.5–6K</span><span class="stat-key">Tuition/yr</span></div>
-          <div class="country-stat"><span class="stat-val">₹10–15K</span><span class="stat-key">Living/mo</span></div>
-          <div class="country-stat accent"><span class="stat-val">€1–1.5K</span><span class="stat-key">Post-grad salary</span></div>
-        </div>
-        <div class="country-intakes">Intakes: Sep &amp; Jan</div>
-      </div>
-    </div>
-
-    <!-- Bulgaria -->
-    <div class="country-card">
-      <div class="country-image-wrap">
-        <img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76?w=600&q=80&auto=format&fit=crop" alt="Sofia, Bulgaria" loading="lazy" />
-        <div class="country-overlay">
-          <span class="country-flag">🇧🇬</span>
-          <span class="country-tag">EU Member</span>
-        </div>
-      </div>
-      <div class="country-body">
-        <h3 class="country-name">Bulgaria</h3>
-        <p class="country-desc">EU member with affordable tuition. Medical universities with English-taught nursing programs.</p>
-        <div class="country-stats">
-          <div class="country-stat"><span class="stat-val">4 Years</span><span class="stat-key">Duration</span></div>
-          <div class="country-stat"><span class="stat-val">€4–7K</span><span class="stat-key">Tuition/yr</span></div>
-          <div class="country-stat"><span class="stat-val">₹12–18K</span><span class="stat-key">Living/mo</span></div>
-          <div class="country-stat accent"><span class="stat-val">€1.5–2.3K</span><span class="stat-key">Post-grad salary</span></div>
-        </div>
-        <div class="country-intakes">Intakes: Oct &amp; Mar</div>
-      </div>
-    </div>
-
-    <!-- Malta -->
-    <div class="country-card">
-      <div class="country-image-wrap">
-        <img src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?w=600&q=80&auto=format&fit=crop" alt="Valletta, Malta" loading="lazy" />
-        <div class="country-overlay">
-          <span class="country-flag">🇲🇹</span>
-          <span class="country-tag">English Speaking</span>
-        </div>
-      </div>
-      <div class="country-body">
-        <h3 class="country-name">Malta</h3>
-        <p class="country-desc">English-speaking EU island. Affordable fees, safe environment. Gateway to European healthcare.</p>
-        <div class="country-stats">
-          <div class="country-stat"><span class="stat-val">3–4 Years</span><span class="stat-key">Duration</span></div>
-          <div class="country-stat"><span class="stat-val">€8–12K</span><span class="stat-key">Tuition/yr</span></div>
-          <div class="country-stat"><span class="stat-val">₹15–20K</span><span class="stat-key">Living/mo</span></div>
-          <div class="country-stat accent"><span class="stat-val">€1.5–2.5K</span><span class="stat-key">Post-grad salary</span></div>
-        </div>
-        <div class="country-intakes">Intakes: Oct &amp; Feb</div>
-      </div>
-    </div>
-
-    <!-- UK -->
-    <div class="country-card">
-      <div class="country-image-wrap">
-        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80&auto=format&fit=crop" alt="London, United Kingdom" loading="lazy" />
-        <div class="country-overlay">
-          <span class="country-flag">🇬🇧</span>
-          <span class="country-tag">High ROI</span>
-        </div>
-      </div>
-      <div class="country-body">
-        <h3 class="country-name">United Kingdom</h3>
-        <p class="country-desc">BSc Nursing (Hons) at UK universities. Work 20 hrs/week during studies. Post-study work visa.</p>
-        <div class="country-stats">
-          <div class="country-stat"><span class="stat-val">3 Years</span><span class="stat-key">Duration</span></div>
-          <div class="country-stat"><span class="stat-val">£12–18K</span><span class="stat-key">Tuition/yr</span></div>
-          <div class="country-stat"><span class="stat-val">£800–1.2K</span><span class="stat-key">Living/mo</span></div>
-          <div class="country-stat accent"><span class="stat-val">£2.1–2.9K</span><span class="stat-key">Post-grad salary</span></div>
-        </div>
-        <div class="country-intakes">Work Rights: ✓ Yes</div>
-      </div>
-    </div>
-
+    <p class="text-center text-sm text-[#6b7280] mt-8 px-6 max-w-lg mx-auto">Same 4-year NMC-recognized BSc Nursing. Same qualification. The only difference is where you study — and that changes everything.</p>
   </div>
 </section>
 
-<!-- WHY SECTION — Apple-style clean dark section -->
-<section class="why-section">
-  <div class="why-header">
-    <p class="section-eyebrow inverted">Why BSc Nursing Abroad</p>
-    <h2 class="section-headline inverted">The Real Answer<br>to Your Problem</h2>
-  </div>
-  <div class="why-grid">
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      </div>
-      <h3 class="why-title">No NEET Required</h3>
-      <p class="why-desc">Unlike MBBS, BSc Nursing abroad doesn't need NEET. Your 12th PCB percentage is what matters — not a single exam result that went wrong.</p>
+<!-- DESTINATIONS — Featured + Compact -->
+<section class="py-16 lg:py-24 bg-[#f9fafb] border-y border-[#e5e7eb]">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="section-header" style="padding-bottom: 2rem;">
+      <p class="section-eyebrow">5 Destinations</p>
+      <h2 class="section-headline">Study Nursing<br><span class="section-headline-muted">in Your Budget</span></h2>
+      <p class="section-desc">From ₹4L/year to ₹20L+ — a country for every mark sheet and bank balance.</p>
     </div>
 
+    <!-- Featured: Georgia (cheapest) + UK (highest ROI) -->
+    <div class="destination-featured">
+      <div class="country-card">
+        <div class="country-image-wrap">
+          <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&q=80&auto=format&fit=crop" alt="Tbilisi, Georgia" loading="lazy" />
+          <div class="country-overlay">
+            <span class="country-flag">🇬🇪</span>
+            <span class="country-tag">Most Affordable</span>
+          </div>
+        </div>
+        <div class="country-body">
+          <h3 class="country-name">Georgia</h3>
+          <p class="country-desc">European BSc Nursing at Asian cost. Safe country, warm climate, multiple intakes.</p>
+          <div class="country-stats">
+            <div class="country-stat"><span class="stat-val">4 Years</span><span class="stat-key">Duration</span></div>
+            <div class="country-stat"><span class="stat-val">$3–5.5K</span><span class="stat-key">Tuition/yr</span></div>
+            <div class="country-stat"><span class="stat-val">₹8–12K</span><span class="stat-key">Living/mo</span></div>
+            <div class="country-stat accent"><span class="stat-val">€1.2–1.8K</span><span class="stat-key">Post-grad salary</span></div>
+          </div>
+          <div class="country-intakes">Intakes: Feb &amp; Sep</div>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <div class="country-image-wrap">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80&auto=format&fit=crop" alt="London, United Kingdom" loading="lazy" />
+          <div class="country-overlay">
+            <span class="country-flag">🇬🇧</span>
+            <span class="country-tag">Highest ROI</span>
+          </div>
+        </div>
+        <div class="country-body">
+          <h3 class="country-name">United Kingdom</h3>
+          <p class="country-desc">BSc Nursing (Hons) at UK universities. Work 20 hrs/week during studies. Post-study work visa.</p>
+          <div class="country-stats">
+            <div class="country-stat"><span class="stat-val">3 Years</span><span class="stat-key">Duration</span></div>
+            <div class="country-stat"><span class="stat-val">£12–18K</span><span class="stat-key">Tuition/yr</span></div>
+            <div class="country-stat"><span class="stat-val">£800–1.2K</span><span class="stat-key">Living/mo</span></div>
+            <div class="country-stat accent"><span class="stat-val">£2.1–2.9K</span><span class="stat-key">Post-grad salary</span></div>
+          </div>
+          <div class="country-intakes">Work Rights: ✓ Yes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compact: Albania, Bulgaria, Malta -->
+    <div class="destination-compact">
+      <div class="country-row">
+        <span class="country-row-flag">🇦🇱</span>
+        <span class="country-row-name">Albania</span>
+        <span class="country-row-stat"><strong>$3.5–6K</strong>/yr</span>
+        <span class="country-row-stat">4 Years</span>
+        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>€1–1.5K</strong>/mo salary</span>
+      </div>
+      <div class="country-row">
+        <span class="country-row-flag">🇧🇬</span>
+        <span class="country-row-name">Bulgaria</span>
+        <span class="country-row-stat"><strong>€4–7K</strong>/yr</span>
+        <span class="country-row-stat">4 Years</span>
+        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>€1.5–2.3K</strong>/mo salary</span>
+      </div>
+      <div class="country-row">
+        <span class="country-row-flag">🇲🇹</span>
+        <span class="country-row-name">Malta</span>
+        <span class="country-row-stat"><strong>€8–12K</strong>/yr</span>
+        <span class="country-row-stat">3–4 Years</span>
+        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>€1.5–2.5K</strong>/mo salary</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS WORKS — 3 zones -->
+<section class="why-section">
+  <div class="why-header">
+    <p class="section-eyebrow inverted">Why This Works</p>
+    <h2 class="section-headline inverted">The Two Things<br>Parents Ask First</h2>
+  </div>
+
+  <!-- Zone A: Deal-breakers -->
+  <div class="why-dealbreakers">
+    <div class="dealbreaker-card">
+      <div class="dealbreaker-badge">✓ Confirmed</div>
+      <h3 class="dealbreaker-title">No NEET Required</h3>
+      <p class="dealbreaker-desc">Unlike MBBS, BSc Nursing abroad doesn't need NEET. Your child's 12th PCB percentage is what matters — not a single exam result that went wrong. 50% minimum at most universities. Some accept 45%.</p>
+    </div>
+    <div class="dealbreaker-card">
+      <div class="dealbreaker-badge">✓ Confirmed</div>
+      <h3 class="dealbreaker-title">NMC Recognized — Valid in India</h3>
+      <p class="dealbreaker-desc">Every university we recommend is NMC recognized. Your child can return to India, pass the screening test, register with the State Nursing Council, and practice in any government or private hospital.</p>
+    </div>
+  </div>
+
+  <!-- Zone B: Advantages -->
+  <div class="why-grid">
     <div class="why-card">
       <div class="why-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       </div>
       <h3 class="why-title">English Medium Only</h3>
-      <p class="why-desc">Every program we recommend is fully English-taught. No foreign language requirement. Indian students adapt faster, academically and socially.</p>
+      <p class="why-desc">Every program is fully English-taught. No foreign language requirement. Indian students adapt faster, academically and socially.</p>
     </div>
-
     <div class="why-card">
       <div class="why-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
       </div>
       <h3 class="why-title">Work While Studying</h3>
-      <p class="why-desc">UK allows 20 hrs/week part-time. Georgia, Albania, and Bulgaria offer on-campus work. Offset living costs while building your career network abroad.</p>
+      <p class="why-desc">UK allows 20 hrs/week part-time. Georgia, Albania, and Bulgaria offer on-campus work. Offset living costs while building your career network.</p>
     </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      </div>
-      <h3 class="why-title">Practice in India</h3>
-      <p class="why-desc">NMC-recognized degrees let you return and register with your State Nursing Council. Work in government or private hospitals, or pursue higher studies.</p>
-    </div>
-
     <div class="why-card">
       <div class="why-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
       </div>
       <h3 class="why-title">International Salary</h3>
-      <p class="why-desc">UK nurses earn £25–35K/year. Malta and Bulgaria nurses earn €18–28K/year with EU license. Gulf countries offer tax-free salaries. Same degree, 5x the salary.</p>
+      <p class="why-desc">UK nurses earn £25–35K/year. Malta and Bulgaria nurses earn €18–28K/year. Gulf countries offer tax-free salaries. Same degree, 5x the pay.</p>
     </div>
+  </div>
 
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-      </div>
-      <h3 class="why-title">Scholarship Available</h3>
-      <p class="why-desc">Merit-based scholarships in UK, Georgia, Albania, Bulgaria, and Malta. We help identify and apply. Reduces total program cost significantly.</p>
-    </div>
-
-    <div class="why-card featured">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-      </div>
-      <h3 class="why-title">The Respect You Deserve</h3>
-      <p class="why-desc">In India, nurses are often overworked and under-respected. In UK, EU, and Gulf — nurses are valued professionals. Same degree. Completely different life.</p>
-    </div>
-
-    <div class="why-card problem">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
-      <h3 class="why-title">Escape India's Reality</h3>
-      <p class="why-desc">Fresh nurses in India earn ₹8–15K/month. Long shifts. Limited growth. The BSc Nursing abroad route exists because India failed to fix this. Don't wait for it to change.</p>
-    </div>
-
+  <!-- Zone C: Editorial truth -->
+  <div class="why-editorial">
+    <p class="why-editorial-text">
+      In India, nurses are overworked and earn ₹8–15K/month. Abroad, they're <strong>valued professionals</strong>. Same qualification. Completely different life. The BSc Nursing abroad route exists because <strong>India failed to fix this</strong>. Don't wait for it to change.
+    </p>
   </div>
 </section>
 
-<!-- SOCIAL PROOF — Apple clean stats + testimonials -->
-<section class="social-proof">
-  <!-- Overall Stats -->
-  <div class="stats-strip">
-    <div class="stat-item">
-      <div class="stat-number">350+</div>
-      <div class="stat-desc">Students Placed</div>
+<!-- STUDENT STORIES — Asymmetric -->
+<section class="py-16 lg:py-24 bg-[#f9fafb]">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="text-center mb-12 px-6">
+      <p class="section-eyebrow mb-3">Real Students. Real Salaries.</p>
+      <h2 class="section-headline">They Were Where<br><span class="section-headline-muted">Your Child Is Now</span></h2>
     </div>
-    <div class="stat-item">
-      <div class="stat-number accent">₹80K</div>
-      <div class="stat-desc">Avg Monthly Salary Abroad<br><span class="stat-sub">vs ₹12K in India</span></div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">6 Mo</div>
-      <div class="stat-desc">Avg Time to Placement</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-desc">Visa Success Rate</div>
-    </div>
-  </div>
 
-  <div class="testimonials-header">
-    <p class="section-eyebrow">Real Students. Real Results.</p>
-    <h2 class="section-headline">Gradiks Students<br>Are Working Now</h2>
-  </div>
+    <div class="stories-grid">
+      <!-- Featured testimonial -->
+      <div class="testimonial-card--featured">
+        <div class="testimonial-person">
+          <div class="person-avatar">R</div>
+          <div class="person-info">
+            <div class="person-name">Rahul <span class="person-loc">🇮🇳 Kerala</span></div>
+            <div class="person-detail">BSc Nursing, Albania · 2024 · From Kozhikode</div>
+          </div>
+        </div>
+        <p class="testimonial-quote">"Gradiks told me Albania was my best option given my 12th marks. I didn't believe it at first. Now I'm working in a UAE hospital, saving ₹80K/month. My parents still can't believe it."</p>
+        <div class="testimonial-outcome">✓ Placed in UAE · Salary ₹80K/mo</div>
+      </div>
 
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-person">
-        <div class="person-avatar">R</div>
-        <div class="person-info">
-          <div class="person-name">Rahul <span class="person-loc">🇮🇳 Kerala</span></div>
-          <div class="person-detail">BSc Nursing, Albania · 2024 · From Kozhikode</div>
+      <!-- Stacked testimonials -->
+      <div class="stories-stack">
+        <div class="testimonial-card">
+          <div class="testimonial-person">
+            <div class="person-avatar">A</div>
+            <div class="person-info">
+              <div class="person-name">Aishwarya <span class="person-loc">🇮🇳 Kerala</span></div>
+              <div class="person-detail">BSc Nursing, Georgia · 2023</div>
+            </div>
+          </div>
+          <p class="testimonial-quote">"I scored 58% in 12th. Every agent said try again next year. Gradiks found me a university in Georgia. Graduated without a loan."</p>
+          <div class="testimonial-outcome">✓ Now at Apollo Hospital, Chennai</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-person">
+            <div class="person-avatar">M</div>
+            <div class="person-info">
+              <div class="person-name">Muhammed <span class="person-loc">🇮🇳 Kerala</span></div>
+              <div class="person-detail">BSc Nursing, UK · 2022</div>
+            </div>
+          </div>
+          <p class="testimonial-quote">"They were honest about the cost and the OSCE challenge. Worth it — I'm in Manchester now."</p>
+          <div class="testimonial-outcome">✓ NHS Hospital, Manchester · £28K/yr</div>
         </div>
       </div>
-      <p class="testimonial-quote">"Gradiks told me Albania was my best option given my 12th marks. I didn't believe it at first. Now I'm working in a UAE hospital, saving ₹80K/month."</p>
-      <div class="testimonial-outcome">✓ Placed in UAE · Salary ₹80K/mo</div>
     </div>
 
-    <div class="testimonial-card">
-      <div class="testimonial-person">
-        <div class="person-avatar">A</div>
-        <div class="person-info">
-          <div class="person-name">Aishwarya <span class="person-loc">🇮🇳 Kerala</span></div>
-          <div class="person-detail">BSc Nursing, Georgia · 2023 · From Kochi</div>
-        </div>
-      </div>
-      <p class="testimonial-quote">"I scored 58% in 12th. Every agent said try again next year. Gradiks found me a European-degree university in Georgia. Graduated without a loan."</p>
-      <div class="testimonial-outcome">✓ Now at Apollo Hospital, Chennai</div>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-person">
-        <div class="person-avatar">M</div>
-        <div class="person-info">
-          <div class="person-name">Muhammed <span class="person-loc">🇮🇳 Kerala</span></div>
-          <div class="person-detail">BSc Nursing, UK · 2022 · From Malappuram</div>
-        </div>
-      </div>
-      <p class="testimonial-quote">"Gradiks was the only one who told me UK was possible with my profile. They were honest about the cost and the OSCE challenge. Worth it — I'm in Manchester now."</p>
-      <div class="testimonial-outcome">✓ NHS Hospital, Manchester · £28K/yr</div>
+    <div class="text-center mt-12 px-6">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
+        Join 350+ students already abroad
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- ELIGIBILITY — CRO: low-friction, immediate answer -->
-<section class="py-24 lg:py-32">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="grid lg:grid-cols-2 gap-16">
-
-      <!-- Eligibility Checklist -->
-      <div>
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Simple Requirements</div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6" style="font-family: var(--font-display);">
-          ARE YOU
-          <span class="text-[#4b5563]">ELIGIBLE?</span>
-        </h2>
-        <p class="text-[#4b5563] mb-8">
-          BSc Nursing abroad has straightforward criteria. No competitive entrance exams. If you have science in 12th, you likely qualify.
-        </p>
-        <ul class="space-y-4 mb-8">
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">10+2 with Physics, Chemistry, Biology (PCB)</span>
-          </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">Minimum 50% aggregate in PCB (some countries accept 45%)</span>
-          </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]"><strong>NEET is NOT required</strong> for BSc Nursing admissions abroad</span>
-          </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">Valid Indian passport</span>
-          </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">No age limit at most universities</span>
-          </li>
-        </ul>
-        <div class="p-4 border border-[#e5e7eb] bg-[#f9fafb]">
-          <p class="text-sm text-[#4b5563]">
-            <strong class="text-[#111827]">Not sure about your score?</strong> Tell us your 12th % in the form below. We'll tell you exactly which countries you qualify for — free.
-          </p>
-        </div>
-      </div>
-
-      <!-- After Graduation -->
-      <div>
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Career Outcomes</div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6" style="font-family: var(--font-display);">
-          WHAT AFTER
-          <span class="text-[#4b5563]"> GRADUATION?</span>
-        </h2>
-        <p class="text-[#4b5563] mb-8">
-          BSc Nursing opens multiple career paths — practice in India, work abroad, or pursue higher studies. Your degree is yours forever.
-        </p>
-
-        <!-- India path -->
-        <div class="bg-[#ffffff] border border-[#e5e7eb] p-6 mb-4">
-          <h3 class="text-base font-medium mb-3 flex items-center gap-2" style="font-family: var(--font-display);">
-            <span class="text-[#be1e2d]">🇮🇳</span> Practice in India
-          </h3>
-          <ol class="space-y-2">
-            <li class="flex gap-3 text-sm text-[#4b5563]">
-              <span class="flex-shrink-0 w-5 h-5 bg-[#be1e2d] text-white text-xs flex items-center justify-center font-medium rounded-full">1</span>
-              Pass NMC Screening Test (NEXT exam)
-            </li>
-            <li class="flex gap-3 text-sm text-[#4b5563]">
-              <span class="flex-shrink-0 w-5 h-5 bg-[#be1e2d] text-white text-xs flex items-center justify-center font-medium rounded-full">2</span>
-              Register with State Nursing Council
-            </li>
-            <li class="flex gap-3 text-sm text-[#4b5563]">
-              <span class="flex-shrink-0 w-5 h-5 bg-[#be1e2d] text-white text-xs flex items-center justify-center font-medium rounded-full">3</span>
-              Join government or private hospital
-            </li>
-          </ol>
-        </div>
-
-        <!-- Abroad path -->
-        <div class="bg-[#ffffff] border border-[#e5e7eb] p-6 mb-6">
-          <h3 class="text-base font-medium mb-3 flex items-center gap-2" style="font-family: var(--font-display);">
-            <span class="text-[#be1e2d]">🌍</span> Work Abroad
-          </h3>
-          <p class="text-sm text-[#4b5563] mb-3">Pass the destination country's licensing exam:</p>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">UK</div>
-              <div class="text-[#6b7280]">OSCE exam + NMC registration</div>
-            </div>
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">USA</div>
-              <div class="text-[#6b7280]">NCLEX-RN exam</div>
-            </div>
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">UAE / Gulf</div>
-              <div class="text-[#6b7280]">DHA or MOH exam</div>
-            </div>
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">Australia</div>
-              <div class="text-[#6b7280]">NCLEX-RN + OBA exam</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Salary grid -->
-        <div class="grid grid-cols-2 gap-4">
-          <div class="border border-[#e5e7eb] bg-[#ffffff] p-5">
-            <div class="text-2xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">₹3–6L</div>
-            <div class="text-xs text-[#6b7280]">Fresh Nurse Salary/yr (India)</div>
-          </div>
-          <div class="border border-[#e5e7eb] bg-[#ffffff] p-5">
-            <div class="text-2xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">£25–35K</div>
-            <div class="text-xs text-[#6b7280]">UK Nurse Salary/yr</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- LEAD FORM — CRO-optimized, friction-minimal -->
-<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f9fafb] border-y border-[#e5e7eb]">
+<!-- LEAD FORM — with eligibility pills + benefits -->
+<section id="lead-form-container" class="py-16 lg:py-24 border-t border-[#e5e7eb]">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-12">
+      <!-- Eligibility pills -->
+      <div class="text-center mb-6">
+        <p class="text-xs tracking-[0.2em] uppercase text-[#6b7280] mb-3">You qualify if you have</p>
+        <div class="eligibility-pills">
+          <span class="eligibility-pill">12th with PCB</span>
+          <span class="eligibility-pill">50% minimum</span>
+          <span class="eligibility-pill">No NEET needed</span>
+          <span class="eligibility-pill">Valid passport</span>
+          <span class="eligibility-pill">Any age</span>
+        </div>
+      </div>
+
+      <div class="text-center mb-10">
         <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Free · No Obligation · 24hr Response</div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
+        <h2 class="text-3xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
           GET YOUR PERSONALIZED
           <br />
           <span class="text-[#4b5563]">COST BREAKDOWN</span>
         </h2>
-        <p class="text-[#4b5563]">Tell us your 12th marks and preferred country. We'll reply with exact universities, fees, and total cost — within 24 hours. No sales pitch.</p>
+        <p class="text-[#4b5563] text-sm max-w-md mx-auto">Tell us your 12th marks and preferred country. We'll reply with exact universities, fees, and total cost — within 24 hours.</p>
       </div>
 
       <form id="lead-form" class="bg-[#ffffff] border border-[#e5e7eb] p-8 lg:p-12">
+        <!-- What you'll get -->
+        <div class="form-benefits">
+          <span class="form-benefit">Personalized university list</span>
+          <span class="form-benefit">Exact fee breakdown</span>
+          <span class="form-benefit">Scholarship options</span>
+          <span class="form-benefit">Visa timeline</span>
+        </div>
+
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
             <label class="form-label">Full Name *</label>
