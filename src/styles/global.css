@@ -90,6 +90,22 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+.trust-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  white-space: nowrap;
+  animation: ticker-scroll 25s linear infinite;
+  width: max-content;
+  padding: 0 1.5rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-ticker-track { animation: none; overflow-x: auto; }
+}
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 .trust-stat {
   font-family: var(--font-display);
   font-size: 0.875rem;
