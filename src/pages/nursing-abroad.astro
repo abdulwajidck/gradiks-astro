@@ -9,20 +9,21 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
 <MainLayout title={title} description={description}>
 <Navigation />
 
+<main>
 <!-- TRUST TICKER -->
 <div class="trust-bar">
-  <div class="trust-items" style="flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
-    <span class="trust-stat" style="white-space: nowrap;">350+ students</span>
-    <span class="trust-label" style="white-space: nowrap;">placed across 5 countries</span>
+  <div class="trust-items">
+    <span class="trust-stat">350+ students</span>
+    <span class="trust-label">placed across 5 countries</span>
     <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat" style="white-space: nowrap;">100% visa</span>
-    <span class="trust-label" style="white-space: nowrap;">success since 2021</span>
+    <span class="trust-stat">100% visa</span>
+    <span class="trust-label">success since 2021</span>
     <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat accent" style="white-space: nowrap;">₹80K/mo</span>
-    <span class="trust-label" style="white-space: nowrap;">avg starting salary abroad</span>
+    <span class="trust-stat accent">₹80K/mo</span>
+    <span class="trust-label">avg starting salary abroad</span>
     <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat" style="white-space: nowrap;">24hr</span>
-    <span class="trust-label" style="white-space: nowrap;">response guaranteed</span>
+    <span class="trust-stat">24hr</span>
+    <span class="trust-label">response guaranteed</span>
   </div>
 </div>
 
@@ -33,7 +34,7 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
     <h1 class="hero-headline">
       Your Child Deserves<br>
       <span class="hero-headline-accent">₹80K/Month.</span><br>
-      <span class="text-[#9ca3af]" style="font-size: 0.6em; font-weight: 400;">Not ₹12K.</span>
+      <span class="hero-subtitle">Not ₹12K.</span>
     </h1>
     <p class="hero-subheadline">
       BSc Nursing abroad. Same 4-year degree. NMC recognized.
@@ -46,14 +47,14 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
       </button>
       <div class="lg:hidden w-full mt-2">
         <form id="hero-lead-form" class="space-y-3">
-          <input type="text" name="name" required class="form-input" placeholder="Full Name *">
-          <input type="tel" name="phone" required class="form-input" placeholder="+91 98765 43210 *">
-          <input type="email" name="email" required class="form-input" placeholder="Email *">
+          <input type="text" name="name" required class="form-input" placeholder="Full Name *" aria-label="Full Name" autocomplete="name">
+          <input type="tel" name="phone" required class="form-input" placeholder="+91 98765 43210 *" aria-label="Phone Number" autocomplete="tel">
+          <input type="email" name="email" required class="form-input" placeholder="Email *" aria-label="Email Address" autocomplete="email">
           <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2">
             GET FREE COST BREAKDOWN
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
-          <p class="text-center text-[10px] text-[#9ca3af]">Free · No spam · 24hr response</p>
+          <p class="text-center text-[10px] text-[var(--color-text-muted)]">Free · No spam · 24hr response</p>
         </form>
       </div>
     </div>
@@ -73,6 +74,7 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
       alt="International nurse in modern hospital setting"
       class="hero-image"
       loading="eager"
+      fetchpriority="high"
     />
     <div class="hero-image-overlay">
       <div class="hero-badge">No NEET required</div>
@@ -164,21 +166,21 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
         <span class="country-row-name">Albania</span>
         <span class="country-row-stat"><strong>$3.5–6K</strong>/yr</span>
         <span class="country-row-stat">4 Years</span>
-        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>€1–1.5K</strong>/mo salary</span>
+        <span class="country-row-stat" class="!text-[var(--color-gold-500)]"><strong>€1–1.5K</strong>/mo salary</span>
       </div>
       <div class="country-row">
         <span class="country-row-flag">🇧🇬</span>
         <span class="country-row-name">Bulgaria</span>
         <span class="country-row-stat"><strong>€4–7K</strong>/yr</span>
         <span class="country-row-stat">4 Years</span>
-        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>€1.5–2.3K</strong>/mo salary</span>
+        <span class="country-row-stat" class="!text-[var(--color-gold-500)]"><strong>€1.5–2.3K</strong>/mo salary</span>
       </div>
       <div class="country-row">
         <span class="country-row-flag">🇲🇹</span>
         <span class="country-row-name">Malta</span>
         <span class="country-row-stat"><strong>€8–12K</strong>/yr</span>
         <span class="country-row-stat">3–4 Years</span>
-        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>€1.5–2.5K</strong>/mo salary</span>
+        <span class="country-row-stat" class="!text-[var(--color-gold-500)]"><strong>€1.5–2.5K</strong>/mo salary</span>
       </div>
     </div>
   </div>
@@ -315,7 +317,7 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
 
       <div class="text-center mb-10">
         <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Free · No Obligation · 24hr Response</div>
-        <h2 class="text-3xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
+        <h2 class="text-3xl md:text-5xl font-medium tracking-tight mb-4 font-[family-name:var(--font-display)]">
           GET YOUR PERSONALIZED
           <br />
           <span class="text-[#4b5563]">COST BREAKDOWN</span>
@@ -334,26 +336,26 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
 
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <label class="form-label">Full Name *</label>
-            <input type="text" name="name" required class="form-input" placeholder="Your full name">
+            <label for="lf-name" class="form-label">Full Name *</label>
+            <input id="lf-name" type="text" name="name" required class="form-input" placeholder="Your full name" autocomplete="name">
           </div>
           <div>
-            <label class="form-label">Phone *</label>
-            <input type="tel" name="phone" required class="form-input" placeholder="+91 98765 43210">
+            <label for="lf-phone" class="form-label">Phone *</label>
+            <input id="lf-phone" type="tel" name="phone" required class="form-input" placeholder="+91 98765 43210" autocomplete="tel">
           </div>
         </div>
         <div class="mb-6">
-          <label class="form-label">Email *</label>
-          <input type="email" name="email" required class="form-input" placeholder="your@email.com">
+          <label for="lf-email" class="form-label">Email *</label>
+          <input id="lf-email" type="email" name="email" required class="form-input" placeholder="your@email.com" autocomplete="email">
         </div>
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <label class="form-label">12th PCB % *</label>
-            <input type="text" name="pcb_percentage" required class="form-input" placeholder="e.g. 58% or 72%">
+            <label for="lf-pcb" class="form-label">12th PCB % *</label>
+            <input id="lf-pcb" type="text" name="pcb_percentage" required class="form-input" placeholder="e.g. 58% or 72%">
           </div>
           <div>
-            <label class="form-label">Program of Interest</label>
-            <select name="program_interest" class="form-select">
+            <label for="lf-program" class="form-label">Program of Interest</label>
+            <select id="lf-program" name="program_interest" class="form-select">
               <option value="">Select program</option>
               <option value="B.Sc Nursing">B.Sc Nursing</option>
               <option value="GNM">GNM Diploma</option>
@@ -365,8 +367,8 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
         </div>
         <div class="mb-6">
           <div>
-            <label class="form-label">Preferred Country</label>
-            <select name="preferred_country" class="form-select">
+            <label for="lf-country" class="form-label">Preferred Country</label>
+            <select id="lf-country" name="preferred_country" class="form-select">
               <option value="">Select country</option>
               <option value="Georgia">🇬🇪 Georgia</option>
               <option value="Albania">🇦🇱 Albania</option>
@@ -378,8 +380,8 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
           </div>
         </div>
         <div class="mb-6">
-          <label class="form-label">Any questions? (optional)</label>
-          <textarea name="questions" class="form-input" rows="2" placeholder="e.g. Can I go to UK with 55%?"></textarea>
+          <label for="lf-questions" class="form-label">Any questions? (optional)</label>
+          <textarea id="lf-questions" name="questions" class="form-input" rows="2" placeholder="e.g. Can I go to UK with 55%?"></textarea>
         </div>
         <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
           SEND MY COST BREAKDOWN — FREE
@@ -391,6 +393,7 @@ const description = "BSc Nursing abroad for Indian students. Georgia, Albania, B
   </div>
 </section>
 
+</main>
 <Footer />
 
 <script>

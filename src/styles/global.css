@@ -152,6 +152,11 @@
 .hero-headline-accent {
   color: var(--color-gold-500);
 }
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
 
 .hero-subheadline {
   font-size: 0.9375rem;
