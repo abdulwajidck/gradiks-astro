@@ -1309,6 +1309,60 @@ a { text-decoration: none; color: inherit; }
   flex-shrink: 0;
 }
 
+/* ============================================
+   VISA GALLERY — auto-scrolling student proof
+   ============================================ */
+.visa-gallery {
+  overflow: hidden;
+  position: relative;
+}
+.visa-gallery::before,
+.visa-gallery::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  z-index: 2;
+  pointer-events: none;
+}
+.visa-gallery::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-surface, #fff), transparent);
+}
+.visa-gallery::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-surface, #fff), transparent);
+}
+.visa-gallery-track {
+  display: flex;
+  gap: 1rem;
+  animation: visa-scroll 40s linear infinite;
+  width: max-content;
+}
+@media (prefers-reduced-motion: reduce) {
+  .visa-gallery-track {
+    animation: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@keyframes visa-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.visa-card {
+  width: 260px;
+  height: 340px;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+@media (max-width: 640px) {
+  .visa-card { width: 200px; height: 260px; }
+}
+
 } /* end @layer components */
 
 /* ============================================
