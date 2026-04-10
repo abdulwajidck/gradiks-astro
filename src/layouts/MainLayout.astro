@@ -83,7 +83,7 @@ const { title, description } = Astro.props;
       var p=new URLSearchParams(location.search),k=['gclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
       k.forEach(function(x){var v=p.get(x);if(v)sessionStorage.setItem(x,v)});
       window.__sendToBackend=function(d){var t={};k.forEach(function(x){t[x]=sessionStorage.getItem(x)||''});t.page_url=location.href;t.referrer=document.referrer||'';
-      fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({},d,t)),keepalive:true}).catch(function(){})};
+      fetch('https://form-viewer-dcuuvo.cranl.net/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({},d,t)),keepalive:true}).catch(function(){})};
     })();
     </script>
 </body>
