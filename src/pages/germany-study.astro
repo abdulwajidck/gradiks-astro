@@ -302,6 +302,9 @@ document.getElementById('lead-form')?.addEventListener('submit', (e) => {
   const extraInfo = [];
   if (program) extraInfo.push('Program: ' + program);
   if (extraInfo.length > 0) payload.fields.notes = extraInfo.join(' | ');
+  // Log to backend
+  window.__sendToBackend && window.__sendToBackend({ form_type: 'germany-study', name, phone: formattedPhone, email, program_interest: program });
+
   const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7' },
@@ -328,6 +331,8 @@ document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
   let formattedPhone = phone.replace(/[\s\-]/g, '');
   if (!formattedPhone.startsWith('+')) { formattedPhone = '+91' + formattedPhone.replace(/^0+/, ''); }
   const payload = { fields: { name, phone: formattedPhone, email, lead_source: 'Google Ads', facebook_campaign_name: 'Germany LP - Study Lead' } };
+  // Log to backend
+  window.__sendToBackend && window.__sendToBackend({ form_type: 'hero-germany-study', name, phone: formattedPhone, email });
   const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7' }, body: JSON.stringify(payload), keepalive: true }).catch(() => {});
   const timeout = new Promise(resolve => setTimeout(resolve, 1500));
   btn.innerHTML = 'SENDING...';

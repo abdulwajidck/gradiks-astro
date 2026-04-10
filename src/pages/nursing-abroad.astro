@@ -613,6 +613,9 @@ document.getElementById('lead-form')?.addEventListener('submit', (e) => {
     payload.fields.notes = extraInfo.join(' | ');
   }
 
+  // Log to backend
+  window.__sendToBackend && window.__sendToBackend({ form_type: 'nursing-abroad', name, phone: formattedPhone, email, pcb_percentage: pcb, program_interest: program, preferred_country: country, questions });
+
   // Send to TeleCRM, then redirect — redirect after response OR 1.5s timeout (whichever comes first)
   const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
     method: 'POST',
@@ -663,6 +666,9 @@ document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
       facebook_campaign_name: 'Nursing Abroad',
     }
   };
+
+  // Log to backend
+  window.__sendToBackend && window.__sendToBackend({ form_type: 'hero-nursing-abroad', name, phone: formattedPhone, email });
 
   const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
     method: 'POST',
