@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && cd backend && npm ci --omit=dev",
+    "start": "node backend/server.js",
     "preview": "astro preview",
     "astro": "astro"
   },
