@@ -1,0 +1,16 @@
+{
+  "name": "gradiks-form-api",
+  "version": "1.0.0",
+  "description": "Minimal form submission API for Gradiks",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongodb": "^6.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  }
+}
