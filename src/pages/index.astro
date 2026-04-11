@@ -10,82 +10,84 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
 <MainLayout title={title} description={description}>
 <Navigation />
 <!-- TRUST BAR -->
-<section class="bg-[#232d61] py-4 mt-20 text-white">
+<section class="bg-[#232d61] py-3.5 mt-20 text-white overflow-hidden">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 text-white text-sm">
-      <span class="flex items-center gap-2">
-        <span class="font-display font-semibold">2,000+</span>
-        <span class="text-white/70">Students Guided</span>
+    <div class="flex flex-wrap justify-center items-center gap-6 lg:gap-14 text-white text-[0.8125rem]">
+      <span class="flex items-center gap-2.5">
+        <span class="font-display font-bold text-base tabular-nums" style="font-variant-numeric: tabular-nums;">2,000+</span>
+        <span class="text-white/60">Students Guided</span>
       </span>
-      <span class="text-white/30 hidden sm:block">•</span>
-      <span class="flex items-center gap-2">
-        <span class="font-display font-semibold">98%</span>
-        <span class="text-white/70">Success Rate</span>
+      <span class="text-white/20 hidden sm:block">|</span>
+      <span class="flex items-center gap-2.5">
+        <span class="font-display font-bold text-base tabular-nums">98%</span>
+        <span class="text-white/60">Admission Success</span>
       </span>
-      <span class="text-white/30 hidden sm:block">•</span>
-      <span class="flex items-center gap-2">
-        <span class="font-display font-semibold">50+</span>
-        <span class="text-white/70">Partner Universities</span>
+      <span class="text-white/20 hidden sm:block">|</span>
+      <span class="flex items-center gap-2.5">
+        <span class="font-display font-bold text-base tabular-nums">50+</span>
+        <span class="text-white/60">Partner Universities</span>
       </span>
-      <span class="text-white/30 hidden sm:block">•</span>
-      <span class="flex items-center gap-2">
-        <span class="font-display font-semibold">15+</span>
-        <span class="text-white/70">Countries</span>
+      <span class="text-white/20 hidden sm:block">|</span>
+      <span class="flex items-center gap-2.5">
+        <span class="font-display font-bold text-base tabular-nums">15+</span>
+        <span class="text-white/60">Countries</span>
       </span>
     </div>
   </div>
 </section>
+
 <!-- HERO SECTION -->
 <section class="relative overflow-hidden bg-white">
-  <!-- Subtle gradient decoration -->
-  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-[rgba(190,30,45,0.04)] via-transparent to-transparent rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-[rgba(35,45,97,0.03)] via-transparent to-transparent rounded-full blur-3xl"></div>
+  <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-gradient-radial from-[oklch(0.55_0.18_25/0.04)] via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-[oklch(0.35_0.08_260/0.03)] via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-6 lg:pt-44 pb-4 lg:pb-28 relative z-10">
-    <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-5 lg:pt-40 pb-4 lg:pb-32 relative z-10">
+    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-start">
       <!-- Left: Content -->
       <div>
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[rgba(21,190,83,0.12)] border border-[rgba(21,190,83,0.3)] mb-2 lg:mb-6 animate-fade-in-up" style="border-radius: 4px;">
-          <span class="w-1.5 h-1.5 bg-[#15be53] rounded-full"></span>
-          <span class="text-[0.8125rem] font-semibold tracking-[0.15em] uppercase text-[#108c3d]" style="font-family: var(--font-body);">Trusted by 2,000+ Families</span>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[oklch(0.85_0.12_145/0.15)] border border-[oklch(0.65_0.15_145/0.3)] mb-2 lg:mb-5 animate-fade-in-up" style="border-radius: 4px;">
+          <span class="w-1.5 h-1.5 bg-[#15be53] rounded-full animate-pulse"></span>
+          <span class="text-[0.8125rem] font-semibold tracking-[0.12em] uppercase text-[oklch(0.45_0.12_150)]" style="font-family: var(--font-body);">Trusted by 2,000+ Families</span>
         </div>
 
         <!-- Headline -->
-        <h1 class="hero-headline animate-fade-in-up delay-100 !text-[1.75rem] lg:!text-[clamp(3rem,7vw,5rem)]">
-          Your Child's
+        <h1 class="hero-headline animate-fade-in-up delay-100 !text-[1.7rem] !leading-[1.12] lg:!text-[clamp(2.75rem,5.5vw,4.25rem)] lg:!leading-[1.06]">
+          <span class="text-[oklch(0.3_0.02_260)]">Your Child Deserves</span>
+          <br />
+          <span class="hero-headline-accent">Honest</span> <span class="text-[oklch(0.3_0.02_260)]">Medical</span>
           <br class="hidden lg:inline" />
-          <span class="hero-headline-accent">Medical</span> Dreams,
-          <br class="hidden lg:inline" />
-          Our Honest Guidance
+          <span class="text-[oklch(0.3_0.02_260)]">Career Guidance</span>
         </h1>
 
         <!-- Subheadline -->
-        <p class="hero-subheadline animate-fade-in-up delay-200">
-          Transparent MBBS admission support abroad. No false promises, no hidden fees — just clear advice for your family's future.
+        <p class="hero-subheadline animate-fade-in-up delay-200 !max-w-[440px]">
+          Transparent MBBS admissions abroad. No false promises, no hidden fees. Clear advice backed by 2,000+ successful placements.
         </p>
 
-        <!-- CTA Row -->
+        <!-- Desktop CTA Row -->
         <div class="hero-ctas animate-fade-in-up delay-300">
           <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex">
             Get Free Assessment
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
           <button onclick="document.getElementById('why-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="cta-secondary hidden lg:inline-flex">
-            Learn More
+            Why Gradiks
           </button>
-          <div class="lg:hidden w-full mt-2">
+
+          <!-- MOBILE HERO FORM -->
+          <div class="lg:hidden w-full mt-1">
             <form id="hero-lead-form" class="space-y-3">
               <input type="text" name="name" required class="form-input" placeholder="Full Name *">
               <input type="tel" name="phone" required class="form-input" placeholder="+91 98765 43210 *">
               <input type="email" name="email" required class="form-input" placeholder="Email *">
-              <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2">GET FREE ASSESSMENT</button>
-              <p class="text-center text-[10px] text-[#9ca3af]">Free · No spam · 24hr response</p>
+              <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2 hover:bg-[#a81826] transition-colors">GET FREE ASSESSMENT</button>
+              <p class="text-center text-[10px] text-[oklch(0.65_0.01_260)]">Free consultation. No spam. Response within 24 hours.</p>
             </form>
           </div>
         </div>
 
-        <!-- Trust micro-stats -->
+        <!-- Trust micro-stats (desktop only) -->
         <div class="hero-meta animate-fade-in-up delay-400">
           <div class="flex items-center gap-2">
             <div class="flex -space-x-1.5">
@@ -97,638 +99,854 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
           </div>
           <span class="meta-dot">|</span>
           <div class="flex items-center gap-1">
-            <span class="text-[#f59e0b]">★★★★★</span>
+            <span class="text-[#f59e0b]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <span>4.9/5 from parents</span>
           </div>
         </div>
       </div>
 
-      <!-- Right: Visual card -->
+      <!-- Right: Data-driven proof panel (desktop only) -->
       <div class="relative hidden lg:block animate-fade-in delay-500">
-        <!-- Main card with Stripe-style shadow -->
-        <div class="relative bg-white border border-[#e5edf5] overflow-hidden" style="border-radius: 8px; box-shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;">
-          <!-- Image top -->
-          <div class="relative h-[240px] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80&auto=format&fit=crop" alt="Doctor in white coat consulting with patient" class="w-full h-full object-cover" loading="eager" />
-            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+        <div class="relative bg-[oklch(0.985_0.005_260)] border border-[oklch(0.9_0.01_260)] overflow-hidden" style="border-radius: 10px; box-shadow: oklch(0.3 0.02 260 / 0.08) 0px 24px 48px -12px, oklch(0 0 0 / 0.04) 0px 8px 16px -8px;">
+
+          <!-- Header strip -->
+          <div class="px-7 pt-7 pb-5 border-b border-[oklch(0.92_0.01_260)]">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[0.6875rem] font-semibold tracking-[0.15em] uppercase text-[oklch(0.55_0.01_260)]" style="font-family: var(--font-body);">Placement Track Record</span>
+              <span class="text-[0.6875rem] text-[oklch(0.55_0.15_145)] font-semibold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 bg-[oklch(0.6_0.17_145)] rounded-full"></span>
+                Live Data
+              </span>
+            </div>
+            <div class="text-[2rem] font-bold tracking-tight text-[oklch(0.2_0.02_260)]" style="font-family: var(--font-display); line-height: 1.15;">
+              2,000+ <span class="text-[1rem] font-normal text-[oklch(0.5_0.01_260)]">students placed since 2018</span>
+            </div>
           </div>
 
-          <!-- Card body -->
-          <div class="px-6 pb-6 -mt-8 relative">
-            <!-- Floating stat pills -->
-            <div class="grid grid-cols-3 gap-3 mb-5">
-              <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
-                <div class="stat-val text-xl">2K+</div>
-                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Students</div>
+          <!-- Key metrics grid -->
+          <div class="grid grid-cols-3 gap-px bg-[oklch(0.92_0.01_260)]">
+            <div class="bg-white px-5 py-5 text-center">
+              <div class="text-[1.625rem] font-bold text-[oklch(0.2_0.02_260)] tracking-tight" style="font-family: var(--font-display);">98%</div>
+              <div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mt-1">Admission Rate</div>
+            </div>
+            <div class="bg-white px-5 py-5 text-center">
+              <div class="text-[1.625rem] font-bold text-[oklch(0.2_0.02_260)] tracking-tight" style="font-family: var(--font-display);">50+</div>
+              <div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mt-1">NMC Universities</div>
+            </div>
+            <div class="bg-white px-5 py-5 text-center">
+              <div class="text-[1.625rem] font-bold text-[oklch(0.45_0.16_145)] tracking-tight" style="font-family: var(--font-display);">3x</div>
+              <div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mt-1">FMGE Pass Rate</div>
+            </div>
+          </div>
+
+          <!-- Proof rows -->
+          <div class="p-6 space-y-3">
+            <div class="flex items-center gap-3.5 p-3.5 bg-[oklch(0.97_0.005_260)] border border-[oklch(0.93_0.01_260)]" style="border-radius: 6px;">
+              <div class="w-9 h-9 flex items-center justify-center bg-[oklch(0.85_0.1_145/0.2)] flex-shrink-0" style="border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.14 145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
               </div>
-              <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
-                <div class="stat-val text-xl">50+</div>
-                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Universities</div>
-              </div>
-              <div class="bg-white border border-[#e5edf5] p-3 text-center" style="border-radius: 6px; box-shadow: rgba(23,23,23,0.06) 0px 3px 6px;">
-                <div class="stat-val text-xl text-[#15be53]">98%</div>
-                <div class="text-[0.6875rem] text-[#6b7280] mt-0.5">Success</div>
+              <div>
+                <div class="text-[0.8125rem] font-semibold text-[oklch(0.2_0.02_260)]" style="font-family: var(--font-display);">Every University NMC Verified</div>
+                <div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)]">WHO + ECFMG recognized worldwide</div>
               </div>
             </div>
+            <div class="flex items-center gap-3.5 p-3.5 bg-[oklch(0.97_0.005_260)] border border-[oklch(0.93_0.01_260)]" style="border-radius: 6px;">
+              <div class="w-9 h-9 flex items-center justify-center bg-[oklch(0.9_0.06_260/0.3)] flex-shrink-0" style="border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.45 0.08 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <div class="text-[0.8125rem] font-semibold text-[oklch(0.2_0.02_260)]" style="font-family: var(--font-display);">Zero Hidden Charges</div>
+                <div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)]">Full fee breakdown before you commit</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3.5 p-3.5 bg-[oklch(0.97_0.005_260)] border border-[oklch(0.93_0.01_260)]" style="border-radius: 6px;">
+              <div class="w-9 h-9 flex items-center justify-center bg-[oklch(0.92_0.08_25/0.25)] flex-shrink-0" style="border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.15 25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="text-[0.8125rem] font-semibold text-[oklch(0.2_0.02_260)]" style="font-family: var(--font-display);">FMGE Coaching Included</div>
+                <div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)]">Structured prep from 3rd year onwards</div>
+              </div>
+            </div>
+          </div>
 
-            <!-- Feature rows -->
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
-                <div class="w-8 h-8 flex items-center justify-center bg-[rgba(21,190,83,0.12)]" style="border-radius: 4px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </div>
-                <div>
-                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">NMC Verified</div>
-                  <div class="text-[0.6875rem] text-[#6b7280]">All universities MCI/NMC approved</div>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
-                <div class="w-8 h-8 flex items-center justify-center bg-[rgba(83,58,253,0.08)]" style="border-radius: 4px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                </div>
-                <div>
-                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">15+ Countries</div>
-                  <div class="text-[0.6875rem] text-[#6b7280]">Georgia, Germany, UK & more</div>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-[#f8f9fb] border border-[#e5edf5]" style="border-radius: 5px;">
-                <div class="w-8 h-8 flex items-center justify-center bg-[rgba(190,30,45,0.06)]" style="border-radius: 4px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div>
-                  <div class="why-title text-sm" style="color: #111827; margin-bottom: 0.125rem;">Transparent Pricing</div>
-                  <div class="text-[0.6875rem] text-[#6b7280]">No hidden charges, ever</div>
-                </div>
-              </div>
+          <!-- Bottom trust strip -->
+          <div class="px-7 py-4 bg-[oklch(0.97_0.005_260)] border-t border-[oklch(0.92_0.01_260)] flex items-center justify-between">
+            <span class="text-[0.6875rem] text-[oklch(0.5_0.01_260)]">Verified by NMC, WHO, ECFMG, IMED</span>
+            <div class="flex items-center gap-1">
+              <span class="text-[#f59e0b] text-xs">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="text-[0.6875rem] font-semibold text-[oklch(0.35_0.02_260)]">4.9</span>
             </div>
           </div>
         </div>
-
-        <!-- Decorative accent -->
-        <div class="absolute -z-10 top-6 left-6 right-6 bottom-6 border border-[#e5edf5]" style="border-radius: 12px;"></div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- WHY CHOOSE US -->
-<section id="why-section" class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-3xl mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Why Choose Us</div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">
-        What Makes Us<br />Different
+<section id="why-section" class="py-20 lg:py-28 bg-[oklch(0.975_0.003_260)]">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="max-w-2xl mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">Why Choose Us</div>
+      <h2 class="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-tight leading-[1.08]" style="font-family: var(--font-display); color: oklch(0.2 0.02 260);">
+        What Makes Gradiks<br />Different
       </h2>
+      <p class="section-desc mt-4">We built our reputation on radical transparency. Here is what that means for your family.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+
+    <!-- Asymmetric layout: featured card + supporting grid -->
+    <div class="grid lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-8">
+      <!-- Featured large card -->
+      <div class="bg-white p-8 lg:p-10 relative overflow-hidden group transition-shadow duration-500 hover:shadow-[0_8px_40px_oklch(0_0_0/0.06)]" style="border-radius: 8px;">
+        <div class="w-12 h-12 border border-[oklch(0.88_0.01_260)] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] transition-colors duration-300" style="border-radius: 6px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[oklch(0.4_0.01_260)] group-hover:text-[#be1e2d] transition-colors duration-300"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Brutally Honest</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">No sugarcoating. We tell you exactly which universities match your budget, marks, and career goals.</p>
+        <h3 class="text-[1.375rem] font-semibold mb-3 text-[oklch(0.15_0.02_260)]" style="font-family: var(--font-display);">Brutally Honest Advice</h3>
+        <p class="text-[0.9375rem] text-[oklch(0.4_0.01_260)] leading-[1.6] mb-6">No sugarcoating, no upselling premium universities for commissions. We tell you exactly which universities match your child's budget, marks, and career goals — even if it means recommending a more affordable option.</p>
+        <div class="flex items-center gap-3 pt-5 border-t border-[oklch(0.93_0.01_260)]">
+          <div class="text-[1.5rem] font-bold text-[oklch(0.2_0.02_260)]" style="font-family: var(--font-display);">2,000+</div>
+          <div class="text-[0.8125rem] text-[oklch(0.5_0.01_260)]">families guided with the same honest approach since 2018</div>
+        </div>
       </div>
-      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+
+      <!-- Supporting 2x2 grid -->
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="bg-white p-6 lg:p-7 group transition-shadow duration-500 hover:shadow-[0_4px_24px_oklch(0_0_0/0.06)]" style="border-radius: 8px;">
+          <div class="w-10 h-10 border border-[oklch(0.88_0.01_260)] flex items-center justify-center mb-4 group-hover:border-[#be1e2d] transition-colors duration-300" style="border-radius: 5px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[oklch(0.4_0.01_260)] group-hover:text-[#be1e2d] transition-colors duration-300"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="text-[1.0625rem] font-semibold mb-2 text-[oklch(0.15_0.02_260)]" style="font-family: var(--font-display);">NMC Verified Only</h3>
+          <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Every university is MCI/NMC approved. No diploma mills, no surprises after admission.</p>
         </div>
-        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Verified Only</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Every university we recommend is MCI/NMC approved. No diploma mills, no surprises.</p>
-      </div>
-      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+
+        <div class="bg-white p-6 lg:p-7 group transition-shadow duration-500 hover:shadow-[0_4px_24px_oklch(0_0_0/0.06)]" style="border-radius: 8px;">
+          <div class="w-10 h-10 border border-[oklch(0.88_0.01_260)] flex items-center justify-center mb-4 group-hover:border-[#be1e2d] transition-colors duration-300" style="border-radius: 5px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[oklch(0.4_0.01_260)] group-hover:text-[#be1e2d] transition-colors duration-300"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="text-[1.0625rem] font-semibold mb-2 text-[oklch(0.15_0.02_260)]" style="font-family: var(--font-display);">Transparent Pricing</h3>
+          <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Full fee breakdown shared in the first call. No hidden charges, no surprise invoices later.</p>
         </div>
-        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Transparent Pricing</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Clear breakdown of tuition, living costs, and our fees. No hidden charges, ever.</p>
-      </div>
-      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+
+        <div class="bg-white p-6 lg:p-7 group transition-shadow duration-500 hover:shadow-[0_4px_24px_oklch(0_0_0/0.06)]" style="border-radius: 8px;">
+          <div class="w-10 h-10 border border-[oklch(0.88_0.01_260)] flex items-center justify-center mb-4 group-hover:border-[#be1e2d] transition-colors duration-300" style="border-radius: 5px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[oklch(0.4_0.01_260)] group-hover:text-[#be1e2d] transition-colors duration-300"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="text-[1.0625rem] font-semibold mb-2 text-[oklch(0.15_0.02_260)]" style="font-family: var(--font-display);">End-to-End Support</h3>
+          <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Application, visa, travel, hostel, and FMGE coaching. One team for the full journey.</p>
         </div>
-        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">End-to-End Support</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">From application to visa to FMGE coaching — we're with you for the entire journey.</p>
-      </div>
-      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+
+        <div class="bg-white p-6 lg:p-7 group transition-shadow duration-500 hover:shadow-[0_4px_24px_oklch(0_0_0/0.06)]" style="border-radius: 8px;">
+          <div class="w-10 h-10 border border-[oklch(0.88_0.01_260)] flex items-center justify-center mb-4 group-hover:border-[#be1e2d] transition-colors duration-300" style="border-radius: 5px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[oklch(0.4_0.01_260)] group-hover:text-[#be1e2d] transition-colors duration-300"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="text-[1.0625rem] font-semibold mb-2 text-[oklch(0.15_0.02_260)]" style="font-family: var(--font-display);">Parent Updates</h3>
+          <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Regular progress reports, attendance tracking, and 24/7 emergency support for families.</p>
         </div>
-        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">Parent Updates</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Regular updates for parents, campus visits arranged, and 24/7 emergency support.</p>
-      </div>
-      <div class="bg-white p-8 lg:p-10 group hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="w-14 h-14 border border-[#e5e7eb] flex items-center justify-center mb-6 group-hover:border-[#be1e2d] group-hover:text-[#be1e2d] transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-display);">FMGE Success</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Proven coaching programs to help you clear the FMGE and practice in India.</p>
       </div>
     </div>
   </div>
 </section>
+
 <!-- HOW IT WORKS -->
-<section id="how-it-works" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="section-eyebrow mb-4">How It Works</div>
+<section id="how-it-works" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">How It Works</div>
       <h2 class="section-headline" style="margin-top: 0.5rem;">Your Journey to<br />Medical School</h2>
-      <p class="section-desc mx-auto mt-4" style="text-align: center;">From your first enquiry to your first day at university — we handle everything in 4 simple steps.</p>
+      <p class="section-desc mx-auto mt-4" style="text-align: center;">From your first call to your first day at university. Four clear steps, zero confusion.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-      <!-- Step 1 -->
-      <div class="relative text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-2xl group-hover:bg-[#be1e2d] transition-all duration-300">
-          <span class="font-display text-2xl font-bold text-[#be1e2d] group-hover:text-white transition-colors duration-300">01</span>
+
+    <!-- Vertical timeline on mobile, horizontal on desktop -->
+    <div class="relative">
+      <!-- Desktop connecting line -->
+      <div class="hidden lg:block absolute top-[2.5rem] left-[8%] right-[8%] h-px bg-[oklch(0.88_0.01_260)]"></div>
+
+      <div class="grid lg:grid-cols-4 gap-10 lg:gap-8">
+        <!-- Step 1 -->
+        <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-5 lg:gap-0">
+          <div class="w-[3.25rem] h-[3.25rem] flex-shrink-0 flex items-center justify-center bg-[#be1e2d] relative z-10 lg:mb-8" style="border-radius: 50%;">
+            <span class="font-display text-lg font-bold text-white">01</span>
+          </div>
+          <!-- Mobile vertical line -->
+          <div class="lg:hidden absolute left-[1.625rem] top-[3.25rem] bottom-0 w-px bg-[oklch(0.88_0.01_260)] -translate-x-1/2"></div>
+          <div class="pb-2 lg:pb-0">
+            <h3 class="font-display text-[1.0625rem] font-semibold text-[oklch(0.15_0.02_260)] mb-1.5">Free Consultation</h3>
+            <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Share your NEET score, budget, and goals. We assess your profile and suggest best-fit countries and universities.</p>
+          </div>
         </div>
-        <div class="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] border-t border-dashed border-[#e5e7eb]"></div>
-        <h3 class="font-display text-lg font-semibold text-[#111827] mb-2">Free Consultation</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Share your NEET score, budget, and preferences. We assess your profile and suggest the best-fit countries and universities.</p>
-      </div>
-      <!-- Step 2 -->
-      <div class="relative text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-2xl group-hover:bg-[#be1e2d] transition-all duration-300">
-          <span class="font-display text-2xl font-bold text-[#be1e2d] group-hover:text-white transition-colors duration-300">02</span>
+        <!-- Step 2 -->
+        <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-5 lg:gap-0">
+          <div class="w-[3.25rem] h-[3.25rem] flex-shrink-0 flex items-center justify-center bg-[oklch(0.2_0.02_260)] relative z-10 lg:mb-8" style="border-radius: 50%;">
+            <span class="font-display text-lg font-bold text-white">02</span>
+          </div>
+          <div class="lg:hidden absolute left-[1.625rem] top-[3.25rem] bottom-0 w-px bg-[oklch(0.88_0.01_260)] -translate-x-1/2"></div>
+          <div class="pb-2 lg:pb-0">
+            <h3 class="font-display text-[1.0625rem] font-semibold text-[oklch(0.15_0.02_260)] mb-1.5">University Selection</h3>
+            <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Verified options with honest fee breakdowns, campus details, and success records. No pressure, no false promises.</p>
+          </div>
         </div>
-        <div class="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] border-t border-dashed border-[#e5e7eb]"></div>
-        <h3 class="font-display text-lg font-semibold text-[#111827] mb-2">University Selection</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">We present verified options with honest fee breakdowns, campus details, and success records. No pressure, no false promises.</p>
-      </div>
-      <!-- Step 3 -->
-      <div class="relative text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-2xl group-hover:bg-[#be1e2d] transition-all duration-300">
-          <span class="font-display text-2xl font-bold text-[#be1e2d] group-hover:text-white transition-colors duration-300">03</span>
+        <!-- Step 3 -->
+        <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-5 lg:gap-0">
+          <div class="w-[3.25rem] h-[3.25rem] flex-shrink-0 flex items-center justify-center bg-[oklch(0.2_0.02_260)] relative z-10 lg:mb-8" style="border-radius: 50%;">
+            <span class="font-display text-lg font-bold text-white">03</span>
+          </div>
+          <div class="lg:hidden absolute left-[1.625rem] top-[3.25rem] bottom-0 w-px bg-[oklch(0.88_0.01_260)] -translate-x-1/2"></div>
+          <div class="pb-2 lg:pb-0">
+            <h3 class="font-display text-[1.0625rem] font-semibold text-[oklch(0.15_0.02_260)] mb-1.5">Application & Visa</h3>
+            <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">We handle documentation, university applications, visa processing, and travel arrangements end-to-end.</p>
+          </div>
         </div>
-        <div class="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] border-t border-dashed border-[#e5e7eb]"></div>
-        <h3 class="font-display text-lg font-semibold text-[#111827] mb-2">Application & Visa</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">We handle documentation, university applications, visa processing, and travel arrangements end-to-end.</p>
-      </div>
-      <!-- Step 4 -->
-      <div class="relative text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-2xl group-hover:bg-[#be1e2d] transition-all duration-300">
-          <span class="font-display text-2xl font-bold text-[#be1e2d] group-hover:text-white transition-colors duration-300">04</span>
+        <!-- Step 4 -->
+        <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-5 lg:gap-0">
+          <div class="w-[3.25rem] h-[3.25rem] flex-shrink-0 flex items-center justify-center bg-[oklch(0.45_0.14_145)] relative z-10 lg:mb-8" style="border-radius: 50%;">
+            <span class="font-display text-lg font-bold text-white">04</span>
+          </div>
+          <div>
+            <h3 class="font-display text-[1.0625rem] font-semibold text-[oklch(0.15_0.02_260)] mb-1.5">Arrival & Support</h3>
+            <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Airport pickup, hostel setup, Indian food, and ongoing support including FMGE coaching until you graduate.</p>
+          </div>
         </div>
-        <h3 class="font-display text-lg font-semibold text-[#111827] mb-2">Arrival & Support</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Airport pickup, hostel setup, Indian food arrangements, and ongoing support including FMGE coaching until you graduate.</p>
       </div>
     </div>
   </div>
 </section>
+
 <!-- COUNTRIES SECTION -->
-<section class="py-24 lg:py-32 bg-[#1d1d1f] text-white">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
-      <div class="max-w-2xl">
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Destinations</div>
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">
-          Top Countries for<br />MBBS
+<section class="py-20 lg:py-28 bg-[#1d1d1f] text-white">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 lg:mb-20">
+      <div class="max-w-xl">
+        <div class="section-eyebrow mb-3" style="color: oklch(0.65 0.15 25);">Destinations</div>
+        <h2 class="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-tight leading-[1.08] text-white" style="font-family: var(--font-display);">
+          Top Countries for<br />MBBS Abroad
         </h2>
       </div>
-      <p class="text-white/60 max-w-md lg:text-right">
-        Choose from world's best medical universities with affordable fees and global recognition.
+      <p class="text-white/50 max-w-sm lg:text-right text-[0.9375rem] leading-relaxed">
+        NMC-approved universities with real tuition data. No inflated numbers.
       </p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Georgia -->
-      <a href="/georgia-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10">
-          <div class="text-4xl mb-6">🇬🇪</div>
-          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Georgia</h3>
-          <p class="text-sm text-white/60 mb-6">Affordable MBBS in Tbilisi with English-medium programs and NMC-approved universities.</p>
-          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
-            <span>Explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </div>
-      </a>
-      <!-- Uzbekistan -->
-      <a href="/uzbekistan-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10">
-          <div class="text-4xl mb-6">🇺🇿</div>
-          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Uzbekistan</h3>
-          <p class="text-sm text-white/60 mb-6">Low-cost MBBS with Indian student-friendly environment and WHO-recognized universities.</p>
-          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
-            <span>Explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </div>
-      </a>
-      <!-- Kazakhstan -->
-      <a href="/kazakhstan-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10">
-          <div class="text-4xl mb-6">🇰🇿</div>
-          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Kazakhstan</h3>
-          <p class="text-sm text-white/60 mb-6">Quality medical education in Almaty with affordable fees and strong clinical training.</p>
-          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
-            <span>Explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </div>
-      </a>
-      <!-- Russia -->
-      <a href="/russia-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10">
-          <div class="text-4xl mb-6">🇷🇺</div>
-          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Russia</h3>
-          <p class="text-sm text-white/60 mb-6">World-renowned medical universities with decades of Indian student success stories.</p>
-          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
-            <span>Explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </div>
-      </a>
-      <!-- Kyrgyzstan -->
-      <a href="/kyrgyzstan-study" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10">
-          <div class="text-4xl mb-6">🇰🇬</div>
-          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Kyrgyzstan</h3>
-          <p class="text-sm text-white/60 mb-6">Budget-friendly MBBS with Indian-run campuses, FMGE coaching, and NMC approval.</p>
-          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
-            <span>Explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </div>
-      </a>
-      <!-- United Kingdom -->
-      <a href="/uk-mbbs" class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 hover:border-[#be1e2d] transition-all duration-500 overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-radial from-[rgba(190,30,45,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10">
-          <div class="text-4xl mb-6">🇬🇧</div>
-          <h3 class="text-2xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">United Kingdom</h3>
-          <p class="text-sm text-white/60 mb-6">Prestigious medical education with global recognition, GMC pathway, and NHS exposure.</p>
 
-          <div class="flex items-center gap-2 text-[#be1e2d] text-sm font-medium">
-            <span>Explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Georgia -->
+      <a href="/georgia-study" class="group relative bg-white/[0.04] border border-white/[0.08] p-7 lg:p-8 hover:border-white/20 transition-all duration-400 overflow-hidden" style="border-radius: 8px;">
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-3xl">&#x1F1EC;&#x1F1EA;</span>
+            <span class="text-[0.6875rem] text-white/40 font-medium tracking-wide uppercase">6 Years</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white" style="font-family: var(--font-display);">Georgia</h3>
+          <p class="text-[0.8125rem] text-white/50 mb-5 leading-relaxed">English-medium MBBS in Tbilisi. NMC-approved, Indian student community.</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-white/[0.08] mb-4">
+            <div>
+              <div class="text-[0.9375rem] font-bold text-white" style="font-family: var(--font-display);">&#x20B9;3-5L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Tuition/yr</div>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <div class="text-[0.9375rem] font-bold text-[oklch(0.7_0.12_145)]" style="font-family: var(--font-display);">&#x20B9;30-48L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Total Est.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-[0.8125rem] font-medium">
+            <span>Explore Georgia</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Uzbekistan -->
+      <a href="/uzbekistan-study" class="group relative bg-white/[0.04] border border-white/[0.08] p-7 lg:p-8 hover:border-white/20 transition-all duration-400 overflow-hidden" style="border-radius: 8px;">
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-3xl">&#x1F1FA;&#x1F1FF;</span>
+            <span class="text-[0.6875rem] text-white/40 font-medium tracking-wide uppercase">5 Years</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white" style="font-family: var(--font-display);">Uzbekistan</h3>
+          <p class="text-[0.8125rem] text-white/50 mb-5 leading-relaxed">Most affordable MBBS option. WHO-recognized, Indian-friendly campuses.</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-white/[0.08] mb-4">
+            <div>
+              <div class="text-[0.9375rem] font-bold text-white" style="font-family: var(--font-display);">&#x20B9;2-4L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Tuition/yr</div>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <div class="text-[0.9375rem] font-bold text-[oklch(0.7_0.12_145)]" style="font-family: var(--font-display);">&#x20B9;17.5-30L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Total Est.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-[0.8125rem] font-medium">
+            <span>Explore Uzbekistan</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Kazakhstan -->
+      <a href="/kazakhstan-study" class="group relative bg-white/[0.04] border border-white/[0.08] p-7 lg:p-8 hover:border-white/20 transition-all duration-400 overflow-hidden" style="border-radius: 8px;">
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-3xl">&#x1F1F0;&#x1F1FF;</span>
+            <span class="text-[0.6875rem] text-white/40 font-medium tracking-wide uppercase">5 Years</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white" style="font-family: var(--font-display);">Kazakhstan</h3>
+          <p class="text-[0.8125rem] text-white/50 mb-5 leading-relaxed">Strong clinical training in Almaty. Affordable fees, modern campus facilities.</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-white/[0.08] mb-4">
+            <div>
+              <div class="text-[0.9375rem] font-bold text-white" style="font-family: var(--font-display);">&#x20B9;3-5L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Tuition/yr</div>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <div class="text-[0.9375rem] font-bold text-[oklch(0.7_0.12_145)]" style="font-family: var(--font-display);">&#x20B9;25-40L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Total Est.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-[0.8125rem] font-medium">
+            <span>Explore Kazakhstan</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Russia -->
+      <a href="/russia-study" class="group relative bg-white/[0.04] border border-white/[0.08] p-7 lg:p-8 hover:border-white/20 transition-all duration-400 overflow-hidden" style="border-radius: 8px;">
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-3xl">&#x1F1F7;&#x1F1FA;</span>
+            <span class="text-[0.6875rem] text-white/40 font-medium tracking-wide uppercase">6 Years</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white" style="font-family: var(--font-display);">Russia</h3>
+          <p class="text-[0.8125rem] text-white/50 mb-5 leading-relaxed">World-renowned universities with decades of Indian student success stories.</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-white/[0.08] mb-4">
+            <div>
+              <div class="text-[0.9375rem] font-bold text-white" style="font-family: var(--font-display);">&#x20B9;3-6L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Tuition/yr</div>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <div class="text-[0.9375rem] font-bold text-[oklch(0.7_0.12_145)]" style="font-family: var(--font-display);">&#x20B9;30-54L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Total Est.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-[0.8125rem] font-medium">
+            <span>Explore Russia</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Kyrgyzstan -->
+      <a href="/kyrgyzstan-study" class="group relative bg-white/[0.04] border border-white/[0.08] p-7 lg:p-8 hover:border-white/20 transition-all duration-400 overflow-hidden" style="border-radius: 8px;">
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-3xl">&#x1F1F0;&#x1F1EC;</span>
+            <span class="text-[0.6875rem] text-white/40 font-medium tracking-wide uppercase">5 Years</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white" style="font-family: var(--font-display);">Kyrgyzstan</h3>
+          <p class="text-[0.8125rem] text-white/50 mb-5 leading-relaxed">Budget-friendly with Indian-run campuses, FMGE coaching, and NMC approval.</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-white/[0.08] mb-4">
+            <div>
+              <div class="text-[0.9375rem] font-bold text-white" style="font-family: var(--font-display);">&#x20B9;2.5-4L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Tuition/yr</div>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <div class="text-[0.9375rem] font-bold text-[oklch(0.7_0.12_145)]" style="font-family: var(--font-display);">&#x20B9;20-30L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Total Est.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-[0.8125rem] font-medium">
+            <span>Explore Kyrgyzstan</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- United Kingdom -->
+      <a href="/uk-mbbs" class="group relative bg-white/[0.04] border border-white/[0.08] p-7 lg:p-8 hover:border-white/20 transition-all duration-400 overflow-hidden" style="border-radius: 8px;">
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-3xl">&#x1F1EC;&#x1F1E7;</span>
+            <span class="text-[0.6875rem] text-white/40 font-medium tracking-wide uppercase">5-6 Years</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white" style="font-family: var(--font-display);">United Kingdom</h3>
+          <p class="text-[0.8125rem] text-white/50 mb-5 leading-relaxed">Prestigious medical education with global recognition, GMC pathway, NHS exposure.</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-white/[0.08] mb-4">
+            <div>
+              <div class="text-[0.9375rem] font-bold text-white" style="font-family: var(--font-display);">&#x20B9;25-40L</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Tuition/yr</div>
+            </div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div>
+              <div class="text-[0.9375rem] font-bold text-[oklch(0.7_0.12_145)]" style="font-family: var(--font-display);">&#x20B9;1.5-3Cr</div>
+              <div class="text-[0.625rem] text-white/40 uppercase tracking-wider">Total Est.</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[#be1e2d] text-[0.8125rem] font-medium">
+            <span>Explore UK</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </div>
         </div>
       </a>
     </div>
+
+    <p class="text-center text-[0.6875rem] text-white/30 mt-8">* Fees estimated for 2025-26 intake. Actual fees vary by university. Contact us for exact figures.</p>
   </div>
 </section>
+
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="section-eyebrow mb-4">Student Stories</div>
-      <h2 class="section-headline" style="margin-top: 0.5rem;">Trusted by Families<br />Across India</h2>
-      <p class="section-desc mx-auto mt-4" style="text-align: center;">Real experiences from students and parents who chose Gradiks for their MBBS journey abroad.</p>
+<section id="testimonials" class="py-20 lg:py-28 bg-[oklch(0.975_0.003_260)]">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">Parent Stories</div>
+      <h2 class="section-headline" style="margin-top: 0.5rem;">Real Families.<br />Real Outcomes.</h2>
+      <p class="section-desc mx-auto mt-4" style="text-align: center;">Every story here is from a family who trusted us with their child's future. We take that seriously.</p>
     </div>
-    <div class="grid md:grid-cols-3 gap-6 max-w-[1100px] mx-auto">
+
+    <div class="grid md:grid-cols-3 gap-6">
       <!-- Testimonial 1 -->
-      <div class="testimonial-card">
-        <div class="testimonial-person">
+      <div class="testimonial-card relative">
+        <div class="flex items-center gap-1 mb-5">
+          <span class="text-[#f59e0b] text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] ml-1">Verified Parent</span>
+        </div>
+        <p class="testimonial-quote" style="font-size: 0.9375rem; line-height: 1.65; font-style: normal; color: oklch(0.3 0.02 260);">"We were terrified of fraud consultants. Gradiks showed us the real fee structure upfront, helped with visa, and even arranged campus visits before we said yes. My daughter is now in her 3rd year and absolutely loves it."</p>
+        <div class="testimonial-person" style="margin-top: 1.5rem; margin-bottom: 0; padding-top: 1.25rem; border-top: 1px solid oklch(0.92 0.01 260);">
           <div class="person-avatar">RK</div>
           <div>
             <div class="person-name">Rajesh Kumar <span class="person-loc">Kochi</span></div>
             <div class="person-detail">Parent of MBBS student in Georgia</div>
           </div>
         </div>
-        <p class="testimonial-quote">"We were terrified of fraud consultants. Gradiks showed us the real fee structure upfront, helped with visa, and even arranged campus visits before we said yes. My daughter is now in her 3rd year and absolutely loves it."</p>
-        <div class="testimonial-outcome">✓ Daughter studying at Tbilisi State Medical University</div>
+        <div class="testimonial-outcome" style="border-top: none; padding-top: 0.75rem;">&#10003; Daughter at Tbilisi State Medical University</div>
       </div>
+
       <!-- Testimonial 2 -->
-      <div class="testimonial-card">
-        <div class="testimonial-person">
+      <div class="testimonial-card relative">
+        <div class="flex items-center gap-1 mb-5">
+          <span class="text-[#f59e0b] text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] ml-1">Verified Student</span>
+        </div>
+        <p class="testimonial-quote" style="font-size: 0.9375rem; line-height: 1.65; font-style: normal; color: oklch(0.3 0.02 260);">"I scored 280 in NEET and thought my MBBS dream was over. Gradiks found me a university in Kyrgyzstan that fit my budget perfectly. The FMGE coaching they provide alongside is a huge bonus."</p>
+        <div class="testimonial-person" style="margin-top: 1.5rem; margin-bottom: 0; padding-top: 1.25rem; border-top: 1px solid oklch(0.92 0.01 260);">
           <div class="person-avatar">PA</div>
           <div>
             <div class="person-name">Priya Anand <span class="person-loc">Chennai</span></div>
             <div class="person-detail">MBBS Student, Kyrgyzstan</div>
           </div>
         </div>
-        <p class="testimonial-quote">"I scored 280 in NEET and thought my MBBS dream was over. Gradiks found me a university in Kyrgyzstan that fit my budget perfectly. The FMGE coaching they provide alongside is a huge bonus."</p>
-        <div class="testimonial-outcome">✓ Cleared FMGE on first attempt</div>
+        <div class="testimonial-outcome" style="border-top: none; padding-top: 0.75rem;">&#10003; Cleared FMGE on first attempt</div>
       </div>
+
       <!-- Testimonial 3 -->
-      <div class="testimonial-card">
-        <div class="testimonial-person">
+      <div class="testimonial-card relative">
+        <div class="flex items-center gap-1 mb-5">
+          <span class="text-[#f59e0b] text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] ml-1">Verified Parent</span>
+        </div>
+        <p class="testimonial-quote" style="font-size: 0.9375rem; line-height: 1.65; font-style: normal; color: oklch(0.3 0.02 260);">"As a doctor myself, I was very particular about the university. Gradiks didn't push the most expensive option — they recommended Kazan Federal University based on my son's profile. Transparent and honest throughout."</p>
+        <div class="testimonial-person" style="margin-top: 1.5rem; margin-bottom: 0; padding-top: 1.25rem; border-top: 1px solid oklch(0.92 0.01 260);">
           <div class="person-avatar">SM</div>
           <div>
             <div class="person-name">Dr. Suresh Menon <span class="person-loc">Kozhikode</span></div>
             <div class="person-detail">Parent, son now in Russia</div>
           </div>
         </div>
-        <p class="testimonial-quote">"As a doctor myself, I was very particular about the university. Gradiks didn't push the most expensive option — they recommended Kazan Federal University based on my son's profile. Transparent and honest throughout."</p>
-        <div class="testimonial-outcome">✓ Son at Kazan Federal University, Russia</div>
+        <div class="testimonial-outcome" style="border-top: none; padding-top: 0.75rem;">&#10003; Son at Kazan Federal University, Russia</div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- FEE COMPARISON -->
-<section id="fees" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="section-eyebrow mb-4">Fee Comparison</div>
+<section id="fees" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">Fee Comparison</div>
       <h2 class="section-headline" style="margin-top: 0.5rem;">MBBS Fees by<br />Country</h2>
-      <p class="section-desc mx-auto mt-4" style="text-align: center;">All fees include tuition. Living costs are estimated. No hidden charges — this is the real picture.</p>
+      <p class="section-desc mx-auto mt-4" style="text-align: center;">All fees include tuition. Living costs estimated. No hidden charges — this is the real picture.</p>
     </div>
-    <div class="max-w-[900px] mx-auto overflow-x-auto">
+
+    <!-- Desktop table -->
+    <div class="hidden md:block max-w-[900px] mx-auto">
       <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
         <thead>
           <tr class="bg-[#232d61] text-white">
-            <th class="font-display font-semibold text-sm px-6 py-4 rounded-tl-lg">Country</th>
-            <th class="font-display font-semibold text-sm px-6 py-4">Duration</th>
-            <th class="font-display font-semibold text-sm px-6 py-4">Tuition / Year</th>
-            <th class="font-display font-semibold text-sm px-6 py-4">Living / Year</th>
-            <th class="font-display font-semibold text-sm px-6 py-4 rounded-tr-lg">Total (est.)</th>
+            <th class="font-display font-semibold text-[0.8125rem] px-6 py-4" style="border-radius: 6px 0 0 0;">Country</th>
+            <th class="font-display font-semibold text-[0.8125rem] px-5 py-4">Duration</th>
+            <th class="font-display font-semibold text-[0.8125rem] px-5 py-4">Tuition / Year</th>
+            <th class="font-display font-semibold text-[0.8125rem] px-5 py-4">Living / Year</th>
+            <th class="font-display font-semibold text-[0.8125rem] px-5 py-4" style="border-radius: 0 6px 0 0;">Total (est.)</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827]">🇬🇪 Georgia</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">6 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3–5 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹2–3 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹30–48 L</td>
+          <tr class="border-b border-[oklch(0.92_0.01_260)] hover:bg-[oklch(0.98_0.003_260)] transition-colors">
+            <td class="px-6 py-4 font-medium text-[oklch(0.15_0.02_260)]">&#x1F1EC;&#x1F1EA; Georgia</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">6 years</td>
+            <td class="px-5 py-4 text-sm font-semibold text-[oklch(0.15_0.02_260)]">&#x20B9;3-5 L</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">&#x20B9;2-3 L</td>
+            <td class="px-5 py-4 text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;30-48 L</td>
           </tr>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827]">🇺🇿 Uzbekistan</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">5 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹2–4 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹1.5–2 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹17.5–30 L</td>
+          <tr class="border-b border-[oklch(0.92_0.01_260)] bg-[oklch(0.98_0.003_260)]">
+            <td class="px-6 py-4 font-medium text-[oklch(0.15_0.02_260)]">&#x1F1FA;&#x1F1FF; Uzbekistan</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">5 years</td>
+            <td class="px-5 py-4 text-sm font-semibold text-[oklch(0.15_0.02_260)]">&#x20B9;2-4 L</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">&#x20B9;1.5-2 L</td>
+            <td class="px-5 py-4 text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;17.5-30 L</td>
           </tr>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827]">🇰🇿 Kazakhstan</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">5 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3–5 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹2–3 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹25–40 L</td>
+          <tr class="border-b border-[oklch(0.92_0.01_260)] hover:bg-[oklch(0.98_0.003_260)] transition-colors">
+            <td class="px-6 py-4 font-medium text-[oklch(0.15_0.02_260)]">&#x1F1F0;&#x1F1FF; Kazakhstan</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">5 years</td>
+            <td class="px-5 py-4 text-sm font-semibold text-[oklch(0.15_0.02_260)]">&#x20B9;3-5 L</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">&#x20B9;2-3 L</td>
+            <td class="px-5 py-4 text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;25-40 L</td>
           </tr>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827]">🇷🇺 Russia</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">6 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3–6 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹2–3 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹30–54 L</td>
+          <tr class="border-b border-[oklch(0.92_0.01_260)] hover:bg-[oklch(0.98_0.003_260)] transition-colors">
+            <td class="px-6 py-4 font-medium text-[oklch(0.15_0.02_260)]">&#x1F1F7;&#x1F1FA; Russia</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">6 years</td>
+            <td class="px-5 py-4 text-sm font-semibold text-[oklch(0.15_0.02_260)]">&#x20B9;3-6 L</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">&#x20B9;2-3 L</td>
+            <td class="px-5 py-4 text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;30-54 L</td>
           </tr>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827]">🇰🇬 Kyrgyzstan</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">5 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹2.5–4 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹1.5–2 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹20–30 L</td>
+          <tr class="border-b border-[oklch(0.92_0.01_260)] hover:bg-[oklch(0.98_0.003_260)] transition-colors">
+            <td class="px-6 py-4 font-medium text-[oklch(0.15_0.02_260)]">&#x1F1F0;&#x1F1EC; Kyrgyzstan</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">5 years</td>
+            <td class="px-5 py-4 text-sm font-semibold text-[oklch(0.15_0.02_260)]">&#x20B9;2.5-4 L</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">&#x20B9;1.5-2 L</td>
+            <td class="px-5 py-4 text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;20-30 L</td>
           </tr>
-          <tr class="hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827]">🇬🇧 United Kingdom</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">5–6 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹25–40 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹10–15 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹1.5–3 Cr</td>
+          <tr class="hover:bg-[oklch(0.98_0.003_260)] transition-colors">
+            <td class="px-6 py-4 font-medium text-[oklch(0.15_0.02_260)]">&#x1F1EC;&#x1F1E7; United Kingdom</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">5-6 years</td>
+            <td class="px-5 py-4 text-sm font-semibold text-[oklch(0.15_0.02_260)]">&#x20B9;25-40 L</td>
+            <td class="px-5 py-4 text-sm text-[oklch(0.4_0.01_260)]">&#x20B9;10-15 L</td>
+            <td class="px-5 py-4 text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;1.5-3 Cr</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="text-center text-xs text-[#6b7280] mt-6">* Fees are estimates for 2025–26 intake. Actual fees may vary by university. Contact us for exact figures.</p>
+
+    <!-- Mobile card layout -->
+    <div class="md:hidden space-y-4">
+      <div class="bg-[oklch(0.975_0.003_260)] border border-[oklch(0.92_0.01_260)] p-5" style="border-radius: 8px;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="font-semibold text-[oklch(0.15_0.02_260)]">&#x1F1EC;&#x1F1EA; Georgia</span>
+          <span class="text-[0.75rem] text-[oklch(0.5_0.01_260)]">6 years</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Tuition/yr</div><div class="text-sm font-semibold">&#x20B9;3-5L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Living/yr</div><div class="text-sm">&#x20B9;2-3L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Total</div><div class="text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;30-48L</div></div>
+        </div>
+      </div>
+      <div class="bg-[oklch(0.975_0.003_260)] border border-[oklch(0.92_0.01_260)] p-5" style="border-radius: 8px;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="font-semibold text-[oklch(0.15_0.02_260)]">&#x1F1FA;&#x1F1FF; Uzbekistan</span>
+          <span class="text-[0.75rem] text-[oklch(0.5_0.01_260)]">5 years</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Tuition/yr</div><div class="text-sm font-semibold">&#x20B9;2-4L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Living/yr</div><div class="text-sm">&#x20B9;1.5-2L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Total</div><div class="text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;17.5-30L</div></div>
+        </div>
+      </div>
+      <div class="bg-[oklch(0.975_0.003_260)] border border-[oklch(0.92_0.01_260)] p-5" style="border-radius: 8px;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="font-semibold text-[oklch(0.15_0.02_260)]">&#x1F1F0;&#x1F1FF; Kazakhstan</span>
+          <span class="text-[0.75rem] text-[oklch(0.5_0.01_260)]">5 years</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Tuition/yr</div><div class="text-sm font-semibold">&#x20B9;3-5L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Living/yr</div><div class="text-sm">&#x20B9;2-3L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Total</div><div class="text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;25-40L</div></div>
+        </div>
+      </div>
+      <div class="bg-[oklch(0.975_0.003_260)] border border-[oklch(0.92_0.01_260)] p-5" style="border-radius: 8px;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="font-semibold text-[oklch(0.15_0.02_260)]">&#x1F1F7;&#x1F1FA; Russia</span>
+          <span class="text-[0.75rem] text-[oklch(0.5_0.01_260)]">6 years</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Tuition/yr</div><div class="text-sm font-semibold">&#x20B9;3-6L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Living/yr</div><div class="text-sm">&#x20B9;2-3L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Total</div><div class="text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;30-54L</div></div>
+        </div>
+      </div>
+      <div class="bg-[oklch(0.975_0.003_260)] border border-[oklch(0.92_0.01_260)] p-5" style="border-radius: 8px;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="font-semibold text-[oklch(0.15_0.02_260)]">&#x1F1F0;&#x1F1EC; Kyrgyzstan</span>
+          <span class="text-[0.75rem] text-[oklch(0.5_0.01_260)]">5 years</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Tuition/yr</div><div class="text-sm font-semibold">&#x20B9;2.5-4L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Living/yr</div><div class="text-sm">&#x20B9;1.5-2L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Total</div><div class="text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;20-30L</div></div>
+        </div>
+      </div>
+      <div class="bg-[oklch(0.975_0.003_260)] border border-[oklch(0.92_0.01_260)] p-5" style="border-radius: 8px;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="font-semibold text-[oklch(0.15_0.02_260)]">&#x1F1EC;&#x1F1E7; United Kingdom</span>
+          <span class="text-[0.75rem] text-[oklch(0.5_0.01_260)]">5-6 years</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Tuition/yr</div><div class="text-sm font-semibold">&#x20B9;25-40L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Living/yr</div><div class="text-sm">&#x20B9;10-15L</div></div>
+          <div><div class="text-[0.6875rem] text-[oklch(0.5_0.01_260)] mb-0.5">Total</div><div class="text-sm font-bold text-[oklch(0.45_0.14_160)]">&#x20B9;1.5-3Cr</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-[0.6875rem] text-[oklch(0.55_0.01_260)] mt-8">* Fees are estimates for 2025-26 intake. Actual fees may vary by university. Contact us for exact figures.</p>
   </div>
 </section>
+
 <!-- UNIVERSITY PARTNERS -->
-<section id="universities" class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="section-eyebrow mb-4">Our University Partners</div>
+<section id="universities" class="py-20 lg:py-28 bg-[oklch(0.975_0.003_260)]">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">Our University Partners</div>
       <h2 class="section-headline" style="margin-top: 0.5rem;">50+ NMC-Approved<br />Universities</h2>
-      <p class="section-desc mx-auto mt-4" style="text-align: center;">Every university in our network is verified by NMC/MCI, WHO, and ECFMG. We only work with institutions we'd send our own children to.</p>
+      <p class="section-desc mx-auto mt-4" style="text-align: center;">Every university in our network is verified by NMC, WHO, and ECFMG. We only recommend institutions we would send our own children to.</p>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1000px] mx-auto">
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">Tbilisi State Medical University</div>
-        <div class="text-xs text-[#6b7280]">Georgia · Est. 1918</div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 max-w-[960px] mx-auto">
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">Tbilisi State Medical University</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Georgia &middot; Est. 1918</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">Kazan Federal University</div>
-        <div class="text-xs text-[#6b7280]">Russia · Est. 1804</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">Kazan Federal University</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Russia &middot; Est. 1804</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">Tashkent Medical Academy</div>
-        <div class="text-xs text-[#6b7280]">Uzbekistan · Est. 1919</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">Tashkent Medical Academy</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Uzbekistan &middot; Est. 1919</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">Kyrgyz State Medical University</div>
-        <div class="text-xs text-[#6b7280]">Kyrgyzstan · Est. 1939</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">Kyrgyz State Medical University</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Kyrgyzstan &middot; Est. 1939</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">Kazakh National Medical University</div>
-        <div class="text-xs text-[#6b7280]">Kazakhstan · Est. 1931</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">Kazakh National Medical University</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Kazakhstan &middot; Est. 1931</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">University of Leicester</div>
-        <div class="text-xs text-[#6b7280]">United Kingdom · Est. 1921</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">University of Leicester</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">United Kingdom &middot; Est. 1921</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">David Tvildiani Medical University</div>
-        <div class="text-xs text-[#6b7280]">Georgia · Est. 1993</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">David Tvildiani Medical University</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Georgia &middot; Est. 1993</div>
       </div>
-      <div class="bg-white border border-[#e5e7eb] rounded-lg p-5 text-center hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow">
-        <div class="font-display font-semibold text-sm text-[#111827] mb-1">Crimea Federal University</div>
-        <div class="text-xs text-[#6b7280]">Russia · Est. 1918</div>
+      <div class="bg-white border border-[oklch(0.92_0.01_260)] p-4 lg:p-5 text-center hover:shadow-[0_4px_16px_oklch(0_0_0/0.05)] transition-shadow duration-300" style="border-radius: 6px;">
+        <div class="font-display font-semibold text-[0.8125rem] text-[oklch(0.15_0.02_260)] mb-1">Crimea Federal University</div>
+        <div class="text-[0.6875rem] text-[oklch(0.55_0.01_260)]">Russia &middot; Est. 1918</div>
       </div>
     </div>
+
     <!-- Accreditation badges -->
-    <div class="flex flex-wrap justify-center items-center gap-6 mt-12">
-      <div class="flex items-center gap-2 px-4 py-2 bg-white border border-[#e5e7eb] rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <span class="text-xs font-semibold text-[#111827]">NMC Approved</span>
+    <div class="flex flex-wrap justify-center items-center gap-4 mt-10">
+      <div class="flex items-center gap-2 px-3.5 py-2 bg-white border border-[oklch(0.92_0.01_260)]" style="border-radius: 99px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span class="text-[0.6875rem] font-semibold text-[oklch(0.2_0.02_260)]">NMC Approved</span>
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 bg-white border border-[#e5e7eb] rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <span class="text-xs font-semibold text-[#111827]">WHO Listed</span>
+      <div class="flex items-center gap-2 px-3.5 py-2 bg-white border border-[oklch(0.92_0.01_260)]" style="border-radius: 99px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span class="text-[0.6875rem] font-semibold text-[oklch(0.2_0.02_260)]">WHO Listed</span>
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 bg-white border border-[#e5e7eb] rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <span class="text-xs font-semibold text-[#111827]">ECFMG Recognized</span>
+      <div class="flex items-center gap-2 px-3.5 py-2 bg-white border border-[oklch(0.92_0.01_260)]" style="border-radius: 99px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span class="text-[0.6875rem] font-semibold text-[oklch(0.2_0.02_260)]">ECFMG Recognized</span>
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 bg-white border border-[#e5e7eb] rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <span class="text-xs font-semibold text-[#111827]">IMED Listed</span>
+      <div class="flex items-center gap-2 px-3.5 py-2 bg-white border border-[oklch(0.92_0.01_260)]" style="border-radius: 99px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span class="text-[0.6875rem] font-semibold text-[oklch(0.2_0.02_260)]">IMED Listed</span>
       </div>
     </div>
   </div>
 </section>
+
 <!-- SAFETY & STUDENT LIFE -->
-<section id="student-life" class="py-24 lg:py-32 bg-white">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="section-eyebrow mb-4">Student Life</div>
+<section id="student-life" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">Student Life & Safety</div>
       <h2 class="section-headline" style="margin-top: 0.5rem;">Your Child Is Safe<br />With Us</h2>
-      <p class="section-desc mx-auto mt-4" style="text-align: center;">We understand the anxiety of sending your child abroad. Here's how we ensure their safety and comfort.</p>
+      <p class="section-desc mx-auto mt-4" style="text-align: center;">We understand the anxiety of sending your child abroad. Here is how we ensure their safety and comfort every single day.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1100px] mx-auto">
-      <div class="bg-[#f8f9fb] border border-[#e5e7eb] rounded-lg p-8">
-        <div class="w-12 h-12 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.93_0.01_260)] p-7" style="border-radius: 8px;">
+        <div class="w-11 h-11 flex items-center justify-center bg-[oklch(0.93_0.06_25/0.4)] mb-4" style="border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
-        <h3 class="font-display text-base font-semibold text-[#111827] mb-2">Indian Hostels & Food</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Indian-run hostels with home-cooked Kerala, Tamil, and North Indian food. Your child never feels far from home.</p>
+        <h3 class="font-display text-[0.9375rem] font-semibold text-[oklch(0.15_0.02_260)] mb-2">Indian Hostels & Food</h3>
+        <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Indian-run hostels with home-cooked Kerala, Tamil, and North Indian food. Your child never feels far from home.</p>
       </div>
-      <div class="bg-[#f8f9fb] border border-[#e5e7eb] rounded-lg p-8">
-        <div class="w-12 h-12 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <div class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.93_0.01_260)] p-7" style="border-radius: 8px;">
+        <div class="w-11 h-11 flex items-center justify-center bg-[oklch(0.93_0.06_25/0.4)] mb-4" style="border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
-        <h3 class="font-display text-base font-semibold text-[#111827] mb-2">24/7 Emergency Support</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Dedicated local coordinators in every country. One call to our India office and help reaches your child within hours.</p>
+        <h3 class="font-display text-[0.9375rem] font-semibold text-[oklch(0.15_0.02_260)] mb-2">24/7 Emergency Support</h3>
+        <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Dedicated local coordinators in every country. One call to our India office and help reaches your child within hours.</p>
       </div>
-      <div class="bg-[#f8f9fb] border border-[#e5e7eb] rounded-lg p-8">
-        <div class="w-12 h-12 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <div class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.93_0.01_260)] p-7" style="border-radius: 8px;">
+        <div class="w-11 h-11 flex items-center justify-center bg-[oklch(0.93_0.06_25/0.4)] mb-4" style="border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <h3 class="font-display text-base font-semibold text-[#111827] mb-2">Safe Campus & City</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">All our partner universities are in safe, student-friendly cities with low crime rates and strong Indian student communities.</p>
+        <h3 class="font-display text-[0.9375rem] font-semibold text-[oklch(0.15_0.02_260)] mb-2">Safe Campus & City</h3>
+        <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">All partner universities are in safe, student-friendly cities with low crime rates and strong Indian student communities.</p>
       </div>
-      <div class="bg-[#f8f9fb] border border-[#e5e7eb] rounded-lg p-8">
-        <div class="w-12 h-12 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.93_0.01_260)] p-7" style="border-radius: 8px;">
+        <div class="w-11 h-11 flex items-center justify-center bg-[oklch(0.93_0.06_25/0.4)] mb-4" style="border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3 class="font-display text-base font-semibold text-[#111827] mb-2">Parent Portal & Updates</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Regular photo updates, attendance tracking, and progress reports shared directly with parents. You always know how your child is doing.</p>
+        <h3 class="font-display text-[0.9375rem] font-semibold text-[oklch(0.15_0.02_260)] mb-2">Parent Portal & Updates</h3>
+        <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Regular photo updates, attendance tracking, and progress reports shared directly with parents. You always know how your child is doing.</p>
       </div>
-      <div class="bg-[#f8f9fb] border border-[#e5e7eb] rounded-lg p-8">
-        <div class="w-12 h-12 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.93_0.01_260)] p-7" style="border-radius: 8px;">
+        <div class="w-11 h-11 flex items-center justify-center bg-[oklch(0.93_0.06_25/0.4)] mb-4" style="border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
-        <h3 class="font-display text-base font-semibold text-[#111827] mb-2">Pre-Departure Training</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Cultural orientation, basic local language phrases, currency tips, and what to pack — everything your child needs before boarding the flight.</p>
+        <h3 class="font-display text-[0.9375rem] font-semibold text-[oklch(0.15_0.02_260)] mb-2">Pre-Departure Training</h3>
+        <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Cultural orientation, basic local language phrases, currency tips, and what to pack before boarding the flight.</p>
       </div>
-      <div class="bg-[#f8f9fb] border border-[#e5e7eb] rounded-lg p-8">
-        <div class="w-12 h-12 flex items-center justify-center bg-[rgba(190,30,45,0.08)] rounded-xl mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.93_0.01_260)] p-7" style="border-radius: 8px;">
+        <div class="w-11 h-11 flex items-center justify-center bg-[oklch(0.93_0.06_25/0.4)] mb-4" style="border-radius: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be1e2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h3 class="font-display text-base font-semibold text-[#111827] mb-2">FMGE Coaching Included</h3>
-        <p class="text-sm text-[#4b5563] leading-relaxed">Structured FMGE preparation starts from year 3. Our students have a 3x higher FMGE pass rate compared to self-study.</p>
+        <h3 class="font-display text-[0.9375rem] font-semibold text-[oklch(0.15_0.02_260)] mb-2">FMGE Coaching Included</h3>
+        <p class="text-[0.8125rem] text-[oklch(0.45_0.01_260)] leading-relaxed">Structured FMGE preparation starts from year 3. Our students have a 3x higher FMGE pass rate compared to self-study.</p>
       </div>
     </div>
   </div>
 </section>
+
 <!-- ADMISSION DEADLINES -->
-<section id="deadlines" class="py-16 lg:py-20 bg-[#232d61]">
-  <div class="max-w-[1000px] mx-auto px-6 lg:px-12 text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#be1e2d] text-white rounded-full mb-6">
+<section id="deadlines" class="py-14 lg:py-20 bg-[#232d61]">
+  <div class="max-w-[900px] mx-auto px-6 lg:px-12 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#be1e2d] text-white mb-6" style="border-radius: 99px;">
       <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-      <span class="text-sm font-semibold tracking-wide uppercase">Applications Open</span>
+      <span class="text-[0.75rem] font-semibold tracking-[0.1em] uppercase">Applications Open</span>
     </div>
-    <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">September 2026 Intake — Seats Filling Fast</h2>
-    <p class="text-white/70 max-w-lg mx-auto mb-8">Top universities in Georgia, Uzbekistan, and Kazakhstan have limited seats. Early applicants get priority in university selection and scholarship consideration.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="px-8 py-4 bg-[#be1e2d] text-white font-semibold hover:bg-[#a81826] transition-all duration-200" style="border-radius: 6px; font-family: var(--font-body);">
+    <h2 class="font-display text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-4 tracking-tight leading-tight">September 2026 Intake — Seats Filling Fast</h2>
+    <p class="text-white/60 max-w-lg mx-auto mb-8 text-[0.9375rem] leading-relaxed">Top universities in Georgia, Uzbekistan, and Kazakhstan have limited seats. Early applicants get priority in university selection and scholarship consideration.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="px-7 py-4 bg-[#be1e2d] text-white font-semibold hover:bg-[#a81826] transition-colors duration-200 text-[0.9375rem]" style="border-radius: 6px; font-family: var(--font-body);">
         Apply Now — Free Assessment
       </button>
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="px-8 py-4 bg-transparent text-white font-semibold border border-white/30 hover:bg-white/10 transition-all duration-200" style="border-radius: 6px; font-family: var(--font-body);">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="px-7 py-4 bg-transparent text-white font-semibold border border-white/25 hover:bg-white/[0.08] transition-colors duration-200 text-[0.9375rem]" style="border-radius: 6px; font-family: var(--font-body);">
         Check Eligibility
       </button>
     </div>
-    <p class="text-white/40 text-xs mt-6">Average processing time: 3–4 weeks from application to admission letter</p>
+    <p class="text-white/35 text-[0.6875rem] mt-6">Average processing time: 3-4 weeks from application to admission letter</p>
   </div>
 </section>
+
 <!-- FAQ -->
-<section id="faq" class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[800px] mx-auto px-6 lg:px-12">
-    <div class="text-center mb-16">
-      <div class="section-eyebrow mb-4">FAQ</div>
+<section id="faq" class="py-20 lg:py-28 bg-[oklch(0.975_0.003_260)]">
+  <div class="max-w-[760px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-14 lg:mb-20">
+      <div class="section-eyebrow mb-3">FAQ</div>
       <h2 class="section-headline" style="margin-top: 0.5rem;">Questions Parents<br />Ask Most</h2>
     </div>
     <div class="space-y-3" id="faq-list">
-      <!-- FAQ 1 -->
-      <div class="faq-item bg-white border border-[#e5e7eb] rounded-lg overflow-hidden">
+      <div class="faq-item bg-white border border-[oklch(0.92_0.01_260)] overflow-hidden" style="border-radius: 8px;">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" onclick="this.parentElement.classList.toggle('open')">
-          <span class="font-display font-semibold text-[#111827] text-sm pr-4">Is MBBS from abroad valid in India?</span>
-          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="font-display font-semibold text-[oklch(0.15_0.02_260)] text-[0.875rem] pr-4">Is MBBS from abroad valid in India?</span>
+          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer px-6 pb-5 hidden">
-          <p class="text-sm text-[#4b5563] leading-relaxed">Yes. Any MBBS degree from an NMC (formerly MCI) approved university is valid in India. After completing your degree abroad, you need to clear the FMGE/NExT exam to practice in India. All universities we recommend are NMC-approved.</p>
+          <p class="text-[0.875rem] text-[oklch(0.4_0.01_260)] leading-relaxed">Yes. Any MBBS degree from an NMC (formerly MCI) approved university is valid in India. After completing your degree abroad, you need to clear the FMGE/NExT exam to practice in India. All universities we recommend are NMC-approved.</p>
         </div>
       </div>
-      <!-- FAQ 2 -->
-      <div class="faq-item bg-white border border-[#e5e7eb] rounded-lg overflow-hidden">
+      <div class="faq-item bg-white border border-[oklch(0.92_0.01_260)] overflow-hidden" style="border-radius: 8px;">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" onclick="this.parentElement.classList.toggle('open')">
-          <span class="font-display font-semibold text-[#111827] text-sm pr-4">What is the minimum NEET score required?</span>
-          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="font-display font-semibold text-[oklch(0.15_0.02_260)] text-[0.875rem] pr-4">What is the minimum NEET score required?</span>
+          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer px-6 pb-5 hidden">
-          <p class="text-sm text-[#4b5563] leading-relaxed">For most countries (Georgia, Russia, Kazakhstan, Kyrgyzstan, Uzbekistan), you need a qualifying NEET score — there's no minimum cutoff. Even scores around 150–200 can get you admission to good universities. For the UK, requirements are higher.</p>
+          <p class="text-[0.875rem] text-[oklch(0.4_0.01_260)] leading-relaxed">For most countries (Georgia, Russia, Kazakhstan, Kyrgyzstan, Uzbekistan), you need a qualifying NEET score — there is no minimum cutoff. Even scores around 150-200 can get you admission to good universities. For the UK, requirements are higher.</p>
         </div>
       </div>
-      <!-- FAQ 3 -->
-      <div class="faq-item bg-white border border-[#e5e7eb] rounded-lg overflow-hidden">
+      <div class="faq-item bg-white border border-[oklch(0.92_0.01_260)] overflow-hidden" style="border-radius: 8px;">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" onclick="this.parentElement.classList.toggle('open')">
-          <span class="font-display font-semibold text-[#111827] text-sm pr-4">How much does the consultancy charge?</span>
-          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="font-display font-semibold text-[oklch(0.15_0.02_260)] text-[0.875rem] pr-4">How much does the consultancy charge?</span>
+          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer px-6 pb-5 hidden">
-          <p class="text-sm text-[#4b5563] leading-relaxed">Our consultancy fee is shared transparently during your first free consultation. There are no hidden charges. The fee covers university application, documentation, visa assistance, and pre-departure support. We do not charge per university — it's a single flat fee.</p>
+          <p class="text-[0.875rem] text-[oklch(0.4_0.01_260)] leading-relaxed">Our consultancy fee is shared transparently during your first free consultation. There are no hidden charges. The fee covers university application, documentation, visa assistance, and pre-departure support. We do not charge per university — it is a single flat fee.</p>
         </div>
       </div>
-      <!-- FAQ 4 -->
-      <div class="faq-item bg-white border border-[#e5e7eb] rounded-lg overflow-hidden">
+      <div class="faq-item bg-white border border-[oklch(0.92_0.01_260)] overflow-hidden" style="border-radius: 8px;">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" onclick="this.parentElement.classList.toggle('open')">
-          <span class="font-display font-semibold text-[#111827] text-sm pr-4">Is it safe for Indian students in these countries?</span>
-          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="font-display font-semibold text-[oklch(0.15_0.02_260)] text-[0.875rem] pr-4">Is it safe for Indian students in these countries?</span>
+          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer px-6 pb-5 hidden">
-          <p class="text-sm text-[#4b5563] leading-relaxed">Yes. Countries like Georgia, Kazakhstan, and Uzbekistan have large Indian student communities (thousands of students). The universities we partner with are in safe cities with good infrastructure. We also arrange Indian hostels, local coordinators, and 24/7 emergency support.</p>
+          <p class="text-[0.875rem] text-[oklch(0.4_0.01_260)] leading-relaxed">Yes. Countries like Georgia, Kazakhstan, and Uzbekistan have large Indian student communities (thousands of students). The universities we partner with are in safe cities with good infrastructure. We also arrange Indian hostels, local coordinators, and 24/7 emergency support.</p>
         </div>
       </div>
-      <!-- FAQ 5 -->
-      <div class="faq-item bg-white border border-[#e5e7eb] rounded-lg overflow-hidden">
+      <div class="faq-item bg-white border border-[oklch(0.92_0.01_260)] overflow-hidden" style="border-radius: 8px;">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" onclick="this.parentElement.classList.toggle('open')">
-          <span class="font-display font-semibold text-[#111827] text-sm pr-4">What about FMGE coaching?</span>
-          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="font-display font-semibold text-[oklch(0.15_0.02_260)] text-[0.875rem] pr-4">What about FMGE coaching?</span>
+          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer px-6 pb-5 hidden">
-          <p class="text-sm text-[#4b5563] leading-relaxed">We provide structured FMGE coaching starting from the 3rd year of MBBS. This includes live online classes, mock tests, and study materials. Our students have a significantly higher FMGE pass rate compared to national average. The coaching is included in our service package at no extra cost.</p>
+          <p class="text-[0.875rem] text-[oklch(0.4_0.01_260)] leading-relaxed">We provide structured FMGE coaching starting from the 3rd year of MBBS. This includes live online classes, mock tests, and study materials. Our students have a significantly higher FMGE pass rate compared to national average. The coaching is included in our service package at no extra cost.</p>
         </div>
       </div>
-      <!-- FAQ 6 -->
-      <div class="faq-item bg-white border border-[#e5e7eb] rounded-lg overflow-hidden">
+      <div class="faq-item bg-white border border-[oklch(0.92_0.01_260)] overflow-hidden" style="border-radius: 8px;">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-5 text-left" onclick="this.parentElement.classList.toggle('open')">
-          <span class="font-display font-semibold text-[#111827] text-sm pr-4">Can I work abroad after completing MBBS?</span>
-          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="font-display font-semibold text-[oklch(0.15_0.02_260)] text-[0.875rem] pr-4">Can I work abroad after completing MBBS?</span>
+          <svg class="faq-chevron flex-shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer px-6 pb-5 hidden">
-          <p class="text-sm text-[#4b5563] leading-relaxed">Yes. After completing MBBS from an ECFMG-recognized university, you can appear for licensing exams in countries like the USA (USMLE), UK (PLAB), Australia (AMC), and Middle East. We guide students interested in international licensing pathways as well.</p>
+          <p class="text-[0.875rem] text-[oklch(0.4_0.01_260)] leading-relaxed">Yes. After completing MBBS from an ECFMG-recognized university, you can appear for licensing exams in countries like the USA (USMLE), UK (PLAB), Australia (AMC), and Middle East. We guide students interested in international licensing pathways as well.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- LEAD FORM SECTION -->
-<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-12">
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Get Started</div>
-        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">
+<section id="lead-form-container" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="max-w-[620px] mx-auto">
+      <div class="text-center mb-10">
+        <div class="section-eyebrow mb-3">Get Started</div>
+        <h2 class="text-[clamp(1.75rem,4vw,2.75rem)] font-semibold tracking-tight mb-3 leading-[1.1]" style="font-family: var(--font-display); color: oklch(0.15 0.02 260);">
           Get Your Free<br />Assessment
         </h2>
-        <p class="text-[#4b5563]">
-          Fill in your details and our experts will contact you within 24 hours.
+        <p class="text-[oklch(0.45_0.01_260)] text-[0.9375rem]">
+          Fill in your details. Our experts will contact you within 24 hours with a personalized university shortlist.
         </p>
       </div>
-      <form id="lead-form" class="bg-white rounded-xl p-8 lg:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
+
+      <form id="lead-form" class="bg-[oklch(0.98_0.003_260)] border border-[oklch(0.92_0.01_260)] p-7 lg:p-10" style="border-radius: 10px;">
+        <div class="grid md:grid-cols-2 gap-5 mb-5">
           <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Student Name *</label>
-            <input type="text" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Full name">
+            <label class="form-label text-[0.8125rem] font-medium text-[oklch(0.2_0.02_260)] mb-2 block">Student Name *</label>
+            <input type="text" required class="w-full px-4 py-3 bg-white border border-[oklch(0.9_0.01_260)] focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all text-[0.9375rem]" style="border-radius: 6px;" placeholder="Full name">
           </div>
           <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Phone Number *</label>
-            <input type="tel" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="+91 98765 43210">
+            <label class="form-label text-[0.8125rem] font-medium text-[oklch(0.2_0.02_260)] mb-2 block">Phone Number *</label>
+            <input type="tel" required class="w-full px-4 py-3 bg-white border border-[oklch(0.9_0.01_260)] focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all text-[0.9375rem]" style="border-radius: 6px;" placeholder="+91 98765 43210">
           </div>
         </div>
-        <div class="mb-6">
-          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Email Address *</label>
-          <input type="email" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="email@example.com">
+        <div class="mb-5">
+          <label class="form-label text-[0.8125rem] font-medium text-[oklch(0.2_0.02_260)] mb-2 block">Email Address *</label>
+          <input type="email" required class="w-full px-4 py-3 bg-white border border-[oklch(0.9_0.01_260)] focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all text-[0.9375rem]" style="border-radius: 6px;" placeholder="email@example.com">
         </div>
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="grid md:grid-cols-2 gap-5 mb-5">
           <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score (if known)</label>
-            <input type="number" class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all" placeholder="Enter score">
+            <label class="form-label text-[0.8125rem] font-medium text-[oklch(0.2_0.02_260)] mb-2 block">NEET Score (if known)</label>
+            <input type="number" class="w-full px-4 py-3 bg-white border border-[oklch(0.9_0.01_260)] focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all text-[0.9375rem]" style="border-radius: 6px;" placeholder="Enter score">
           </div>
           <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label>
-            <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all bg-white">
+            <label class="form-label text-[0.8125rem] font-medium text-[oklch(0.2_0.02_260)] mb-2 block">Preferred Country</label>
+            <select class="w-full px-4 py-3 bg-white border border-[oklch(0.9_0.01_260)] focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all text-[0.9375rem]" style="border-radius: 6px;">
               <option value="">Select country</option>
               <option value="georgia">Georgia</option>
               <option value="uzbekistan">Uzbekistan</option>
@@ -740,25 +958,39 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
             </select>
           </div>
         </div>
-        <div class="mb-8">
-          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Message (Optional)</label>
-          <textarea class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea>
+        <div class="mb-7">
+          <label class="form-label text-[0.8125rem] font-medium text-[oklch(0.2_0.02_260)] mb-2 block">Message (Optional)</label>
+          <textarea class="w-full px-4 py-3 bg-white border border-[oklch(0.9_0.01_260)] focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-all resize-none text-[0.9375rem]" style="border-radius: 6px;" rows="3" placeholder="Tell us about your requirements..."></textarea>
         </div>
-        <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
+        <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide hover:bg-[#a81826] transition-colors duration-200 flex items-center justify-center gap-2.5 text-[0.9375rem]" style="border-radius: 6px;">
           Get Free Assessment
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
-        <p class="text-xs text-center text-[#6b7280] mt-6">
-          By submitting, you agree to our privacy policy. We never share your data.
-        </p>
+
+        <!-- Trust signals below submit -->
+        <div class="flex flex-wrap justify-center items-center gap-4 mt-5 pt-5 border-t border-[oklch(0.92_0.01_260)]">
+          <span class="flex items-center gap-1.5 text-[0.6875rem] text-[oklch(0.5_0.01_260)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Data encrypted
+          </span>
+          <span class="flex items-center gap-1.5 text-[0.6875rem] text-[oklch(0.5_0.01_260)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            No spam, ever
+          </span>
+          <span class="flex items-center gap-1.5 text-[0.6875rem] text-[oklch(0.5_0.01_260)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.5 0.14 160)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            24hr response
+          </span>
+        </div>
       </form>
     </div>
   </div>
 </section>
+
 <!-- MOBILE STICKY CTA -->
-<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#e5e7eb] p-4 lg:hidden z-50">
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[oklch(0.9_0.01_260)] p-3 lg:hidden z-50" style="box-shadow: 0 -4px 20px oklch(0 0 0 / 0.06);">
   <div class="flex gap-3">
-    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-[#be1e2d] text-white font-semibold text-center">
+    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3.5 bg-[#be1e2d] text-white font-semibold text-center text-[0.875rem] tracking-wide" style="border-radius: 6px;">
       Get Free Assessment
     </button>
   </div>
