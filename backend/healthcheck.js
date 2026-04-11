@@ -1,38 +1,34 @@
 #!/usr/bin/env node
-// Cranl Cron Job: checks TeleCRM API, sends email alert on failure
-// Zero dependencies — uses Node built-in fetch and SMTP via nodemailer-free approach
+// Cranl Cron Job: checks TeleCRM API, sends email alert on failure via AgentMail
+// Zero dependencies — uses Node built-in fetch
 
-const ALERT_EMAIL = process.env.ALERT_EMAIL || 'abdulwajidck@gmail.com';
-const SMTP_USER = process.env.SMTP_USER || '';
-const SMTP_PASS = process.env.SMTP_PASS || '';
+const AGENTMAIL_API_KEY = 'am_us_1e68249cc9475f6db7a14a01a6a7fdd3a6be7be04b5c65ba13d98ca00baf3673';
+const AGENTMAIL_BASE = 'https://api.agentmail.to/v0';
+const ALERT_EMAIL = 'abdulwajidck@gmail.com';
+const FROM_INBOX = 'stakque@agentmail.to';
 
-async function sendEmail(subject, body) {
-  if (!SMTP_USER || !SMTP_PASS) {
-    console.log('[NO SMTP] Would have sent:', subject);
-    return;
-  }
+async function sendAlert(subject, body) {
   try {
-    // Use Gmail SMTP via raw HTTPS request (no nodemailer needed)
-    const auth = btoa(`${SMTP_USER}:${SMTP_PASS}`);
-    const message = [
-      `From: ${SMTP_USER}`,
-      `To: ${ALERT_EMAIL}`,
-      `Subject: ${subject}`,
-      '',
-      body
-    ].join('\r\n');
-
-    const raw = btoa(message).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-    const res = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
+    const res = await fetch(`${AGENTMAIL_BASE}/inboxes/${encodeURIComponent(FROM_INBOX)}/messages/send`, {
       method: 'POST',
-      headers: { 'Authorization': `Basic ${auth}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ raw }),
+      headers: {
+        'Authorization': `Bearer ${AGENTMAIL_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        to: ALERT_EMAIL,
+        subject: subject,
+        text: body,
+      }),
     });
-    if (res.ok) console.log('Alert email sent to', ALERT_EMAIL);
-    else console.log('Email API returned', res.status, '— falling back to console alert');
+    if (res.ok) {
+      console.log('Alert email sent to', ALERT_EMAIL, 'via AgentMail');
+    } else {
+      const err = await res.text();
+      console.log('AgentMail returned', res.status, err);
+    }
   } catch (e) {
     console.error('Email send failed:', e.message);
-    console.log('ALERT:', subject, '-', body);
   }
 }
 
@@ -61,7 +57,7 @@ async function checkTeleCRM() {
 
   if (!result.ok) {
     console.log('  ALERT: TeleCRM is down!');
-    await sendEmail(
+    await sendAlert(
       'Gradiks Alert — TeleCRM Down',
       `TeleCRM API is DOWN as of ${now}.\n\n${result.error || 'HTTP ' + result.status}\n\nCheck immediately.`
     );
