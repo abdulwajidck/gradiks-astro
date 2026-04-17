@@ -31,7 +31,7 @@ const description = "Study in Ireland with Gradiks. MSc Data Analytics, Cyber Se
 <!-- HERO SECTION -->
 <section class="lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32 bg-[#1d1d1f]">
   <div class="absolute inset-0 z-0">
-    <div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] bg-gradient-radial from-[rgba(190,30,45,0.06)] via-transparent to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(190,30,45,0.06) 0%, transparent 70%);"></div>
   </div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 lg:py-32 relative z-10 w-full">
     <div class="max-w-4xl">
@@ -250,12 +250,18 @@ document.getElementById('lead-form')?.addEventListener('submit', (e) => {
     headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7' },
     body: JSON.stringify(payload),
     keepalive: true,
-  }).catch(() => {});
-  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-  Promise.race([sent, timeout]).then(() => {
+  }).then(res => {
     btn.innerHTML = 'REDIRECTING...';
     btn.style.backgroundColor = '#22c55e';
     setTimeout(() => { window.location.href = '/mbbs-thank-you'; }, 500);
+  }).catch(() => {
+    btn.disabled = false;
+    btn.innerHTML = originalText;
+    const err = document.createElement('p');
+    err.className = 'text-red-600 text-sm text-center mt-4';
+    err.textContent = 'Something went wrong. Please try again or WhatsApp us.';
+    btn.parentElement.appendChild(err);
+    setTimeout(() => err.remove(), 5000);
   });
 });
 
@@ -273,13 +279,14 @@ document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
   const payload = { fields: { name, phone: formattedPhone, email, lead_source: 'Google Ads', facebook_campaign_name: 'Ireland LP - Study Lead' } };
   // Log to backend
   window.__sendToBackend && window.__sendToBackend({ form_type: 'hero-ireland-study', name, phone: formattedPhone, email });
-  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7' }, body: JSON.stringify(payload), keepalive: true }).catch(() => {});
-  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-  btn.innerHTML = 'SENDING...';
-  Promise.race([sent, timeout]).then(() => {
+  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7' }, body: JSON.stringify(payload), keepalive: true }).then(res => {
     btn.innerHTML = 'REDIRECTING...';
     btn.style.backgroundColor = '#22c55e';
     setTimeout(() => { window.location.href = '/mbbs-thank-you'; }, 500);
+  }).catch(() => {
+    btn.disabled = false;
+    btn.innerHTML = 'GET FREE ASSESSMENT';
+    alert('Something went wrong. Please try again.');
   });
 });
 </script>

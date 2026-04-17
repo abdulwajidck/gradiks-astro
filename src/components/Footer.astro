@@ -7,25 +7,40 @@
       <img src="/gradiks-logo.png" alt="Gradiks Global" class="footer-logo" />
       <p class="footer-tagline">Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning.</p>
       <div class="footer-contact">
-        <span class="contact-item">hello@gradiks.com</span>
-        <span class="contact-item">Kochi, Kerala</span>
+        <a href="mailto:hello@gradiks.com" class="contact-item">hello@gradiks.com</a>
+        <a href="https://wa.me/919876543210?text=Hi%20Gradiks%2C%20I%27m%20interested%20in%20studying%20MBBS%20abroad" target="_blank" rel="noopener" class="contact-item contact-whatsapp">+91 98765 43210</a>
+        <span class="contact-item">MG Road, Kochi, Kerala 682011</span>
       </div>
     </div>
 
     <div class="footer-links-grid">
       <div class="footer-col">
-        <h4 class="footer-col-title">Study Abroad</h4>
+        <h4 class="footer-col-title">MBBS Abroad</h4>
         <ul class="footer-col-list">
-          <li><span>Germany</span></li>
-          <li><span>Ireland</span></li>
-          <li><span>United Kingdom</span></li>
+          <li><a href="/georgia-study">Georgia</a></li>
+          <li><a href="/kazakhstan-study">Kazakhstan</a></li>
+          <li><a href="/kyrgyzstan-study">Kyrgyzstan</a></li>
+          <li><a href="/russia-study">Russia</a></li>
+          <li><a href="/uzbekistan-study">Uzbekistan</a></li>
+          <li><a href="/uk-mbbs">United Kingdom</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4 class="footer-col-title">Programs</h4>
+        <h4 class="footer-col-title">Other Programs</h4>
         <ul class="footer-col-list">
-          <li><span>BSc Nursing Abroad</span></li>
-          <li><span>MBBS in India</span></li>
+          <li><a href="/germany-study">Study in Germany</a></li>
+          <li><a href="/ireland-study">Study in Ireland</a></li>
+          <li><a href="/uk-study">Study in UK</a></li>
+          <li><a href="/nursing-albania">BSc Nursing — Albania</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-col-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#why-section">Why Gradiks</a></li>
+          <li><a href="/#fees">Compare Fees</a></li>
+          <li><a href="/#faq">FAQ</a></li>
         </ul>
       </div>
     </div>
@@ -33,7 +48,7 @@
 
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <p class="footer-copy">© 2026 Gradiks. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Gradiks. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -81,13 +96,24 @@
     font-family: var(--font-body);
     font-size: 0.875rem;
     color: #4b5563;
+    text-decoration: none;
     transition: color 0.2s ease;
   }
-  .contact-item:hover { color: var(--color-gold-500); }
+  .contact-item:hover { color: #be1e2d; }
+  .contact-whatsapp {
+    color: #25D366;
+    font-weight: 500;
+  }
+  .contact-whatsapp:hover { color: #128C7E; }
   .footer-links-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+  @media (min-width: 768px) {
+    .footer-links-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   .footer-col-title {
     font-family: var(--font-display);
@@ -103,12 +129,17 @@
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
+    padding: 0;
+    margin: 0;
   }
-  .footer-col-list li span {
+  .footer-col-list a {
     font-family: var(--font-body);
     font-size: 0.875rem;
     color: #6b7280;
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
+  .footer-col-list a:hover { color: #be1e2d; }
   .footer-bottom {
     border-top: 1px solid #f1f1f1;
   }
@@ -129,16 +160,4 @@
     font-size: 0.8125rem;
     color: #9ca3af;
   }
-  .footer-legal {
-    display: flex;
-    gap: 1.5rem;
-  }
-  .footer-legal span {
-    font-family: var(--font-body);
-    font-size: 0.8125rem;
-    color: #9ca3af;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
-  .footer-legal span:hover { color: #6b7280; }
 </style>

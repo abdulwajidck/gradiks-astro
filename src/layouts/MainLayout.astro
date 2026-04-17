@@ -78,6 +78,15 @@ const { title, description } = Astro.props;
 </head>
 <body>
     <slot />
+
+    <!-- WhatsApp Floating CTA -->
+    <a href="https://wa.me/919876543210?text=Hi%20Gradiks%2C%20I%27m%20interested%20in%20studying%20MBBS%20abroad" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+        <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.744 3.052 9.38L1.056 31.2l6.044-1.944A15.9 15.9 0 0016.004 32C24.826 32 32 24.826 32 16.004S24.826 0 16.004 0zm9.312 22.596c-.392 1.104-1.94 2.02-3.188 2.288-.852.18-1.964.324-5.708-1.228-4.792-1.984-7.876-6.84-8.116-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.48 1.656-3.96c.432-.48.944-.6 1.26-.6.316 0 .632.004.908.016.292.012.684-.112 1.068.816.392.948 1.332 3.268 1.448 3.504.116.236.196.512.04.828-.156.316-.232.512-.468.788-.236.276-.496.616-.708.828-.236.236-.484.492-.204.964.276.472 1.232 2.028 2.644 3.284 1.816 1.616 3.348 2.116 3.82 2.352.472.236.748.196 1.02-.12.276-.316 1.18-1.376 1.496-1.852.316-.472.632-.392 1.064-.236.432.156 2.768 1.304 3.24 1.544.472.236.788.356.904.548.116.196.116 1.12-.276 2.224z" fill="#25D366"/>
+      </svg>
+      <span class="whatsapp-label">Chat with us</span>
+    </a>
+
     <script is:inline>
     (function(){
       var p=new URLSearchParams(location.search),k=['gclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
@@ -87,3 +96,46 @@ const { title, description } = Astro.props;
     <script src="../scripts/instantdb.js"></script>
 </body>
 </html>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1.25rem;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25D366;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  }
+  .whatsapp-label {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .whatsapp-float {
+      bottom: 2rem;
+      right: 2rem;
+    }
+    .whatsapp-label {
+      display: inline;
+    }
+  }
+  @media (max-width: 1023px) {
+    .whatsapp-float {
+      bottom: 5rem;
+    }
+  }
+</style>
