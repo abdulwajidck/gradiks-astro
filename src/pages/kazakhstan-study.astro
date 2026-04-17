@@ -5,10 +5,14 @@ import Footer from '../components/Footer.astro';
 const title = "Gradiks — MBBS in Kazakhstan | NMC Approved Universities";
 const description = "Study MBBS in Kazakhstan with Gradiks. 5-year program, NMC approved, fees from ₹3-5L/year. Kazakh National Medical University & more. Free consultation.";
 ---
+
+<style>
+  :root { --color-accent: #0d7377; }
+</style>
 <MainLayout title={title} description={description}>
 <Navigation />
 <!-- TRUST BAR -->
-<section class="bg-[#232d61] py-4 mt-20">
+<section class="bg-brand-blue py-4 mt-20">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 text-white text-sm">
       <span class="flex items-center gap-2"><span class="font-display font-semibold">5 Years</span><span class="text-white/70">Duration</span></span>
@@ -22,7 +26,7 @@ const description = "Study MBBS in Kazakhstan with Gradiks. 5-year program, NMC 
   </div>
 </section>
 <!-- HERO -->
-<section class="lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32 bg-[#1d1d1f]">
+<section class="lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32 bg-surface-dark">
   <div class="absolute inset-0 z-0"><div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(13,115,119,0.06) 0%, transparent 70%);"></div></div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 lg:py-32 relative z-10 w-full">
     <div class="max-w-4xl">
@@ -30,12 +34,12 @@ const description = "Study MBBS in Kazakhstan with Gradiks. 5-year program, NMC 
         <span class="text-2xl">🇰🇿</span>
         <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Study MBBS in Kazakhstan</span>
       </div>
-      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">MBBS in<br /><span class="text-[#0d7377]">Kazakhstan</span></h1>
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">MBBS in<br /><span class="text-accent">Kazakhstan</span></h1>
       <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12">
         Central Asia's most developed country with world-class medical universities. 5-year program, modern infrastructure, and affordable fees.
       </p>
       <div class="hidden lg:flex flex-col sm:flex-row gap-4">
-        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#0d7377] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(13,115,119,0.3)]">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-accent text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(13,115,119,0.3)]">
           <span class="relative z-10 flex items-center justify-center gap-2">Apply Now<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </button>
         <a href="/#fees" class="group relative px-8 py-4 border border-white/20 text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:bg-white/5 text-center">Compare Fees</a>
@@ -43,90 +47,11 @@ const description = "Study MBBS in Kazakhstan with Gradiks. 5-year program, NMC 
       <div class="lg:hidden">
         <form id="hero-lead-form" class="space-y-3">
           <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Full Name *" aria-label="Full Name">
-          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="+91 98765 43210 *" aria-label="Phone Number">
+          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Your phone number *" aria-label="Phone Number">
           <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Email *" aria-label="Email Address">
-          <button type="submit" class="w-full py-4 bg-[#0d7377] text-white font-semibold tracking-wide text-sm">GET FREE ASSESSMENT</button>
+          <button type="submit" class="w-full py-4 bg-accent text-white font-semibold tracking-wide text-sm">GET FREE ASSESSMENT</button>
           <p class="text-center text-[10px] text-white/40">Free · No spam · 24hr response</p>
         </form>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- TOP UNIVERSITIES -->
-<section class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-3xl mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#0d7377] mb-4">Top Universities</div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">NMC-Approved<br />Universities in Kazakhstan</h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="text-xs tracking-[0.2em] uppercase text-[#0d7377] mb-4">Est. 1931</div>
-        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Kazakh National Medical University</h3>
-        <p class="text-sm text-[#4b5563] mb-6">#1 medical university in Kazakhstan. WHO listed, ECFMG recognized, excellent research facilities and clinical exposure.</p>
-        <div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
-          <div><div class="text-xs text-[#6b7280]">Duration</div><div class="text-[#111827]">5 Years</div></div>
-          <div class="text-right"><div class="text-xs text-[#6b7280]">Tuition/Year</div><div class="text-[#0d7377] font-medium">₹4–5 Lakh</div></div>
-        </div>
-      </div>
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="text-xs tracking-[0.2em] uppercase text-[#0d7377] mb-4">Est. 1964</div>
-        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Astana Medical University</h3>
-        <p class="text-sm text-[#4b5563] mb-6">Located in the capital city Nur-Sultan. Modern campus, state-of-the-art labs, and strong international partnerships.</p>
-        <div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
-          <div><div class="text-xs text-[#6b7280]">Duration</div><div class="text-[#111827]">5 Years</div></div>
-          <div class="text-right"><div class="text-xs text-[#6b7280]">Tuition/Year</div><div class="text-[#0d7377] font-medium">₹3.5–4.5 Lakh</div></div>
-        </div>
-      </div>
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="text-xs tracking-[0.2em] uppercase text-[#0d7377] mb-4">Est. 1950</div>
-        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Karaganda State Medical University</h3>
-        <p class="text-sm text-[#4b5563] mb-6">Affordable option with strong clinical training. Well-established university with decades of experience teaching international students.</p>
-        <div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
-          <div><div class="text-xs text-[#6b7280]">Duration</div><div class="text-[#111827]">5 Years</div></div>
-          <div class="text-right"><div class="text-xs text-[#6b7280]">Tuition/Year</div><div class="text-[#0d7377] font-medium">₹3–4 Lakh</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- WHY KAZAKHSTAN -->
-<section class="py-24 lg:py-32 bg-[#1d1d1f]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-3xl mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#0d7377] mb-4">Why Kazakhstan</div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">Why Study<br />MBBS in Kazakhstan?</h2>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#0d7377] transition-colors" style="font-family: var(--font-display);">01</div>
-        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">NMC Approved</h3>
-        <p class="text-sm text-white/60">All listed universities are recognized by NMC and WHO. Your degree is fully valid in India after clearing FMGE.</p>
-      </div>
-      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#0d7377] transition-colors" style="font-family: var(--font-display);">02</div>
-        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">5-Year Program</h3>
-        <p class="text-sm text-white/60">Complete your MBBS faster than Georgia or Russia. Save one full year of tuition and living costs.</p>
-      </div>
-      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#0d7377] transition-colors" style="font-family: var(--font-display);">03</div>
-        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Modern Infrastructure</h3>
-        <p class="text-sm text-white/60">Best medical facilities in Central Asia. State-of-the-art labs, simulation centers, and well-equipped hospitals.</p>
-      </div>
-      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#0d7377] transition-colors" style="font-family: var(--font-display);">04</div>
-        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Growing Economy</h3>
-        <p class="text-sm text-white/60">Safe, rapidly developing cities with excellent public transport, modern amenities, and a welcoming atmosphere.</p>
-      </div>
-      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#0d7377] transition-colors" style="font-family: var(--font-display);">05</div>
-        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Affordable Living</h3>
-        <p class="text-sm text-white/60">Living costs from ₹2-3L/year. Indian food is available, and Indian hostels make it feel like home.</p>
-      </div>
-      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#0d7377] transition-colors" style="font-family: var(--font-display);">06</div>
-        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Indian Food Available</h3>
-        <p class="text-sm text-white/60">Indian mess and hostels in major cities. Vegetarian and non-vegetarian options readily available.</p>
       </div>
     </div>
   </div>
@@ -135,29 +60,107 @@ const description = "Study MBBS in Kazakhstan with Gradiks. 5-year program, NMC 
 <section class="py-24 lg:py-32 bg-white">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#0d7377] mb-4">Fee Breakdown</div>
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Fee Breakdown</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">Kazakhstan MBBS<br />Cost Breakdown</h2>
-      <p class="text-[#4b5563]">Transparent fees. No hidden charges.</p>
+      <p class="text-text-secondary">Transparent fees. No hidden charges.</p>
     </div>
     <div class="max-w-[900px] mx-auto overflow-x-auto">
       <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
-        <thead><tr class="bg-[#232d61] text-white"><th class="font-display font-semibold text-sm px-6 py-4 rounded-tl-lg">University</th><th class="font-display font-semibold text-sm px-6 py-4">Duration</th><th class="font-display font-semibold text-sm px-6 py-4">Tuition/Year</th><th class="font-display font-semibold text-sm px-6 py-4">Living/Year</th><th class="font-display font-semibold text-sm px-6 py-4 rounded-tr-lg">Total (est.)</th></tr></thead>
+        <thead><tr class="bg-brand-blue text-white"><th class="font-display font-semibold text-sm px-6 py-4 rounded-tl-lg">University</th><th class="font-display font-semibold text-sm px-6 py-4">Duration</th><th class="font-display font-semibold text-sm px-6 py-4">Tuition/Year</th><th class="font-display font-semibold text-sm px-6 py-4">Living/Year</th><th class="font-display font-semibold text-sm px-6 py-4 rounded-tr-lg">Total (est.)</th></tr></thead>
         <tbody>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors"><td class="px-6 py-4 font-medium text-[#111827] text-sm">Kazakh National Medical University</td><td class="px-6 py-4 text-sm text-[#4b5563]">5 years</td><td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹4–5 L</td><td class="px-6 py-4 text-sm text-[#4b5563]">₹2–3 L</td><td class="px-6 py-4 text-sm font-bold text-[#059669]">₹30–40 L</td></tr>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors"><td class="px-6 py-4 font-medium text-[#111827] text-sm">Astana Medical University</td><td class="px-6 py-4 text-sm text-[#4b5563]">5 years</td><td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3.5–4.5 L</td><td class="px-6 py-4 text-sm text-[#4b5563]">₹2.5–3 L</td><td class="px-6 py-4 text-sm font-bold text-[#059669]">₹30–37.5 L</td></tr>
-          <tr class="hover:bg-[#f8f9fb] transition-colors"><td class="px-6 py-4 font-medium text-[#111827] text-sm">Karaganda State Medical University</td><td class="px-6 py-4 text-sm text-[#4b5563]">5 years</td><td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3–4 L</td><td class="px-6 py-4 text-sm text-[#4b5563]">₹2–2.5 L</td><td class="px-6 py-4 text-sm font-bold text-[#059669]">₹25–32.5 L</td></tr>
+          <tr class="border-b border-border hover:bg-surface-bright transition-colors"><td class="px-6 py-4 font-medium text-text-primary text-sm">Kazakh National Medical University</td><td class="px-6 py-4 text-sm text-text-secondary">5 years</td><td class="px-6 py-4 text-sm font-semibold text-text-primary">₹4–5 L</td><td class="px-6 py-4 text-sm text-text-secondary">₹2–3 L</td><td class="px-6 py-4 text-sm font-bold text-success">₹30–40 L</td></tr>
+          <tr class="border-b border-border hover:bg-surface-bright transition-colors"><td class="px-6 py-4 font-medium text-text-primary text-sm">Astana Medical University</td><td class="px-6 py-4 text-sm text-text-secondary">5 years</td><td class="px-6 py-4 text-sm font-semibold text-text-primary">₹3.5–4.5 L</td><td class="px-6 py-4 text-sm text-text-secondary">₹2.5–3 L</td><td class="px-6 py-4 text-sm font-bold text-success">₹30–37.5 L</td></tr>
+          <tr class="hover:bg-surface-bright transition-colors"><td class="px-6 py-4 font-medium text-text-primary text-sm">Karaganda State Medical University</td><td class="px-6 py-4 text-sm text-text-secondary">5 years</td><td class="px-6 py-4 text-sm font-semibold text-text-primary">₹3–4 L</td><td class="px-6 py-4 text-sm text-text-secondary">₹2–2.5 L</td><td class="px-6 py-4 text-sm font-bold text-success">₹25–32.5 L</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="text-center text-xs text-[#6b7280] mt-6">* Fees are estimates for 2025–26 intake. Actual fees may vary. Contact us for exact figures.</p>
+    <p class="text-center text-xs text-text-muted mt-6">* Fees are estimates for 2025–26 intake. Actual fees may vary. Contact us for exact figures.</p>
   </div>
 </section>
-
+<!-- WHY KAZAKHSTAN -->
+<section class="py-24 lg:py-32 bg-surface-dark">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Why Kazakhstan</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">Why Study<br />MBBS in Kazakhstan?</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">01</div>
+        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">NMC Approved</h3>
+        <p class="text-sm text-white/60">All listed universities are recognized by NMC and WHO. Your degree is fully valid in India after clearing FMGE.</p>
+      </div>
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">02</div>
+        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">5-Year Program</h3>
+        <p class="text-sm text-white/60">Complete your MBBS faster than Georgia or Russia. Save one full year of tuition and living costs.</p>
+      </div>
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">03</div>
+        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Modern Infrastructure</h3>
+        <p class="text-sm text-white/60">Best medical facilities in Central Asia. State-of-the-art labs, simulation centers, and well-equipped hospitals.</p>
+      </div>
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">04</div>
+        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Growing Economy</h3>
+        <p class="text-sm text-white/60">Safe, rapidly developing cities with excellent public transport, modern amenities, and a welcoming atmosphere.</p>
+      </div>
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">05</div>
+        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Affordable Living</h3>
+        <p class="text-sm text-white/60">Living costs from ₹2-3L/year. Indian food is available, and Indian hostels make it feel like home.</p>
+      </div>
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">06</div>
+        <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Indian Food Available</h3>
+        <p class="text-sm text-white/60">Indian mess and hostels in major cities. Vegetarian and non-vegetarian options readily available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TOP UNIVERSITIES -->
+<section class="py-24 lg:py-32 bg-surface">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Top Universities</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">NMC-Approved<br />Universities in Kazakhstan</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1931</div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Kazakh National Medical University</h3>
+        <p class="text-sm text-text-secondary mb-6">#1 medical university in Kazakhstan. WHO listed, ECFMG recognized, excellent research facilities and clinical exposure.</p>
+        <div class="flex justify-between items-center pt-6 border-t border-border">
+          <div><div class="text-xs text-text-muted">Duration</div><div class="text-text-primary">5 Years</div></div>
+          <div class="text-right"><div class="text-xs text-text-muted">Tuition/Year</div><div class="text-accent font-medium">₹4–5 Lakh</div></div>
+        </div>
+      </div>
+      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1964</div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Astana Medical University</h3>
+        <p class="text-sm text-text-secondary mb-6">Located in the capital city Nur-Sultan. Modern campus, state-of-the-art labs, and strong international partnerships.</p>
+        <div class="flex justify-between items-center pt-6 border-t border-border">
+          <div><div class="text-xs text-text-muted">Duration</div><div class="text-text-primary">5 Years</div></div>
+          <div class="text-right"><div class="text-xs text-text-muted">Tuition/Year</div><div class="text-accent font-medium">₹3.5–4.5 Lakh</div></div>
+        </div>
+      </div>
+      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1950</div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Karaganda State Medical University</h3>
+        <p class="text-sm text-text-secondary mb-6">Affordable option with strong clinical training. Well-established university with decades of experience teaching international students.</p>
+        <div class="flex justify-between items-center pt-6 border-t border-border">
+          <div><div class="text-xs text-text-muted">Duration</div><div class="text-text-primary">5 Years</div></div>
+          <div class="text-right"><div class="text-xs text-text-muted">Tuition/Year</div><div class="text-accent font-medium">₹3–4 Lakh</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- STUDENT STORIES -->
-<section class="py-20 lg:py-28 bg-[#f5f5f7]">
+<section class="py-20 lg:py-28 bg-surface">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="max-w-3xl mb-12">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#0d7377] mb-4">Student Stories</div>
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Student Stories</div>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.1]" style="font-family: var(--font-display);">
         Hear From Our<br />KAZAKHSTAN Students
       </h2>
@@ -165,68 +168,68 @@ const description = "Study MBBS in Kazakhstan with Gradiks. 5-year program, NMC 
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-white p-8">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 bg-[#0d7377]/10 text-[#0d7377] flex items-center justify-center font-display font-semibold text-sm">A</div>
+          <div class="w-10 h-10 bg-accent/10 text-accent flex items-center justify-center font-display font-semibold text-sm">A</div>
           <div>
-            <div class="font-semibold text-[#111827] text-sm">Arjun R.</div>
-            <div class="text-xs text-[#6b7280]">Delhi · 2nd Year</div>
+            <div class="font-semibold text-text-primary text-sm">Arjun R.</div>
+            <div class="text-xs text-text-muted">Delhi · 2nd Year</div>
           </div>
         </div>
-        <p class="text-sm text-[#4b5563] leading-relaxed mb-4">"5-year program saved me an entire year compared to other options. The campus is modern, classes are in English, and Almaty is a beautiful city with great Indian food."</p>
-        <div class="text-xs text-[#9ca3af] font-medium">Kazakh National Medical University</div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"5-year program saved me an entire year compared to other options. The campus is modern, classes are in English, and Almaty is a beautiful city with great Indian food."</p>
+        <div class="text-xs text-text-subtle font-medium">Kazakh National Medical University</div>
       </div>
       <div class="bg-white p-8">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 bg-[#0d7377]/10 text-[#0d7377] flex items-center justify-center font-display font-semibold text-sm">S</div>
+          <div class="w-10 h-10 bg-accent/10 text-accent flex items-center justify-center font-display font-semibold text-sm">S</div>
           <div>
-            <div class="font-semibold text-[#111827] text-sm">Sneha P.</div>
-            <div class="text-xs text-[#6b7280]">Bangalore · 3rd Year</div>
+            <div class="font-semibold text-text-primary text-sm">Sneha P.</div>
+            <div class="text-xs text-text-muted">Bangalore · 3rd Year</div>
           </div>
         </div>
-        <p class="text-sm text-[#4b5563] leading-relaxed mb-4">"Gradiks was honest about everything — the good and the challenges. No fake promises. That's why I trusted them. Now I'm thriving in Astana with a clear path ahead."</p>
-        <div class="text-xs text-[#9ca3af] font-medium">Astana Medical University</div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"Gradiks was honest about everything — the good and the challenges. No fake promises. That's why I trusted them. Now I'm thriving in Astana with a clear path ahead."</p>
+        <div class="text-xs text-text-subtle font-medium">Astana Medical University</div>
       </div>
       <div class="bg-white p-8">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 bg-[#0d7377]/10 text-[#0d7377] flex items-center justify-center font-display font-semibold text-sm">V</div>
+          <div class="w-10 h-10 bg-accent/10 text-accent flex items-center justify-center font-display font-semibold text-sm">V</div>
           <div>
-            <div class="font-semibold text-[#111827] text-sm">Vishal T.</div>
-            <div class="text-xs text-[#6b7280]">Mumbai · 4th Year</div>
+            <div class="font-semibold text-text-primary text-sm">Vishal T.</div>
+            <div class="text-xs text-text-muted">Mumbai · 4th Year</div>
           </div>
         </div>
-        <p class="text-sm text-[#4b5563] leading-relaxed mb-4">"The total cost was under 25 lakhs including everything. My family could actually afford this. Gradiks helped with the bank loan process too."</p>
-        <div class="text-xs text-[#9ca3af] font-medium">Karaganda State Medical University</div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"The total cost was under 25 lakhs including everything. My family could actually afford this. Gradiks helped with the bank loan process too."</p>
+        <div class="text-xs text-text-subtle font-medium">Karaganda State Medical University</div>
       </div>
     </div>
   </div>
 </section>
 <!-- LEAD FORM -->
-<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f5f5f7]">
+<section id="lead-form-container" class="py-24 lg:py-32 bg-surface">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12">
-        <div class="text-xs tracking-[0.3em] uppercase text-[#0d7377] mb-4">Get Started</div>
+        <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Get Started</div>
         <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">Get Your Free<br />Kazakhstan Assessment</h2>
-        <p class="text-[#4b5563]">Fill in your details and our experts will contact you within 24 hours.</p>
+        <p class="text-text-secondary">Fill in your details and our experts will contact you within 24 hours.</p>
       </div>
       <form id="lead-form" class="bg-white rounded-xl p-8 lg:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
         <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Student Name *</label><input type="text" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#0d7377] focus:ring-1 focus:ring-[#0d7377] transition-all" placeholder="Full name"></div>
-          <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Phone Number *</label><input type="tel" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#0d7377] focus:ring-1 focus:ring-[#0d7377] transition-all" placeholder="+91 98765 43210"></div>
+          <div><label class="form-label text-sm font-medium text-text-primary mb-2 block">Student Name *</label><input type="text" required class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Full name"></div>
+          <div><label class="form-label text-sm font-medium text-text-primary mb-2 block">Phone Number *</label><input type="tel" required class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Your phone number"></div>
         </div>
-        <div class="mb-6"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Email Address *</label><input type="email" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#0d7377] focus:ring-1 focus:ring-[#0d7377] transition-all" placeholder="email@example.com"></div>
+        <div class="mb-6"><label class="form-label text-sm font-medium text-text-primary mb-2 block">Email Address *</label><input type="email" required class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="email@example.com"></div>
         <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div><label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score (if known)</label><input type="number" class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#0d7377] focus:ring-1 focus:ring-[#0d7377] transition-all" placeholder="Enter score"></div>
+          <div><label class="form-label text-sm font-medium text-text-primary mb-2 block">NEET Score (if known)</label><input type="number" class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Enter score"></div>
         </div>
-        <div class="mb-6"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label><select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#0d7377] focus:ring-1 focus:ring-[#0d7377] transition-all bg-white"><option value="">Select country</option><option value="georgia">Georgia</option><option value="uzbekistan">Uzbekistan</option><option value="kazakhstan" selected>Kazakhstan</option><option value="russia">Russia</option><option value="kyrgyzstan">Kyrgyzstan</option><option value="uk">United Kingdom</option><option value="other">Other / Not Sure</option></select></div>
+        <div class="mb-6"><label class="form-label text-sm font-medium text-text-primary mb-2 block">Preferred Country</label><select class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all bg-white"><option value="">Select country</option><option value="georgia">Georgia</option><option value="uzbekistan">Uzbekistan</option><option value="kazakhstan" selected>Kazakhstan</option><option value="russia">Russia</option><option value="kyrgyzstan">Kyrgyzstan</option><option value="uk">United Kingdom</option><option value="other">Other / Not Sure</option></select></div>
         </div>
-        <div class="mb-8"><label class="form-label text-sm font-medium text-[#111827] mb-2 block">Message (Optional)</label><textarea class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#0d7377] focus:ring-1 focus:ring-[#0d7377] transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea></div>
-        <button type="submit" class="w-full py-5 bg-[#0d7377] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(13,115,119,0.25)] transition-all duration-300 flex items-center justify-center gap-3">Submit Application<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
-        <p class="text-xs text-center text-[#6b7280] mt-6">By submitting, you agree to our privacy policy. We never share your data.</p>
+        <div class="mb-8"><label class="form-label text-sm font-medium text-text-primary mb-2 block">Message (Optional)</label><textarea class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea></div>
+        <button type="submit" class="w-full py-5 bg-accent text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(13,115,119,0.25)] transition-all duration-300 flex items-center justify-center gap-3">Submit Application<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        <p class="text-xs text-center text-text-muted mt-6">By submitting, you agree to our privacy policy. We never share your data.</p>
       </form>
     </div>
   </div>
 </section>
-<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#e5e7eb] p-4 lg:hidden z-50"><div class="flex gap-3"><button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-[#0d7377] text-white font-semibold text-center">Apply for Kazakhstan MBBS</button></div></div>
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 lg:hidden z-50"><div class="flex gap-3"><button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-accent text-white font-semibold text-center">Apply for Kazakhstan MBBS</button></div></div>
 <Footer />
 <script>
 document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
@@ -260,7 +263,7 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
     btn.innerHTML = originalText;
     const err = document.createElement('p');
     err.className = 'text-red-600 text-sm text-center mt-4';
-    err.textContent = 'Something went wrong. Please try again or WhatsApp us.';
+    err.textContent = 'Something went wrong. Please try again.';
     btn.parentElement.appendChild(err);
     setTimeout(() => err.remove(), 5000);
   });

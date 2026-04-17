@@ -17,6 +17,14 @@
   --color-surface: #f5f5f7;
   --color-surface-dark: #1d1d1f;
   --font-display: 'Poppins', system-ui, sans-serif;
+
+  --color-text-subtle: #9ca3af;
+  --color-surface-bright: #f8f9fb;
+  --color-surface-accent-light: #fee;
+  --color-success: #059669;
+  --color-accent: #d4a017;
+  --color-accent-light: #fee;
+  --color-success-bright: #22c55e;
   --font-body: 'Lato', system-ui, sans-serif;
 }
 

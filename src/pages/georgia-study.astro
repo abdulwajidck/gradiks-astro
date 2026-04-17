@@ -5,10 +5,14 @@ import Footer from '../components/Footer.astro';
 const title = "Gradiks — MBBS in Georgia | NMC Approved Universities";
 const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC approved, fees from ₹3-5L/year. Tbilisi State Medical University & more. Free consultation.";
 ---
+
+<style>
+  :root { --color-accent: #d4a017; }
+</style>
 <MainLayout title={title} description={description}>
 <Navigation />
 <!-- TRUST BAR -->
-<section class="bg-[#232d61] py-4 mt-20">
+<section class="bg-brand-blue py-4 mt-20">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 text-white text-sm">
       <span class="flex items-center gap-2">
@@ -34,7 +38,7 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
   </div>
 </section>
 <!-- HERO -->
-<section class="lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32 bg-[#1d1d1f]">
+<section class="lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32 bg-surface-dark">
   <div class="absolute inset-0 z-0">
     <div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(212,160,23,0.06) 0%, transparent 70%);"></div>
   </div>
@@ -44,12 +48,12 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
         <span class="text-2xl">🇬🇪</span>
         <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Study MBBS in Georgia</span>
       </div>
-      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">MBBS in<br /><span class="text-[#d4a017]">Georgia</span></h1>
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">MBBS in<br /><span class="text-accent">Georgia</span></h1>
       <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12">
         NMC-approved universities, English-medium instruction, and one of the safest countries for Indian students. Fees starting ₹3L/year.
       </p>
       <div class="hidden lg:flex flex-col sm:flex-row gap-4">
-        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#d4a017] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,160,23,0.3)]">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-accent text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,160,23,0.3)]">
           <span class="relative z-10 flex items-center justify-center gap-2">
             Apply Now
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -62,112 +66,112 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
       <div class="lg:hidden">
         <form id="hero-lead-form" class="space-y-3">
           <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Full Name *" aria-label="Full Name">
-          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="+91 98765 43210 *" aria-label="Phone Number">
+          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Your phone number *" aria-label="Phone Number">
           <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Email *" aria-label="Email Address">
-          <button type="submit" class="w-full py-4 bg-[#d4a017] text-white font-semibold tracking-wide text-sm">GET FREE ASSESSMENT</button>
+          <button type="submit" class="w-full py-4 bg-accent text-white font-semibold tracking-wide text-sm">GET FREE ASSESSMENT</button>
           <p class="text-center text-[10px] text-white/40">Free · No spam · 24hr response</p>
         </form>
       </div>
     </div>
   </div>
 </section>
-<!-- TOP UNIVERSITIES -->
-<section class="py-24 lg:py-32 bg-[#f5f5f7]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-3xl mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#d4a017] mb-4">Top Universities</div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">
-        NMC-Approved<br />Universities in Georgia
-      </h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="text-xs tracking-[0.2em] uppercase text-[#d4a017] mb-4">Est. 1918</div>
-        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Tbilisi State Medical University</h3>
-        <p class="text-sm text-[#4b5563] mb-6">Georgia's #1 medical university. WHO listed, ECFMG recognized. Excellent clinical exposure with modern infrastructure.</p>
-        <div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
-          <div>
-            <div class="text-xs text-[#6b7280]">Duration</div>
-            <div class="text-[#111827]">6 Years</div>
-          </div>
-          <div class="text-right">
-            <div class="text-xs text-[#6b7280]">Tuition/Year</div>
-            <div class="text-[#d4a017] font-medium">₹4–5 Lakh</div>
-          </div>
-        </div>
-      </div>
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="text-xs tracking-[0.2em] uppercase text-[#d4a017] mb-4">Est. 1993</div>
-        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">David Tvildiani Medical University</h3>
-        <p class="text-sm text-[#4b5563] mb-6">Fully English-medium program. NMC approved with strong FMGE pass rate. Popular choice among Indian students.</p>
-        <div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
-          <div>
-            <div class="text-xs text-[#6b7280]">Duration</div>
-            <div class="text-[#111827]">6 Years</div>
-          </div>
-          <div class="text-right">
-            <div class="text-xs text-[#6b7280]">Tuition/Year</div>
-            <div class="text-[#d4a017] font-medium">₹3.5–4.5 Lakh</div>
-          </div>
-        </div>
-      </div>
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
-        <div class="text-xs tracking-[0.2em] uppercase text-[#d4a017] mb-4">Est. 1935</div>
-        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Batumi Shota Rustaveli State University</h3>
-        <p class="text-sm text-[#4b5563] mb-6">Located in the beautiful coastal city of Batumi. Most affordable NMC-approved option in Georgia with good facilities.</p>
-        <div class="flex justify-between items-center pt-6 border-t border-[#e5e7eb]">
-          <div>
-            <div class="text-xs text-[#6b7280]">Duration</div>
-            <div class="text-[#111827]">6 Years</div>
-          </div>
-          <div class="text-right">
-            <div class="text-xs text-[#6b7280]">Tuition/Year</div>
-            <div class="text-[#d4a017] font-medium">₹3–4 Lakh</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- WHY GEORGIA -->
-<section class="py-24 lg:py-32 bg-[#1d1d1f]">
+<section class="py-24 lg:py-32 bg-surface-dark">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="max-w-3xl mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#d4a017] mb-4">Why Georgia</div>
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Why Georgia</div>
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">
         Why Study<br />MBBS in Georgia?
       </h2>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#d4a017] transition-colors" style="font-family: var(--font-display);">01</div>
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">01</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">NMC/MCI Approved</h3>
         <p class="text-sm text-white/60">All universities we recommend are listed in NMC's approved foreign medical institutions. Your degree is valid in India.</p>
       </div>
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#d4a017] transition-colors" style="font-family: var(--font-display);">02</div>
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">02</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Affordable Fees</h3>
         <p class="text-sm text-white/60">Tuition starts from just ₹3L/year. Total cost including living expenses is significantly lower than private colleges in India.</p>
       </div>
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#d4a017] transition-colors" style="font-family: var(--font-display);">03</div>
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">03</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">English Medium</h3>
         <p class="text-sm text-white/60">No need to learn a new language. Entire MBBS program is taught in English at all NMC-approved universities.</p>
       </div>
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#d4a017] transition-colors" style="font-family: var(--font-display);">04</div>
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">04</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Safe Country</h3>
         <p class="text-sm text-white/60">Georgia is one of the safest countries in Europe. Low crime rate, friendly locals, and a large Indian student community in Tbilisi.</p>
       </div>
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#d4a017] transition-colors" style="font-family: var(--font-display);">05</div>
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">05</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">European Lifestyle</h3>
         <p class="text-sm text-white/60">Experience Europe on a budget. Modern cities, great food, rich culture, and beautiful landscapes from mountains to the Black Sea.</p>
       </div>
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
-        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#d4a017] transition-colors" style="font-family: var(--font-display);">06</div>
+        <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-accent transition-colors" style="font-family: var(--font-display);">06</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">FMGE Coaching</h3>
         <p class="text-sm text-white/60">Our structured FMGE preparation starts from year 3. Live online classes, mock tests, and study materials included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TOP UNIVERSITIES -->
+<section class="py-24 lg:py-32 bg-surface">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Top Universities</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">
+        NMC-Approved<br />Universities in Georgia
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1918</div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Tbilisi State Medical University</h3>
+        <p class="text-sm text-text-secondary mb-6">Georgia's #1 medical university. WHO listed, ECFMG recognized. Excellent clinical exposure with modern infrastructure.</p>
+        <div class="flex justify-between items-center pt-6 border-t border-border">
+          <div>
+            <div class="text-xs text-text-muted">Duration</div>
+            <div class="text-text-primary">6 Years</div>
+          </div>
+          <div class="text-right">
+            <div class="text-xs text-text-muted">Tuition/Year</div>
+            <div class="text-accent font-medium">₹4–5 Lakh</div>
+          </div>
+        </div>
+      </div>
+      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1993</div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">David Tvildiani Medical University</h3>
+        <p class="text-sm text-text-secondary mb-6">Fully English-medium program. NMC approved with strong FMGE pass rate. Popular choice among Indian students.</p>
+        <div class="flex justify-between items-center pt-6 border-t border-border">
+          <div>
+            <div class="text-xs text-text-muted">Duration</div>
+            <div class="text-text-primary">6 Years</div>
+          </div>
+          <div class="text-right">
+            <div class="text-xs text-text-muted">Tuition/Year</div>
+            <div class="text-accent font-medium">₹3.5–4.5 Lakh</div>
+          </div>
+        </div>
+      </div>
+      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+        <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1935</div>
+        <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Batumi Shota Rustaveli State University</h3>
+        <p class="text-sm text-text-secondary mb-6">Located in the beautiful coastal city of Batumi. Most affordable NMC-approved option in Georgia with good facilities.</p>
+        <div class="flex justify-between items-center pt-6 border-t border-border">
+          <div>
+            <div class="text-xs text-text-muted">Duration</div>
+            <div class="text-text-primary">6 Years</div>
+          </div>
+          <div class="text-right">
+            <div class="text-xs text-text-muted">Tuition/Year</div>
+            <div class="text-accent font-medium">₹3–4 Lakh</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -176,16 +180,16 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
 <section class="py-24 lg:py-32 bg-white">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#d4a017] mb-4">Fee Breakdown</div>
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Fee Breakdown</div>
       <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">
         Georgia MBBS<br />Cost Breakdown
       </h2>
-      <p class="text-[#4b5563]">Transparent fees. No hidden charges.</p>
+      <p class="text-text-secondary">Transparent fees. No hidden charges.</p>
     </div>
     <div class="max-w-[900px] mx-auto overflow-x-auto">
       <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
         <thead>
-          <tr class="bg-[#232d61] text-white">
+          <tr class="bg-brand-blue text-white">
             <th class="font-display font-semibold text-sm px-6 py-4 rounded-tl-lg">University</th>
             <th class="font-display font-semibold text-sm px-6 py-4">Duration</th>
             <th class="font-display font-semibold text-sm px-6 py-4">Tuition/Year</th>
@@ -194,39 +198,38 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827] text-sm">Tbilisi State Medical University</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">6 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹4–5 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹2–3 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹36–48 L</td>
+          <tr class="border-b border-border hover:bg-surface-bright transition-colors">
+            <td class="px-6 py-4 font-medium text-text-primary text-sm">Tbilisi State Medical University</td>
+            <td class="px-6 py-4 text-sm text-text-secondary">6 years</td>
+            <td class="px-6 py-4 text-sm font-semibold text-text-primary">₹4–5 L</td>
+            <td class="px-6 py-4 text-sm text-text-secondary">₹2–3 L</td>
+            <td class="px-6 py-4 text-sm font-bold text-success">₹36–48 L</td>
           </tr>
-          <tr class="border-b border-[#e5e7eb] hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827] text-sm">David Tvildiani Medical University</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">6 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3.5–4.5 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹2–3 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹33–45 L</td>
+          <tr class="border-b border-border hover:bg-surface-bright transition-colors">
+            <td class="px-6 py-4 font-medium text-text-primary text-sm">David Tvildiani Medical University</td>
+            <td class="px-6 py-4 text-sm text-text-secondary">6 years</td>
+            <td class="px-6 py-4 text-sm font-semibold text-text-primary">₹3.5–4.5 L</td>
+            <td class="px-6 py-4 text-sm text-text-secondary">₹2–3 L</td>
+            <td class="px-6 py-4 text-sm font-bold text-success">₹33–45 L</td>
           </tr>
-          <tr class="hover:bg-[#f8f9fb] transition-colors">
-            <td class="px-6 py-4 font-medium text-[#111827] text-sm">Batumi Shota Rustaveli State University</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">6 years</td>
-            <td class="px-6 py-4 text-sm font-semibold text-[#111827]">₹3–4 L</td>
-            <td class="px-6 py-4 text-sm text-[#4b5563]">₹1.5–2.5 L</td>
-            <td class="px-6 py-4 text-sm font-bold text-[#059669]">₹27–39 L</td>
+          <tr class="hover:bg-surface-bright transition-colors">
+            <td class="px-6 py-4 font-medium text-text-primary text-sm">Batumi Shota Rustaveli State University</td>
+            <td class="px-6 py-4 text-sm text-text-secondary">6 years</td>
+            <td class="px-6 py-4 text-sm font-semibold text-text-primary">₹3–4 L</td>
+            <td class="px-6 py-4 text-sm text-text-secondary">₹1.5–2.5 L</td>
+            <td class="px-6 py-4 text-sm font-bold text-success">₹27–39 L</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="text-center text-xs text-[#6b7280] mt-6">* Fees are estimates for 2025–26 intake. Actual fees may vary. Contact us for exact figures.</p>
+    <p class="text-center text-xs text-text-muted mt-6">* Fees are estimates for 2025–26 intake. Actual fees may vary. Contact us for exact figures.</p>
   </div>
 </section>
-
 <!-- STUDENT STORIES -->
-<section class="py-20 lg:py-28 bg-[#f5f5f7]">
+<section class="py-20 lg:py-28 bg-surface">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="max-w-3xl mb-12">
-      <div class="text-xs tracking-[0.3em] uppercase text-[#d4a017] mb-4">Student Stories</div>
+      <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Student Stories</div>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.1]" style="font-family: var(--font-display);">
         Hear From Our<br />GEORGIA Students
       </h2>
@@ -234,73 +237,73 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-white p-8">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 bg-[#d4a017]/10 text-[#d4a017] flex items-center justify-center font-display font-semibold text-sm">A</div>
+          <div class="w-10 h-10 bg-accent/10 text-accent flex items-center justify-center font-display font-semibold text-sm">A</div>
           <div>
-            <div class="font-semibold text-[#111827] text-sm">Ananya S.</div>
-            <div class="text-xs text-[#6b7280]">Chennai · 3rd Year</div>
+            <div class="font-semibold text-text-primary text-sm">Ananya S.</div>
+            <div class="text-xs text-text-muted">Chennai · 3rd Year</div>
           </div>
         </div>
-        <p class="text-sm text-[#4b5563] leading-relaxed mb-4">"I was nervous about going abroad, but Gradiks made the entire process so smooth. From visa to hostel, everything was taken care of. Tbilisi is incredibly safe and affordable."</p>
-        <div class="text-xs text-[#9ca3af] font-medium">Tbilisi State Medical University</div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"I was nervous about going abroad, but Gradiks made the entire process so smooth. From visa to hostel, everything was taken care of. Tbilisi is incredibly safe and affordable."</p>
+        <div class="text-xs text-text-subtle font-medium">Tbilisi State Medical University</div>
       </div>
       <div class="bg-white p-8">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 bg-[#d4a017]/10 text-[#d4a017] flex items-center justify-center font-display font-semibold text-sm">R</div>
+          <div class="w-10 h-10 bg-accent/10 text-accent flex items-center justify-center font-display font-semibold text-sm">R</div>
           <div>
-            <div class="font-semibold text-[#111827] text-sm">Rohan K.</div>
-            <div class="text-xs text-[#6b7280]">Pune · 2nd Year</div>
+            <div class="font-semibold text-text-primary text-sm">Rohan K.</div>
+            <div class="text-xs text-text-muted">Pune · 2nd Year</div>
           </div>
         </div>
-        <p class="text-sm text-[#4b5563] leading-relaxed mb-4">"My parents were skeptical, but the Gradiks team personally showed us the university and living conditions. Total transparency. Now I'm studying in English medium with students from 15+ countries."</p>
-        <div class="text-xs text-[#9ca3af] font-medium">David Tvildiani Medical University</div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"My parents were skeptical, but the Gradiks team personally showed us the university and living conditions. Total transparency. Now I'm studying in English medium with students from 15+ countries."</p>
+        <div class="text-xs text-text-subtle font-medium">David Tvildiani Medical University</div>
       </div>
       <div class="bg-white p-8">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 bg-[#d4a017]/10 text-[#d4a017] flex items-center justify-center font-display font-semibold text-sm">P</div>
+          <div class="w-10 h-10 bg-accent/10 text-accent flex items-center justify-center font-display font-semibold text-sm">P</div>
           <div>
-            <div class="font-semibold text-[#111827] text-sm">Priya M.</div>
-            <div class="text-xs text-[#6b7280]">Kochi · 5th Year</div>
+            <div class="font-semibold text-text-primary text-sm">Priya M.</div>
+            <div class="text-xs text-text-muted">Kochi · 5th Year</div>
           </div>
         </div>
-        <p class="text-sm text-[#4b5563] leading-relaxed mb-4">"The FMGE coaching from Gradiks starting in 3rd year was a game-changer. I cleared FMGE on my first attempt. Best decision of my life."</p>
-        <div class="text-xs text-[#9ca3af] font-medium">Tbilisi State Medical University</div>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"The FMGE coaching from Gradiks starting in 3rd year was a game-changer. I cleared FMGE on my first attempt. Best decision of my life."</p>
+        <div class="text-xs text-text-subtle font-medium">Tbilisi State Medical University</div>
       </div>
     </div>
   </div>
 </section>
 <!-- LEAD FORM -->
-<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f5f5f7]">
+<section id="lead-form-container" class="py-24 lg:py-32 bg-surface">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12">
-        <div class="text-xs tracking-[0.3em] uppercase text-[#d4a017] mb-4">Get Started</div>
+        <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Get Started</div>
         <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.07] letter-tight" style="font-family: var(--font-display);">
           Get Your Free<br />Georgia Assessment
         </h2>
-        <p class="text-[#4b5563]">Fill in your details and our experts will contact you within 24 hours.</p>
+        <p class="text-text-secondary">Fill in your details and our experts will contact you within 24 hours.</p>
       </div>
       <form id="lead-form" class="bg-white rounded-xl p-8 lg:p-12 shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Student Name *</label>
-            <input type="text" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#d4a017] focus:ring-1 focus:ring-[#d4a017] transition-all" placeholder="Full name">
+            <label class="form-label text-sm font-medium text-text-primary mb-2 block">Student Name *</label>
+            <input type="text" required class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Full name">
           </div>
           <div>
-            <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Phone Number *</label>
-            <input type="tel" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#d4a017] focus:ring-1 focus:ring-[#d4a017] transition-all" placeholder="+91 98765 43210">
+            <label class="form-label text-sm font-medium text-text-primary mb-2 block">Phone Number *</label>
+            <input type="tel" required class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Your phone number">
           </div>
         </div>
         <div class="mb-6">
-          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Email Address *</label>
-          <input type="email" required class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#d4a017] focus:ring-1 focus:ring-[#d4a017] transition-all" placeholder="email@example.com">
+          <label class="form-label text-sm font-medium text-text-primary mb-2 block">Email Address *</label>
+          <input type="email" required class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="email@example.com">
         </div>
         <div class="mb-6">
-          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">NEET Score (if known)</label>
-          <input type="number" class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#d4a017] focus:ring-1 focus:ring-[#d4a017] transition-all" placeholder="Enter score">
+          <label class="form-label text-sm font-medium text-text-primary mb-2 block">NEET Score (if known)</label>
+          <input type="number" class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Enter score">
         </div>
         <div class="mb-6">
-          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Preferred Country</label>
-          <select class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#d4a017] focus:ring-1 focus:ring-[#d4a017] transition-all bg-white">
+          <label class="form-label text-sm font-medium text-text-primary mb-2 block">Preferred Country</label>
+          <select class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all bg-white">
             <option value="">Select country</option>
             <option value="georgia" selected>Georgia</option>
             <option value="uzbekistan">Uzbekistan</option>
@@ -312,22 +315,22 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC app
           </select>
         </div>
         <div class="mb-8">
-          <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Message (Optional)</label>
-          <textarea class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#d4a017] focus:ring-1 focus:ring-[#d4a017] transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea>
+          <label class="form-label text-sm font-medium text-text-primary mb-2 block">Message (Optional)</label>
+          <textarea class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea>
         </div>
-        <button type="submit" class="w-full py-5 bg-[#d4a017] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(212,160,23,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
+        <button type="submit" class="w-full py-5 bg-accent text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(212,160,23,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
           Submit Application
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
-        <p class="text-xs text-center text-[#6b7280] mt-6">By submitting, you agree to our privacy policy. We never share your data.</p>
+        <p class="text-xs text-center text-text-muted mt-6">By submitting, you agree to our privacy policy. We never share your data.</p>
       </form>
     </div>
   </div>
 </section>
 <!-- MOBILE STICKY CTA -->
-<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#e5e7eb] p-4 lg:hidden z-50">
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 lg:hidden z-50">
   <div class="flex gap-3">
-    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-[#d4a017] text-white font-semibold text-center">
+    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="flex-1 py-3 bg-accent text-white font-semibold text-center">
       Apply for Georgia MBBS
     </button>
   </div>
@@ -372,7 +375,7 @@ document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
     btn.innerHTML = originalText;
     const err = document.createElement('p');
     err.className = 'text-red-600 text-sm text-center mt-4';
-    err.textContent = 'Something went wrong. Please try again or WhatsApp us.';
+    err.textContent = 'Something went wrong. Please try again.';
     btn.parentElement.appendChild(err);
     setTimeout(() => err.remove(), 5000);
   });
