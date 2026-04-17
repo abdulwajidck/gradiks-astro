@@ -40,18 +40,18 @@ const description = "Study MBBS in United Kingdom with Gradiks. 5-6 year program
   </div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 lg:py-32 relative z-10 w-full">
     <div class="max-w-4xl">
-      <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-white/5 backdrop-blur-sm mb-3 lg:mb-8 animate-fade-in-up">
+      <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-white/10 mb-3 lg:mb-8 ">
         <span class="text-2xl">🇬🇧</span>
         <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Study MBBS in United Kingdom</span>
       </div>
-      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 animate-fade-in-up delay-100 text-white" style="font-family: var(--font-display);">
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">
         MBBS in<br /><span class="text-[#7b2d3b]">United Kingdom</span>
       </h1>
-      <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12 animate-fade-in-up delay-200">
+      <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12">
         World-class medical education with GMC registration, NHS clinical placements, and a globally recognised degree that opens doors everywhere.
       </p>
-      <div class="hidden lg:flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#7b2d3b] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(190,30,45,0.3)]">
+      <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-[#7b2d3b] text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(123,45,59,0.3)]">
           <span class="relative z-10 flex items-center justify-center gap-2">
             Apply Now
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -61,11 +61,11 @@ const description = "Study MBBS in United Kingdom with Gradiks. 5-6 year program
           Compare Fees
         </a>
       </div>
-      <div class="lg:hidden animate-fade-in-up delay-300">
+      <div class="lg:hidden">
         <form id="hero-lead-form" class="space-y-3">
-          <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Full Name *">
-          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="+91 98765 43210 *">
-          <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Email *">
+          <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Full Name *" aria-label="Full Name">
+          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="+91 98765 43210 *" aria-label="Phone Number">
+          <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Email *" aria-label="Email Address">
           <button type="submit" class="w-full py-4 bg-[#7b2d3b] text-white font-semibold tracking-wide text-sm">GET FREE ASSESSMENT</button>
           <p class="text-center text-[10px] text-white/40">Free · No spam · 24hr response</p>
         </form>
@@ -141,32 +141,32 @@ const description = "Study MBBS in United Kingdom with Gradiks. 5-6 year program
       </h2>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
         <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#7b2d3b] transition-colors" style="font-family: var(--font-display);">01</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">GMC Registration</h3>
         <p class="text-sm text-white/60">Graduate with a degree that's immediately recognised by the General Medical Council. Straight path to PLAB and full UK medical practice.</p>
       </div>
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
         <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#7b2d3b] transition-colors" style="font-family: var(--font-display);">02</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">NHS Clinical Training</h3>
         <p class="text-sm text-white/60">Train in some of the world's best hospitals. NHS placements give you hands-on experience with diverse patient populations from year one.</p>
       </div>
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
         <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#7b2d3b] transition-colors" style="font-family: var(--font-display);">03</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Global Recognition</h3>
         <p class="text-sm text-white/60">A UK medical degree is respected in over 150 countries. Direct pathways to USMLE, AMC, and other international licensing exams.</p>
       </div>
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
         <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#7b2d3b] transition-colors" style="font-family: var(--font-display);">04</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Research Excellence</h3>
         <p class="text-sm text-white/60">UK universities consistently rank in the global top 20 for medical research. Opportunities to participate in cutting-edge research alongside your studies.</p>
       </div>
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
         <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#7b2d3b] transition-colors" style="font-family: var(--font-display);">05</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Work While Studying</h3>
         <p class="text-sm text-white/60">International students can work up to 20 hours/week during term. Post-study work visa allows you to stay and work in the UK for 2 years after graduation.</p>
       </div>
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
+      <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
         <div class="text-5xl font-light text-white/30 mb-4 group-hover:text-[#7b2d3b] transition-colors" style="font-family: var(--font-display);">06</div>
         <h3 class="text-xl font-semibold mb-3 text-white" style="font-family: var(--font-display);">Multicultural Campus</h3>
         <p class="text-sm text-white/60">A large Indian student community across UK cities. Safe, welcoming environment with excellent student support services and Indian food availability.</p>
@@ -376,7 +376,7 @@ const description = "Study MBBS in United Kingdom with Gradiks. 5-6 year program
           <label class="form-label text-sm font-medium text-[#111827] mb-2 block">Message (Optional)</label>
           <textarea class="w-full px-4 py-3 border border-[#e5e7eb] rounded-lg focus:outline-none focus:border-[#7b2d3b] focus:ring-1 focus:ring-[#7b2d3b] transition-all resize-none" rows="4" placeholder="Tell us about your requirements..."></textarea>
         </div>
-        <button type="submit" class="w-full py-5 bg-[#7b2d3b] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
+        <button type="submit" class="w-full py-5 bg-[#7b2d3b] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(123,45,59,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
           Submit Application
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
