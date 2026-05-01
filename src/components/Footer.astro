@@ -5,10 +5,16 @@
   <div class="footer-container">
     <div class="footer-brand">
       <img src="/gradiks-logo.png" alt="Gradiks Global" class="footer-logo" />
-      <p class="footer-tagline">Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning.</p>
+      <p class="footer-tagline">Honest education consultancy for Indian families. We guide with realistic outcomes and transparent planning — no false promises, no hidden fees.</p>
       <div class="footer-contact">
-        <a href="mailto:hello@gradiks.com" class="contact-item">hello@gradiks.com</a>
-        <span class="contact-item">MG Road, Kochi, Kerala 682011</span>
+        <a href="mailto:hello@gradiks.com" class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          hello@gradiks.com
+        </a>
+        <span class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          MG Road, Kochi, Kerala 682011
+        </span>
       </div>
     </div>
 
@@ -30,6 +36,7 @@
           <li><a href="/germany-study">Study in Germany</a></li>
           <li><a href="/ireland-study">Study in Ireland</a></li>
           <li><a href="/uk-study">Study in UK</a></li>
+          <li><a href="/nursing-abroad">BSc Nursing Abroad</a></li>
           <li><a href="/nursing-albania">BSc Nursing — Albania</a></li>
         </ul>
       </div>
@@ -39,7 +46,9 @@
           <li><a href="/">Home</a></li>
           <li><a href="/#why-section">Why Gradiks</a></li>
           <li><a href="/#fees">Compare Fees</a></li>
+          <li><a href="/#countries">Countries</a></li>
           <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#lead-form-container">Apply Now</a></li>
         </ul>
       </div>
     </div>
@@ -47,7 +56,12 @@
 
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <p class="footer-copy">&copy; 2026 Gradiks. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Gradiks Global. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <span class="footer-legal-dot">&middot;</span>
+        <a href="/terms">Terms of Service</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -82,14 +96,14 @@
     font-family: var(--font-body);
     font-size: 0.9375rem;
     color: #6b7280;
-    line-height: 1.6;
-    max-width: 340px;
+    line-height: 1.7;
+    max-width: 360px;
     margin-bottom: 1.5rem;
   }
   .footer-contact {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
   .contact-item {
     font-family: var(--font-body);
@@ -97,9 +111,15 @@
     color: #4b5563;
     text-decoration: none;
     transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
-  .contact-item:hover { color: #be1e2d; }
-.footer-links-grid {
+  .contact-item:hover { color: var(--color-brand-red); }
+  .contact-item svg { color: #9ca3af; flex-shrink: 0; }
+  .contact-item:hover svg { color: var(--color-brand-red); }
+
+  .footer-links-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -111,10 +131,10 @@
   }
   .footer-col-title {
     font-family: var(--font-display);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #111827;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
@@ -132,8 +152,22 @@
     color: #6b7280;
     text-decoration: none;
     transition: color 0.2s ease;
+    position: relative;
+    width: fit-content;
   }
-  .footer-col-list a:hover { color: #be1e2d; }
+  .footer-col-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-brand-red);
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .footer-col-list a:hover { color: var(--color-brand-red); }
+  .footer-col-list a:hover::after { width: 100%; }
+
   .footer-bottom {
     border-top: 1px solid #f1f1f1;
   }
@@ -145,6 +179,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
   }
   @media (max-width: 560px) {
     .footer-bottom-inner { flex-direction: column; text-align: center; }
@@ -154,4 +189,18 @@
     font-size: 0.8125rem;
     color: #9ca3af;
   }
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer-legal a {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-legal a:hover { color: var(--color-brand-red); }
+  .footer-legal-dot { color: #d1d5db; }
 </style>
