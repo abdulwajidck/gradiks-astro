@@ -8,11 +8,155 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
 
 <style>
   :root { --color-accent: #1d4ed8; }
+
+  .russia-image-hero > div.relative.z-10 {
+    display: block !important;
+    grid-template-columns: none !important;
+    min-height: auto !important;
+  }
+
+  .russia-image-hero > div.relative.z-10::after {
+    content: none !important;
+  }
+
+  .russia-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.86fr);
+    gap: clamp(2rem, 4vw, 4.25rem);
+    align-items: center;
+  }
+
+  .russia-visual-stack {
+    position: relative;
+    min-height: 520px;
+  }
+
+  .russia-photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
+    border: 1px solid rgba(255,255,255,0.20);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 34px 90px rgba(2, 8, 23, 0.42);
+  }
+
+  .russia-photo-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .russia-photo-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba(2,8,23,0.76));
+    pointer-events: none;
+  }
+
+  .russia-hero-photo {
+    height: 520px;
+    transform: rotate(1.5deg);
+  }
+
+  .russia-floating-note {
+    position: absolute;
+    left: -38px;
+    bottom: 42px;
+    z-index: 4;
+    width: 260px;
+    border-radius: 24px;
+    padding: 18px;
+    color: #0f172a;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 26px 64px rgba(2,8,23,0.28);
+    backdrop-filter: blur(18px);
+  }
+
+  .russia-mini-card {
+    position: absolute;
+    right: -22px;
+    top: 34px;
+    z-index: 4;
+    width: 210px;
+    border-radius: 22px;
+    padding: 16px;
+    color: white;
+    background: linear-gradient(135deg, rgba(29,78,216,0.96), rgba(15,23,42,0.92));
+    box-shadow: 0 24px 60px rgba(29,78,216,0.25);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .russia-image-strip {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 4rem;
+  }
+
+  .russia-feature-photo {
+    min-height: 360px;
+    border-radius: 32px;
+    overflow: hidden;
+    background: #dbeafe;
+    box-shadow: 0 30px 80px rgba(2,8,23,0.16);
+  }
+
+  .russia-feature-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .russia-story-panel {
+    border-radius: 32px;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .russia-story-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/russia/russia-student-city.svg') center/cover no-repeat;
+    opacity: .38;
+  }
+
+  .russia-story-panel > * { position: relative; z-index: 1; }
+
+  .russia-university-card {
+    overflow: hidden;
+    border-radius: 26px;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+  }
+
+  .russia-card-media {
+    height: 180px;
+    background: #dbeafe;
+    overflow: hidden;
+  }
+  .russia-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .russia-university-card:hover .russia-card-media img { transform: scale(1.04); }
+
+  @media (max-width: 1023px) {
+    .russia-hero-grid { grid-template-columns: 1fr; }
+    .russia-visual-stack { display: block; min-height: 320px; margin-top: 1.5rem; }
+    .russia-hero-photo { height: 300px; border-radius: 26px; transform: none; }
+    .russia-mini-card { right: 12px; top: 16px; width: 176px; padding: 13px; border-radius: 18px; }
+    .russia-floating-note { display: none; }
+    .russia-image-strip { grid-template-columns: 1fr; }
+    .russia-feature-photo, .russia-story-panel { min-height: 280px; border-radius: 24px; }
+  }
 </style>
 <MainLayout title={title} description={description}>
 <Navigation />
 <!-- TRUST BAR -->
-<section class="bg-brand-blue py-4 mt-20">
+<section class="hidden sm:block bg-[#071b46] py-4 mt-16">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 text-white text-sm">
       <span class="flex items-center gap-2"><span class="font-display font-semibold">6 Years</span><span class="text-white/70">Duration</span></span>
@@ -26,24 +170,25 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
   </div>
 </section>
 <!-- HERO -->
-<section class="country-hero-section mbbs-hero-premium lg:min-h-screen flex items-center relative overflow-hidden py-8 lg:py-32">
+<section class="country-hero-section mbbs-hero-premium mbbs-hero-has-proof-card russia-image-hero mt-16 sm:mt-0 flex items-center relative overflow-hidden py-8 lg:py-24">
   <div class="absolute inset-0 z-0"><div class="absolute top-1/3 right-0 w-[1000px] h-[1000px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(29,78,216,0.06) 0%, transparent 70%);"></div></div>
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 lg:py-32 relative z-10 w-full">
-    <div class="max-w-4xl">
-      <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-white/10 mb-3 lg:mb-8 ">
-        <span class="text-2xl">🇷🇺</span>
-        <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Study MBBS in Russia</span>
-      </div>
-      <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">MBBS in<br /><span class="text-accent">Russia</span></h1>
-      <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12">
-        World-class medical education at affordable fees. Russia has been a top MBBS destination for Indian students for over 30 years.
-      </p>
-      <div class="hidden lg:flex flex-col sm:flex-row gap-4">
-        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 bg-accent text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(29,78,216,0.3)]">
-          <span class="relative z-10 flex items-center justify-center gap-2">Apply Now<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-        </button>
-        <a href="/#fees" class="group relative px-8 py-4 border border-white/20 text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:bg-white/5 text-center">Compare Fees</a>
-      </div>
+    <div class="russia-hero-grid">
+      <div>
+        <div class="inline-flex items-center gap-3 px-4 py-2 border border-white/20 bg-white/10 mb-3 lg:mb-8 rounded-full backdrop-blur-md">
+          <span class="text-2xl">🇷🇺</span>
+          <span class="text-xs font-medium tracking-[0.15em] uppercase text-white/80">Study MBBS in Russia</span>
+        </div>
+        <h1 class="text-4xl md:text-7xl lg:text-8xl font-semibold leading-[1.04] tracking-[-0.02em] mb-3 lg:mb-8 text-white" style="font-family: var(--font-display);">MBBS in<br /><span class="text-accent">Russia</span></h1>
+        <p class="text-base lg:text-2xl text-white/70 max-w-2xl leading-relaxed mb-4 lg:mb-12">
+          A proven MBBS destination with established medical universities, Indian student communities, and Gradiks-backed counselling for the 2026 intake.
+        </p>
+        <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="group relative px-8 py-4 min-w-[160px] bg-accent text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(29,78,216,0.3)] rounded-full whitespace-nowrap">
+            <span class="relative z-10 flex items-center justify-center gap-2">Apply Now<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </button>
+          <a href="/#fees" class="group relative px-8 py-4 min-w-[160px] border border-white/20 text-white font-semibold tracking-wide overflow-hidden transition-all duration-300 hover:bg-white/5 text-center rounded-full whitespace-nowrap">Compare Fees</a>
+        </div>
       <div class="lg:hidden">
         <form id="hero-lead-form" class="space-y-3">
           <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Full Name *" aria-label="Full Name">
@@ -52,6 +197,22 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
           <button type="submit" class="w-full py-4 bg-accent text-white font-semibold tracking-wide text-sm">GET FREE ASSESSMENT</button>
           <p class="text-center text-[10px] text-white/40">Free · No spam · 24hr response</p>
         </form>
+      </div>
+      </div>
+      <div class="russia-visual-stack" aria-hidden="true">
+        <div class="russia-photo-card russia-hero-photo">
+          <img src="/russia/russia-campus-hero.svg" alt="" loading="eager" />
+        </div>
+        <div class="russia-mini-card">
+          <div class="text-[10px] uppercase tracking-[0.22em] text-white/60 mb-2">Pathway check</div>
+          <div class="text-2xl font-semibold leading-tight" style="font-family: var(--font-display);">NMC/FMGE reviewed</div>
+          <div class="mt-3 text-xs text-white/70 leading-relaxed">University shortlist + parent counselling before application.</div>
+        </div>
+        <div class="russia-floating-note">
+          <div class="text-[10px] uppercase tracking-[0.22em] text-slate-500 mb-2">Student life</div>
+          <div class="font-semibold text-slate-950 mb-1">Campus, hostel and Indian community guidance</div>
+          <div class="text-xs text-slate-500 leading-relaxed">A visual walkthrough before you choose the university.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -62,6 +223,16 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
     <div class="max-w-3xl mb-16">
       <div class="text-xs tracking-[0.3em] uppercase text-accent mb-4">Why Russia</div>
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight text-white" style="font-family: var(--font-display);">Why Study<br />MBBS in Russia?</h2>
+    </div>
+    <div class="russia-image-strip">
+      <div class="russia-feature-photo">
+        <img src="/russia/russia-medical-lab.svg" alt="Indian MBBS students practicing clinical skills in a modern medical simulation lab" loading="lazy" />
+      </div>
+      <div class="russia-story-panel">
+        <div class="text-xs tracking-[0.25em] uppercase text-white/60 mb-4">Beyond admission</div>
+        <h3 class="text-3xl lg:text-4xl font-semibold leading-tight mb-4" style="font-family: var(--font-display);">See the full Russia pathway before you commit.</h3>
+        <p class="text-sm text-white/72 leading-relaxed">We help families compare university fit, hostel life, Indian food access, language support, FMGE planning and total cost — not just the admission letter.</p>
+      </div>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="bg-white/10 border border-white/10 p-8 lg:p-10 group hover:bg-white/10 transition-colors duration-500">
@@ -126,7 +297,9 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.07] letter-tight" style="font-family: var(--font-display);">NMC-aligned<br />Universities in Russia</h2>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+      <div class="group bg-white russia-university-card transition-all duration-500">
+        <div class="russia-card-media"><img src="/russia/russia-campus-hero.svg" alt="Kazan-style Russian medical university campus illustration" loading="lazy" /></div>
+        <div class="p-8">
         <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1804</div>
         <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Kazan Federal University</h3>
         <p class="text-sm text-text-secondary mb-6">One of Russia's oldest and most prestigious universities. Top-ranked medical faculty with world-class research facilities.</p>
@@ -134,8 +307,11 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
           <div><div class="text-xs text-text-muted">Duration</div><div class="text-text-primary">6 Years</div></div>
           <div class="text-right"><div class="text-xs text-text-muted">Tuition/Year</div><div class="text-accent font-medium">₹4–6 Lakh</div></div>
         </div>
+        </div>
       </div>
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+      <div class="group bg-white russia-university-card transition-all duration-500">
+        <div class="russia-card-media"><img src="/russia/russia-medical-lab.svg" alt="Medical training lab for MBBS students in Russia" loading="lazy" /></div>
+        <div class="p-8">
         <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1918</div>
         <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Crimea Federal University</h3>
         <p class="text-sm text-text-secondary mb-6">Popular among Indian students for decades. English medium, excellent clinical training, and affordable living in Crimea.</p>
@@ -143,14 +319,18 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
           <div><div class="text-xs text-text-muted">Duration</div><div class="text-text-primary">6 Years</div></div>
           <div class="text-right"><div class="text-xs text-text-muted">Tuition/Year</div><div class="text-accent font-medium">₹3–4.5 Lakh</div></div>
         </div>
+        </div>
       </div>
-      <div class="group bg-white p-8 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-500">
+      <div class="group bg-white russia-university-card transition-all duration-500">
+        <div class="russia-card-media"><img src="/russia/russia-student-city.svg" alt="Indian MBBS student life in a Russian city illustration" loading="lazy" /></div>
+        <div class="p-8">
         <div class="text-xs tracking-[0.2em] uppercase text-accent mb-4">Est. 1930</div>
         <h3 class="text-2xl font-semibold mb-4" style="font-family: var(--font-display);">Pirogov Russian National Research University</h3>
         <p class="text-sm text-text-secondary mb-6">Located in Moscow, Russia's top medical research university. Exceptional clinical exposure at leading Moscow hospitals.</p>
         <div class="flex justify-between items-center pt-6 border-t border-border">
           <div><div class="text-xs text-text-muted">Duration</div><div class="text-text-primary">6 Years</div></div>
           <div class="text-right"><div class="text-xs text-text-muted">Tuition/Year</div><div class="text-accent font-medium">₹5–6 Lakh</div></div>
+        </div>
         </div>
       </div>
     </div>
@@ -174,7 +354,7 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
             <div class="text-xs text-text-muted">Lucknow · 4th Year</div>
           </div>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">"Russia has 30+ years of history teaching Indian students. The infrastructure at Kazan is world-class. Gradiks helped me get a government scholarship that covered half my tuition."</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"Russia has a long history of teaching Indian students. The infrastructure at Kazan felt strong, and Gradiks helped my family compare scholarship options, hostel choices and total yearly costs clearly."</p>
         <div class="text-xs text-text-subtle font-medium">Kazan Federal University</div>
       </div>
       <div class="bg-white p-8">
@@ -185,7 +365,7 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
             <div class="text-xs text-text-muted">Chandigarh · 3rd Year</div>
           </div>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">"I was worried about the language, but the first 3 years are fully in English. Gradiks arranged Russian language classes too, which helps with clinical rotations."</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"I was worried about the language, but Gradiks helped me shortlist English-medium options and understand where basic Russian would help during hospital rotations."</p>
         <div class="text-xs text-text-subtle font-medium">Bashkir State Medical University</div>
       </div>
       <div class="bg-white p-8">
@@ -196,7 +376,7 @@ const description = "Study MBBS in Russia with Gradiks. 6-year program, NMC-alig
             <div class="text-xs text-text-muted">Chennai · 6th Year</div>
           </div>
         </div>
-        <p class="text-sm text-text-secondary leading-relaxed mb-4">"The degree is recognized everywhere — WHO, NMC, ECFMG. I'm already planning for USMLE next year. Gradiks' guidance from day one was invaluable."</p>
+        <p class="text-sm text-text-secondary leading-relaxed mb-4">"Gradiks explained recognition checks, NMC/FMGE requirements and possible licensing pathways before I applied. That made the Russia decision much clearer for my parents."</p>
         <div class="text-xs text-text-subtle font-medium">Kazan Federal University</div>
       </div>
     </div>
