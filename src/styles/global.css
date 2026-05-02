@@ -238,6 +238,10 @@
   transform: translateY(0);
 }
 
+/* Explicit helpers for CSS-variable accents used in Astro pages. */
+.bg-accent { background: var(--color-accent) !important; }
+.text-accent { color: var(--color-accent) !important; }
+
 .cta-secondary {
   display: inline-flex;
   align-items: center;
@@ -583,17 +587,23 @@
    ============================================ */
 .sticky-mobile-cta {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  padding: 0.75rem;
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  left: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border-top: 0;
+  padding: 0;
   display: none;
   z-index: 50;
 }
+.sticky-mobile-cta button,
+.sticky-mobile-cta a {
+  width: 100%;
+  border-radius: 999px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+}
 @media (max-width: 1023px) {
-  .sticky-mobile-cta { display: block; }
+  .sticky-mobile-cta { display: flex; }
 }
 
 /* ============================================
@@ -648,5 +658,35 @@
 /* Mobile adjustments */
 @media (max-width: 639px) {
   .hero-headline { line-height: 1.08; }
+  section.mt-20 > .trust-ticker-track {
+    animation: none;
+    width: 100%;
+    overflow: visible;
+    justify-content: stretch;
+    gap: 0;
+    padding: 0.7rem 1rem !important;
+  }
+  section.mt-20 > .trust-ticker-track > .trust-ticker-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.55rem;
+    overflow: visible;
+    padding: 0;
+  }
+  section.mt-20 > .trust-ticker-track > .trust-ticker-track > span:not(.flex) { display: none; }
+  section.mt-20 > .trust-ticker-track > .trust-ticker-track > .flex {
+    min-width: 0;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.55rem 0.45rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    font-size: 0.72rem;
+  }
+  section.mt-20 > .trust-ticker-track > .trust-ticker-track > .flex .font-display {
+    font-size: 0.8rem;
+  }
 }
 }
