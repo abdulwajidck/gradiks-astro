@@ -263,6 +263,122 @@
   z-index: 2;
 }
 
+.country-hero-section.mbbs-hero-premium::after {
+  left: max(1.5rem, calc((100vw - 1400px) / 2 + 1.5rem));
+  right: max(1.5rem, calc((100vw - 1400px) / 2 + 1.5rem));
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.24), transparent);
+  z-index: 3;
+}
+
+/* Premium MBBS hero system: Apple cinema + Stripe data panels + Vercel precision. */
+.country-hero-section.mbbs-hero-premium {
+  min-height: clamp(540px, 68vh, 660px) !important;
+  padding-block: clamp(2.25rem, 5vw, 4.5rem) !important;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,0.07) 0 1px, transparent 1px 100%) 0 0 / 88px 88px,
+    radial-gradient(circle at 74% 18%, color-mix(in srgb, var(--color-accent, #be1e2d) 34%, transparent) 0%, transparent 24rem),
+    radial-gradient(circle at 14% 86%, rgba(255,255,255,0.10) 0%, transparent 24rem),
+    linear-gradient(135deg, #030814 0%, #0b1628 46%, #121f35 100%);
+}
+
+.country-hero-section.mbbs-hero-premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(3,8,20,0.72) 0%, rgba(3,8,20,0.34) 52%, rgba(3,8,20,0.08) 100%),
+    radial-gradient(circle at 82% 60%, rgba(255,255,255,0.10), transparent 23rem);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.country-hero-section.mbbs-hero-premium > div.relative.z-10 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.54fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-block: 0 !important;
+}
+
+.country-hero-section.mbbs-hero-premium > div.relative.z-10 > .max-w-4xl {
+  max-width: 760px;
+}
+
+.country-hero-section.mbbs-hero-premium:not(.mbbs-hero-has-proof-card) > div.relative.z-10::after {
+  content: "2026 INTAKE SUPPORT\A \A ✓ Application review\A ✓ University shortlist\A ✓ NMC/FMGE pathway check\A ✓ Parent counselling\A \A Free eligibility check in 24 hours";
+  white-space: pre-line;
+  justify-self: end;
+  width: min(360px, 100%);
+  min-height: 330px;
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 28px;
+  color: rgba(255,255,255,0.82);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.17), rgba(255,255,255,0.055)),
+    radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--color-accent, #be1e2d) 26%, transparent), transparent 13rem);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    rgba(0,0,0,0.30) 0 34px 80px -38px,
+    rgba(255,255,255,0.14) 0 1px 0 inset,
+    rgba(255,255,255,0.08) 0 0 0 1px inset;
+  backdrop-filter: blur(22px);
+}
+
+.country-hero-section.mbbs-hero-premium .inline-flex[class*="border-white"],
+.country-hero-section.mbbs-hero-premium .hero-badge {
+  border-radius: 999px;
+  border-color: rgba(255,255,255,0.18) !important;
+  background: rgba(255,255,255,0.10) !important;
+  box-shadow: rgba(255,255,255,0.08) 0 1px 0 inset;
+  backdrop-filter: blur(16px);
+}
+
+.country-hero-section.mbbs-hero-premium h1 {
+  max-width: 780px;
+  text-wrap: balance;
+  letter-spacing: -0.055em !important;
+  text-shadow: 0 20px 70px rgba(0,0,0,0.34);
+}
+
+.country-hero-section.mbbs-hero-premium p {
+  text-wrap: pretty;
+}
+
+.country-hero-section.mbbs-hero-premium button,
+.country-hero-section.mbbs-hero-premium a {
+  border-radius: 999px !important;
+}
+
+.country-hero-section.mbbs-hero-premium input {
+  border-radius: 14px;
+  background: rgba(255,255,255,0.09) !important;
+  box-shadow: rgba(255,255,255,0.06) 0 1px 0 inset;
+}
+
+@media (max-width: 1023px) {
+  .country-hero-section.mbbs-hero-premium {
+    min-height: auto !important;
+  }
+
+  .country-hero-section.mbbs-hero-premium > div.relative.z-10 {
+    display: block;
+  }
+
+  .country-hero-section.mbbs-hero-premium > div.relative.z-10::after {
+    content: none;
+  }
+
+  .country-hero-section.mbbs-hero-premium h1 {
+    letter-spacing: -0.035em !important;
+  }
+}
+
 .country-why-section {
   position: relative;
   background:
@@ -694,6 +810,16 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .trust-ticker-track { animation: none; overflow-x: auto; }
+}
+
+@media (min-width: 640px) {
+  section.mt-20 > .trust-ticker-track,
+  section.mt-20 > .trust-ticker-track > .trust-ticker-track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
+    overflow: visible;
+  }
 }
 
 /* Number styling */
