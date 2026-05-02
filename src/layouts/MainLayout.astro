@@ -24,12 +24,12 @@ const { title, description } = Astro.props;
     <meta property="og:description" content={description}>
     <meta property="og:type" content="website">
     <meta property="og:url" content={Astro.url}>
-    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image" content={new URL('/og-image.png', Astro.site).toString()}>
     <meta property="og:site_name" content="Gradiks Global">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={title}>
     <meta name="twitter:description" content={description}>
-    <meta name="twitter:image" content="/og-image.png">
+    <meta name="twitter:image" content={new URL('/og-image.png', Astro.site).toString()}>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <!-- Preconnect -->
@@ -93,19 +93,32 @@ const { title, description } = Astro.props;
     <!-- Scroll reveal observer -->
     <script is:inline>
     (function(){
-      // Intersection Observer for reveal animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      document.documentElement.classList.add('js-enabled');
 
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-      });
+      function initReveal(){
+        const revealEls = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+          revealEls.forEach(el => el.classList.add('visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealEls.forEach(el => observer.observe(el));
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initReveal, { once: true });
+      } else {
+        initReveal();
+      }
     })();
     </script>
 
