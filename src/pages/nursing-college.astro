@@ -1,0 +1,269 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import NursingHero from '../components/NursingHero.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Gradiks Nursing College Kerala | BSc Nursing, GNM, Post-Basic | 2026 Admissions";
+const description = "Kerala's most trusted nursing college. BSc Nursing, GNM, and Post-Basic programs. 97% NCLEX pass rate. 100% placement support. AICTE approved, INC recognized. Apply for 2026 batch.";
+---
+
+<MainLayout title={title} description={description}>
+<Navigation />
+
+<NursingHero
+  badge="AICTE Approved | INC Recognized"
+  headline="Kerala's Most Trusted"
+  headlineAccent="Nursing College"
+  subheadline="Join 2,400+ students who chose Gradiks for BSc Nursing, GNM, and Post-Basic programs. 97% NCLEX pass rate. 100% placement support."
+  primaryCta="Apply for 2026 Batch"
+  primaryCtaHref="#lead-form-container"
+  secondaryCta="Download Brochure"
+  secondaryCtaHref="#"
+  image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=80"
+  imageAlt="Nursing students in clinical training at Gradiks"
+  stats={[
+    { value: "97%", label: "NCLEX Pass Rate" },
+    { value: "2,400+", label: "Students Trained" },
+    { value: "100%", label: "Placement Support" },
+  ]}
+  floatingCards={[
+    { icon: "🏆", value: "#1", label: "in Kerala" },
+    { icon: "🎓", value: "15+", label: "Years of Excellence" },
+    { icon: "🏥", value: "50+", label: "Hospital Tie-ups" },
+  ]}
+/>
+
+<!-- TRUST BAR — auto-scrolling marquee -->
+<div class="trust-bar" style="overflow: hidden; background: var(--color-brand-navy);">
+  <div class="trust-ticker-track" aria-label="Key statistics" style="padding: 0.875rem 0; color: rgba(255,255,255,0.7); font-size: 0.8125rem;">
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">2,400+</span>
+    <span class="trust-label">students trained</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">97%</span>
+    <span class="trust-label">NCLEX pass rate</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">100%</span>
+    <span class="trust-label">placement support</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">50+</span>
+    <span class="trust-label">hospital tie-ups</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">2,400+</span>
+    <span class="trust-label">students trained</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">97%</span>
+    <span class="trust-label">NCLEX pass rate</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">100%</span>
+    <span class="trust-label">placement support</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+    <span class="trust-stat" style="color: #fff; font-weight: 700;">50+</span>
+    <span class="trust-label">hospital tie-ups</span>
+    <span class="trust-divider" aria-hidden="true" style="color: rgba(255,255,255,0.3);">·</span>
+  </div>
+</div>
+
+<!-- PROGRAMS OFFERED -->
+<section class="py-16 lg:py-24">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12">
+      <p class="section-eyebrow mb-3">Programs</p>
+      <h2 class="section-headline">Build Your Nursing Career<br><span class="text-[#4b5563]">With The Right Program</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="data-card">
+        <div class="data-card-header">
+          <div class="data-card-number text-[#be1e2d]">BSc Nursing</div>
+          <p class="text-sm text-[#6b7280] mt-1">4 Years · Full-time</p>
+        </div>
+        <div class="p-5 space-y-3">
+          <p class="text-sm text-[#4b5563]">Comprehensive 4-year degree with clinical rotations at 50+ partner hospitals. Eligible for NCLEX, HAAD, DHA, and MOH licensing.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-[#f3f4f6] text-[#4b5563] text-xs rounded-md font-medium">NCLEX Eligible</span>
+            <span class="px-2.5 py-1 bg-[#f3f4f6] text-[#4b5563] text-xs rounded-md font-medium">Gulf Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-header">
+          <div class="data-card-number text-[#be1e2d]">GNM</div>
+          <p class="text-sm text-[#6b7280] mt-1">3 Years · Diploma</p>
+        </div>
+        <div class="p-5 space-y-3">
+          <p class="text-sm text-[#4b5563]">General Nursing & Midwifery diploma with hands-on ward training. Fast-track entry into healthcare with immediate placement support.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-[#f3f4f6] text-[#4b5563] text-xs rounded-md font-medium">Ward Training</span>
+            <span class="px-2.5 py-1 bg-[#f3f4f6] text-[#4b5563] text-xs rounded-md font-medium">Immediate Placement</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-header">
+          <div class="data-card-number text-[#be1e2d]">Post-Basic</div>
+          <p class="text-sm text-[#6b7280] mt-1">2 Years · Lateral Entry</p>
+        </div>
+        <div class="p-5 space-y-3">
+          <p class="text-sm text-[#4b5563]">For registered nurses looking to upgrade to BSc Nursing. Flexible scheduling for working professionals with weekend clinicals.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-[#f3f4f6] text-[#4b5563] text-xs rounded-md font-medium">Working Professionals</span>
+            <span class="px-2.5 py-1 bg-[#f3f4f6] text-[#4b5563] text-xs rounded-md font-medium">Weekend Clinicals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY GRADIKS NURSING -->
+<section class="py-16 lg:py-24 bg-[#f9fafb] border-y border-[#e5e7eb]">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12">
+      <p class="section-eyebrow mb-3">Why Gradiks Nursing</p>
+      <h2 class="section-headline">What Makes Us<br><span class="text-[#4b5563]">Kerala's #1 Choice</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl p-6 border border-[#e5e7eb]">
+        <div class="w-10 h-10 rounded-lg bg-[#fce8ea] flex items-center justify-center text-[#be1e2d] mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#0d0d0d] mb-1">97% NCLEX Pass</h3>
+        <p class="text-base text-[#6b7280]">Structured coaching from Year 1. Mock tests, interview prep, and licensing guidance included.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-[#e5e7eb]">
+        <div class="w-10 h-10 rounded-lg bg-[#fce8ea] flex items-center justify-center text-[#be1e2d] mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#0d0d0d] mb-1">50+ Hospital Tie-ups</h3>
+        <p class="text-base text-[#6b7280]">Clinical training at multi-specialty hospitals across Kerala and Bangalore.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-[#e5e7eb]">
+        <div class="w-10 h-10 rounded-lg bg-[#fce8ea] flex items-center justify-center text-[#be1e2d] mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#0d0d0d] mb-1">100% Placement Support</h3>
+        <p class="text-base text-[#6b7280]">Dedicated placement cell with tie-ups in India, Gulf, UK, and Canada.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-[#e5e7eb]">
+        <div class="w-10 h-10 rounded-lg bg-[#fce8ea] flex items-center justify-center text-[#be1e2d] mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="font-semibold text-[#0d0d0d] mb-1">Global Mobility</h3>
+        <p class="text-base text-[#6b7280]">Curriculum aligned with international standards. Go anywhere with your degree.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="lead-form-container" class="py-16 lg:py-24">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="section-eyebrow mb-3">Admissions Open</p>
+      <h2 class="section-headline mb-4">Apply for 2026 Batch</h2>
+      <p class="section-desc mx-auto mb-8">Fill in your details and our admissions team will call you within 24 hours with fee structure, scholarship options, and next steps.</p>
+
+      <form id="nursing-lead-form" class="bg-white rounded-2xl border border-[#e5e7eb] p-6 lg:p-8 shadow-sm text-left space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-[#4b5563] mb-1.5">Full Name *</label>
+            <input type="text" name="name" required class="w-full px-3.5 py-2.5 bg-[#f9fafb] border border-[#e5e7eb] rounded-lg text-sm focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-colors" placeholder="Your name" autocomplete="name">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[#4b5563] mb-1.5">Phone Number *</label>
+            <input type="tel" name="phone" required class="w-full px-3.5 py-2.5 bg-[#f9fafb] border border-[#e5e7eb] rounded-lg text-sm focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-colors" placeholder="+91 98765 43210" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-[#4b5563] mb-1.5">Program Interested In</label>
+            <select name="program" class="w-full px-3.5 py-2.5 bg-[#f9fafb] border border-[#e5e7eb] rounded-lg text-sm focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-colors">
+              <option value="">Select program</option>
+              <option value="bsc-nursing">BSc Nursing</option>
+              <option value="gnm">GNM</option>
+              <option value="post-basic">Post-Basic BSc Nursing</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-[#4b5563] mb-1.5">12th Marks (%)</label>
+            <input type="text" name="marks" class="w-full px-3.5 py-2.5 bg-[#f9fafb] border border-[#e5e7eb] rounded-lg text-sm focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-colors" placeholder="e.g. 85%">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-[#4b5563] mb-1.5">City / District</label>
+          <input type="text" name="city" class="w-full px-3.5 py-2.5 bg-[#f9fafb] border border-[#e5e7eb] rounded-lg text-sm focus:outline-none focus:border-[#be1e2d] focus:ring-1 focus:ring-[#be1e2d] transition-colors" placeholder="e.g. Calicut">
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-[#be1e2d] text-white font-semibold text-sm rounded-lg hover:bg-[#a81826] transition-colors flex items-center justify-center gap-2">
+          Submit Application
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <p class="text-center text-[10px] text-[#9ca3af]">Free counselling · No obligation · 24hr response guaranteed</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<Footer />
+</MainLayout>
+
+<style>
+  .trust-bar {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .trust-ticker-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: ticker-scroll 20s linear infinite;
+  }
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<script>
+  document.getElementById('nursing-lead-form')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+    const body = {
+      name: data.get('name'),
+      phone: data.get('phone'),
+      program: data.get('program'),
+      marks: data.get('marks'),
+      city: data.get('city'),
+      lead_source: 'Gradiks Nursing College Landing Page',
+      source_of_lead: 'Gradiks Nursing College Landing Page',
+      type_of_lead: 'Gradiks Nursing College 2026',
+    };
+
+    try {
+      const res = await fetch('/api/submit-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (res.ok) {
+        window.location.href = '/nursing-thank-you.html';
+      } else {
+        alert('Something went wrong. Please try again or WhatsApp us.');
+      }
+    } catch (err) {
+      alert('Network error. Please try again.');
+    }
+  });
+</script>

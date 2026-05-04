@@ -13,103 +13,104 @@ const description = "Study MBBS in Georgia with Gradiks. 6-year program, NMC-ali
 <Navigation />
 
 <!-- ============================================
-     TRUST BAR — Marquee ticker
-     ============================================ -->
-<section class="mt-20 overflow-hidden" style="background: var(--color-brand-navy);">
-  <div class="trust-ticker-track" style="padding: 0.875rem 0; color: rgba(255,255,255,0.7); font-size: 0.8125rem;">
-    <span class="trust-ticker-track" style="padding: 0;">
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">6 Years</span>
-        <span style="color: rgba(255,255,255,0.5);">Duration</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">₹3–5L</span>
-        <span style="color: rgba(255,255,255,0.5);">Tuition/Year</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">NMC/FMGE</span>
-        <span style="color: rgba(255,255,255,0.5);">Reviewed</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">English</span>
-        <span style="color: rgba(255,255,255,0.5);">Medium</span>
-      </span>
-    </span>
-  </div>
-</section>
-
-<!-- ============================================
-     HERO — Dark with gradient spotlights
+     HERO — Dark with gradient spotlights + integrated proof row
      ============================================ -->
 <section class="country-hero-section mbbs-hero-premium mbbs-hero-has-proof-card relative overflow-hidden">
   <!-- Ambient gradient spotlights -->
   <div class="gradient-spotlight gradient-spotlight-1" style="top: -10%; right: -5%; width: 800px; height: 800px;"></div>
   <div class="gradient-spotlight gradient-spotlight-2" style="bottom: -10%; left: -10%; width: 600px; height: 600px;"></div>
 
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-12 sm:pt-14 lg:pt-32 pb-16 lg:pb-32 relative z-10">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-12 sm:pt-14 lg:pt-28 pb-16 lg:pb-32 relative z-10">
     <div class="max-w-4xl">
       <!-- Badge -->
-      <div class="hero-badge mb-3 lg:mb-8 animate-fade-in-up" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">
+      <div class="hero-badge mb-4 lg:mb-8 animate-fade-in-up" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">
         <span class="text-2xl">&#x1F1EC;&#x1F1EA;</span>
-        <span class="hero-badge-text" style="color: rgba(255,255,255,0.8);">Study MBBS in Georgia</span>
+        <span class="hero-badge-text" style="color: rgba(255,255,255,0.85);">Study MBBS in Georgia</span>
       </div>
 
       <!-- Headline -->
-      <h1 class="hero-headline animate-fade-in-up delay-100" style="color: #ffffff;">
+      <h1 class="hero-headline animate-fade-in-up delay-100" style="color: #fafaf9;">
         <span>MBBS in</span>
         <br />
         <span class="hero-headline-accent" style="color: var(--color-accent);">Georgia</span>
       </h1>
 
-      <!-- Subheadline -->
-      <p class="hero-subheadline animate-fade-in-up delay-200" style="color: rgba(255,255,255,0.7); max-width: 600px;">
-        NMC-aligned university options, English-medium instruction, and one of the safest countries for Indian students. Fees starting ₹3L/year.
+      <!-- Subheadline — benefit-driven, concise -->
+      <p class="hero-subheadline animate-fade-in-up delay-200" style="color: rgba(255,255,255,0.72); max-width: 560px;">
+        NMC-aligned universities with English-medium classrooms. Safe, affordable, and a proven pathway to practice in India.
       </p>
+
+      <!-- Inline proof row — replaces distracting marquee ticker -->
+      <div class="animate-fade-in-up delay-250 flex flex-wrap gap-x-8 gap-y-2 mt-6 mb-6">
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <span class="font-display font-bold text-white text-base">6 Years</span> Duration
+        </span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.15);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <span class="font-display font-bold text-white text-base">₹3–5L</span> Tuition/Year
+        </span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.15);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <span class="font-display font-bold text-white text-base">NMC/FMGE</span> Reviewed
+        </span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.15);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <span class="font-display font-bold text-white text-base">English</span> Medium
+        </span>
+      </div>
 
       <!-- Desktop CTA Row -->
       <div class="hero-ctas animate-fade-in-up delay-300">
-        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex" style="background: var(--color-accent);">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex" style="background: var(--color-accent); box-shadow: 0 8px 28px rgba(212,160,23,0.28);">
           Apply Now
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
-        <a href="/#fees" class="cta-secondary hidden lg:inline-flex" style="border-color: rgba(255,255,255,0.2); color: #ffffff; background: transparent;">
+        <a href="/#fees" class="cta-secondary hidden lg:inline-flex" style="border-color: rgba(255,255,255,0.22); color: #fafaf9; background: transparent;">
           Compare Fees
         </a>
       </div>
-      <div class="lg:hidden mt-5">
+
+      <!-- Mobile form — now with visible labels, not just placeholders -->
+      <div class="lg:hidden mt-6">
         <form id="hero-lead-form" class="space-y-3">
-          <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Full Name *" aria-label="Full Name">
-          <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Your phone number *" aria-label="Phone Number">
-          <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm" placeholder="Email *" aria-label="Email Address">
-          <button type="submit" class="w-full py-4 bg-accent text-white font-semibold tracking-wide text-sm rounded-lg shadow-lg" style="background: var(--color-accent); box-shadow: 0 14px 30px rgba(212,160,23,0.22);">GET FREE ASSESSMENT</button>
-          <p class="text-center text-[10px] text-white/40">Free · No spam · 24hr response</p>
+          <div>
+            <label for="hero-name" class="block text-xs font-medium mb-1" style="color: rgba(255,255,255,0.6);">Full Name</label>
+            <input id="hero-name" type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="Your name" aria-label="Full Name">
+          </div>
+          <div>
+            <label for="hero-phone" class="block text-xs font-medium mb-1" style="color: rgba(255,255,255,0.6);">Phone Number</label>
+            <input id="hero-phone" type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="+91 98765 43210" aria-label="Phone Number">
+          </div>
+          <div>
+            <label for="hero-email" class="block text-xs font-medium mb-1" style="color: rgba(255,255,255,0.6);">Email Address</label>
+            <input id="hero-email" type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="you@email.com" aria-label="Email Address">
+          </div>
+          <button type="submit" class="w-full py-4 text-white font-semibold tracking-wide text-sm rounded-lg" style="background: var(--color-accent); box-shadow: 0 12px 28px rgba(212,160,23,0.25);">Get Free Assessment</button>
+          <p class="text-center text-[11px]" style="color: rgba(255,255,255,0.35);">Free · No spam · Response within 24 hours</p>
         </form>
       </div>
     </div>
   </div>
 
-  <!-- Desktop proof card fills the previously empty hero right side without touching lead forms -->
-  <div class="hidden lg:block absolute right-[max(3rem,calc((100vw-1200px)/2+3rem))] top-1/2 -translate-y-1/2 w-[360px] z-10 animate-scale-in delay-500">
+  <!-- Desktop proof card — clearer copy -->
+  <div class="hidden lg:block absolute right-[max(3rem,calc((100vw-1200px)/2+3rem))] top-1/2 -translate-y-1/2 w-[340px] z-10 animate-scale-in delay-500">
     <div class="rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-xl p-6 shadow-2xl">
-      <div class="text-xs uppercase tracking-[0.18em] mb-4" style="color: rgba(255,255,255,0.5);">Georgia snapshot</div>
+      <div class="text-xs uppercase tracking-[0.18em] mb-4" style="color: rgba(255,255,255,0.5);">At a glance</div>
       <div class="space-y-4">
         <div class="flex items-center justify-between gap-6 border-b border-white/10 pb-4">
-          <span class="text-white/60 text-sm">Program length</span>
+          <span class="text-white/55 text-sm">Program length</span>
           <strong class="text-white font-display text-xl">6 years</strong>
         </div>
         <div class="flex items-center justify-between gap-6 border-b border-white/10 pb-4">
-          <span class="text-white/60 text-sm">Typical tuition</span>
+          <span class="text-white/55 text-sm">Typical tuition</span>
           <strong class="text-white font-display text-xl">₹3–5L/yr</strong>
         </div>
         <div class="flex items-center justify-between gap-6 border-b border-white/10 pb-4">
-          <span class="text-white/60 text-sm">Counselling check</span>
+          <span class="text-white/55 text-sm">Licensing pathway</span>
           <strong class="font-display text-lg" style="color: var(--color-accent);">NMC/FMGE</strong>
         </div>
         <div class="rounded-xl p-4" style="background: rgba(255,255,255,0.08);">
-          <p class="text-sm leading-relaxed text-white/70">We verify university fit, fees, licensing pathway, hostel options, and parent concerns before recommending Georgia.</p>
+          <p class="text-sm leading-relaxed text-white/65">We verify your university fit, fees, licensing pathway, hostel options, and parent concerns — before you apply anywhere.</p>
         </div>
       </div>
     </div>

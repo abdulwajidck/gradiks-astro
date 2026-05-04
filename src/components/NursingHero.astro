@@ -1,0 +1,346 @@
+---
+export interface Props {
+  badge?: string;
+  headline: string;
+  headlineAccent: string;
+  subheadline: string;
+  primaryCta: string;
+  primaryCtaHref?: string;
+  secondaryCta?: string;
+  secondaryCtaHref?: string;
+  image: string;
+  imageAlt: string;
+  stats: { value: string; label: string }[];
+  floatingCards?: { icon: string; value: string; label: string }[];
+}
+
+const {
+  badge = "AICTE Approved | INC Recognized",
+  headline,
+  headlineAccent,
+  subheadline,
+  primaryCta,
+  primaryCtaHref = "#lead-form-container",
+  secondaryCta,
+  secondaryCtaHref = "#",
+  image,
+  imageAlt,
+  stats,
+  floatingCards = [],
+} = Astro.props;
+---
+
+<section class="nursing-hero">
+  <div class="nursing-hero-inner">
+    <!-- Left: Content -->
+    <div class="nursing-hero-content">
+      <div class="nursing-hero-badge">
+        <span class="nursing-hero-badge-dot"></span>
+        <span class="nursing-hero-badge-text">{badge}</span>
+      </div>
+
+      <h1 class="nursing-hero-headline">
+        {headline}<br />
+        <span class="nursing-hero-headline-accent">{headlineAccent}</span>
+      </h1>
+
+      <p class="nursing-hero-subheadline">{subheadline}</p>
+
+      <div class="nursing-hero-ctas">
+        <a href={primaryCtaHref} class="cta-primary">
+          {primaryCta}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        {secondaryCta && (
+          <a href={secondaryCtaHref} class="cta-secondary">{secondaryCta}</a>
+        )}
+      </div>
+
+      <div class="nursing-hero-stats">
+        {stats.map((stat) => (
+          <div class="nursing-hero-stat">
+            <span class="nursing-hero-stat-value">{stat.value}</span>
+            <span class="nursing-hero-stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="nursing-hero-visual">
+      <div class="nursing-hero-image-wrapper">
+        <img src={image} alt={imageAlt} class="nursing-hero-image" loading="eager" fetchpriority="high" />
+
+        {floatingCards.map((card, i) => (
+          <div class="nursing-float-card" style={`animation-delay: ${i * 1.2}s`}>
+            <div class="nursing-float-icon">{card.icon}</div>
+            <div class="nursing-float-content">
+              <span class="nursing-float-value">{card.value}</span>
+              <span class="nursing-float-label">{card.label}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .nursing-hero {
+    position: relative;
+    background: linear-gradient(135deg, #fafbfc 0%, #f5f7fa 50%, #ffffff 100%);
+    padding: clamp(3rem, 6vw, 5rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
+    overflow: hidden;
+  }
+
+  .nursing-hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(190, 30, 45, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .nursing-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -60px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(13, 24, 41, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .nursing-hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Badge */
+  .nursing-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.875rem;
+    background: var(--color-brand-red-light, #fce8ea);
+    border: 1px solid rgba(190, 30, 45, 0.2);
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+    width: fit-content;
+  }
+
+  .nursing-hero-badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-brand-red, #be1e2d);
+    border-radius: 50%;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .nursing-hero-badge-text {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-brand-red, #be1e2d);
+  }
+
+  /* Headline */
+  .nursing-hero-headline {
+    font-family: var(--font-display, 'Poppins', system-ui, sans-serif);
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary, #0d0d0d);
+    margin-bottom: 1rem;
+  }
+
+  .nursing-hero-headline-accent {
+    color: var(--color-brand-red, #be1e2d);
+  }
+
+  /* Subheadline */
+  .nursing-hero-subheadline {
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.65;
+    color: var(--color-text-secondary, #4b5563);
+    max-width: 480px;
+    margin-bottom: 1.75rem;
+  }
+
+  /* CTAs */
+  .nursing-hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Stats row */
+  .nursing-hero-stats {
+    display: flex;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+  }
+
+  .nursing-hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .nursing-hero-stat-value {
+    font-family: var(--font-display, 'Poppins', system-ui, sans-serif);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--color-brand-red, #be1e2d);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .nursing-hero-stat-label {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted, #6b7280);
+    font-weight: 500;
+  }
+
+  /* Visual */
+  .nursing-hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nursing-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .nursing-hero-image {
+    width: 100%;
+    height: clamp(300px, 28vw, 420px);
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(13, 24, 41, 0.12);
+  }
+
+  /* Floating cards */
+  .nursing-float-card {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0.875rem 1.125rem;
+    box-shadow: 0 12px 40px rgba(13, 24, 41, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: float 4s ease-in-out infinite;
+    border: 1px solid var(--color-border-light, #f1f1f1);
+  }
+
+  .nursing-float-card:nth-of-type(2) { top: 12px; right: -16px; }
+  .nursing-float-card:nth-of-type(3) { bottom: 48px; left: -24px; }
+  .nursing-float-card:nth-of-type(4) { bottom: 110px; right: -8px; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .nursing-float-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--color-brand-red-light, #fce8ea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .nursing-float-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .nursing-float-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-primary, #0d0d0d);
+    line-height: 1;
+  }
+
+  .nursing-float-label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #6b7280);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .nursing-hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .nursing-hero-subheadline {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nursing-hero-ctas {
+      justify-content: center;
+    }
+
+    .nursing-hero-stats {
+      justify-content: center;
+    }
+
+    .nursing-hero-visual {
+      order: -1;
+    }
+
+    .nursing-float-card:nth-of-type(2) { right: 0; }
+    .nursing-float-card:nth-of-type(3) { left: 0; }
+    .nursing-float-card:nth-of-type(4) { right: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .nursing-hero {
+      padding: 2.5rem 1.25rem 2rem;
+    }
+
+    .nursing-hero-stats {
+      gap: 1.25rem;
+    }
+
+    .nursing-hero-stat-value {
+      font-size: 1.375rem;
+    }
+
+    .nursing-float-card {
+      display: none;
+    }
+  }
+</style>

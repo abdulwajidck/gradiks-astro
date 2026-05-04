@@ -2,7 +2,7 @@
 
 /* 2026 Design System — Impeccable-audited
    Brand: Red #be1e2d, Navy #0d1829, Near-black #080d14, Off-white #fafaf9
-   Fonts: Poppins (Display), Figtree (Body), Geist Mono (Mono)
+   Fonts: Poppins (Display), Inter (Body), Geist Mono (Mono)
    Design DNA: Apple cinema + Stripe trust + Vercel precision
 */
 @theme {
@@ -31,7 +31,7 @@
   --color-accent-gold: #f59e0b;
 
   --font-display: 'Poppins', system-ui, sans-serif;
-  --font-body: 'Figtree', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, monospace;
 }
 

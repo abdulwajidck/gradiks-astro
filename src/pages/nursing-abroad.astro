@@ -2,688 +2,661 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-const title = "BSc Nursing Abroad 2026 | No NEET | Top Countries | Gradiks";
-const description = "BSc Nursing abroad for Indian students. Georgia, Albania, Bulgaria, Malta, UK. No NEET required. English medium. Admissions open for 2026 batch. Get free cost breakdown.";
+const title = "BSc Nursing Abroad 2026 | European Degree, Indian Budget | Gradiks";
+const description = "BSc Nursing abroad for Indian students — European degree at Indian budget. No capitation, no management quota. Georgia, Albania, Bulgaria, Malta, UK. Get free eligibility check.";
 ---
 
 <MainLayout title={title} description={description}>
 <Navigation />
 
 <main>
-<!-- TRUST TICKER — auto-scrolling marquee -->
-<div class="trust-bar" style="overflow: hidden;">
-  <div class="trust-ticker-track" aria-label="Key statistics">
-    <span class="trust-stat">350+ students</span>
-    <span class="trust-label">placed across 5 countries</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">Visa</span>
-    <span class="trust-label">success rate</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat accent">Abroad</span>
-    <span class="trust-label">salary pathways</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">24hr</span>
-    <span class="trust-label">response guaranteed</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <!-- Duplicate for seamless loop -->
-    <span class="trust-stat">350+ students</span>
-    <span class="trust-label">placed across 5 countries</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">Visa</span>
-    <span class="trust-label">success rate</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat accent">Abroad</span>
-    <span class="trust-label">salary pathways</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">24hr</span>
-    <span class="trust-label">response guaranteed</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-  </div>
-</div>
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<section class="country-hero-section mbbs-hero-premium relative overflow-hidden" style="min-height: auto; padding-block: clamp(3rem, 6vw, 5rem);">
+  <div class="gradient-spotlight gradient-spotlight-1" style="top: -10%; right: -5%; width: 800px; height: 800px;"></div>
+  <div class="gradient-spotlight gradient-spotlight-2" style="bottom: -10%; left: -10%; width: 600px; height: 600px;"></div>
 
-<!-- HERO — Salary-led headline -->
-<section class="hero">
-  <div class="hero-content">
-    <!-- Student visa proof strip — mobile -->
-    <div class="hero-faces lg:hidden">
-      <div class="hero-faces-row">
-        <img src="/students/visa-student-1.jpeg" alt="Nursing abroad student portrait" class="hero-face-card" />
-        <img src="/students/visa-student-4.jpeg" alt="Gradiks student visa success portrait" class="hero-face-card" />
-        <img src="/students/visa-student-5.jpeg" alt="Indian nursing student abroad portrait" class="hero-face-card" />
-        <img src="/students/visa-student-7.jpeg" alt="BSc Nursing abroad student portrait" class="hero-face-card" />
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
+    <div class="max-w-3xl">
+      <!-- Badge -->
+      <div class="hero-badge mb-4 lg:mb-6 animate-fade-in-up" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">
+        <span class="text-2xl">🌍</span>
+        <span class="hero-badge-text" style="color: rgba(255,255,255,0.85);">BSc Nursing — European Degree</span>
       </div>
-      <span class="hero-faces-label">Visas approved this week 🇬🇪</span>
-    </div>
-    <p class="hero-eyebrow">BSc Nursing Abroad — 2026 Batch Open</p>
-    <h1 class="hero-headline">
-      Your Child Deserves<br>
-      <span class="hero-headline-accent">A Global Nursing Pathway.</span><br>
-      <span class="hero-subtitle">Not guesswork.</span>
-    </h1>
-    <p class="hero-subheadline">
-      BSc Nursing abroad. Same 4-year degree. Registration pathway reviewed.
-      5 countries. No NEET. English medium. clear salary and licensing pathways.
-    </p>
-    <div class="hero-ctas">
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex">
-        Get free cost breakdown
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-      <div class="lg:hidden w-full mt-2">
+
+      <!-- H1 -->
+      <h1 class="hero-headline animate-fade-in-up delay-100" style="color: #fafaf9; max-width: 800px;">
+        BSc Nursing Abroad
+        <br />
+        <span class="hero-headline-accent" style="color: var(--color-accent-gold);">European Degree, Indian Budget</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero-subheadline animate-fade-in-up delay-200" style="color: rgba(255,255,255,0.72); max-width: 560px;">
+        Total cost ₹8–12L all-inclusive. INC pathway reviewed. Zero capitation. Zero commission.
+      </p>
+
+      <!-- Inline Eligibility Form -->
+      <div class="animate-fade-in-up delay-300 mt-6 bg-white/[0.06] backdrop-blur-lg border border-white/10 rounded-2xl p-5 lg:p-6 max-w-xl">
         <form id="hero-lead-form" class="space-y-3">
-          <input type="text" name="name" required class="form-input" placeholder="Full Name *" aria-label="Full Name" autocomplete="name">
-          <input type="tel" name="phone" required class="form-input" placeholder="Your phone number *" aria-label="Phone Number" autocomplete="tel">
-          <input type="email" name="email" required class="form-input" placeholder="Email *" aria-label="Email Address" autocomplete="email">
-          <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2">
-            GET FREE COST BREAKDOWN
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div>
+              <label for="hero-pcb" class="block text-xs font-medium mb-1" style="color: rgba(255,255,255,0.6);">Your 12th PCB %</label>
+              <input id="hero-pcb" type="text" name="pcb_percent" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="e.g. 62%">
+            </div>
+            <div>
+              <label for="hero-phone" class="block text-xs font-medium mb-1" style="color: rgba(255,255,255,0.6);">WhatsApp Number</label>
+              <input id="hero-phone" type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <button type="submit" class="w-full py-4 text-white font-semibold tracking-wide text-sm rounded-lg" style="background: var(--color-brand-red); box-shadow: 0 8px 28px rgba(190,30,45,0.28);">
+            Check My Eligibility — Free
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="inline ml-2 -mt-0.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
-          <p class="text-center text-[10px] text-[var(--color-text-muted)]">Free · No spam · 24hr response</p>
+          <p class="text-center text-[11px]" style="color: rgba(255,255,255,0.35);">Free · No spam · 24hr response</p>
         </form>
       </div>
-    </div>
-    <div class="hero-meta">
-      <span>Registration pathway reviewed</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>No NEET required</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>English medium</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>5 countries</span>
-    </div>
 
-    <!-- Curiosity hook — scroll to visa gallery -->
-    <button onclick="document.getElementById('visa-gallery')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="visa-teaser" aria-label="See recent visa approvals">
-      <div class="visa-teaser-faces">
-        <img src="/students/visa-student-1.jpeg" alt="Nursing abroad student portrait" class="visa-teaser-face" />
-        <img src="/students/visa-student-4.jpeg" alt="Gradiks student visa success portrait" class="visa-teaser-face" />
-        <img src="/students/visa-student-5.jpeg" alt="Indian nursing student abroad portrait" class="visa-teaser-face" />
-        <img src="/students/visa-student-7.jpeg" alt="BSc Nursing abroad student portrait" class="visa-teaser-face" />
-        <span class="visa-teaser-more">+8</span>
+      <!-- 5-stat strip -->
+      <div class="animate-fade-in-up delay-400 flex flex-wrap gap-x-8 gap-y-2 mt-6">
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">🎓 <span class="font-display font-bold text-white text-base">4-Year</span> BSc</span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.12);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">💰 <span class="font-display font-bold text-white text-base">$3–5.5K/yr</span> Tuition</span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.12);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">📅 <span class="font-display font-bold text-white text-base">Feb & Sep</span> Intake</span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.12);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">🏥 <span class="font-display font-bold text-white text-base">INC</span> Pathway Reviewed</span>
+        <span class="hidden sm:inline" style="color: rgba(255,255,255,0.12);">|</span>
+        <span class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">🌍 <span class="font-display font-bold text-white text-base">Work</span> Abroad After</span>
       </div>
-      <div class="visa-teaser-text">
-        <span class="visa-teaser-count">12 visas approved</span>
-        <span class="visa-teaser-cta">this month — see proof ↓</span>
-      </div>
-    </button>
-  </div>
-  <div class="hero-image-wrapper">
-    <div class="hero-collage">
-      <img src="/students/visa-student-1.jpeg" alt="Alvin Jijo — Visa approved for BSc Nursing, Georgia" class="hero-collage-img hero-collage-main" loading="eager" fetchpriority="high" />
-      <img src="/students/visa-student-4.jpeg" alt="Student visa approved" class="hero-collage-img hero-collage-sm-1" loading="eager" />
-      <img src="/students/visa-student-5.jpeg" alt="Student visa approved" class="hero-collage-img hero-collage-sm-2" loading="eager" />
-      <img src="/students/visa-student-7.jpeg" alt="Student visa approved" class="hero-collage-img hero-collage-sm-3" loading="eager" />
-    </div>
-    <div class="hero-collage-label">
-      <span class="hero-badge">12 visas this month</span>
-    </div>
-    <div class="hero-country-flags">🇬🇪 🇦🇱 🇧🇬 🇲🇹 🇬🇧</div>
-  </div>
-</section>
-
-<!-- SALARY COMPARISON — The anchor moment -->
-<section class="py-16 lg:py-24">
-  <div class="max-w-[1400px] mx-auto">
-    <div class="text-center mb-8 px-6">
-      <p class="section-eyebrow mb-3">The Real Difference</p>
-      <h2 class="section-headline">Same Degree.<br><span class="section-headline-muted">Different Life.</span></h2>
-    </div>
-    <div class="salary-comparison">
-      <div>
-        <div class="salary-big muted">India</div>
-        <div class="salary-label">Entry-level salary varies widely</div>
-      </div>
-      <div class="salary-divider">vs</div>
-      <div>
-        <div class="salary-big accent">Global</div>
-        <div class="salary-label">Same degree, working abroad</div>
-      </div>
-    </div>
-    <p class="text-center text-sm text-[#6b7280] mt-8 px-6 max-w-lg mx-auto">Same 4-year BSc Nursing route, with registration requirements reviewed country by country. Where you study can change licensing, work rights, and salary pathways.</p>
-  </div>
-</section>
-
-<!-- DESTINATIONS — Featured + Compact -->
-<section class="py-16 lg:py-24 bg-[#f9fafb] border-y border-[#e5e7eb]">
-  <div class="max-w-[1400px] mx-auto">
-    <div class="section-header" style="padding-bottom: 2rem;">
-      <p class="section-eyebrow">5 Destinations</p>
-      <h2 class="section-headline">Study Nursing<br><span class="section-headline-muted">in Your Budget</span></h2>
-      <p class="section-desc">From ₹4L/year to ₹20L+ — a country for every mark sheet and bank balance.</p>
-    </div>
-
-    <!-- Featured: Georgia (cheapest) + UK (highest ROI) -->
-    <div class="destination-featured">
-      <div class="country-card">
-        <div class="country-image-wrap">
-          <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&q=80&auto=format&fit=crop" alt="Tbilisi, Georgia" loading="lazy" />
-          <div class="country-overlay">
-            <span class="country-flag">🇬🇪</span>
-            <span class="country-tag">Most Affordable</span>
-          </div>
-        </div>
-        <div class="country-body">
-          <h3 class="country-name">Georgia</h3>
-          <p class="country-desc">European BSc Nursing at Asian cost. Any stream can apply. No IELTS. 50% and above eligible.</p>
-          <div class="country-stats">
-            <div class="country-stat"><span class="stat-val">4 Years</span><span class="stat-key">Duration</span></div>
-            <div class="country-stat"><span class="stat-val">₹2.5–4.5L</span><span class="stat-key">Tuition/yr</span></div>
-            <div class="country-stat"><span class="stat-val">₹1–1.5L</span><span class="stat-key">Living/yr</span></div>
-            <div class="country-stat accent"><span class="stat-val">₹1–1.5L</span><span class="stat-key">Salary/mo after</span></div>
-          </div>
-          <div class="country-intakes">50% min · No IELTS · Intakes: Feb &amp; Sep</div>
-          <a href="/nursing-georgia" class="cta-primary mt-4 w-full justify-center text-sm py-3">Explore Georgia →</a>
-        </div>
-      </div>
-
-      <div class="country-card">
-        <div class="country-image-wrap">
-          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80&auto=format&fit=crop" alt="London, United Kingdom" loading="lazy" />
-          <div class="country-overlay">
-            <span class="country-flag">🇬🇧</span>
-            <span class="country-tag">Highest ROI</span>
-          </div>
-        </div>
-        <div class="country-body">
-          <h3 class="country-name">United Kingdom</h3>
-          <p class="country-desc">BSc Nursing (Hons) at UK universities. Work 20 hrs/week. Post-study work visa. 60% and above eligible.</p>
-          <div class="country-stats">
-            <div class="country-stat"><span class="stat-val">3 Years</span><span class="stat-key">Duration</span></div>
-            <div class="country-stat"><span class="stat-val">₹12–18L</span><span class="stat-key">Tuition/yr</span></div>
-            <div class="country-stat"><span class="stat-val">₹8–12L</span><span class="stat-key">Living/yr</span></div>
-            <div class="country-stat accent"><span class="stat-val">₹2.2–3L</span><span class="stat-key">Salary/mo after</span></div>
-          </div>
-          <div class="country-intakes">60% min · IELTS 6.0+ · Work Rights: ✓</div>
-          <a href="/nursing-uk" class="cta-primary mt-4 w-full justify-center text-sm py-3">Explore UK →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Compact: Albania, Bulgaria, Malta — with entry requirements -->
-    <div class="destination-compact">
-      <a href="/nursing-albania" class="country-row" style="text-decoration: none; color: inherit;">
-        <span class="country-row-flag">🇦🇱</span>
-        <span class="country-row-name">Albania</span>
-        <span class="country-row-stat"><strong>₹3–5L</strong>/yr · 65% min · No IELTS</span>
-        <span class="country-row-stat">4 Years</span>
-        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>₹85K–1.25L</strong>/mo →</span>
-      </a>
-      <a href="/nursing-bulgaria" class="country-row" style="text-decoration: none; color: inherit;">
-        <span class="country-row-flag">🇧🇬</span>
-        <span class="country-row-name">Bulgaria</span>
-        <span class="country-row-stat"><strong>₹3.5–6L</strong>/yr · 62% min · No IELTS</span>
-        <span class="country-row-stat">4 Years</span>
-        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>₹1.25–1.9L</strong>/mo →</span>
-      </a>
-      <a href="/nursing-malta" class="country-row" style="text-decoration: none; color: inherit;">
-        <span class="country-row-flag">🇲🇹</span>
-        <span class="country-row-name">Malta</span>
-        <span class="country-row-stat"><strong>₹7–10L</strong>/yr · English speaking</span>
-        <span class="country-row-stat">3–4 Years</span>
-        <span class="country-row-stat" style="color: var(--color-gold-500);"><strong>₹1.25–2.1L</strong>/mo →</span>
-      </a>
-    </div>
-
-    <!-- Entry requirements summary -->
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 mt-8">
-      <p class="text-center text-sm text-[var(--color-text-secondary)]">
-        <strong class="text-[var(--color-text-primary)]">Any stream can apply</strong> — not just PCB. No IELTS required for Georgia, Albania, and Bulgaria.
-      </p>
     </div>
   </div>
 </section>
 
-<!-- INDIA vs ABROAD — Fees Comparison -->
-<section class="py-16 lg:py-24">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="text-center mb-12">
-      <p class="section-eyebrow mb-3">Fees in INR</p>
-      <h2 class="section-headline">India vs Abroad<br><span class="section-headline-muted">Real Cost Comparison</span></h2>
-      <p class="section-desc mx-auto">Parents ask: "Isn't abroad expensive?" Here are the actual numbers — including what you'd really pay in India.</p>
+<!-- ============================================
+     COMPARISON TABLE
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: #fafaf9;">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Why Abroad When You Can Study Nursing in India?</h2>
+      <p class="section-desc mx-auto mt-4">Honest comparison. Decide for yourself.</p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      <!-- India costs -->
-      <div>
-        <h3 class="text-base font-semibold mb-4 flex items-center gap-2" style="font-family: var(--font-display);">
-          🇮🇳 BSc Nursing in India
-        </h3>
-        <div class="space-y-3">
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">Kerala — Govt college tuition (4 yrs)</span>
-            <span class="text-sm font-semibold">₹1,06,000</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">Kerala — Donation / capitation</span>
-            <span class="text-sm font-semibold text-[var(--color-gold-500)]">₹8–12 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">Food &amp; accommodation (4 yrs)</span>
-            <span class="text-sm font-semibold">₹3–4 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">Karnataka / TN — Medical college (pvt)</span>
-            <span class="text-sm font-semibold">₹12–16 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">Karnataka / TN — Normal college (pvt)</span>
-            <span class="text-sm font-semibold">₹8–11 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 bg-[var(--color-surface)] px-3 -mx-3">
-            <span class="text-sm font-semibold">Realistic total (Kerala private)</span>
-            <span class="text-sm font-bold text-[var(--color-text-primary)]">₹12–17 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <span class="text-sm text-[var(--color-text-muted)]">Salary after graduation</span>
-            <span class="text-sm font-semibold text-[var(--color-text-muted)]">entry-level India salaries</span>
-          </div>
-        </div>
+    <div class="max-w-3xl mx-auto reveal reveal-delay-1">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--color-brand-red);">
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-text-primary);">Factor</th>
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-text-secondary);">India Private Nursing</th>
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">Abroad BSc Nursing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-medium" style="color: var(--color-text-primary);">Total Cost</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">₹15–30L + capitation</td>
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">₹8–12L all inclusive</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-medium" style="color: var(--color-text-primary);">Capitation Fee</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">₹5–15L extra</td>
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">Zero</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-medium" style="color: var(--color-text-primary);">Management Quota</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">Yes</td>
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">No</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-medium" style="color: var(--color-text-primary);">Degree Type</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">Indian</td>
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">European Standard</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-medium" style="color: var(--color-text-primary);">Work Abroad After</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">Difficult</td>
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">UK, UAE, Australia pathways open</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm font-medium" style="color: var(--color-text-primary);">Language of Teaching</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">Regional mix</td>
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">English only</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <!-- Abroad costs -->
-      <div>
-        <h3 class="text-base font-semibold mb-4 flex items-center gap-2" style="font-family: var(--font-display);">
-          🌍 BSc Nursing Abroad
-        </h3>
-        <div class="space-y-3">
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">🇬🇪 Georgia — Total 4 years</span>
-            <span class="text-sm font-semibold">₹14–24 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">🇦🇱 Albania — Total 4 years</span>
-            <span class="text-sm font-semibold">₹16–26 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">🇧🇬 Bulgaria — Total 4 years</span>
-            <span class="text-sm font-semibold">₹19–31 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">🇲🇹 Malta — Total 4 years</span>
-            <span class="text-sm font-semibold">₹34–48 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 border-b border-[var(--color-border)]">
-            <span class="text-sm text-[var(--color-text-secondary)]">🇬🇧 UK — Total 3 years</span>
-            <span class="text-sm font-semibold">₹60–90 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-3 bg-[oklch(0.95_0.02_25)] px-3 -mx-3">
-            <span class="text-sm font-semibold">Georgia (most affordable)</span>
-            <span class="text-sm font-bold text-[var(--color-gold-500)]">₹14–24 lakhs</span>
-          </div>
-          <div class="flex justify-between items-center py-2">
-            <span class="text-sm text-[var(--color-text-muted)]">Salary after graduation</span>
-            <span class="text-sm font-bold text-[var(--color-gold-500)]">Country-specific range</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p class="text-center mt-10 text-sm font-semibold text-[var(--color-text-primary)] max-w-lg mx-auto" style="font-family: var(--font-display);">
-      Georgia costs roughly the same as Kerala private nursing — but the salary after graduation is 8–10x higher.
-    </p>
-  </div>
-</section>
-
-<!-- WHY THIS WORKS — 3 zones -->
-<section class="why-section">
-  <div class="why-header">
-    <p class="section-eyebrow inverted">Why This Works</p>
-    <h2 class="section-headline inverted">The Two Things<br>Parents Ask First</h2>
-  </div>
-
-  <!-- Zone A: Deal-breakers -->
-  <div class="why-dealbreakers">
-    <div class="dealbreaker-card">
-      <div class="dealbreaker-badge">✓ Confirmed</div>
-      <h3 class="dealbreaker-title">No NEET · No IELTS · Any Stream</h3>
-      <p class="dealbreaker-desc">Unlike MBBS, BSc Nursing abroad doesn't need NEET or IELTS (except UK). Any 12th stream can apply — not just PCB. Georgia accepts 50%+, UK accepts 60%+, Albania 65%+. Your child's marks are enough.</p>
-    </div>
-    <div class="dealbreaker-card">
-      <div class="dealbreaker-badge">✓ Confirmed</div>
-      <h3 class="dealbreaker-title">NMC Recognized — Valid in India</h3>
-      <p class="dealbreaker-desc">Every university we recommend is Registration pathway reviewed. Your child can return to India, pass the screening test, register with the State Nursing Council, and practice in any government or private hospital.</p>
-    </div>
-  </div>
-
-  <!-- Zone B: Advantages -->
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      </div>
-      <h3 class="why-title">English Medium Only</h3>
-      <p class="why-desc">Every program is fully English-taught. No foreign language requirement. Indian students adapt faster, academically and socially.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      </div>
-      <h3 class="why-title">Work While Studying</h3>
-      <p class="why-desc">UK allows 20 hrs/week part-time. Georgia, Albania, and Bulgaria offer on-campus work. Offset living costs while building your career network.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      </div>
-      <h3 class="why-title">International Salary</h3>
-      <p class="why-desc">UK nurses earn £25–35K/year. Malta and Bulgaria nurses earn €18–28K/year. Gulf countries offer tax-free salaries. Same degree, 5x the pay.</p>
-    </div>
-  </div>
-
-  <!-- Zone C: Editorial truth -->
-  <div class="why-editorial">
-    <p class="why-editorial-text">
-      In India, nurses are overworked and earn entry-level India salaries. Abroad, they're <strong>valued professionals</strong>. Same qualification. Completely different life. The BSc Nursing abroad route exists because <strong>India failed to fix this</strong>. Plan with facts before choosing a route.
-    </p>
-  </div>
-</section>
-
-<!-- STUDENT STORIES — Asymmetric -->
-<section class="py-16 lg:py-24 bg-[#f9fafb]">
-  <div class="max-w-[1400px] mx-auto">
-    <div class="text-center mb-12 px-6">
-      <p class="section-eyebrow mb-3">Real Students. Real Salaries.</p>
-      <h2 class="section-headline">They Were Where<br><span class="section-headline-muted">Your Child Is Now</span></h2>
-    </div>
-
-    <div class="stories-grid">
-      <!-- Featured testimonial -->
-      <div class="testimonial-card--featured">
-        <div class="testimonial-person">
-          <div class="person-avatar">R</div>
-          <div class="person-info">
-            <div class="person-name">Rahul <span class="person-loc">🇮🇳 Kerala</span></div>
-            <div class="person-detail">BSc Nursing · European University, Tirana, Albania · 2024 batch</div>
-          </div>
-        </div>
-        <p class="testimonial-quote">"Gradiks told me Albania was my best option given my 12th marks. I didn't believe it at first. Got my student visa in 3 weeks. Now I'm working in a UAE hospital, building an international nursing career. My parents still can't believe it."</p>
-        <div class="testimonial-outcome">✓ Student Visa → UAE placement · Earning ₹80,000/month</div>
-      </div>
-
-      <!-- Stacked testimonials -->
-      <div class="stories-stack">
-        <div class="testimonial-card">
-          <div class="testimonial-person">
-            <div class="person-avatar">A</div>
-            <div class="person-info">
-              <div class="person-name">Aishwarya <span class="person-loc">🇮🇳 Kerala</span></div>
-              <div class="person-detail">BSc Nursing · Tbilisi State Medical University, Georgia · 2023 batch</div>
-            </div>
-          </div>
-          <p class="testimonial-quote">"I scored 58% in 12th. Every agent said try again. Gradiks got me into Georgia — graduated without a loan. Total cost was ₹18 lakhs for 4 years."</p>
-          <div class="testimonial-outcome">✓ Student Visa → Apollo Hospital, Chennai · Earning ₹25,000/month</div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-person">
-            <div class="person-avatar">M</div>
-            <div class="person-info">
-              <div class="person-name">Muhammed <span class="person-loc">🇮🇳 Kerala</span></div>
-              <div class="person-detail">BSc Nursing (Hons) · University of Bolton, UK · 2022 batch</div>
-            </div>
-          </div>
-          <p class="testimonial-quote">"They were honest about the cost and the OSCE challenge. Worth it — I'm in Manchester now earning ₹2.4 lakh/month as an NHS nurse."</p>
-          <div class="testimonial-outcome">✓ Tier 4 Visa → NHS Manchester Royal Infirmary · Earning ₹2,40,000/month</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-12 px-6">
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
-        Join 350+ students already abroad
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- VISA APPROVED — Real student proof gallery -->
-<section id="visa-gallery" class="py-16 lg:py-24 overflow-hidden">
-  <div class="max-w-[1400px] mx-auto">
-    <div class="text-center mb-10 px-6">
-      <p class="section-eyebrow mb-3">Visa Approved — 2025/2026 Batch</p>
-      <h2 class="section-headline">Real Students.<br><span class="section-headline-muted">Real Visas.</span></h2>
-      <p class="section-desc mx-auto">These are actual Gradiks students with approved e-Visas for Georgia. Not stock photos. Not actors.</p>
-    </div>
-    <div class="visa-gallery" aria-label="Student visa approval gallery">
-      <div class="visa-gallery-track">
-        <img src="/students/visa-student-1.jpeg" alt="Alvin Jijo — BSc Nursing visa approved, University of Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-3.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-4.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-5.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-7.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-8.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-9.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <!-- Duplicate for seamless loop -->
-        <img src="/students/visa-student-1.jpeg" alt="Alvin Jijo — BSc Nursing visa approved, University of Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-3.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-4.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-5.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-7.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-8.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-        <img src="/students/visa-student-9.jpeg" alt="Student visa approved for BSc Nursing in Georgia" loading="lazy" class="visa-card" />
-      </div>
-    </div>
-    <div class="text-center mt-10 px-6">
-      <p class="text-sm text-[var(--color-text-secondary)] mb-4">Want your child's name on this wall?</p>
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
-        Get your free cost breakdown
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD FORM — with eligibility pills + benefits -->
-<section id="lead-form-container" class="py-16 lg:py-24 border-t border-[#e5e7eb]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-2xl mx-auto">
-      <!-- Eligibility pills -->
-      <div class="text-center mb-6">
-        <p class="text-xs tracking-[0.2em] uppercase text-[#6b7280] mb-3">You qualify if you have</p>
-        <div class="eligibility-pills">
-          <span class="eligibility-pill">Any 12th stream</span>
-          <span class="eligibility-pill">50% minimum</span>
-          <span class="eligibility-pill">No NEET</span>
-          <span class="eligibility-pill">No IELTS*</span>
-          <span class="eligibility-pill">Valid passport</span>
-        </div>
-      </div>
-
-      <div class="text-center mb-10">
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Free · No Obligation · 24hr Response</div>
-        <h2 class="text-3xl md:text-5xl font-medium tracking-tight mb-4 font-[family-name:var(--font-display)]">
-          GET YOUR PERSONALIZED
-          <br />
-          <span class="text-[#4b5563]">COST BREAKDOWN</span>
-        </h2>
-        <p class="text-[#4b5563] text-sm max-w-md mx-auto">Tell us your 12th marks and preferred country. We'll reply with exact universities, fees, and total cost — within 24 hours.</p>
-      </div>
-
-      <form id="lead-form" class="bg-[#ffffff] border border-[#e5e7eb] p-8 lg:p-12">
-        <!-- What you'll get -->
-        <div class="form-benefits">
-          <span class="form-benefit">Personalized university list</span>
-          <span class="form-benefit">Exact fee breakdown</span>
-          <span class="form-benefit">Scholarship options</span>
-          <span class="form-benefit">Visa timeline</span>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label for="lf-name" class="form-label">Full Name *</label>
-            <input id="lf-name" type="text" name="name" required class="form-input" placeholder="Your full name" autocomplete="name">
-          </div>
-          <div>
-            <label for="lf-phone" class="form-label">Phone *</label>
-            <input id="lf-phone" type="tel" name="phone" required class="form-input" placeholder="Your phone number" autocomplete="tel">
-          </div>
-        </div>
-        <div class="mb-6">
-          <label for="lf-email" class="form-label">Email *</label>
-          <input id="lf-email" type="email" name="email" required class="form-input" placeholder="your@email.com" autocomplete="email">
-        </div>
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label for="lf-pcb" class="form-label">12th PCB % *</label>
-            <input id="lf-pcb" type="text" name="pcb_percentage" required class="form-input" placeholder="e.g. 58% or 72%">
-          </div>
-          <div>
-            <label for="lf-program" class="form-label">Program of Interest</label>
-            <select id="lf-program" name="program_interest" class="form-select">
-              <option value="">Select program</option>
-              <option value="B.Sc Nursing">B.Sc Nursing</option>
-              <option value="GNM">GNM Diploma</option>
-              <option value="Post B.Sc">Post B.Sc Nursing</option>
-              <option value="M.Sc Nursing">M.Sc Nursing</option>
-              <option value="Other">Other / Not Sure</option>
-            </select>
-          </div>
-        </div>
-        <div class="mb-6">
-          <div>
-            <label for="lf-country" class="form-label">Preferred Country</label>
-            <select id="lf-country" name="preferred_country" class="form-select">
-              <option value="">Select country</option>
-              <option value="Georgia">🇬🇪 Georgia</option>
-              <option value="Albania">🇦🇱 Albania</option>
-              <option value="Bulgaria">🇧🇬 Bulgaria</option>
-              <option value="Malta">🇲🇹 Malta</option>
-              <option value="UK">🇬🇧 United Kingdom</option>
-              <option value="Not Sure">Not sure — advise me</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
-          SEND MY COST BREAKDOWN — FREE
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <div class="text-center mt-8">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+          Get the Full Fee Breakdown — Free
         </button>
-        <p class="text-center text-xs text-[#9ca3af] mt-4">No spam. No commission talk. Just real data and honest advice.</p>
-      </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ELIGIBILITY CHECK
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: var(--color-surface);">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Is Nursing Abroad Right for You?</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal reveal-delay-1">
+      <!-- Good fit -->
+      <div class="rounded-2xl p-8 border" style="background: rgba(5,150,105,0.04); border-color: rgba(5,150,105,0.2);">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">✅</span>
+          <h3 class="text-xl font-semibold" style="color: var(--color-success); font-family: var(--font-display);">Good fit if</h3>
+        </div>
+        <ul class="space-y-3 text-sm" style="color: var(--color-text-secondary);">
+          <li>• 12th PCB 45–60%</li>
+          <li>• Want European exposure</li>
+          <li>• Budget ₹8–12L total</li>
+          <li>• Open to working abroad</li>
+        </ul>
+      </div>
+
+      <!-- Not right fit -->
+      <div class="rounded-2xl p-8 border" style="background: rgba(190,30,45,0.03); border-color: rgba(190,30,45,0.15);">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">❌</span>
+          <h3 class="text-xl font-semibold" style="color: var(--color-brand-red); font-family: var(--font-display);">Not right if</h3>
+        </div>
+        <ul class="space-y-3 text-sm" style="color: var(--color-text-secondary);">
+          <li>• Want to practice in India only without additional registration</li>
+          <li>• Expecting India-style hostel culture</li>
+          <li>• Want a program under 3 years</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-center mt-8 text-sm" style="color: var(--color-text-secondary); max-width: 500px; margin-left: auto; margin-right: auto;">
+      If you're unsure, tell us your profile. We'll tell you exactly where you stand.
+    </p>
+
+    <div class="text-center mt-4">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+        Check If You Qualify — Takes 30 Seconds
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY NURSING ABROAD — 4 BLOCKS
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: #fafaf9;">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <!-- Block 1: Cost Reality -->
+    <div class="max-w-4xl mx-auto mb-20 reveal">
+      <h2 class="text-2xl lg:text-3xl font-semibold mb-6" style="font-family: var(--font-display); color: var(--color-text-primary);">📊 The Cost Reality</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--color-brand-navy);">
+              <th class="py-3 px-4 text-sm font-semibold">Year</th>
+              <th class="py-3 px-4 text-sm font-semibold">What's Included</th>
+              <th class="py-3 px-4 text-sm font-semibold text-right">Estimated Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">Year 1</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">Tuition + hostel + food + visa + flights</td>
+              <td class="py-3 px-4 text-sm font-semibold text-right">₹3.5–4.5L</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-3 px-4 text-sm font-semibold" style="color: var(--color-brand-red);">Year 2–4</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">Tuition + hostel + food (each year)</td>
+              <td class="py-3 px-4 text-sm font-semibold text-right">₹2–2.5L/yr</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-sm font-semibold text-lg" style="color: var(--color-brand-red); font-family: var(--font-display);">Total</td>
+              <td class="py-3 px-4 text-sm" style="color: var(--color-text-secondary);">All-in, 4 years</td>
+              <td class="py-3 px-4 text-sm font-bold text-right text-lg" style="color: var(--color-brand-red); font-family: var(--font-display);">₹8–12L</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm" style="color: var(--color-success);">No hidden costs. This is what you actually pay.</p>
+    </div>
+
+    <!-- Block 2: Career Reality -->
+    <div class="max-w-4xl mx-auto mb-20 reveal reveal-delay-1">
+      <h2 class="text-2xl lg:text-3xl font-semibold mb-6" style="font-family: var(--font-display); color: var(--color-text-primary);">💼 The Career Reality</h2>
+      <p class="text-sm mb-6" style="color: var(--color-text-secondary);">Where Gradiks nursing graduates are working today:</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="rounded-xl p-6 border" style="border-color: #e5e7eb; background: #fafaf9;">
+          <div class="text-lg mb-1">🇦🇪</div>
+          <div class="font-semibold text-sm mb-1" style="color: var(--color-text-primary);">UAE Hospital</div>
+          <div class="text-sm" style="color: var(--color-text-secondary);">AED 4,000–7,000/mo</div>
+        </div>
+        <div class="rounded-xl p-6 border" style="border-color: #e5e7eb; background: #fafaf9;">
+          <div class="text-lg mb-1">🇮🇳</div>
+          <div class="font-semibold text-sm mb-1" style="color: var(--color-text-primary);">Apollo Chennai</div>
+          <div class="text-sm" style="color: var(--color-text-secondary);">₹3–6L/yr</div>
+        </div>
+        <div class="rounded-xl p-6 border" style="border-color: #e5e7eb; background: #fafaf9;">
+          <div class="text-lg mb-1">🇬🇧</div>
+          <div class="font-semibold text-sm mb-1" style="color: var(--color-text-primary);">NHS Manchester</div>
+          <div class="text-sm" style="color: var(--color-text-secondary);">£25–35K/yr</div>
+        </div>
+      </div>
+      <p class="mt-4 text-sm" style="color: var(--color-success);">These are real graduate outcomes, not projections.</p>
+    </div>
+
+    <!-- Block 3: Registration Reality -->
+    <div class="max-w-4xl mx-auto mb-20 reveal reveal-delay-2">
+      <h2 class="text-2xl lg:text-3xl font-semibold mb-6" style="font-family: var(--font-display); color: var(--color-text-primary);">📋 The Registration Reality</h2>
+      <div class="rounded-2xl p-8 border" style="border-color: #e5e7eb; background: #fafaf9;">
+        <p class="text-sm mb-4 leading-relaxed" style="color: var(--color-text-secondary);">
+          Your European BSc Nursing degree is recognized. To practice in India, you need to register with the Indian Nursing Council (INC). This involves an application, document verification, and sometimes a short screening test — but the degree itself is valid. We guide you through every step of this process.
+        </p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+          Most consultants don't tell you this upfront. We do.
+        </p>
+      </div>
+    </div>
+
+    <!-- Block 4: Life Abroad -->
+    <div class="max-w-4xl mx-auto reveal reveal-delay-3">
+      <h2 class="text-2xl lg:text-3xl font-semibold mb-6" style="font-family: var(--font-display); color: var(--color-text-primary);">🏠 Life as a Nursing Student Abroad</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="rounded-xl p-6 border" style="border-color: #e5e7eb; background: #fafaf9;">
+          <div class="text-2xl mb-2">🛡️</div>
+          <div class="font-semibold text-sm mb-1" style="color: var(--color-text-primary);">Safe & Welcoming</div>
+          <div class="text-xs" style="color: var(--color-text-secondary);">Georgia, Albania, Malta are among the safest countries for international students</div>
+        </div>
+        <div class="rounded-xl p-6 border" style="border-color: #e5e7eb; background: #fafaf9;">
+          <div class="text-2xl mb-2">🗣️</div>
+          <div class="font-semibold text-sm mb-1" style="color: var(--color-text-primary);">English-Friendly</div>
+          <div class="text-xs" style="color: var(--color-text-secondary);">Universities teach in English. Locals in student areas speak basic English</div>
+        </div>
+        <div class="rounded-xl p-6 border" style="border-color: #e5e7eb; background: #fafaf9;">
+          <div class="text-2xl mb-2">💰</div>
+          <div class="font-semibold text-sm mb-1" style="color: var(--color-text-primary);">Living Cost</div>
+          <div class="text-xs" style="color: var(--color-text-secondary);">₹8,000–15,000/month including hostel, food, and transport</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+        Get Honest Advice for Your Profile — Free
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     UNIVERSITIES
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: var(--color-surface);">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Universities We Work With</h2>
+      <p class="section-desc mx-auto mt-4">We'll tell you which one fits your profile — not which one pays us more.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal reveal-delay-1">
+      <div class="feature-card">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xl">🇬🇪</span>
+          <h3 class="font-semibold text-lg" style="font-family: var(--font-display);">Tbilisi State Medical University</h3>
+        </div>
+        <div class="space-y-1 text-xs" style="color: var(--color-text-secondary);">
+          <p>Est. 1918</p>
+          <p>INC/WHO Recognized</p>
+          <p>$3,500/yr tuition</p>
+          <p>Feb & Sep Intake</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xl">🇦🇱</span>
+          <h3 class="font-semibold text-lg" style="font-family: var(--font-display);">University of Tirana</h3>
+        </div>
+        <div class="space-y-1 text-xs" style="color: var(--color-text-secondary);">
+          <p>Est. 1957</p>
+          <p>WHO Recognized</p>
+          <p>$2,800/yr tuition</p>
+          <p>Sep Intake</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xl">🇧🇬</span>
+          <h3 class="font-semibold text-lg" style="font-family: var(--font-display);">Medical University of Sofia</h3>
+        </div>
+        <div class="space-y-1 text-xs" style="color: var(--color-text-secondary);">
+          <p>Est. 1917</p>
+          <p>EU/WHO Recognized</p>
+          <p>$4,500/yr tuition</p>
+          <p>Sep Intake</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xl">🇲🇹</span>
+          <h3 class="font-semibold text-lg" style="font-family: var(--font-display);">University of Malta</h3>
+        </div>
+        <div class="space-y-1 text-xs" style="color: var(--color-text-secondary);">
+          <p>Est. 1592</p>
+          <p>EU/WHO Recognized</p>
+          <p>$5,500/yr tuition</p>
+          <p>Sep Intake</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+        Find Out Which University Fits You — Free
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: var(--color-brand-navy);">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline inverted">Real Students. Real Outcomes.<br>No Exaggeration.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 reveal reveal-delay-1">
+      <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="text-lg font-bold mb-3" style="color: var(--color-accent-gold);">Now working at NHS Manchester — £28K/yr</div>
+        <p class="text-sm mb-4 leading-relaxed" style="color: rgba(255,255,255,0.7);">"Gradiks didn't just help with admission — they walked me through the entire OSCE and NMC registration. I'm now a registered nurse in the UK. No one else explained this pathway so clearly."</p>
+        <div class="text-xs" style="color: rgba(255,255,255,0.5);">
+          <span class="font-semibold text-white">Ananya S.</span> · Kochi, Kerala → NHS Manchester
+        </div>
+      </div>
+      <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="text-lg font-bold mb-3" style="color: var(--color-accent-gold);">Apollo Chennai — ₹5L/yr starting</div>
+        <p class="text-sm mb-4 leading-relaxed" style="color: rgba(255,255,255,0.7);">"I wanted to work in India after my degree. Gradiks explained the INC registration process clearly — no surprises. Started at Apollo within 4 months of graduation."</p>
+        <div class="text-xs" style="color: rgba(255,255,255,0.5);">
+          <span class="font-semibold text-white">Rahul M.</span> · Calicut, Kerala → Apollo Chennai
+        </div>
+      </div>
+      <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="text-lg font-bold mb-3" style="color: var(--color-accent-gold);">DHA Dubai — AED 5,500/mo</div>
+        <p class="text-sm mb-4 leading-relaxed" style="color: rgba(255,255,255,0.7);">"Zero capitation, honest cost breakdown — everything Gradiks told me came true. From Kochi to Dubai in 4 years. My parents were skeptical at first but now they recommend Gradiks to everyone."</p>
+        <div class="text-xs" style="color: rgba(255,255,255,0.5);">
+          <span class="font-semibold text-white">Fathima K.</span> · Malappuram, Kerala → Dubai
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-accent-gold); color: var(--color-brand-navy);">
+        Get Honest Guidance Like They Did — Free
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CAREER PATHWAYS
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: #fafaf9;">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Where Does a BSc Nursing Degree Take You?</h2>
+      <p class="section-desc mx-auto mt-4">Four real pathways. Honest requirements for each.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal reveal-delay-1">
+      <div class="feature-card">
+        <div class="text-2xl mb-2">🇮🇳</div>
+        <h3 class="font-semibold mb-2" style="font-family: var(--font-display);">India</h3>
+        <div class="text-sm font-bold mb-2" style="color: var(--color-brand-red);">₹3–6L/yr</div>
+        <p class="text-xs mb-2" style="color: var(--color-text-secondary);">Apollo, Fortis, Govt hospitals</p>
+        <p class="text-xs" style="color: var(--color-text-muted);">State Nursing Council registration required</p>
+      </div>
+      <div class="feature-card">
+        <div class="text-2xl mb-2">🇬🇧</div>
+        <h3 class="font-semibold mb-2" style="font-family: var(--font-display);">United Kingdom</h3>
+        <div class="text-sm font-bold mb-2" style="color: var(--color-brand-red);">£25–35K/yr</div>
+        <p class="text-xs mb-2" style="color: var(--color-text-secondary);">NHS hospitals</p>
+        <p class="text-xs" style="color: var(--color-text-muted);">OSCE exam + NMC registration required</p>
+      </div>
+      <div class="feature-card">
+        <div class="text-2xl mb-2">🇦🇪</div>
+        <h3 class="font-semibold mb-2" style="font-family: var(--font-display);">UAE</h3>
+        <div class="text-sm font-bold mb-2" style="color: var(--color-brand-red);">AED 4,000–7,000/mo</div>
+        <p class="text-xs mb-2" style="color: var(--color-text-secondary);">DHA or MOH license</p>
+        <p class="text-xs" style="color: var(--color-text-muted);">Licensing exam required</p>
+      </div>
+      <div class="feature-card">
+        <div class="text-2xl mb-2">🇺🇸</div>
+        <h3 class="font-semibold mb-2" style="font-family: var(--font-display);">United States</h3>
+        <div class="text-sm font-bold mb-2" style="color: var(--color-brand-red);">$60–80K/yr</div>
+        <p class="text-xs mb-2" style="color: var(--color-text-secondary);">NCLEX-RN exam</p>
+        <p class="text-xs" style="color: var(--color-text-muted);">Exam required post-graduation</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+        Find Your Best Career Pathway — Free
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: var(--color-surface);">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">How Gradiks Works — 6 Steps, No Surprises</h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto reveal reveal-delay-1">
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: var(--color-brand-red); color: #fafaf9; font-family: var(--font-display);">1</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Submit your 12th marks</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">We assess your profile within 24 hours, free.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: var(--color-brand-red); color: #fafaf9; font-family: var(--font-display);">2</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Receive honest recommendation</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">We tell you which country fits — or if another country fits better.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: var(--color-brand-red); color: #fafaf9; font-family: var(--font-display);">3</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Choose your university</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">We share pros and cons of each. No preference. You decide.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: var(--color-brand-red); color: #fafaf9; font-family: var(--font-display);">4</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Application and documents</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">We guide you through every requirement — you own every document.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: var(--color-brand-red); color: #fafaf9; font-family: var(--font-display);">5</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Visa process</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">We support you through every step. You own the decision.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background: var(--color-brand-red); color: #fafaf9; font-family: var(--font-display);">6</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: var(--color-text-primary);">Pre-departure</h3>
+            <p class="text-sm" style="color: var(--color-text-secondary);">Accommodation, orientation, what to actually expect on Day 1.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+        Start Your Assessment — Free
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="py-16 lg:py-24" style="background: #fafaf9;">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Questions Every Student and Parent Asks</h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-3 reveal reveal-delay-1">
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Can I practice nursing in India with this degree?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Yes. Your European BSc Nursing degree is recognized. You need to register with the Indian Nursing Council (INC), which involves document verification and sometimes a screening test. We guide you through every step.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>What if I don't like it abroad and want to come back?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Your degree is valid in India. Complete your INC registration and you can practice at any hospital in India — Apollo, Fortis, government hospitals. Many of our graduates work in India after completing their degree abroad.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Is Gradiks a registered agency? Do you take money from universities?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Gradiks is a registered study-abroad consultancy. We do NOT take commissions from universities. Our recommendations are based on your profile and goals — not on which university pays us more. This is why we can be honest about pros and cons.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>How is this different from other consultancies?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>We tell you the full picture — costs, registration process, what exams you'll need after graduation — before you pay anything. Most consultancies hide the hard parts until after you've committed. We give you the honest assessment first.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>What happens after graduation — exactly what exams do I need?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>It depends on where you want to work: India → INC registration. UK → OSCE exam + NMC. UAE → DHA/MOH licensing exam. USA → NCLEX-RN. We explain your specific pathway based on your goals.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Can I work part-time while studying?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Part-time work policies vary by country. In Georgia and Malta, international students can work part-time with limits. In Albania and Bulgaria, restrictions are tighter. We cover this for your specific country before you go.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>What is the total cost including living expenses?</span>
+          <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Total all-in cost for 4 years ranges from ₹8–12L depending on the country. This includes tuition, hostel, food, visa, and flights. No hidden fees. We give you a full cost breakdown before you commit.</p></div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary" style="background: var(--color-brand-red);">
+        Still Have Questions? Talk to Us — Free
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     BOTTOM FORM
+     ============================================ -->
+<section id="lead-form-container" class="py-16 lg:py-24" style="background: var(--color-brand-navy);">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-8 reveal">
+        <div class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-4" style="background: rgba(255,255,255,0.1); color: var(--color-accent-gold);">
+          ⚡ September 2026 Intake — Seats Being Confirmed Now
+        </div>
+        <h2 class="section-headline inverted" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">Get Your Free Cost Breakdown</h2>
+        <p class="text-sm mt-3" style="color: rgba(255,255,255,0.6);">
+          Tell us your profile. We'll reply with exact universities, fees, and total cost — within 24 hours. No sales pitch.
+        </p>
+      </div>
+
+      <div class="rounded-2xl p-8 lg:p-10 reveal reveal-delay-1" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px);">
+        <form id="lead-form" class="space-y-4">
+          <div>
+            <label for="lf-name" class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Full Name</label>
+            <input id="lf-name" type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="Your full name">
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="lf-phone" class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Phone Number</label>
+              <input id="lf-phone" type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="+91 98765 43210">
+            </div>
+            <div>
+              <label for="lf-email" class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Email Address</label>
+              <input id="lf-email" type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="you@email.com">
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="lf-pcb" class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">12th PCB %</label>
+              <input id="lf-pcb" type="text" name="pcb_percent" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-lg" placeholder="e.g. 62%">
+            </div>
+            <div>
+              <label for="lf-program" class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Program of Interest</label>
+              <select id="lf-program" name="program" class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white text-sm rounded-lg">
+                <option value="" disabled selected style="color: #000;">Select program...</option>
+                <option value="BSc Nursing" style="color: #000;">BSc Nursing (4 years)</option>
+                <option value="GNM" style="color: #000;">GNM Diploma</option>
+                <option value="Post-Basic BSc" style="color: #000;">Post-Basic BSc Nursing</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="lf-country" class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Preferred Country</label>
+            <select id="lf-country" name="country" class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white text-sm rounded-lg">
+              <option value="" disabled selected style="color: #000;">Select country...</option>
+              <option value="Georgia" style="color: #000;">Georgia 🇬🇪</option>
+              <option value="Albania" style="color: #000;">Albania 🇦🇱</option>
+              <option value="Bulgaria" style="color: #000;">Bulgaria 🇧🇬</option>
+              <option value="Malta" style="color: #000;">Malta 🇲🇹</option>
+              <option value="UK" style="color: #000;">United Kingdom 🇬🇧</option>
+              <option value="Not sure" style="color: #000;">Not sure — help me decide</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full py-4 text-white font-semibold tracking-wide text-sm rounded-lg" style="background: var(--color-brand-red); box-shadow: 0 8px 28px rgba(190,30,45,0.3);">
+            Get My Free Cost Breakdown
+          </button>
+          <p class="text-center text-[11px]" style="color: rgba(255,255,255,0.3);">No spam. No commission talk. Just real data and honest advice.</p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
+
 <Footer />
-
-<script>
-document.getElementById('lead-form')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-
-  // Collect form data
-  const name = form.querySelector('[name="name"]').value.trim();
-  const phone = form.querySelector('[name="phone"]').value.trim();
-  const email = form.querySelector('[name="email"]').value.trim();
-  const pcb = form.querySelector('[name="pcb_percentage"]').value.trim();
-  const program = form.querySelector('[name="program_interest"]')?.value || '';
-  const country = form.querySelector('[name="preferred_country"]').value;
-  const questions = form.querySelector('[name="questions"]').value.trim();
-
-  // Ensure phone has country code
-  let formattedPhone = phone.replace(/[\s\-]/g, '');
-  if (!formattedPhone.startsWith('+')) {
-    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
-  }
-
-  // Build TeleCRM payload
-  const extraInfo = [];
-  if (pcb) extraInfo.push('12th PCB: ' + pcb);
-  if (program) extraInfo.push('Program: ' + program);
-  if (country) extraInfo.push('Country: ' + country);
-  if (questions) extraInfo.push('Questions: ' + questions);
-
-  const payload = {
-    fields: {
-      name: name,
-      phone: formattedPhone,
-      email: email,
-      lead_source: 'Google Ads',
-      facebook_campaign_name: 'Nursing Abroad',
-    }
-  };
-  if (extraInfo.length > 0) {
-    payload.fields.notes = extraInfo.join(' | ');
-  }
-
-  // Log to backend
-  window.__sendToBackend && window.__sendToBackend({ form_type: 'nursing-abroad', name, phone: formattedPhone, email, pcb_percentage: pcb, program_interest: program, preferred_country: country, questions });
-
-  // Send to TeleCRM, then redirect — redirect after response OR 1.5s timeout (whichever comes first)
-  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
-    },
-    body: JSON.stringify(payload),
-    keepalive: true,
-  }).catch(() => {});
-
-  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-
-  btn.innerHTML = 'SENDING...';
-
-  Promise.race([sent, timeout]).then(() => {
-    btn.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      REDIRECTING...
-    `;
-    btn.style.backgroundColor = '#22c55e';
-    setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
-  });
-});
-
-// Hero mobile form handler
-document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-
-  const name = form.querySelector('[name="name"]').value.trim();
-  const phone = form.querySelector('[name="phone"]').value.trim();
-  const email = form.querySelector('[name="email"]').value.trim();
-
-  let formattedPhone = phone.replace(/[\s\-]/g, '');
-  if (!formattedPhone.startsWith('+')) {
-    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
-  }
-
-  const payload = {
-    fields: {
-      name: name,
-      phone: formattedPhone,
-      email: email,
-      lead_source: 'Google Ads',
-      facebook_campaign_name: 'Nursing Abroad',
-    }
-  };
-
-  // Log to backend
-  window.__sendToBackend && window.__sendToBackend({ form_type: 'hero-nursing-abroad', name, phone: formattedPhone, email });
-
-  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
-    },
-    body: JSON.stringify(payload),
-    keepalive: true,
-  }).catch(() => {});
-
-  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-  btn.innerHTML = 'SENDING...';
-
-  Promise.race([sent, timeout]).then(() => {
-    btn.innerHTML = 'REDIRECTING...';
-    btn.style.backgroundColor = '#22c55e';
-    setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
-  });
-});
-</script>
 </MainLayout>
