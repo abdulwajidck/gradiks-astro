@@ -160,13 +160,15 @@
     position: absolute;
     bottom: -1px;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 1px;
     background: var(--color-brand-red);
-    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .footer-col-list a:hover { color: var(--color-brand-red); }
-  .footer-col-list a:hover::after { width: 100%; }
+  .footer-col-list a:hover::after { transform: scaleX(1); }
 
   .footer-bottom {
     border-top: 1px solid #f1f1f1;

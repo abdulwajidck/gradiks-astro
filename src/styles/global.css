@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* 2026 Design System
-   Brand: Red #be1e2d, Navy #0d1829, Black #000000, Off White #f5f5f7
-   Fonts: Geist (Primary), Poppins (Display fallback), Inter (Body fallback)
+/* 2026 Design System — Impeccable-audited
+   Brand: Red #be1e2d, Navy #0d1829, Near-black #080d14, Off-white #fafaf9
+   Fonts: Poppins (Display), Figtree (Body), Geist Mono (Mono)
    Design DNA: Apple cinema + Stripe trust + Vercel precision
 */
 @theme {
@@ -11,7 +11,7 @@
   --color-brand-red-light: #fce8ea;
   --color-brand-navy: #0d1829;
   --color-brand-navy-light: #1a2a45;
-  --color-brand-black: #000000;
+  --color-brand-black: #080d14;
   --color-brand-offwhite: #f5f5f7;
 
   --color-text-primary: #0d0d0d;
@@ -25,13 +25,13 @@
   --color-surface: #f8f9fb;
   --color-surface-alt: #f5f5f7;
   --color-surface-dark: #0d1829;
-  --color-surface-card: #ffffff;
+  --color-surface-card: #fafaf9;
 
   --color-success: #059669;
   --color-accent-gold: #f59e0b;
 
-  --font-display: 'Poppins', 'Geist', system-ui, sans-serif;
-  --font-body: 'Inter', 'Geist', system-ui, sans-serif;
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, monospace;
 }
 
@@ -49,7 +49,7 @@
   body {
     font-family: var(--font-body);
     color: var(--color-text-primary);
-    background: #ffffff;
+    background: #fafaf9;
     line-height: 1.6;
     overflow-x: hidden;
   }
@@ -153,7 +153,7 @@
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
 }
-.section-headline.inverted { color: #ffffff; }
+.section-headline.inverted { color: #fafaf9; }
 
 .section-desc {
   font-size: 1.0625rem;
@@ -429,7 +429,7 @@
    DATA CARD (Stripe-style trust panel)
    ============================================ */
 .data-card {
-  background: #ffffff;
+  background: #fafaf9;
   border-radius: 10px;
   overflow: hidden;
   box-shadow:
@@ -464,7 +464,7 @@
   background: #f1f1f1;
 }
 .data-grid-item {
-  background: #ffffff;
+  background: #fafaf9;
   padding: 1.25rem 1rem;
   text-align: center;
 }
@@ -517,7 +517,7 @@
    FEATURE CARDS
    ============================================ */
 .feature-card {
-  background: #ffffff;
+  background: #fafaf9;
   border-radius: 10px;
   padding: 2rem;
   box-shadow:
@@ -558,7 +558,7 @@
    TESTIMONIALS
    ============================================ */
 .testimonial-card {
-  background: #ffffff;
+  background: #fafaf9;
   border: 1px solid #f1f1f1;
   border-radius: 12px;
   padding: 2rem;
@@ -630,7 +630,7 @@
 .form-input {
   width: 100%;
   padding: 0.875rem 1rem;
-  background: #ffffff;
+  background: #fafaf9;
   border: 1.5px solid #e5e7eb;
   border-radius: 8px;
   font-family: var(--font-body);
@@ -662,7 +662,7 @@
 .faq-item {
   border: 1px solid #f1f1f1;
   border-radius: 10px;
-  background: #ffffff;
+  background: #fafaf9;
   overflow: hidden;
   transition: box-shadow 0.2s ease;
 }
@@ -693,15 +693,17 @@
 }
 .faq-item.open .faq-chevron { transform: rotate(180deg); }
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.3s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 0 1.5rem;
 }
+.faq-answer > * {
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
 .faq-item.open .faq-answer {
-  max-height: 300px;
-  padding: 0 1.5rem 1.5rem;
+  grid-template-rows: 1fr;
 }
 .faq-answer p {
   font-size: 0.875rem;
