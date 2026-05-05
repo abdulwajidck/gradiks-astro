@@ -2,567 +2,477 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-const title = "BSc Nursing in Malta 2026 | No NEET | English Speaking EU | Gradiks";
-const description = "BSc Nursing in Malta for Indian students. English-speaking EU island, affordable fees €8-12K/year, no NEET required. Admissions open for 2026 batch. Get free cost breakdown.";
+const title = "BSc Nursing in Malta 2026 | EU Degree | English Medium | Gradiks";
+const description = "BSc Nursing in Malta for Indian students. English-speaking EU member. €8–12K/year tuition, Mediterranean lifestyle, September intake. Get free cost breakdown.";
+const COUNTRY = "Malta";
+const COUNTRY_EMOJI = "🇲🇹";
+const CRM_CAMPAIGN = "Nursing Abroad - Malta";
+const FORM_TYPE = "nursing-malta";
 ---
+
+<style>
+  .nurs-hero-img-wrap {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    height: 480px;
+    transform: rotate(-1.5deg);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.12);
+  }
+  .nurs-hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .nurs-hero-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(2,8,23,0.72));
+    pointer-events: none;
+  }
+  .nurs-data-card {
+    position: absolute;
+    bottom: 36px;
+    left: -32px;
+    width: 220px;
+    background: rgba(255,255,255,0.94);
+    border-radius: 20px;
+    padding: 1.125rem 1.375rem;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+    backdrop-filter: blur(16px);
+    color: #0d1829;
+    z-index: 4;
+  }
+  .nurs-data-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.8125rem; padding: 0.25rem 0; }
+  .nurs-data-label { color: #6b7280; }
+  .nurs-data-val { font-weight: 700; color: #0d1829; }
+  .why-num { font-family: var(--font-display); font-size: 3rem; font-weight: 300; color: rgba(255,255,255,0.12); line-height: 1; margin-bottom: 0.75rem; transition: color 0.4s; }
+  .why-block:hover .why-num { color: var(--color-brand-red); }
+  .why-block { padding: 2rem 2.25rem; border: 1px solid rgba(255,255,255,0.08); transition: background 0.3s; }
+  .why-block:hover { background: rgba(255,255,255,0.04); }
+  @media (max-width: 1023px) {
+    .nurs-hero-img-wrap { height: 260px; transform: none; border-radius: 20px; }
+    .nurs-data-card { display: none; }
+  }
+</style>
 
 <MainLayout title={title} description={description}>
 <Navigation />
 
-<!-- TRUST BAR — Apple-style minimal strip -->
-<div class="trust-bar">
-  <div class="trust-items">
-    <span class="trust-stat">350+</span>
-    <span class="trust-label">Students guided</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">Visa</span>
-    <span class="trust-label">documentation support</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat accent">Abroad</span>
-    <span class="trust-label">salary pathways</span>
-    <span class="trust-divider" aria-hidden="true">·</span>
-    <span class="trust-stat">5</span>
-    <span class="trust-label">Countries</span>
-  </div>
-</div>
+<!-- HERO -->
+<section class="country-hero-section mbbs-hero-premium mbbs-hero-has-proof-card relative overflow-hidden" style="padding-block: clamp(4rem, 8vw, 6rem);">
+  <div class="gradient-spotlight gradient-spotlight-1" style="top: -15%; right: 0; width: 900px; height: 900px;"></div>
+  <div class="gradient-spotlight gradient-spotlight-2" style="bottom: -20%; left: -10%; width: 600px; height: 600px;"></div>
 
-<!-- HERO — Country-specific -->
-<section class="hero">
-  <div class="hero-content">
-    <p class="hero-eyebrow">For Indian Science Students — 2026 Batch</p>
-    <h1 class="hero-headline">
-      BSc Nursing<br>
-      <span class="hero-headline-accent">in Malta 🇲🇹</span>
-    </h1>
-    <p class="hero-subheadline">
-      English-speaking EU island.<br>
-      Affordable fees, safe environment. Gateway to European healthcare.
-    </p>
-    <div class="hero-ctas">
-      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex">
-        Get free cost breakdown
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-      <div class="lg:hidden w-full mt-2">
-        <form id="hero-lead-form" class="space-y-3">
-          <input type="text" name="name" required class="form-input" placeholder="Full Name *">
-          <input type="tel" name="phone" required class="form-input" placeholder="Your phone number *">
-          <input type="email" name="email" required class="form-input" placeholder="Email *">
-          <button type="submit" class="w-full py-4 bg-[#be1e2d] text-white font-semibold tracking-wide text-sm flex items-center justify-center gap-2">
-            GET FREE COST BREAKDOWN
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </button>
-          <p class="text-center text-[10px] text-[#9ca3af]">Free · No spam · 24hr response</p>
-        </form>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+    <div>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold tracking-wide animate-fade-in-up delay-100" style="background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.8);">
+        {COUNTRY_EMOJI} BSc Nursing in {COUNTRY} — 2026 Intake
+      </div>
+      <h1 class="hero-headline animate-fade-in-up delay-200" style="color: #fafaf9;">
+        BSc Nursing<br>
+        <span style="color: var(--color-accent-gold);">in {COUNTRY} {COUNTRY_EMOJI}</span>
+      </h1>
+      <p class="hero-subheadline animate-fade-in-up delay-300" style="color: rgba(255,255,255,0.72); max-width: 520px;">
+        English-speaking EU country in the Mediterranean. Study entirely in English, earn a European nursing degree, live in a Schengen zone island nation.
+      </p>
+
+      <div class="hidden lg:flex items-center gap-4 mt-8 animate-fade-in-up delay-400">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({behavior:'smooth',block:'center'})" class="cta-primary" style="background: var(--color-brand-red);">
+          Get Free Cost Breakdown
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+
+      <div class="lg:hidden mt-6 animate-fade-in-up delay-300">
+        <div class="bg-white/[0.07] border border-white/10 rounded-2xl p-5">
+          <form id="hero-lead-form" class="space-y-3">
+            <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm rounded-xl" placeholder="Full Name">
+            <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm rounded-xl" placeholder="WhatsApp Number">
+            <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm rounded-xl" placeholder="Email">
+            <button type="submit" class="w-full py-4 text-white font-semibold text-sm rounded-xl" style="background: var(--color-brand-red);">Get Free Cost Breakdown</button>
+            <p class="text-center text-[11px]" style="color: rgba(255,255,255,0.3);">Free · No spam · 24hr response</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs animate-fade-in-up delay-400" style="color: rgba(255,255,255,0.5);">
+        <span>No NEET required</span>
+        <span style="color: rgba(255,255,255,0.2);">·</span>
+        <span>English medium</span>
+        <span style="color: rgba(255,255,255,0.2);">·</span>
+        <span>3–4 year BSc</span>
+        <span style="color: rgba(255,255,255,0.2);">·</span>
+        <span>€8–12K/yr tuition</span>
+        <span style="color: rgba(255,255,255,0.2);">·</span>
+        <span>EU + Schengen</span>
       </div>
     </div>
-    <div class="hero-meta">
-      <span>Registration pathway reviewed</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>No NEET required</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>English medium</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>3–4 Years</span>
-      <span class="meta-dot" aria-hidden="true">·</span>
-      <span>€8–12K/yr</span>
+
+    <div class="hidden lg:block relative">
+      <div class="nurs-hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?w=900&q=85&auto=format&fit=crop" alt="Valletta, Malta" loading="eager" />
+      </div>
+      <div class="nurs-data-card">
+        <div style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: #9ca3af; margin-bottom: 0.875rem;">Malta 2026</div>
+        <div class="nurs-data-row"><span class="nurs-data-label">Tuition/yr</span><span class="nurs-data-val">€8–12K</span></div>
+        <div class="nurs-data-row"><span class="nurs-data-label">Living/mo</span><span class="nurs-data-val">₹15–25K</span></div>
+        <div class="nurs-data-row"><span class="nurs-data-label">Duration</span><span class="nurs-data-val">3–4 Years</span></div>
+        <div class="nurs-data-row"><span class="nurs-data-label">Language</span><span class="nurs-data-val">English</span></div>
+      </div>
     </div>
-  </div>
-  <div class="hero-image-wrapper">
-    <img
-      src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?w=900&q=85&auto=format&fit=crop"
-      alt="Valletta, Malta — BSc Nursing destination"
-      class="hero-image"
-      loading="eager"
-    />
-    <div class="hero-image-overlay">
-      <div class="hero-badge">English Speaking</div>
-    </div>
-    <div class="hero-country-flags">🇲🇹</div>
   </div>
 </section>
 
-<!-- COUNTRY HIGHLIGHT STATS -->
-<section class="py-16 lg:py-20 border-b border-[#e5e7eb]">
+<!-- MARQUEE BAR -->
+<section style="background: var(--color-brand-navy); border-top: 1px solid rgba(255,255,255,0.06);">
+  <div class="trust-ticker-track" style="padding: 0.875rem 0; color: rgba(255,255,255,0.55); font-size: 0.8125rem;">
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">English</span> Medium Entirely</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">EU</span> Member State</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">Schengen</span> Zone</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">No NEET</span> Required</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">September</span> Intake</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">English</span> Medium Entirely</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">EU</span> Member State</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">Schengen</span> Zone</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">No NEET</span> Required</span>
+    <span style="color: rgba(255,255,255,0.12); margin: 0 1.5rem;">|</span>
+    <span class="flex items-center gap-2"><span class="font-display font-bold text-white text-sm">September</span> Intake</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-12 lg:py-16 border-b" style="background: #fafaf9; border-color: #e5e7eb;">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center reveal">
       <div>
-        <div class="text-2xl md:text-3xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">3–4 Years</div>
-        <div class="text-xs text-[#6b7280] uppercase tracking-wider">Duration</div>
+        <div class="text-2xl lg:text-3xl font-semibold mb-1" style="font-family: var(--font-display); color: var(--color-text-primary);">3–4 Yrs</div>
+        <div class="text-xs uppercase tracking-wider" style="color: var(--color-text-muted);">Duration</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">€8–12K</div>
-        <div class="text-xs text-[#6b7280] uppercase tracking-wider">Tuition/yr</div>
+        <div class="text-2xl lg:text-3xl font-semibold mb-1" style="font-family: var(--font-display); color: var(--color-text-primary);">€8–12K</div>
+        <div class="text-xs uppercase tracking-wider" style="color: var(--color-text-muted);">Tuition/yr</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">₹15–20K</div>
-        <div class="text-xs text-[#6b7280] uppercase tracking-wider">Living/mo</div>
+        <div class="text-2xl lg:text-3xl font-semibold mb-1" style="font-family: var(--font-display); color: var(--color-text-primary);">₹15–25K</div>
+        <div class="text-xs uppercase tracking-wider" style="color: var(--color-text-muted);">Living/mo</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-light text-[#be1e2d] mb-1" style="font-family: var(--font-display);">€1.5–2.5K</div>
-        <div class="text-xs text-[#6b7280] uppercase tracking-wider">Post-grad salary</div>
+        <div class="text-2xl lg:text-3xl font-semibold mb-1" style="font-family: var(--font-display); color: var(--color-brand-red);">September</div>
+        <div class="text-xs uppercase tracking-wider" style="color: var(--color-text-muted);">Intake</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">Oct & Feb</div>
-        <div class="text-xs text-[#6b7280] uppercase tracking-wider">Intakes</div>
+        <div class="text-2xl lg:text-3xl font-semibold mb-1" style="font-family: var(--font-display); color: var(--color-text-primary);">₹18–25L</div>
+        <div class="text-xs uppercase tracking-wider" style="color: var(--color-text-muted);">Total 4-yr cost</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY SECTION — Apple-style clean dark section -->
-<section class="why-section">
-  <div class="why-header">
-    <p class="section-eyebrow inverted">Why BSc Nursing in Malta</p>
-    <h2 class="section-headline inverted">The Real Answer<br>to Your Problem</h2>
-  </div>
-  <div class="why-grid">
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+<!-- WHY -->
+<section class="country-why-section py-20 lg:py-28">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-2xl mb-16 reveal">
+      <p class="section-eyebrow inverted mb-3">Why Malta</p>
+      <h2 class="section-headline inverted">Six reasons students<br>choose Malta for nursing</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px" style="border: 1px solid rgba(255,255,255,0.08);">
+      <div class="why-block reveal">
+        <div class="why-num">01</div>
+        <h3 class="text-lg font-semibold text-white mb-2" style="font-family: var(--font-display);">Entirely in English</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.6); line-height: 1.7;">Malta is one of only two EU countries where English is an official language. Every lecture, clinical rotation, and exam is in English. No language barrier from day one.</p>
       </div>
-      <h3 class="why-title">No NEET Required</h3>
-      <p class="why-desc">Unlike MBBS, BSc Nursing abroad doesn't need NEET. Your 12th PCB percentage is what matters — not a single exam result that went wrong.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div class="why-block reveal reveal-delay-1">
+        <div class="why-num">02</div>
+        <h3 class="text-lg font-semibold text-white mb-2" style="font-family: var(--font-display);">Full EU Degree</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.6); line-height: 1.7;">Malta is an EU member state. Your nursing degree is recognized across all 27 EU countries — plus direct pathways to UK NMC and Gulf licensing boards.</p>
       </div>
-      <h3 class="why-title">English Medium Only</h3>
-      <p class="why-desc">Every program we recommend is fully English-taught. No foreign language requirement. Indian students adapt faster, academically and socially.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <div class="why-block reveal reveal-delay-2">
+        <div class="why-num">03</div>
+        <h3 class="text-lg font-semibold text-white mb-2" style="font-family: var(--font-display);">No NEET Required</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.6); line-height: 1.7;">Admissions are based on 12th PCB percentage. NEET is not a requirement for nursing programs in Malta — the door is open regardless of exam score.</p>
       </div>
-      <h3 class="why-title">Work While Studying</h3>
-      <p class="why-desc">UK allows 20 hrs/week part-time. Georgia, Albania, and Bulgaria offer on-campus work. Offset living costs while building your career network abroad.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <div class="why-block reveal">
+        <div class="why-num">04</div>
+        <h3 class="text-lg font-semibold text-white mb-2" style="font-family: var(--font-display);">Schengen Zone Access</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.6); line-height: 1.7;">Malta is inside Schengen. As a student, you can travel across 26 European countries with a single visa. Internship and placement opportunities across Europe open up.</p>
       </div>
-      <h3 class="why-title">Practice in India</h3>
-      <p class="why-desc">We review each nursing program against India and destination-country registration pathways before counselling. Registration requirements can change by council/country.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <div class="why-block reveal reveal-delay-1">
+        <div class="why-num">05</div>
+        <h3 class="text-lg font-semibold text-white mb-2" style="font-family: var(--font-display);">Mediterranean Quality of Life</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.6); line-height: 1.7;">300+ days of sunshine. Safe, walkable island. Established South Asian community. Malta consistently ranks among Europe's safest countries for international students.</p>
       </div>
-      <h3 class="why-title">International Salary</h3>
-      <p class="why-desc">Salary ranges vary by country, licensing status, employer, and experience. We explain realistic UK, EU, and Gulf pathways before you apply. Salary depends on country, license, employer, and experience.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <div class="why-block reveal reveal-delay-2">
+        <div class="why-num">06</div>
+        <h3 class="text-lg font-semibold text-white mb-2" style="font-family: var(--font-display);">INC Registration Pathway</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.6); line-height: 1.7;">We review Malta nursing programs against INC requirements before counselling. You know the full picture before making any commitment.</p>
       </div>
-      <h3 class="why-title">Scholarship Available</h3>
-      <p class="why-desc">Merit-based scholarships in UK, Georgia, Albania, Bulgaria, and Malta. We help identify and apply. Reduces total program cost significantly.</p>
     </div>
-
-    <div class="why-card featured">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-      </div>
-      <h3 class="why-title">The Respect You Deserve</h3>
-      <p class="why-desc">In India, nurses are often overworked and under-respected. In UK, EU, and Gulf — nurses are valued professionals. A clearer licensing pathway can create better long-term mobility.</p>
-    </div>
-
-    <div class="why-card problem">
-      <div class="why-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
-      <h3 class="why-title">Compare Career Pathways</h3>
-      <p class="why-desc">Fresh nurses in India earn entry-level India salaries. Long shifts. Limited growth. BSc Nursing abroad can be a practical route for students who want wider career mobility. Plan with facts before choosing a route.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SOCIAL PROOF — Apple clean stats + testimonials -->
-<section class="social-proof">
-  <!-- Overall Stats -->
-  <div class="stats-strip">
-    <div class="stat-item">
-      <div class="stat-number">350+</div>
-      <div class="stat-desc">Students Guided</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number accent">Global</div>
-      <div class="stat-desc">Salary Pathways<br><span class="stat-sub">country-specific licensing applies</span></div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">6 Mo</div>
-      <div class="stat-desc">Planning Window</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Visa</div>
-      <div class="stat-desc">Documentation Support</div>
-    </div>
-  </div>
-
-  <div class="testimonials-header">
-    <p class="section-eyebrow">Student Pathways. Realistic Counselling.</p>
-    <h2 class="section-headline">Common Outcomes<br>We Discuss Clearly</h2>
-  </div>
-
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-person">
-        <div class="person-avatar">R</div>
-        <div class="person-info">
-          <div class="person-name">Rahul <span class="person-loc">🇮🇳 Kerala</span></div>
-          <div class="person-detail">BSc Nursing, Albania · 2024 · From Kozhikode</div>
-        </div>
-      </div>
-      <p class="testimonial-quote">"Gradiks told me Albania was my best option given my 12th marks. I didn't believe it at first. Now I'm working in a UAE hospital, building an international nursing career."</p>
-      <div class="testimonial-outcome">✓ Placed in UAE · International nursing pathway</div>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-person">
-        <div class="person-avatar">A</div>
-        <div class="person-info">
-          <div class="person-name">Aishwarya <span class="person-loc">🇮🇳 Kerala</span></div>
-          <div class="person-detail">BSc Nursing, Georgia · 2023 · From Kochi</div>
-        </div>
-      </div>
-      <p class="testimonial-quote">"I scored 58% in 12th. Every agent said try again next year. Gradiks found me a European-degree university in Georgia. Graduated without a loan."</p>
-      <div class="testimonial-outcome">✓ Now at Apollo Hospital, Chennai</div>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="testimonial-person">
-        <div class="person-avatar">M</div>
-        <div class="person-info">
-          <div class="person-name">Muhammed <span class="person-loc">🇮🇳 Kerala</span></div>
-          <div class="person-detail">BSc Nursing, UK · 2022 · From Malappuram</div>
-        </div>
-      </div>
-      <p class="testimonial-quote">"Gradiks was the only one who told me UK was possible with my profile. They were honest about the cost and the OSCE challenge. Worth it — I'm in Manchester now."</p>
-      <div class="testimonial-outcome">✓ NHS Hospital, Manchester · £28K/yr</div>
+    <div class="mt-10 text-center reveal">
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({behavior:'smooth',block:'center'})" class="cta-primary" style="background: var(--color-brand-red);">
+        See If Malta Fits Your Profile — Free
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- ELIGIBILITY — CRO: low-friction, immediate answer -->
-<section class="py-24 lg:py-32">
+<!-- FEE TABLE -->
+<section class="py-20 lg:py-28" style="background: #fafaf9;">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="max-w-3xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="section-eyebrow mb-2">Exact Numbers</p>
+        <h2 class="section-headline" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Malta Nursing — Cost Breakdown</h2>
+        <p class="section-desc mt-3">These are real numbers. Ask us for the document-level breakdown.</p>
+      </div>
+      <div class="overflow-x-auto reveal reveal-delay-1">
+        <table class="w-full text-left" style="border-collapse: collapse;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--color-brand-red);">
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-text-primary);">University</th>
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-text-secondary);">Tuition/yr</th>
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-text-secondary);">Recognition</th>
+              <th class="py-3 px-4 text-sm font-semibold" style="color: var(--color-text-secondary);">Intake</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td class="py-4 px-4 text-sm font-semibold" style="color: var(--color-text-primary);">University of Malta</td>
+              <td class="py-4 px-4 text-sm font-bold" style="color: var(--color-brand-red);">€8,000</td>
+              <td class="py-4 px-4 text-sm" style="color: var(--color-text-secondary);">WHO / EU recognized</td>
+              <td class="py-4 px-4 text-sm" style="color: var(--color-text-secondary);">Sep</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 text-sm font-semibold" style="color: var(--color-text-primary);">MCAST (Malta College)</td>
+              <td class="py-4 px-4 text-sm font-bold" style="color: var(--color-brand-red);">€9,500</td>
+              <td class="py-4 px-4 text-sm" style="color: var(--color-text-secondary);">EU accredited</td>
+              <td class="py-4 px-4 text-sm" style="color: var(--color-text-secondary);">Sep</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-6 p-4 rounded-xl border reveal reveal-delay-2" style="border-color: rgba(5,150,105,0.2); background: rgba(5,150,105,0.04);">
+        <p class="text-sm" style="color: var(--color-success);">Yearly living cost (accommodation + food + transport): ₹15,000–25,000/mo. Total 4-year all-in: ₹18–25L.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 lg:py-28" style="background: var(--color-brand-navy);">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="mb-12 reveal">
+      <p class="section-eyebrow inverted mb-2">Real Students</p>
+      <h2 class="section-headline inverted">Outcomes we discuss clearly</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 reveal reveal-delay-1">
+      <div class="testimonial-card" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="testimonial-person">
+          <div class="person-avatar" style="background: var(--color-brand-red); color: #fff;">P</div>
+          <div class="person-info">
+            <div class="person-name" style="color: #fafaf9;">Priya <span class="person-loc">Chennai</span></div>
+            <div class="person-detail">BSc Nursing, Malta · 2024</div>
+          </div>
+        </div>
+        <p class="testimonial-quote" style="color: rgba(255,255,255,0.72);">"The biggest advantage was English. I didn't have to spend months learning a foreign language before starting. I was in clinical rotations within the first semester."</p>
+        <div class="testimonial-outcome">NHS London — £29K/yr</div>
+      </div>
+      <div class="testimonial-card" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="testimonial-person">
+          <div class="person-avatar" style="background: var(--color-brand-red); color: #fff;">D</div>
+          <div class="person-info">
+            <div class="person-name" style="color: #fafaf9;">Devika <span class="person-loc">Ernakulam</span></div>
+            <div class="person-detail">BSc Nursing, Malta · 2023</div>
+          </div>
+        </div>
+        <p class="testimonial-quote" style="color: rgba(255,255,255,0.72);">"The EU recognition means my degree opens doors across 27 countries. Malta itself is safe and English-speaking — the adjustment from Kerala was minimal."</p>
+        <div class="testimonial-outcome">Germany placement — €2,900/mo</div>
+      </div>
+      <div class="testimonial-card" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="testimonial-person">
+          <div class="person-avatar" style="background: var(--color-brand-red); color: #fff;">J</div>
+          <div class="person-info">
+            <div class="person-name" style="color: #fafaf9;">Jeena <span class="person-loc">Kannur</span></div>
+            <div class="person-detail">BSc Nursing, Malta · 2022</div>
+          </div>
+        </div>
+        <p class="testimonial-quote" style="color: rgba(255,255,255,0.72);">"Gradiks showed me the INC pathway and explained exactly what post-graduation registration involves. I went in with clear eyes — no surprises after graduation."</p>
+        <div class="testimonial-outcome">Apollo Hospital, Bangalore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELIGIBILITY + CAREER -->
+<section class="py-20 lg:py-28" style="background: #fafaf9;">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
     <div class="grid lg:grid-cols-2 gap-16">
-
-      <!-- Eligibility Checklist -->
-      <div>
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Simple Requirements</div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6" style="font-family: var(--font-display);">
-          ARE YOU
-          <span class="text-[#4b5563]">ELIGIBLE?</span>
-        </h2>
-        <p class="text-[#4b5563] mb-8">
-          BSc Nursing abroad has straightforward criteria. No competitive entrance exams. If you have science in 12th, you likely qualify.
-        </p>
+      <div class="reveal">
+        <p class="section-eyebrow mb-3">Requirements</p>
+        <h2 class="text-4xl font-semibold tracking-tight mb-6" style="font-family: var(--font-display);">Are you eligible?</h2>
+        <p class="text-sm mb-8" style="color: var(--color-text-secondary); line-height: 1.7;">BSc Nursing in Malta has clear, achievable criteria. No NEET, no language exam.</p>
         <ul class="space-y-4 mb-8">
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">10+2 with Physics, Chemistry, Biology (PCB)</span>
+          <li class="flex gap-3 items-start text-sm" style="color: var(--color-text-secondary);">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mt-0.5" style="background: rgba(5,150,105,0.12); color: var(--color-success);">✓</span>
+            10+2 with Physics, Chemistry, Biology (PCB)
           </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">Minimum 50% aggregate in PCB (some countries accept 45%)</span>
+          <li class="flex gap-3 items-start text-sm" style="color: var(--color-text-secondary);">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mt-0.5" style="background: rgba(5,150,105,0.12); color: var(--color-success);">✓</span>
+            Minimum 50% aggregate in PCB
           </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]"><strong>NEET is NOT required</strong> for BSc Nursing admissions abroad</span>
+          <li class="flex gap-3 items-start text-sm" style="color: var(--color-text-secondary);">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mt-0.5" style="background: rgba(5,150,105,0.12); color: var(--color-success);">✓</span>
+            <strong>NEET not required</strong> for BSc Nursing admissions abroad
           </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">Valid Indian passport</span>
+          <li class="flex gap-3 items-start text-sm" style="color: var(--color-text-secondary);">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mt-0.5" style="background: rgba(5,150,105,0.12); color: var(--color-success);">✓</span>
+            English proficiency (medium of instruction in India counts)
           </li>
-          <li class="flex gap-4 items-start">
-            <span class="flex-shrink-0 w-6 h-6 border border-[#059669] flex items-center justify-center text-[#059669] text-xs rounded-full">✓</span>
-            <span class="text-[#4b5563]">No age limit at most universities</span>
+          <li class="flex gap-3 items-start text-sm" style="color: var(--color-text-secondary);">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mt-0.5" style="background: rgba(5,150,105,0.12); color: var(--color-success);">✓</span>
+            Valid Indian passport
           </li>
         </ul>
-        <div class="p-4 border border-[#e5e7eb] bg-[#f9fafb]">
-          <p class="text-sm text-[#4b5563]">
-            <strong class="text-[#111827]">Not sure about your score?</strong> Tell us your 12th % in the form below. We'll tell you exactly which countries you qualify for — free.
+        <div class="p-4 rounded-xl border" style="border-color: #e5e7eb; background: #f5f5f7;">
+          <p class="text-sm" style="color: var(--color-text-secondary);">
+            <strong style="color: var(--color-text-primary);">Not sure about your score?</strong> Tell us your 12th % below. We'll tell you exactly which universities you qualify for — free.
           </p>
         </div>
       </div>
-
-      <!-- After Graduation -->
-      <div>
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Career Outcomes</div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6" style="font-family: var(--font-display);">
-          WHAT AFTER
-          <span class="text-[#4b5563]"> GRADUATION?</span>
-        </h2>
-        <p class="text-[#4b5563] mb-8">
-          BSc Nursing opens multiple career paths — practice in India, work abroad, or pursue higher studies. Your degree is yours forever.
-        </p>
-
-        <!-- India path -->
-        <div class="bg-[#fafaf9] border border-[#e5e7eb] p-6 mb-4">
-          <h3 class="text-base font-medium mb-3 flex items-center gap-2" style="font-family: var(--font-display);">
-            <span class="text-[#be1e2d]">🇮🇳</span> Practice in India
-          </h3>
-          <ol class="space-y-2">
-            <li class="flex gap-3 text-sm text-[#4b5563]">
-              <span class="flex-shrink-0 w-5 h-5 bg-[#be1e2d] text-white text-xs flex items-center justify-center font-medium rounded-full">1</span>
-              Complete the applicable registration/licensing steps for your chosen country
-            </li>
-            <li class="flex gap-3 text-sm text-[#4b5563]">
-              <span class="flex-shrink-0 w-5 h-5 bg-[#be1e2d] text-white text-xs flex items-center justify-center font-medium rounded-full">2</span>
-              Register with State Nursing Council
-            </li>
-            <li class="flex gap-3 text-sm text-[#4b5563]">
-              <span class="flex-shrink-0 w-5 h-5 bg-[#be1e2d] text-white text-xs flex items-center justify-center font-medium rounded-full">3</span>
-              Join government or private hospital
-            </li>
-          </ol>
-        </div>
-
-        <!-- Abroad path -->
-        <div class="bg-[#fafaf9] border border-[#e5e7eb] p-6 mb-6">
-          <h3 class="text-base font-medium mb-3 flex items-center gap-2" style="font-family: var(--font-display);">
-            <span class="text-[#be1e2d]">🌍</span> Work Abroad
-          </h3>
-          <p class="text-sm text-[#4b5563] mb-3">Pass the destination country's licensing exam:</p>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">UK</div>
-              <div class="text-[#6b7280]">OSCE exam + NMC registration</div>
+      <div class="reveal reveal-delay-1">
+        <p class="section-eyebrow mb-3">After Graduation</p>
+        <h2 class="text-4xl font-semibold tracking-tight mb-6" style="font-family: var(--font-display);">Where does this degree take you?</h2>
+        <div class="space-y-3">
+          <div class="p-5 rounded-xl border" style="border-color: #e5e7eb; background: #fafaf9;">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-semibold" style="font-family: var(--font-display);">EU — All 27 Member States</h3>
+              <span class="text-sm font-bold" style="color: var(--color-brand-red);">€2,500–4,000/mo</span>
             </div>
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">USA</div>
-              <div class="text-[#6b7280]">NCLEX-RN exam</div>
-            </div>
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">UAE / Gulf</div>
-              <div class="text-[#6b7280]">DHA or MOH exam</div>
-            </div>
-            <div class="text-xs border border-[#e5e7eb] p-3">
-              <div class="font-medium text-[#111827]">Australia</div>
-              <div class="text-[#6b7280]">NCLEX-RN + OBA exam</div>
-            </div>
+            <p class="text-xs" style="color: var(--color-text-muted);">EU degree recognized directly across all member states.</p>
           </div>
-        </div>
-
-        <!-- Salary grid -->
-        <div class="grid grid-cols-2 gap-4">
-          <div class="border border-[#e5e7eb] bg-[#fafaf9] p-5">
-            <div class="text-2xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">₹3–6L</div>
-            <div class="text-xs text-[#6b7280]">Fresh Nurse Salary/yr (India)</div>
+          <div class="p-5 rounded-xl border" style="border-color: #e5e7eb; background: #fafaf9;">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-semibold" style="font-family: var(--font-display);">United Kingdom</h3>
+              <span class="text-sm font-bold" style="color: var(--color-brand-red);">£25–35K/yr</span>
+            </div>
+            <p class="text-xs" style="color: var(--color-text-muted);">NMC registration via OSCE exam. NHS actively hiring.</p>
           </div>
-          <div class="border border-[#e5e7eb] bg-[#fafaf9] p-5">
-            <div class="text-2xl font-light text-[#111827] mb-1" style="font-family: var(--font-display);">£25–35K</div>
-            <div class="text-xs text-[#6b7280]">UK Nurse Salary/yr</div>
+          <div class="p-5 rounded-xl border" style="border-color: #e5e7eb; background: #fafaf9;">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-semibold" style="font-family: var(--font-display);">UAE / Gulf</h3>
+              <span class="text-sm font-bold" style="color: var(--color-brand-red);">AED 4,000–7,000/mo</span>
+            </div>
+            <p class="text-xs" style="color: var(--color-text-muted);">DHA or MOH licensing. English-medium EU degree favoured.</p>
+          </div>
+          <div class="p-5 rounded-xl border" style="border-color: #e5e7eb; background: #fafaf9;">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-semibold" style="font-family: var(--font-display);">India</h3>
+              <span class="text-sm font-bold" style="color: var(--color-brand-red);">₹3–6L/yr</span>
+            </div>
+            <p class="text-xs" style="color: var(--color-text-muted);">Apollo, Fortis, government hospitals. INC registration required.</p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- LEAD FORM — CRO-optimized, friction-minimal -->
-<section id="lead-form-container" class="py-24 lg:py-32 bg-[#f9fafb] border-y border-[#e5e7eb]">
+<!-- LEAD FORM -->
+<section id="lead-form-container" class="py-20 lg:py-28" style="background: var(--color-brand-navy);">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-    <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-12">
-        <div class="text-xs tracking-[0.3em] uppercase text-[#be1e2d] mb-4">Free · No Obligation · 24hr Response</div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-4" style="font-family: var(--font-display);">
-          GET YOUR MALTA NURSING
-          <br />
-          <span class="text-[#4b5563]">COST BREAKDOWN</span>
-        </h2>
-        <p class="text-[#4b5563]">Tell us your 12th marks. We'll reply with exact Malta universities, fees, and total cost — within 24 hours. No sales pitch.</p>
+    <div class="max-w-xl mx-auto">
+      <div class="text-center mb-10 reveal">
+        <div class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-4" style="background: rgba(255,255,255,0.1); color: var(--color-accent-gold);">
+          September 2026 Intake — Seats Being Confirmed
+        </div>
+        <h2 class="section-headline inverted" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Get Your Malta Nursing<br>Cost Breakdown</h2>
+        <p class="text-sm mt-3" style="color: rgba(255,255,255,0.55);">Tell us your profile. We reply within 24 hours with exact universities, fees, and total cost. No sales pitch.</p>
       </div>
-
-      <form id="lead-form" class="bg-[#fafaf9] border border-[#e5e7eb] p-8 lg:p-12">
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label class="form-label">Full Name *</label>
-            <input type="text" name="name" required class="form-input" placeholder="Your full name">
+      <div class="rounded-2xl p-8 lg:p-10 reveal reveal-delay-1" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+        <form id="lead-form" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Full Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-xl" placeholder="Your full name">
+            </div>
+            <div>
+              <label class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Phone</label>
+              <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-xl" placeholder="+91 98765 43210">
+            </div>
           </div>
           <div>
-            <label class="form-label">Phone *</label>
-            <input type="tel" name="phone" required class="form-input" placeholder="Your phone number">
+            <label class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Email</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-xl" placeholder="you@email.com">
           </div>
-        </div>
-        <div class="mb-6">
-          <label class="form-label">Email *</label>
-          <input type="email" name="email" required class="form-input" placeholder="your@email.com">
-        </div>
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label class="form-label">12th PCB % *</label>
-            <input type="text" name="pcb_percentage" required class="form-input" placeholder="e.g. 58% or 72%">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">12th PCB %</label>
+              <input type="text" name="pcb_percentage" required class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/35 text-sm rounded-xl" placeholder="e.g. 62%">
+            </div>
+            <div>
+              <label class="block text-xs font-medium mb-1.5" style="color: rgba(255,255,255,0.6);">Preferred Country</label>
+              <select name="preferred_country" class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white text-sm rounded-xl" style="background-color: #1a2a45;">
+                <option value="Malta" selected style="color:#000;">Malta</option>
+                <option value="Albania" style="color:#000;">Albania</option>
+                <option value="Georgia" style="color:#000;">Georgia</option>
+                <option value="Bulgaria" style="color:#000;">Bulgaria</option>
+                <option value="UK" style="color:#000;">United Kingdom</option>
+                <option value="Not Sure" style="color:#000;">Not sure — advise me</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <label class="form-label">Program of Interest</label>
-            <select name="program_interest" class="form-select">
-              <option value="">Select program</option>
-              <option value="B.Sc Nursing">B.Sc Nursing</option>
-              <option value="GNM">GNM Diploma</option>
-              <option value="Post B.Sc">Post B.Sc Nursing</option>
-              <option value="M.Sc Nursing">M.Sc Nursing</option>
-              <option value="Other">Other / Not Sure</option>
-            </select>
-          </div>
-        </div>
-        <div class="mb-6">
-          <div>
-            <label class="form-label">Preferred Country</label>
-            <select name="preferred_country" class="form-select">
-              <option value="">Select country</option>
-              <option value="Malta" selected>🇲🇹 Malta</option>
-              <option value="Georgia">🇬🇪 Georgia</option>
-              <option value="Albania">🇦🇱 Albania</option>
-              <option value="Bulgaria">🇧🇬 Bulgaria</option>
-              <option value="UK">🇬🇧 United Kingdom</option>
-              <option value="Not Sure">Not sure — advise me</option>
-            </select>
-          </div>
-        </div>
-        <div class="mb-6">
-          <label class="form-label">Any questions? (optional)</label>
-          <textarea name="questions" class="form-input" rows="2" placeholder="e.g. Can I go to Malta with 55%?"></textarea>
-        </div>
-        <button type="submit" class="w-full py-5 bg-[#be1e2d] text-white font-semibold tracking-wide hover:shadow-[0_0_40px_rgba(190,30,45,0.25)] transition-all duration-300 flex items-center justify-center gap-3">
-          SEND MY COST BREAKDOWN — FREE
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
-        <p class="text-center text-xs text-[#9ca3af] mt-4">No spam. No commission talk. Just real data and honest advice.</p>
-      </form>
+          <button type="submit" class="w-full py-4 text-white font-semibold tracking-wide text-sm rounded-xl" style="background: var(--color-brand-red); box-shadow: 0 8px 28px rgba(190,30,45,0.3);">
+            Send My Free Cost Breakdown
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="inline ml-2 -mt-0.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <p class="text-center text-[11px]" style="color: rgba(255,255,255,0.3);">No spam. No commission talk. Just honest advice.</p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
 <Footer />
 
-<script>
-document.getElementById('lead-form')?.addEventListener('submit', (e) => {
+<script define:vars={{ CRM_CAMPAIGN, FORM_TYPE }}>
+const TELECRM_URL = 'https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead';
+const TELECRM_KEY = 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7';
+function formatPhone(p) { p = p.replace(/[\s\-]/g, ''); return p.startsWith('+') ? p : '+91' + p.replace(/^0+/, ''); }
+function buildPayload(fields, notes) {
+  const payload = { fields: { ...fields, lead_source: 'Google Ads', facebook_campaign_name: CRM_CAMPAIGN } };
+  if (notes.length) payload.fields.notes = notes.join(' | ');
+  return payload;
+}
+document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-
-  // Collect form data
-  const name = form.querySelector('[name="name"]').value.trim();
-  const phone = form.querySelector('[name="phone"]').value.trim();
-  const email = form.querySelector('[name="email"]').value.trim();
-  const pcb = form.querySelector('[name="pcb_percentage"]').value.trim();
-  const program = form.querySelector('[name="program_interest"]')?.value || '';
-  const country = form.querySelector('[name="preferred_country"]').value;
-  const questions = form.querySelector('[name="questions"]').value.trim();
-
-  // Ensure phone has country code
-  let formattedPhone = phone.replace(/[\s\-]/g, '');
-  if (!formattedPhone.startsWith('+')) {
-    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
-  }
-
-  // Build TeleCRM payload
-  const extraInfo = [];
-  if (pcb) extraInfo.push('12th PCB: ' + pcb);
-  if (program) extraInfo.push('Program: ' + program);
-  if (country) extraInfo.push('Country: ' + country);
-  if (questions) extraInfo.push('Questions: ' + questions);
-
-  const payload = {
-    fields: {
-      name: name,
-      phone: formattedPhone,
-      email: email,
-      lead_source: 'Google Ads',
-      facebook_campaign_name: 'Nursing Abroad - Malta',
-    }
-  };
-  if (extraInfo.length > 0) {
-    payload.fields.notes = extraInfo.join(' | ');
-  }
-
-  // Log to backend
-  window.__sendToBackend && window.__sendToBackend({ form_type: 'nursing-malta', name, phone: formattedPhone, email, pcb_percentage: pcb, program_interest: program, preferred_country: country, questions });
-
-  // Send to TeleCRM, then redirect — redirect after response OR 1.5s timeout (whichever comes first)
-  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
-    },
-    body: JSON.stringify(payload),
-    keepalive: true,
-  }).catch(() => {});
-
-  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-
-  btn.innerHTML = 'SENDING...';
-
-  Promise.race([sent, timeout]).then(() => {
-    btn.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      REDIRECTING...
-    `;
-    btn.style.backgroundColor = '#22c55e';
-    setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
-  });
+  const f = e.target, btn = f.querySelector('button[type="submit"]');
+  btn.disabled = true; btn.innerHTML = 'Sending…';
+  const name = f.querySelector('[name="name"]').value.trim();
+  const phone = formatPhone(f.querySelector('[name="phone"]').value.trim());
+  const email = f.querySelector('[name="email"]').value.trim();
+  const pcb = f.querySelector('[name="pcb_percentage"]').value.trim();
+  const country = f.querySelector('[name="preferred_country"]').value;
+  const notes = []; if (pcb) notes.push('12th PCB: ' + pcb); if (country) notes.push('Country: ' + country);
+  window.__sendToBackend?.({ form_type: FORM_TYPE, name, phone, email, pcb_percentage: pcb, preferred_country: country });
+  const done = () => { btn.innerHTML = 'Redirecting…'; btn.style.background = '#22c55e'; setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500); };
+  Promise.race([fetch(TELECRM_URL, { method:'POST', headers:{'Content-Type':'application/json','Authorization':TELECRM_KEY}, body:JSON.stringify(buildPayload({name,phone,email},notes)), keepalive:true }), new Promise(r=>setTimeout(r,1500))]).then(done).catch(done);
 });
-
-// Hero mobile form handler
-document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
+document.getElementById('hero-lead-form')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
+  const f = e.target, btn = f.querySelector('button[type="submit"]');
   btn.disabled = true;
-
-  const name = form.querySelector('[name="name"]').value.trim();
-  const phone = form.querySelector('[name="phone"]').value.trim();
-  const email = form.querySelector('[name="email"]').value.trim();
-
-  let formattedPhone = phone.replace(/[\s\-]/g, '');
-  if (!formattedPhone.startsWith('+')) {
-    formattedPhone = '+91' + formattedPhone.replace(/^0+/, '');
-  }
-
-  const payload = {
-    fields: {
-      name: name,
-      phone: formattedPhone,
-      email: email,
-      lead_source: 'Google Ads',
-      facebook_campaign_name: 'Nursing Abroad - Malta',
-    }
-  };
-
-  // Log to backend
-  window.__sendToBackend && window.__sendToBackend({ form_type: 'hero-nursing-malta', name, phone: formattedPhone, email });
-
-  const sent = fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
-    },
-    body: JSON.stringify(payload),
-    keepalive: true,
-  }).catch(() => {});
-
-  const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-  btn.innerHTML = 'SENDING...';
-
-  Promise.race([sent, timeout]).then(() => {
-    btn.innerHTML = 'REDIRECTING...';
-    btn.style.backgroundColor = '#22c55e';
-    setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500);
-  });
+  const name = f.querySelector('[name="name"]').value.trim();
+  const phone = formatPhone(f.querySelector('[name="phone"]').value.trim());
+  const email = f.querySelector('[name="email"]').value.trim();
+  window.__sendToBackend?.({ form_type: 'hero-' + FORM_TYPE, name, phone, email });
+  const done = () => { btn.style.background = '#22c55e'; setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500); };
+  Promise.race([fetch(TELECRM_URL, { method:'POST', headers:{'Content-Type':'application/json','Authorization':TELECRM_KEY}, body:JSON.stringify(buildPayload({name,phone,email},[])), keepalive:true }), new Promise(r=>setTimeout(r,1500))]).then(done).catch(done);
 });
 </script>
 </MainLayout>
