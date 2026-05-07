@@ -11,6 +11,8 @@
 require('dotenv').config();
 const express = require('express');
 const { spawn } = require('child_process');
+const { createServer } = require('https');
+const { readFileSync } = require('fs');
 const fs = require('fs');
 const path = require('path');
 
@@ -38,8 +40,6 @@ app.use((req, res, next) => {
   }
   next();
 });
-
-const PORT = process.env.CHAT_PORT || 3002;
 
 // ─── Session Store ────────────────────────────────────────────────────────────
 const sessions = new Map();
@@ -326,8 +326,17 @@ app.get('/poll/:sessionId', (req, res) => {
   res.json({ reply: null, action: null, nextStage: null });
 });
 
+const _PORT = process.env.CHAT_PORT || 3002;
+const SSL_DIR = __dirname;
+
 // ─── Start ───────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`[Gradiks Chat] API running on port ${PORT}`);
+const httpsOptions = {
+  key: readFileSync(path.join(SSL_DIR, 'key.pem')),
+  cert: readFileSync(path.join(SSL_DIR, 'cert.pem')),
+};
+const server = createServer(httpsOptions, app);
+
+server.listen(_PORT, '0.0.0.0', () => {
+  console.log(`[Gradiks Chat] HTTPS API running on port ${_PORT}`);
   console.log(`[Gradiks Chat] Hermes model: MiniMax-M2.7-highspeed`);
 });
