@@ -16,6 +16,29 @@ const path = require('path');
 
 const app = express();
 app.use(express.json());
+
+// ─── CORS ─────────────────────────────────────────────────────────────────────
+const ALLOWED_ORIGINS = [
+  'https://learn.gradiks.com',
+  'https://gradiks.com',
+  'http://localhost:4321',
+  'http://localhost:3000',
+];
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (ALLOWED_ORIGINS.includes(origin) || !origin) {
+    res.setHeader('Access-Control-Allow-Origin', origin || '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+  }
+  if (req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
+  next();
+});
+
 const PORT = process.env.CHAT_PORT || 3002;
 
 // ─── Session Store ────────────────────────────────────────────────────────────
