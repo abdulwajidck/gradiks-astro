@@ -19,10 +19,10 @@
   'use strict';
 
   // ─── Config ───────────────────────────────────────────────────────────────
-  // Use localhost:3002 in dev, /api/chat in production (relative)
+  // Use localhost:3002 in dev, public server in production
   var API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? 'http://localhost:3002/api/chat'
-    : '/api/chat';
+    : 'http://84.247.128.155:3002/api/chat';
   var TELECRM_URL = 'https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead';
   var TELECRM_KEY = 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7';
 
