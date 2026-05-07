@@ -675,5 +675,26 @@ document.getElementById('hero-lead-form')?.addEventListener('submit', async (e) 
   const done = () => { btn.style.background = '#22c55e'; setTimeout(() => { window.location.href = '/nursing-thank-you'; }, 500); };
   Promise.race([fetch(TELECRM_URL, { method:'POST', headers:{'Content-Type':'application/json','Authorization':TELECRM_KEY}, body:JSON.stringify(buildPayload({phone},notes)), keepalive:true }), new Promise(r=>setTimeout(r,1500))]).then(done).catch(done);
 });
+<script>
+  window.__GRADIKS_PAGE_DATA__ = {
+    pageKey: 'nursing-abroad',
+    program: 'nursing',
+    country: 'georgia',
+    pageTitle: 'Study Nursing in Georgia | Gradiks',
+    countries: ['Georgia', 'Albania', 'Bulgaria', 'Malta', 'UK'],
+    keyFacts: [
+      'Fees: $3,500–$5,500/year',
+      'Medium: English',
+      'Global NNC/WHO recognized',
+      'No donation, only processing fee',
+      'FMGE passing ratio: 30–45%'
+    ],
+    faqs: [
+      { q: 'NEET required?', a: 'Yes, for nursing abroad in most countries.' },
+      { q: 'PCB minimum?', a: '50% aggregate for most universities.' },
+      { q: 'Salary after nursing abroad?', a: '$800–$2,500/month depending on country.' }
+    ]
+  };
 </script>
+<script src="/chat/chat-client.js" is:inline></script>
 </MainLayout>

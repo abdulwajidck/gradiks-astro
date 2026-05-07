@@ -1,0 +1,60 @@
+---
+/**
+ * PageData.astro
+ * Injects window.__GRADIKS_PAGE_DATA__ with page-specific content
+ * for Hermes chat widget to answer visitor queries accurately.
+ *
+ * Usage: <PageData /> in any .astro page's <head> or before closing </body>
+ */
+export interface Props {
+  program: 'nursing' | 'mbbs' | 'index';
+  country?: string;
+  pageKey: string;            // e.g. 'nursing-abroad', 'nursing-georgia', 'russia-study'
+  pageTitle: string;
+  countries: Array<{
+    name: string;
+    flag: string;
+    tuition: string;
+    living: string;
+    intake: string;
+    neet: string;
+    tag: string;
+    notes: string;
+  }>;
+  keyFacts: string[];
+  faqs?: Array<{ q: string; a: string }>;
+  testimonials?: Array<{ outcome: string; quote: string; name: string; location: string }>;
+}
+
+const {
+  program,
+  country,
+  pageKey,
+  pageTitle,
+  countries = [],
+  keyFacts = [],
+  faqs = [],
+  testimonials = [],
+} = Astro.props;
+---
+<script define:vars={{
+  program,
+  country,
+  pageKey,
+  pageTitle,
+  countries,
+  keyFacts,
+  faqs,
+  testimonials,
+}}>
+window.__GRADIKS_PAGE_DATA__ = {
+  program,
+  country,
+  pageKey,
+  pageTitle,
+  countries,
+  keyFacts,
+  faqs,
+  testimonials,
+};
+</script>
