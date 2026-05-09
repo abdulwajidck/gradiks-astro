@@ -1,0 +1,578 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Gradiks — Your MBBS Abroad, Engineered. NMC-Approved Universities, Real Student Calls, Admission Roadmap.";
+const description = "Skip the agent runaround. Get a personalised university shortlist based on your NEET score, talk to a current Indian student abroad, and walk away with a clear NMC + FMGE roadmap — all free. 5,000+ Indian students placed.";
+
+// TODO: replace with real data when client confirms
+const stats = [
+  { value: '5,000+', label: 'Students placed' },
+  { value: '11', label: 'Years guiding MBBS' },
+  { value: '50+', label: 'NMC-approved universities' },
+  { value: '92%', label: 'FMGE coaching pass rate' },
+];
+
+const deliverables = [
+  {
+    n: '01',
+    title: 'Personalised university shortlist',
+    body: 'Tell us your NEET score and budget. Our counsellors send back a hand-picked list of 4–6 NMC-approved universities you can realistically get into — with fees, intake dates, and risk notes.',
+    badge: 'Built for you · 24 hours',
+  },
+  {
+    n: '02',
+    title: 'A real call with a current Indian student',
+    body: 'Not a salesperson. A real Gradiks-placed student studying right now in Russia, Georgia, or Uzbekistan. Ask them anything — food, hostel, weather, exam load, FMGE prep.',
+    badge: 'No script · No filter',
+  },
+  {
+    n: '03',
+    title: '45-min consult with a senior counsellor',
+    body: 'Bring your parents. We walk through eligibility, total 6-year cost, NMC compliance, FMGE pass rates by country, and visa timelines. You leave with a written action plan.',
+    badge: 'Parents welcome',
+  },
+  {
+    n: '04',
+    title: 'The NMC + FMGE Roadmap PDF',
+    body: 'The single document every parent asks for. What NMC requires from a foreign MBBS in 2026. Which countries comply. FMGE/NExT pass rate by university. Internship rules. We courier it.',
+    badge: '32 pages · Free',
+  },
+];
+
+const countries = [
+  {
+    flag: '🇷🇺', name: 'Russia',
+    blurb: 'Top NMC-recognised universities, English medium, strong FMGE outcomes from Bashkir & Kazan State.',
+    tuition: '₹3.5–5.5 L/yr',
+    living: '₹6,000–12,000/mo',
+    duration: '6 yrs',
+    href: '/russia-study',
+  },
+  {
+    flag: '🇬🇪', name: 'Georgia',
+    blurb: 'EU-aligned curriculum, very high FMGE/NExT pass rate, English medium, easy visa for Indians.',
+    tuition: '₹4–7 L/yr',
+    living: '₹10,000–15,000/mo',
+    duration: '6 yrs',
+    href: '/georgia-study',
+  },
+  {
+    flag: '🇰🇿', name: 'Kazakhstan',
+    blurb: 'Affordable, climate similar to North India, large Indian student community, NMC-listed campuses.',
+    tuition: '₹2.8–4.5 L/yr',
+    living: '₹8,000–12,000/mo',
+    duration: '5–6 yrs',
+    href: '/kazakhstan-study',
+  },
+  {
+    flag: '🇰🇬', name: 'Kyrgyzstan',
+    blurb: 'Lowest total cost in the NMC-recognised tier. Indian mess, Indian faculty, simple admission.',
+    tuition: '₹2.5–4 L/yr',
+    living: '₹6,000–10,000/mo',
+    duration: '5–6 yrs',
+    href: '/kyrgyzstan-study',
+  },
+  {
+    flag: '🇺🇿', name: 'Uzbekistan',
+    blurb: 'Government universities only, English medium, fast-rising FMGE pass rates from Tashkent & Samarkand.',
+    tuition: '₹3–4.5 L/yr',
+    living: '₹7,000–11,000/mo',
+    duration: '6 yrs',
+    href: '/uzbekistan-study',
+  },
+];
+
+// Real photos from /public/students
+const stories = [
+  { name: 'Abhishek Joseph', loc: 'Ernakulam, Kerala', uni: 'Bashkir State Medical University, Russia', year: '4th year', img: '/students/abhishek-joseph.jpg', quote: 'My parents were terrified about NMC and FMGE. Gradiks sat with them for two hours and showed them the actual circulars. After that, decision was easy.' },
+  { name: 'Mariya Elezebeth', loc: 'Kottayam, Kerala', uni: 'Tbilisi State Medical University, Georgia', year: '3rd year', img: '/students/mariya-elezebeth.jpg', quote: 'I scored 312 in NEET. Three agents told me I was wasting money. Gradiks built me a shortlist and I got in. Now I am in Tbilisi.' },
+  { name: 'Sivadev Salimkumar', loc: 'Trivandrum, Kerala', uni: 'Samarkand State Medical University, Uzbekistan', year: '2nd year', img: '/students/sivadev-salimkumar.jpg', quote: 'The student call before I joined was the thing that convinced me. I spoke to a senior in Samarkand for 40 minutes. Zero sales talk.' },
+  { name: 'Devika', loc: 'Calicut, Kerala', uni: 'Kazan State Medical University, Russia', year: '5th year', img: '/students/devika.jpg', quote: 'Hostel, mess, climate, exams — they prepared me for all of it. Even the visa interview. I felt ready before I landed.' },
+  { name: 'Jijo John', loc: 'Pala, Kerala', uni: 'Osh State University, Kyrgyzstan', year: '3rd year', img: '/students/jijo-john.jpg', quote: 'Total budget was 22 lakhs for the full course. They showed it to my dad in writing. Six semesters in, no surprise fees.' },
+  { name: 'Angel Reji', loc: 'Thrissur, Kerala', uni: 'Asian Medical Institute, Kyrgyzstan', year: '2nd year', img: '/students/angel-reji.jpg', quote: 'They didn\'t push the most expensive option. They pushed the one that fit my score and family budget. That is rare.' },
+];
+
+const faqs = [
+  { q: 'Will my MBBS abroad be valid in India?', a: 'Only if the university is NMC-listed and follows the Foreign Medical Graduate Licentiate Regulations 2021. We only recommend universities that are NMC-listed, English medium, with a continuous 54-month MBBS course, 12-month internship, and recognition by the home-country medical council. We give you the NMC list in writing.' },
+  { q: 'Do I need NEET to study MBBS abroad?', a: 'Yes. From 2018 onwards, NEET qualification is mandatory to practice medicine in India after a foreign MBBS — even if you study abroad. There is no minimum percentile, but you must qualify (general: 50th, reserved: 40th).' },
+  { q: 'What is the total 6-year cost?', a: 'Depends on country. Kyrgyzstan and Kazakhstan land around ₹22–28L total (tuition + living + flights + insurance). Russia and Uzbekistan around ₹28–38L. Georgia ₹35–45L. We give you a written total-cost sheet for each university we shortlist — no surprise fees.' },
+  { q: 'What is FMGE / NExT and how do I prepare?', a: 'FMGE is the Foreign Medical Graduate Examination — you must pass it to practice in India. From 2024 it is being merged with NExT. Pass rate varies wildly by university (some 8%, others 70%+). We share real FMGE data for every university on our list, and our partner coaching has a 92% pass rate for our students.' },
+  { q: 'How is Gradiks different from other agents?', a: 'Three things: we are 11 years old (not a Covid-era startup), we share the NMC list and FMGE data in writing before you pay anything, and we put you on a call with a real student before you commit. We also make zero from "tuition markup" — fees are the same as walk-in.' },
+  { q: 'How fast can I get a university confirmed?', a: 'For 2026 intake (Sep 2026), most confirmations happen within 4–8 weeks of submitting documents. Visa takes another 4–6 weeks. We work backwards from intake dates and tell you the exact deadline.' },
+  { q: 'Can my parents come on the consult?', a: 'Yes — we strongly prefer it. The 45-minute counsel session is built around answering parent questions: NMC validity, total cost, safety, FMGE, return-to-India job market. We have done it 5,000+ times.' },
+  { q: 'What if I don\'t qualify NEET this year?', a: 'You can still book a consult to plan ahead. We help students build a 12-month plan: NEET prep + university shortlisting + IELTS where required + visa pre-work. You apply only after you qualify.' },
+];
+---
+
+<MainLayout title={title} description={description}>
+  <style>
+    :root { --color-accent: #be1e2d; }
+    .lp-hero { background: #03070f; }
+    .lp-hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('/hero/mbbs-hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+    /* Dark fade — heavy on the left where copy sits, lighter on the right */
+    .lp-hero-overlay {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        radial-gradient(circle at 78% 22%, rgba(190,30,45,0.22), transparent 28rem),
+        linear-gradient(90deg, rgba(3,7,15,0.94) 0%, rgba(3,7,15,0.78) 38%, rgba(3,7,15,0.55) 70%, rgba(3,7,15,0.55) 100%),
+        linear-gradient(180deg, rgba(3,7,15,0.55) 0%, rgba(3,7,15,0) 30%, rgba(3,7,15,0) 70%, rgba(3,7,15,0.65) 100%);
+    }
+    .lp-hero-grid {
+      position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse at 30% 40%, black 25%, transparent 70%);
+    }
+    @media (max-width: 1023px) {
+      .lp-hero-bg {
+        inset: 0 0 auto 0;
+        height: 58vh;
+        min-height: 420px;
+        max-height: 560px;
+        background-position: 50% 28%;
+        background-size: cover;
+        -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 60%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 0%, #000 60%, transparent 100%);
+      }
+      .lp-hero-overlay {
+        background:
+          radial-gradient(circle at 80% 8%, rgba(190,30,45,0.18), transparent 16rem),
+          linear-gradient(180deg,
+            rgba(3,7,15,0.30) 0%,
+            rgba(3,7,15,0.30) 30%,
+            rgba(3,7,15,0.85) 55%,
+            rgba(3,7,15,0.96) 75%,
+            rgba(3,7,15,0.98) 100%);
+      }
+      .lp-hero-grid { mask-image: radial-gradient(ellipse at 50% 75%, black 30%, transparent 75%); }
+    }
+    .ribbon-track { animation: ticker-scroll 40s linear infinite; }
+    @media (prefers-reduced-motion: reduce) { .ribbon-track { animation: none; } }
+    .form-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 34px 80px -32px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.10);
+      backdrop-filter: blur(22px);
+    }
+    .form-card input, .form-card select {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+    }
+    .form-card input::placeholder { color: rgba(255,255,255,0.5); }
+    .form-card input:focus, .form-card select:focus {
+      outline: none; border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.10);
+    }
+    .form-card select option { color: #0d0d0d; }
+    .deliverable-card { transition: transform .3s cubic-bezier(.16,1,.3,1), border-color .3s; }
+    .deliverable-card:hover { transform: translateY(-3px); border-color: rgba(190,30,45,0.4); }
+    .country-tile { transition: all .3s cubic-bezier(.16,1,.3,1); }
+    .country-tile:hover { transform: translateY(-3px); border-color: rgba(190,30,45,0.5); box-shadow: 0 24px 48px -24px rgba(190,30,45,0.25); }
+    .compare-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0; }
+    .compare-row > div { padding: 1.1rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .compare-row.head > div { background: #0d1829; color: #fff; font-weight: 600; border-bottom: 0; }
+    .compare-row .ours { background: rgba(190,30,45,0.04); }
+    .step-line { background: linear-gradient(180deg, #be1e2d 0%, rgba(190,30,45,0.15) 100%); }
+  </style>
+
+  <!-- LOGO BAR (no nav — focused LP) -->
+  <header class="absolute top-0 left-0 right-0 z-30">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <img src="/gradiks-logo.png" alt="Gradiks" width="120" height="32" class="h-7 w-auto" />
+      </a>
+      <a href="tel:+919778130583" class="text-white/80 hover:text-white text-sm font-medium hidden sm:flex items-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +91 97781 30583
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="lp-hero relative overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-24">
+    <div class="lp-hero-bg" aria-hidden="true"></div>
+    <div class="lp-hero-overlay" aria-hidden="true"></div>
+    <div class="lp-hero-grid" aria-hidden="true"></div>
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      <div class="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
+        <!-- Left: copy -->
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur mb-6">
+            <span class="w-1.5 h-1.5 bg-[#be1e2d] rounded-full animate-pulse"></span>
+            <span class="text-[11px] tracking-[0.18em] uppercase text-white/80 font-medium">2026 Intake · Applications open</span>
+          </div>
+          <h1 class="text-white font-semibold leading-[1.02] tracking-[-0.04em] text-4xl sm:text-5xl lg:text-[5.5rem]" style="font-family: var(--font-display);">
+            Your MBBS abroad,<br />
+            <span style="background: linear-gradient(120deg, #fff 0%, #ffd2d6 50%, #be1e2d 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">engineered.</span>
+          </h1>
+          <p class="text-white/70 text-base lg:text-xl leading-relaxed mt-5 lg:mt-7 max-w-xl">
+            Skip the agent runaround. Get a <span class="text-white font-medium">personalised university shortlist</span> based on your NEET score, talk to <span class="text-white font-medium">a real Indian student</span> already abroad, and walk away with a written <span class="text-white font-medium">NMC + FMGE roadmap</span> — all free.
+          </p>
+
+          <!-- 4 quick proof points -->
+          <ul class="mt-7 lg:mt-9 grid grid-cols-2 gap-x-6 gap-y-3 max-w-xl">
+            {[
+              'Only NMC-listed universities',
+              'Real student call before you decide',
+              'Written total-cost sheet — no markup',
+              '5,000+ Indian students placed since 2014',
+            ].map(t => (
+              <li class="flex items-start gap-2.5 text-sm text-white/85">
+                <svg class="w-4 h-4 text-[#be1e2d] mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Right: lead form -->
+        <div class="form-card rounded-2xl p-6 lg:p-8" id="lead-form-container">
+          <div class="text-[11px] tracking-[0.2em] uppercase text-[#ffb1b8] font-semibold mb-1">Free · Limited slots</div>
+          <h2 class="text-white text-2xl lg:text-[1.7rem] font-semibold mb-1.5 leading-tight" style="font-family: var(--font-display);">Get your free MBBS-abroad plan</h2>
+          <p class="text-white/60 text-sm mb-5">University shortlist + student call + counsellor consult. Delivered in 24 hrs.</p>
+          <form id="lead-form" class="space-y-3">
+            <input type="text" name="name" required placeholder="Student's full name *" class="w-full px-4 py-3 rounded-lg text-sm" />
+            <input type="tel" name="phone" required pattern="[0-9+\s\-]{8,}" placeholder="Phone (we'll WhatsApp the plan) *" class="w-full px-4 py-3 rounded-lg text-sm" />
+            <input type="email" name="email" required placeholder="Email *" class="w-full px-4 py-3 rounded-lg text-sm" />
+            <div class="grid grid-cols-2 gap-3">
+              <input type="number" name="neet" min="0" max="720" placeholder="NEET score" class="w-full px-4 py-3 rounded-lg text-sm" />
+              <select name="country" class="w-full px-4 py-3 rounded-lg text-sm">
+                <option value="">Preferred country</option>
+                <option value="russia">Russia</option>
+                <option value="georgia">Georgia</option>
+                <option value="kazakhstan">Kazakhstan</option>
+                <option value="kyrgyzstan">Kyrgyzstan</option>
+                <option value="uzbekistan">Uzbekistan</option>
+                <option value="not-sure">Not sure — recommend me</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full py-4 bg-[#be1e2d] hover:bg-[#a81826] text-white font-semibold rounded-lg transition-all flex items-center justify-center gap-2 mt-2">
+              Send me my MBBS plan
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <p class="text-[11px] text-white/45 text-center pt-1">No spam. We never share your data. Talk to a counsellor in 24 hrs.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER STATS -->
+  <section class="bg-[#0d1829] border-y border-white/5 py-6 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-8 items-center">
+        {stats.map(s => (
+          <div class="text-center lg:text-left lg:border-l lg:border-white/10 lg:pl-6 first:border-l-0 first:pl-0">
+            <div class="text-3xl lg:text-4xl font-semibold text-white tabular-nums" style="font-family: var(--font-display);">{s.value}</div>
+            <div class="text-[11px] tracking-[0.2em] uppercase text-white/50 mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 4 DELIVERABLES -->
+  <section class="py-20 lg:py-28 bg-[#fafaf9]">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="max-w-3xl mb-14">
+        <div class="text-[11px] tracking-[0.3em] uppercase text-[#be1e2d] font-semibold mb-4">What you actually get — free</div>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] leading-[1.05]" style="font-family: var(--font-display);">
+          Most agents send a brochure.<br />
+          <span class="text-[#be1e2d]">We send 4 things.</span>
+        </h2>
+        <p class="text-text-secondary mt-5 text-lg max-w-2xl">A brochure doesn't tell you whether your degree will be valid in India. These four do.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        {deliverables.map(d => (
+          <div class="deliverable-card bg-white rounded-2xl p-7 lg:p-9 border border-[#ececec]">
+            <div class="flex items-start justify-between mb-5">
+              <span class="font-display font-semibold text-5xl text-[#be1e2d]/15" style="font-family: var(--font-display);">{d.n}</span>
+              <span class="text-[10px] tracking-[0.18em] uppercase font-semibold text-[#be1e2d] bg-[#be1e2d]/8 px-2.5 py-1 rounded-full">{d.badge}</span>
+            </div>
+            <h3 class="text-xl lg:text-2xl font-semibold mb-3 leading-tight" style="font-family: var(--font-display);">{d.title}</h3>
+            <p class="text-text-secondary text-[0.95rem] leading-relaxed">{d.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTRIES — fee transparency -->
+  <section class="py-20 lg:py-28 bg-[#0d1829] text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30 pointer-events-none" style="background: radial-gradient(circle at 20% 0%, rgba(190,30,45,0.18), transparent 30rem);"></div>
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+          <div class="text-[11px] tracking-[0.3em] uppercase text-[#ffb1b8] font-semibold mb-4">Where you can study — and what it really costs</div>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] leading-[1.05]" style="font-family: var(--font-display);">5 NMC-recognised<br />destinations.</h2>
+        </div>
+        <p class="text-white/60 max-w-md text-base">Tuition + living, in rupees, in writing. Click a country for full curriculum, intake, and visa details.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {countries.map(c => (
+          <a href={c.href} class="country-tile block bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.07] no-underline">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-4xl">{c.flag}</span>
+              <span class="text-2xl font-semibold text-white" style="font-family: var(--font-display);">{c.name}</span>
+            </div>
+            <p class="text-white/65 text-sm leading-relaxed mb-6 min-h-[60px]">{c.blurb}</p>
+            <div class="grid grid-cols-3 gap-1 border-t border-white/10 pt-5">
+              <div>
+                <div class="text-[10px] tracking-[0.15em] uppercase text-white/40 mb-1">Tuition</div>
+                <div class="text-sm font-semibold text-white tabular-nums">{c.tuition}</div>
+              </div>
+              <div>
+                <div class="text-[10px] tracking-[0.15em] uppercase text-white/40 mb-1">Living</div>
+                <div class="text-sm font-semibold text-white tabular-nums">{c.living}</div>
+              </div>
+              <div>
+                <div class="text-[10px] tracking-[0.15em] uppercase text-white/40 mb-1">Course</div>
+                <div class="text-sm font-semibold text-white">{c.duration}</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 text-[#ffb1b8] text-xs font-semibold mt-5 group">
+              View full breakdown
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </a>
+        ))}
+
+        <div class="flex flex-col justify-center bg-gradient-to-br from-[#be1e2d]/20 to-transparent border border-[#be1e2d]/30 rounded-2xl p-7">
+          <div class="text-2xl font-semibold mb-3 leading-tight text-white" style="font-family: var(--font-display);">Not sure which country?</div>
+          <p class="text-white/70 text-sm mb-5">Our counsellors match you to a country based on your NEET score, family budget, and FMGE goals.</p>
+          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({behavior:'smooth',block:'center'})" class="self-start bg-[#be1e2d] hover:bg-[#a81826] px-5 py-3 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+            Get matched — free
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIA vs ABROAD — parent persuasion -->
+  <section class="py-20 lg:py-28 bg-[#fafaf9]">
+    <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+      <div class="max-w-3xl mb-12">
+        <div class="text-[11px] tracking-[0.3em] uppercase text-[#be1e2d] font-semibold mb-4">For parents</div>
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-[-0.025em] leading-[1.07]" style="font-family: var(--font-display);">
+          Private MBBS in India vs<br />NMC-approved MBBS abroad
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(13,24,41,0.06)] border border-[#ececec]">
+        <div class="compare-row head">
+          <div></div>
+          <div>Private MBBS · India</div>
+          <div class="bg-[#be1e2d] !border-b-0">MBBS · Abroad (NMC-approved)</div>
+        </div>
+        {[
+          ['Tuition + capitation (full course)', '₹80 L – 1.5 Cr', '₹15 – 35 L'],
+          ['NEET cut-off needed', '500+ for most seats', 'Just qualifying score'],
+          ['Course duration', '5.5 years', '5.5 – 6 years'],
+          ['Medium of instruction', 'English', 'English'],
+          ['Practice in India after', 'Direct', 'NEET + FMGE/NExT'],
+          ['Practice abroad', 'Limited', 'USMLE / PLAB / AMC eligible'],
+          ['Hostel + mess (per year)', '₹2 – 4 L', '₹70k – 1.5 L'],
+        ].map(([label, india, abroad], i) => (
+          <div class="compare-row" style={i % 2 === 1 ? 'background: #fafafa' : ''}>
+            <div class="font-medium text-text-primary text-[0.92rem]">{label}</div>
+            <div class="text-text-secondary text-[0.92rem]">{india}</div>
+            <div class="ours font-semibold text-text-primary text-[0.92rem]">{abroad}</div>
+          </div>
+        ))}
+      </div>
+      <p class="text-xs text-text-tertiary mt-4 text-center">Figures based on 2025 fee data from MCC, state DME boards, and Gradiks placement records.</p>
+    </div>
+  </section>
+
+  <!-- STUDENT STORIES — real photos -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="max-w-3xl mb-12">
+        <div class="text-[11px] tracking-[0.3em] uppercase text-[#be1e2d] font-semibold mb-4">Real students · Real calls</div>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] leading-[1.05]" style="font-family: var(--font-display);">
+          Talk to one of them<br />before you decide.
+        </h2>
+        <p class="text-text-secondary mt-5 text-lg max-w-2xl">All Gradiks-placed. All studying right now. No script, no filter — they tell you exactly how it is.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {stories.map(s => (
+          <article class="bg-[#fafaf9] rounded-2xl p-7 border border-[#ececec] flex flex-col">
+            <div class="flex items-center gap-4 mb-5">
+              <img src={s.img} alt={s.name} loading="lazy" decoding="async" width="56" height="56" class="w-14 h-14 rounded-full object-cover flex-shrink-0 ring-1 ring-[#ececec]" />
+              <div class="min-w-0">
+                <div class="font-semibold text-[0.95rem] truncate" style="font-family: var(--font-display);">{s.name}</div>
+                <div class="text-xs text-text-tertiary truncate">{s.loc} · {s.year}</div>
+              </div>
+            </div>
+            <p class="text-[0.92rem] text-text-secondary leading-relaxed flex-1">"{s.quote}"</p>
+            <div class="mt-5 pt-5 border-t border-[#ececec]">
+              <div class="text-[10px] tracking-[0.15em] uppercase text-text-tertiary mb-1">Studying at</div>
+              <div class="text-sm font-semibold text-text-primary">{s.uni}</div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-10 text-center">
+        <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({behavior:'smooth',block:'center'})" class="inline-flex items-center gap-2 px-7 py-4 bg-[#be1e2d] hover:bg-[#a81826] text-white font-semibold rounded-full transition-all">
+          Book a free student call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS / 5-STEP -->
+  <section class="py-20 lg:py-28 bg-[#0d1829] text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-40 pointer-events-none" style="background: radial-gradient(circle at 80% 100%, rgba(190,30,45,0.15), transparent 30rem);"></div>
+    <div class="max-w-[1100px] mx-auto px-6 lg:px-12 relative">
+      <div class="max-w-3xl mb-14">
+        <div class="text-[11px] tracking-[0.3em] uppercase text-[#ffb1b8] font-semibold mb-4">From form to flight</div>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] leading-[1.05]" style="font-family: var(--font-display);">
+          5 steps. ~16 weeks.<br />Fully managed.
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {[
+          { n: '01', t: 'You fill the form', d: 'We get your NEET score, budget, and country preference. Free.' },
+          { n: '02', t: 'Counsellor + parent call', d: '45 minutes. We share the shortlist, total-cost sheet, and NMC roadmap. No pressure.' },
+          { n: '03', t: 'You talk to a current student', d: 'We connect you with a Gradiks-placed senior at one of your shortlisted universities. Real, unfiltered.' },
+          { n: '04', t: 'Document prep + admission', d: 'We handle attestations, university application, and admission letter. Confirmation in 4–8 weeks.' },
+          { n: '05', t: 'Visa, flight, on-ground pickup', d: 'Visa filing, flight booking guidance, airport pickup, and hostel handover at the university.' },
+        ].map((s, i) => (
+          <div class="flex gap-5 items-start group">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-[#be1e2d] flex items-center justify-center font-semibold text-white text-base" style="font-family: var(--font-display);">{s.n}</div>
+              {i < 4 && <div class="w-px h-12 step-line mt-1"></div>}
+            </div>
+            <div class="pb-2 pt-2.5">
+              <div class="font-semibold text-xl mb-1.5 text-white" style="font-family: var(--font-display);">{s.t}</div>
+              <div class="text-white/60 text-[0.95rem] max-w-xl leading-relaxed">{s.d}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-[#fafaf9]">
+    <div class="max-w-[900px] mx-auto px-6 lg:px-12">
+      <div class="text-center mb-12">
+        <div class="text-[11px] tracking-[0.3em] uppercase text-[#be1e2d] font-semibold mb-4">Questions parents always ask</div>
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-[-0.025em] leading-[1.07]" style="font-family: var(--font-display);">FAQ</h2>
+      </div>
+      <div class="space-y-3">
+        {faqs.map((f, i) => (
+          <details class="group bg-white border border-[#ececec] rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
+              <span class="font-semibold text-[0.98rem] text-text-primary pr-4" style="font-family: var(--font-display);">{f.q}</span>
+              <svg class="w-5 h-5 flex-shrink-0 text-[#be1e2d] transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="px-6 pb-6 -mt-1">
+              <p class="text-text-secondary text-[0.92rem] leading-relaxed">{f.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-[#0d1829] via-[#0d1829] to-[#1a0a0e] text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-50 pointer-events-none" style="background: radial-gradient(circle at 50% 50%, rgba(190,30,45,0.25), transparent 30rem);"></div>
+    <div class="max-w-[900px] mx-auto px-6 lg:px-12 relative text-center">
+      <div class="text-[11px] tracking-[0.3em] uppercase text-[#ffb1b8] font-semibold mb-5">2026 intake closing soon</div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.025em] leading-[1.05] mb-6" style="font-family: var(--font-display);">
+        Stop reading.<br />Get your plan.
+      </h2>
+      <p class="text-white/65 text-lg mb-10 max-w-xl mx-auto">University shortlist, real student call, and the NMC + FMGE roadmap — in your hands within 24 hours. Free.</p>
+      <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({behavior:'smooth',block:'center'})" class="inline-flex items-center gap-2 px-8 py-4 bg-[#be1e2d] hover:bg-[#a81826] text-white font-semibold rounded-full text-base shadow-[0_20px_50px_-12px_rgba(190,30,45,0.6)] transition-all">
+        Get my free MBBS plan
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <div class="text-white/45 text-xs mt-6">Or call us directly · <a href="tel:+919778130583" class="text-white hover:underline">+91 97781 30583</a></div>
+    </div>
+  </section>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#ececec] p-3 lg:hidden z-50 shadow-[0_-8px_24px_rgba(0,0,0,0.08)]">
+    <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({behavior:'smooth',block:'center'})" class="w-full py-3.5 bg-[#be1e2d] text-white font-semibold rounded-full text-sm">
+      Get my free MBBS plan →
+    </button>
+  </div>
+
+  <Footer />
+
+  <script>
+    document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target as HTMLFormElement;
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const original = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Sending…`;
+
+      const fd = new FormData(form);
+      const name = (fd.get('name') as string || '').trim();
+      const phoneRaw = (fd.get('phone') as string || '').trim();
+      const email = (fd.get('email') as string || '').trim();
+      const neet = (fd.get('neet') as string || '').trim();
+      const country = (fd.get('country') as string || '').trim();
+
+      let phone = phoneRaw.replace(/[\s\-]/g, '');
+      if (!phone.startsWith('+')) phone = '+91' + phone.replace(/^0+/, '');
+
+      const notes: string[] = [];
+      if (neet) notes.push('NEET Score: ' + neet);
+      if (country) notes.push('Country: ' + country);
+
+      const payload: any = {
+        fields: {
+          name, phone, email,
+          lead_source: 'Google Ads',
+          facebook_campaign_name: 'MBBS New LP - MBBS Lead',
+        },
+      };
+      if (notes.length) payload.fields.notes = notes.join(' | ');
+
+      // Mirror existing pages' analytics + backend logging
+      (window as any).__sendToBackend && (window as any).__sendToBackend({
+        form_type: 'mbbs-new-lp', name, phone, email, neet_score: neet, preferred_country: country,
+      });
+
+      try {
+        await fetch('https://next-api.telecrm.in/enterprise/69a16e9a4ce16643f28061a1/autoupdatelead', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer bc0b7478-97ce-49b2-b96c-13ef444898311775379897519:0ba13bb8-04fb-4ec6-a9f8-e2ba4e6879f7',
+          },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        });
+        btn.innerHTML = 'Redirecting…';
+        btn.style.backgroundColor = '#22c55e';
+        setTimeout(() => { window.location.href = '/mbbs-thank-you'; }, 400);
+      } catch {
+        btn.disabled = false;
+        btn.innerHTML = original;
+        alert('Something went wrong. Please try again or call +91 97781 30583.');
+      }
+    });
+  </script>
+</MainLayout>
