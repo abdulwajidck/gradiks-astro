@@ -3,193 +3,133 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
-const title = "Gradiks — Premium Study Abroad Guidance for Kerala Students";
-const description = "Serious, transparent study abroad guidance for Kerala students after 12th. Get a free profile review, shortlist the right countries, and speak to an expert advisor.";
+const title = "Gradiks Global | Brutally Honest Education Consultancy";
+const description = "We don't sell dreams. We prepare you for reality. Study abroad with real data, real visa success rates, and honest guidance.";
 ---
 
 <MainLayout title={title} description={description}>
 <Navigation />
 
-<!-- ============================================
-     TRUST BAR — Marquee ticker
-     ============================================ -->
-<section class="mt-20 overflow-hidden" style="background: var(--color-brand-navy);">
-  <div class="trust-ticker-track" style="padding: 0.875rem 0; color: rgba(255,255,255,0.7); font-size: 0.8125rem;">
-    <span class="trust-ticker-track" style="padding: 0;">
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">2,000+</span>
-        <span style="color: rgba(255,255,255,0.5);">Students Guided</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">Profile-fit</span>
-        <span style="color: rgba(255,255,255,0.5);">Guidance First</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">50+</span>
-        <span style="color: rgba(255,255,255,0.5);">Partner Universities</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">15+</span>
-        <span style="color: rgba(255,255,255,0.5);">Countries</span>
-      </span>
-      <span style="color: rgba(255,255,255,0.2);">|</span>
-      <span class="flex items-center gap-2.5">
-        <span class="font-display font-bold text-base tabular-nums text-white">FMGE</span>
-        <span style="color: rgba(255,255,255,0.5);">Prep Support</span>
-      </span>
-    </span>
-  </div>
-</section>
+<!-- HERO — gradiks.com editorial layout -->
+<section class="gradiks-hero" id="hero">
+  <div class="gradiks-hero-grid" aria-hidden="true"></div>
+  <div class="gradiks-hero-glow" aria-hidden="true"></div>
 
-<!-- ============================================
-     HERO — Apple cinema + Stripe data panel
-     ============================================ -->
-<section class="relative overflow-hidden bg-white">
-  <!-- Ambient gradient spotlights -->
-  <div class="gradient-spotlight gradient-spotlight-1" style="top: -10%; right: -5%; width: 800px; height: 800px;"></div>
-  <div class="gradient-spotlight gradient-spotlight-2" style="bottom: -10%; left: -10%; width: 600px; height: 600px;"></div>
-
-  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-6 lg:pt-24 pb-6 lg:pb-32 relative z-10">
-    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-start">
-      <!-- Left: Content -->
+  <div class="gradiks-hero-inner">
+    <div class="gradiks-hero-layout">
       <div>
-        <!-- Badge -->
-        <div class="hero-badge mb-3 lg:mb-5 animate-fade-in-up">
-          <span class="hero-badge-dot"></span>
-          <span class="hero-badge-text">Trusted by 2,000+ Families</span>
+        <div class="gradiks-hero-overline animate-fade-in-up">
+          <span class="gradiks-hero-overline-bar"></span>
+          <span class="gradiks-hero-overline-text">Brutally Honest Consultancy</span>
         </div>
 
-        <!-- Headline -->
         <h1 class="hero-headline animate-fade-in-up delay-100">
-          <span>Your Child Deserves</span>
-          <br />
-          <span class="hero-headline-accent">Honest</span> <span>Medical</span>
-          <br class="hidden lg:inline" />
-          <span>Career Guidance</span>
+          MBBS Abroad<br />
+          Without the<br />
+          <span class="hero-headline-accent">Sales Pitch.</span>
         </h1>
 
-        <!-- Subheadline -->
-        <p class="hero-subheadline animate-fade-in-up delay-200">
-          Transparent MBBS admissions abroad. No false promises, no hidden fees. Clear advice backed by 2,000+ successful placements.
+        <!-- Truth vs Lie -->
+        <div class="hero-truths mb-8 max-w-xl animate-fade-in-up delay-200">
+          <div class="hero-truths-label">The truth they don't tell you</div>
+          
+          <div class="hero-truth-item">
+            <div class="hero-truth-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <div class="hero-truth-content">
+              <div class="hero-truth-lie">"99% visa success rate guaranteed"</div>
+              <div class="hero-truth-fact">Real rejection rates for Indian students applying to MBBS abroad — published every quarter.</div>
+            </div>
+          </div>
+
+          <div class="hero-truth-item">
+            <div class="hero-truth-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+            </div>
+            <div class="hero-truth-content">
+              <div class="hero-truth-lie">"Our partner colleges pay our commission"</div>
+              <div class="hero-truth-fact">We only recommend universities with strong FMGE results and proper clinical training — not the highest paying ones.</div>
+            </div>
+          </div>
+
+          <div class="hero-truth-item">
+            <div class="hero-truth-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="hero-truth-content">
+              <div class="hero-truth-lie">"Sign our multi-year locked contract"</div>
+              <div class="hero-truth-fact">Full cost breakdown and FMGE reality check before you decide. No hidden fees later.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="hero-subheadline animate-fade-in-up delay-300">
+          No fake promises. No random university lists. Just clear data on NMC-approved colleges, real total costs, actual FMGE passing rates, and honest visa odds — based on your NEET score and budget.
         </p>
 
-        <!-- Desktop CTA Row -->
-        <div class="hero-ctas animate-fade-in-up delay-300">
-          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary hidden lg:inline-flex">
-            Get Free Assessment
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <div class="hero-ctas animate-fade-in-up delay-400">
+          <button onclick="document.getElementById('lead-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' })" class="cta-primary">
+            Get Your Roadmap
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
-          <button onclick="document.getElementById('why-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="cta-secondary hidden lg:inline-flex">
-            Why Gradiks
+          <button onclick="document.getElementById('why-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })" class="cta-secondary">
+            How We're Different
           </button>
-
-          <!-- MOBILE HERO FORM -->
-          <div class="lg:hidden w-full mt-2">
-            <form id="hero-lead-form" class="space-y-3">
-              <input aria-label="Full Name" type="text" name="name" required class="form-input" placeholder="Full Name *">
-              <input aria-label="Your phone number" type="tel" name="phone" required class="form-input" placeholder="Your phone number *">
-              <input aria-label="Email" type="email" name="email" required class="form-input" placeholder="Email *">
-              <button type="submit" class="w-full cta-primary justify-center" style="padding-top: 1rem; padding-bottom: 1rem;">GET FREE ASSESSMENT</button>
-              <p class="text-center text-[10px] text-[oklch(0.65_0.01_260)]">Free consultation. No spam. Response within 24 hours.</p>
-            </form>
-          </div>
         </div>
 
-        <!-- Trust micro-stats (desktop) -->
-        <div class="flex items-center gap-4 mt-6 animate-fade-in-up delay-400" style="display: none;">
-          <div class="flex items-center gap-2">
-            <div class="flex -space-x-1.5">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=face" alt="Student profile" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Student profile" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="Student profile" class="w-6 h-6 rounded-full border-2 border-white object-cover" />
-            </div>
-            <span class="text-sm text-[#6b7280]">2,000+ students guided</span>
-          </div>
-          <span class="text-[#e5e7eb] hidden sm:inline">|</span>
-          <div class="flex items-center gap-1 hidden sm:flex">
-            <span class="text-[#f59e0b]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="text-sm text-[#6b7280]">4.9/5 from parents</span>
-          </div>
+        <div class="lg:hidden w-full mt-6 animate-fade-in-up delay-500">
+          <form id="hero-lead-form" class="space-y-3 bg-white border border-black/10 p-4 rounded-sm shadow-[var(--shadow-soft-md)]">
+            <input aria-label="Full Name" type="text" name="name" required class="form-input" placeholder="Full Name *">
+            <input aria-label="Your phone number" type="tel" name="phone" required class="form-input" placeholder="Your phone number *">
+            <input aria-label="Email" type="email" name="email" required class="form-input" placeholder="Email *">
+            <button type="submit" class="w-full cta-primary justify-center">Get Your Roadmap</button>
+            <p class="text-center text-[10px] text-gray-500">Free consultation. No spam. Response within 24 hours.</p>
+          </form>
         </div>
       </div>
 
-      <!-- Right: Stripe-style data panel (desktop only) -->
-      <div class="relative hidden lg:block animate-scale-in delay-500">
-        <div class="data-card">
-          <!-- Header -->
-          <div class="data-card-header">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-[0.6875rem] font-semibold tracking-[0.12em] uppercase" style="color: #6b7280; font-family: var(--font-body);">Placement Track Record</span>
-              <span class="text-[0.6875rem] font-semibold flex items-center gap-1" style="color: #059669;">
-                <span class="w-1.5 h-1.5 rounded-full" style="background: #059669;"></span>
-                Updated guidance
-              </span>
-            </div>
-            <div class="data-card-number" style="color: #0d0d0d;">
-              2,000+ <span style="font-size: 0.875rem; font-weight: 400; color: #6b7280;">students guided since 2018</span>
-            </div>
-          </div>
-
-          <!-- Key metrics grid -->
-          <div class="data-grid">
-            <div class="data-grid-item">
-              <div class="data-grid-value">Strong</div>
-              <div class="data-grid-label">Eligible Profile Matches</div>
-            </div>
-            <div class="data-grid-item">
-              <div class="data-grid-value">50+</div>
-              <div class="data-grid-label">NMC Universities</div>
-            </div>
-            <div class="data-grid-item">
-              <div class="data-grid-value accent">FMGE</div>
-              <div class="data-grid-label">Prep Support</div>
-            </div>
-          </div>
-
-          <!-- Proof rows -->
-          <div class="p-6 space-y-3" style="background: #f8f9fb;">
-            <div class="data-row">
-              <div class="w-9 h-9 flex items-center justify-center flex-shrink-0 rounded-md" style="background: rgba(21,190,83,0.12);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <div>
-                <div class="text-[0.8125rem] font-semibold" style="color: #0d0d0d; font-family: var(--font-display);">Every University Reviewed</div>
-                <div class="text-[0.6875rem]" style="color: #6b7280;">Recognition checked before counselling</div>
-              </div>
-            </div>
-            <div class="data-row">
-              <div class="w-9 h-9 flex items-center justify-center flex-shrink-0 rounded-md" style="background: rgba(99,102,241,0.1);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <div>
-                <div class="text-[0.8125rem] font-semibold" style="color: #0d0d0d; font-family: var(--font-display);">Zero Hidden Charges</div>
-                <div class="text-[0.6875rem]" style="color: #6b7280;">Full fee breakdown before you commit</div>
-              </div>
-            </div>
-            <div class="data-row">
-              <div class="w-9 h-9 flex items-center justify-center flex-shrink-0 rounded-md" style="background: rgba(245,158,11,0.12);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <div class="text-[0.8125rem] font-semibold" style="color: #0d0d0d; font-family: var(--font-display);">FMGE Coaching Included</div>
-                <div class="text-[0.6875rem]" style="color: #6b7280;">Structured prep from 3rd year onwards</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom trust strip -->
-          <div class="flex items-center justify-between px-6 py-4" style="background: #f8f9fb; border-top: 1px solid #f1f1f1;">
-            <span class="text-[0.6875rem]" style="color: #6b7280;">Verified by NMC, WHO, ECFMG, IMED</span>
-            <div class="flex items-center gap-1">
-              <span class="text-[#f59e0b] text-xs">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span class="text-[0.6875rem] font-semibold" style="color: #0d0d0d;">4.9</span>
-            </div>
-          </div>
+      <div class="gradiks-hero-visual hidden lg:block animate-scale-in delay-500">
+        <div class="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-[#be1e2d] z-10" aria-hidden="true"></div>
+        <div class="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-[#be1e2d] z-10" aria-hidden="true"></div>
+        <div class="gradiks-hero-visual-frame">
+          <img src="/images/gradiks-hero-mbbs-student.jpg" alt="Young Indian woman MBBS student in white coat with her parents during an honest consultation with a Gradiks counsellor about studying medicine abroad" loading="eager" fetchpriority="high" />
+          <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#f1f1f1] to-transparent pointer-events-none" aria-hidden="true"></div>
+        </div>
+        <div class="gradiks-hero-badge-float" style="top: 2.5rem; left: -1.5rem;">
+          <p class="font-display text-[11px] font-bold tracking-wider text-gray-800">100% AUDITED</p>
+          <p class="text-[9px] text-gray-500">Rejections Public</p>
+        </div>
+        <div class="gradiks-hero-badge-float delay" style="bottom: 3.5rem; right: -1rem;">
+          <p class="font-display text-[11px] font-bold tracking-wider text-gray-800">COMMISSION-FREE</p>
+          <p class="text-[9px] text-gray-500">Pure ROI Advice</p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="gradiks-hero-marquee" role="marquee" aria-label="Gradiks transparency statistics">
+    <div class="gradiks-hero-marquee-track">
+      <span class="mx-6 text-gray-400">2,000+ STUDENTS GUIDED SINCE 2018</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">50+ NMC-APPROVED UNIVERSITIES</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">ZERO HIDDEN FEES POLICY</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">FMGE COACHING INCLUDED</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">15+ STUDY DESTINATIONS</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">2,000+ STUDENTS GUIDED SINCE 2018</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">50+ NMC-APPROVED UNIVERSITIES</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">ZERO HIDDEN FEES POLICY</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">FMGE COACHING INCLUDED</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
+      <span class="mx-6 text-gray-400">15+ STUDY DESTINATIONS</span>
+      <span class="mx-2 text-[#be1e2d]">✦</span>
     </div>
   </div>
 </section>
@@ -197,7 +137,7 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
 <!-- ============================================
      WHY CHOOSE US — Asymmetric feature layout
      ============================================ -->
-<section id="why-section" class="py-20 lg:py-28" style="background: #f8f9fb;">
+<section id="why-section" class="py-20 lg:py-28" style="background: #ffffff;">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
     <div class="max-w-2xl mb-14 lg:mb-20 reveal">
       <div class="section-eyebrow mb-3">Why Choose Us</div>
@@ -254,6 +194,77 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============================================
+     REAL STUDENTS — Powerful visual social proof
+     ============================================ -->
+<section id="real-students" class="py-20 lg:py-24" style="background: #f8f9fb;">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16 reveal">
+      <div class="max-w-2xl">
+        <div class="section-eyebrow mb-3">Real Students. Real Decisions.</div>
+        <h2 class="section-headline">These Are The<br />Conversations That Matter</h2>
+      </div>
+      <p class="max-w-md text-[0.9375rem] leading-relaxed" style="color: #4b5563;">
+        Every student here sat across from us with the same fears you have. We showed them the real numbers. They made their own choice.
+      </p>
+    </div>
+
+    <!-- Lead visual + student grid -->
+    <div class="grid lg:grid-cols-12 gap-5">
+      <!-- Large lead image -->
+      <div class="lg:col-span-7 relative overflow-hidden rounded-sm border border-black/5 reveal">
+        <img src="/images/gradiks-students-campus.jpg" alt="Group of confident Indian MBBS students outside a medical university abroad" class="w-full h-full object-cover" style="aspect-ratio: 16/10; min-height: 320px;" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8 text-white">
+          <div class="font-display text-2xl leading-none tracking-[-0.02em] mb-1">They chose clarity<br />over comfort.</div>
+          <div class="text-white/70 text-[0.8125rem]">Over 2,000 families have done the same since 2018.</div>
+        </div>
+      </div>
+
+      <!-- Student stories grid -->
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="student-story-card reveal reveal-delay-1">
+          <img src="/students/mariya-elezebeth.jpg" alt="Mariya Elezebeth, MBBS student at Tbilisi State Medical University, Georgia" class="student-story-img" loading="lazy" />
+          <div class="p-5">
+            <div class="font-display text-[1.0625rem] font-semibold leading-tight mb-1.5" style="color:#0d0d0d;">Mariya Elezebeth</div>
+            <div class="text-[0.6875rem] text-[#6b7280] mb-3">3rd Year • Tbilisi State Medical University, Georgia</div>
+            <p class="text-[0.8125rem] leading-relaxed" style="color:#4b5563;">"I scored 312 in NEET. Three agents told me I was wasting money. Gradiks built me a shortlist and I got in. Now I am in Tbilisi."</p>
+          </div>
+        </div>
+
+        <div class="student-story-card reveal reveal-delay-2">
+          <img src="/students/devika.jpg" alt="Devika, MBBS student at Kazan State Medical University, Russia" class="student-story-img" loading="lazy" />
+          <div class="p-5">
+            <div class="font-display text-[1.0625rem] font-semibold leading-tight mb-1.5" style="color:#0d0d0d;">Devika</div>
+            <div class="text-[0.6875rem] text-[#6b7280] mb-3">5th Year • Kazan State Medical University, Russia</div>
+            <p class="text-[0.8125rem] leading-relaxed" style="color:#4b5563;">"Hostel, mess, climate, exams — they prepared me for all of it. Even the visa interview. I felt ready before I landed."</p>
+          </div>
+        </div>
+
+        <div class="student-story-card reveal reveal-delay-3">
+          <img src="/students/abhishek-joseph.jpg" alt="Abhishek Joseph, MBBS student at Bashkir State Medical University, Russia" class="student-story-img" loading="lazy" />
+          <div class="p-5">
+            <div class="font-display text-[1.0625rem] font-semibold leading-tight mb-1.5" style="color:#0d0d0d;">Abhishek Joseph</div>
+            <div class="text-[0.6875rem] text-[#6b7280] mb-3">4th Year • Bashkir State Medical University, Russia</div>
+            <p class="text-[0.8125rem] leading-relaxed" style="color:#4b5563;">"My parents were terrified about NMC and FMGE. Gradiks sat with them for two hours and showed them the actual circulars."</p>
+          </div>
+        </div>
+
+        <div class="student-story-card reveal reveal-delay-4">
+          <img src="/students/sivadev-salimkumar.jpg" alt="Sivadev Salimkumar, MBBS student at Samarkand State Medical University, Uzbekistan" class="student-story-img" loading="lazy" />
+          <div class="p-5">
+            <div class="font-display text-[1.0625rem] font-semibold leading-tight mb-1.5" style="color:#0d0d0d;">Sivadev Salimkumar</div>
+            <div class="text-[0.6875rem] text-[#6b7280] mb-3">2nd Year • Samarkand State Medical University, Uzbekistan</div>
+            <p class="text-[0.8125rem] leading-relaxed" style="color:#4b5563;">"The student call before I joined was the thing that convinced me. I spoke to a senior in Samarkand for 40 minutes. Zero sales talk."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-[0.6875rem] text-[#9ca3af] mt-8">All stories are from verified families. No paid testimonials. Ever.</p>
   </div>
 </section>
 
@@ -322,9 +333,44 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
 </section>
 
 <!-- ============================================
+     VIDEO — The honest conversation
+     ============================================ -->
+<section class="gradiks-video-section py-20 lg:py-24">
+  <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
+    <div class="max-w-2xl mb-10 reveal">
+      <div class="section-eyebrow mb-3" style="color: #be1e2d;">See It For Yourself</div>
+      <h2 class="font-display text-white text-[2rem] lg:text-[2.5rem] leading-[1.05] tracking-[-0.025em]">This is what honest<br />guidance actually looks like.</h2>
+      <p class="mt-4 text-white/60 text-[0.9375rem]">No sales script. No pressure. Just the real picture — fees, visa odds, FMGE reality, and whether this path is right for your child.</p>
+    </div>
+
+    <div class="max-w-[980px] mx-auto reveal reveal-delay-1">
+      <div class="gradiks-video-wrapper" id="gradiks-video-container">
+        <video 
+          id="gradiks-brand-video"
+          src="/videos/gradiks-honest-guidance.mp4" 
+          poster="/images/gradiks-students-campus.jpg"
+          preload="metadata"
+          playsinline
+          class="w-full h-full">
+        </video>
+        
+        <div class="gradiks-video-overlay" id="gradiks-video-overlay">
+          <button class="gradiks-video-play" aria-label="Play video" id="gradiks-video-play-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#ffffff" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          </button>
+        </div>
+        
+        <div class="gradiks-video-label">0:15 — THE GRADIKS CONVERSATION</div>
+      </div>
+      <p class="text-center text-white/40 text-[0.6875rem] mt-4 tracking-[0.05em]">Real guidance. No performance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
      COUNTRIES — Dark section, premium card grid
      ============================================ -->
-<section id="countries" class="py-20 lg:py-28" style="background: #0d1829;">
+<section id="countries" class="py-20 lg:py-28" style="background: #232d61;">
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 lg:mb-20 reveal">
       <div class="max-w-xl">
@@ -497,7 +543,7 @@ const description = "Serious, transparent study abroad guidance for Kerala stude
 <!-- ============================================
      TESTIMONIALS — Modern testimonial cards
      ============================================ -->
-<section id="testimonials" class="py-20 lg:py-28" style="background: #f8f9fb;">
+<section id="testimonials" class="py-20 lg:py-28" style="background: #f1f1f1;">
   <div class="max-w-[1100px] mx-auto px-6 lg:px-12">
 
     <div class="text-center max-w-2xl mx-auto mb-14 lg:mb-20 reveal">
@@ -1083,5 +1129,41 @@ document.getElementById('hero-lead-form')?.addEventListener('submit', (e) => {
     setTimeout(() => { window.location.href = '/mbbs-thank-you'; }, 500);
   });
 });
+
+// Custom video player for brand film
+const videoContainer = document.getElementById('gradiks-video-container');
+const video = document.getElementById('gradiks-brand-video');
+const overlay = document.getElementById('gradiks-video-overlay');
+const playBtn = document.getElementById('gradiks-video-play-btn');
+
+if (video && overlay && playBtn && videoContainer) {
+  const playVideo = () => {
+    video.play().catch(() => {});
+    videoContainer.classList.add('playing');
+    overlay.style.display = 'none';
+  };
+
+  playBtn.addEventListener('click', playVideo);
+  videoContainer.addEventListener('click', (e) => {
+    if (!video.paused) return;
+    if (e.target === playBtn || playBtn.contains(e.target)) return;
+    playVideo();
+  });
+
+  video.addEventListener('ended', () => {
+    videoContainer.classList.remove('playing');
+    overlay.style.display = '';
+  });
+
+  // Pause when scrolling out of view (performance + UX)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting && !video.paused) {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.25 });
+  observer.observe(videoContainer);
+}
 </script>
 </MainLayout>

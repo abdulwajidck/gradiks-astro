@@ -108,7 +108,7 @@ const faqs = [
     .lp-hero { background: #03070f; }
     .lp-hero-bg {
       position: absolute; inset: 0; z-index: 0;
-      background-image: url('/hero/nursing-hero.jpg');
+      background-image: url('/images/nursing/nursing-hero-clean.jpg');
       background-size: cover;
       background-position: center 30%;
       background-repeat: no-repeat;
@@ -181,7 +181,7 @@ const faqs = [
   <!-- LOGO BAR (no nav — focused LP) -->
   <header class="absolute top-0 left-0 right-0 z-30">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2">
+      <a href="/" class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white shadow-md">
         <img src="/gradiks-logo.png" alt="Gradiks" width="120" height="32" class="h-7 w-auto" />
       </a>
       <a href="tel:+919778130583" class="text-white/80 hover:text-white text-sm font-medium hidden sm:flex items-center gap-2">
@@ -390,6 +390,33 @@ const faqs = [
     </div>
   </section>
 
+  <!-- REAL TRAINING VISUALS -->
+  <section class="py-16 lg:py-24 bg-[#fafaf9]">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="text-[11px] tracking-[0.3em] uppercase text-[#be1e2d] font-semibold mb-3">Actual hospital floors. Not simulations.</div>
+          <h2 class="text-4xl md:text-5xl font-semibold tracking-[-0.025em] leading-[1.05]" style="font-family: var(--font-display);">
+            This is the training<br />you'll actually get.
+          </h2>
+          <p class="text-text-secondary mt-4 text-lg max-w-md">
+            1,800+ hours of supervised clinical rotations in real European hospitals. You graduate with patient experience that actually counts for licensing exams.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-sm">
+            <img src="/images/nursing/nursing-lab.jpg" alt="Nursing students practicing in university skills lab" class="w-full h-auto object-cover" />
+            <div class="p-4 text-xs text-text-secondary bg-white">University skills lab — Year 1 &amp; 2</div>
+          </div>
+          <div class="overflow-hidden rounded-2xl border border-[#e5e7eb] shadow-sm">
+            <img src="/images/nursing/nursing-clinical.jpg" alt="Nursing student on clinical placement in hospital" class="w-full h-auto object-cover" />
+            <div class="p-4 text-xs text-text-secondary bg-white">Hospital ward rotation — Year 3 &amp; 4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CAREER PATHWAYS -->
   <section class="py-20 lg:py-28 bg-white">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -426,18 +453,25 @@ const faqs = [
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        {stories.map(s => (
-          <article class="bg-white rounded-2xl p-7 border border-[#ececec] flex flex-col">
-            <div class="inline-flex items-center gap-2 self-start text-[10px] tracking-[0.18em] uppercase font-semibold text-[#059669] bg-[#059669]/8 px-2.5 py-1 rounded-full mb-5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-              {s.outcome}
+        {stories.map((s, i) => (
+          <article class="bg-white rounded-2xl overflow-hidden border border-[#ececec] flex flex-col">
+            <div class="relative h-48 bg-[#f8f9fb]">
+              <img 
+                src={i === 0 ? '/images/nursing/student-ananya.jpg' : i === 1 ? '/images/nursing/student-rahul.jpg' : '/images/nursing/student-fathima.jpg'} 
+                alt={s.name}
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <div class="text-[10px] tracking-[0.18em] uppercase font-semibold text-[#86efac] mb-0.5">{s.outcome}</div>
+                <div class="font-semibold text-lg leading-none" style="font-family: var(--font-display);">{s.name}</div>
+                <div class="text-xs text-white/70">{s.loc}</div>
+              </div>
             </div>
-            <p class="text-[0.92rem] text-text-secondary leading-relaxed flex-1">"{s.quote}"</p>
-            <div class="mt-5 pt-5 border-t border-[#ececec] flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-[#be1e2d] text-white flex items-center justify-center font-semibold flex-shrink-0" style="font-family: var(--font-display);">{s.initial}</div>
-              <div class="min-w-0">
-                <div class="font-semibold text-sm" style="font-family: var(--font-display);">{s.name} <span class="text-text-tertiary font-normal">· {s.loc}</span></div>
-                <div class="text-xs text-text-tertiary truncate">{s.uni}</div>
+            <div class="p-6 flex-1 flex flex-col">
+              <p class="text-[0.92rem] text-text-secondary leading-relaxed flex-1">"{s.quote}"</p>
+              <div class="mt-4 pt-4 border-t border-[#ececec] text-xs text-text-tertiary">
+                {s.uni}
               </div>
             </div>
           </article>

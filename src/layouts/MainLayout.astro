@@ -16,7 +16,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
-    <meta name="theme-color" content="#0d1829">
+    <meta name="theme-color" content="#BE1E2D">
     <link rel="canonical" href={Astro.url} />
 
     <!-- Open Graph / Social -->
@@ -40,8 +40,9 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Fonts: Inter for body, Poppins for display, Geist Mono for code -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Fonts: gradiks.com — Barlow Condensed + Barlow + Space Mono -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
     <script is:inline>
